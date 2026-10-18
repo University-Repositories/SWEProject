@@ -25,33 +25,42 @@ Check your Rust version with `rustc --version`.
 
 ## First-time setup
 
-1. Clone the repo and enter it:
+### 1. Clone the repo
 
 ```
-   git clone https://github.com/University-Repositories/SWEProject.git
-   cd SWEProject
+git clone https://github.com/University-Repositories/SWEProject.git
+cd SWEProject
 ```
 
-2. Create your local environment file from the template. `.env` is ignored by git.
-   - Windows (PowerShell): `Copy-Item .env.example .env`
-   - macOS or Linux: `cp .env.example .env`
-3. Start the database:
+### 2. Create your `.env` file
+
+Create a file named `.env` at the repo root containing this line. Git ignores it.
 
 ```
-   docker compose up -d
+DATABASE_URL=postgres://beat4beat:beat4beat@localhost:5432/beat4beat
 ```
 
-4. Check that it accepts connections:
+### 3. Start the database
 
 ```
-   docker compose exec db pg_isready -U beat4beat
+docker compose up -d
 ```
 
-The output should end with `accepting connections`. 5. Build and test everything:
+The database user, password, and database name all default to `beat4beat`. To change them, set `POSTGRES_USER`, `POSTGRES_PASSWORD`, and `POSTGRES_DB` in `.env`, update `DATABASE_URL` to match, and run `docker compose down -v` before starting again. New values only apply to a fresh database.
+
+### 4. Check that it accepts connections
 
 ```
-   cargo build
-   cargo test
+docker compose exec db pg_isready -U beat4beat
+```
+
+The output should end with `accepting connections`.
+
+### 5. Build and test everything
+
+```
+cargo build
+cargo test
 ```
 
 ## Everyday commands
@@ -76,6 +85,5 @@ Run the format and lint commands before you push.
 
 ## Troubleshooting
 
-- `variable is not set. Defaulting to a blank string` when starting the database: `.env` is missing. Repeat setup step 2.
 - Port 5432 already in use: another PostgreSQL is running on your machine. Stop it, then run `docker compose up -d` again.
 - Windows build error mentioning `link.exe` or `link: extra operand`: the Visual Studio C++ build tools are missing. Add the "Desktop development with C++" workload in the Visual Studio Installer.
