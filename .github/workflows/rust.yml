@@ -2,21 +2,52 @@ name: Rust
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
   pull_request:
-    branches: [ "main" ]
+    branches: ["main"]
 
 env:
   CARGO_TERM_COLOR: always
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
+    services:
+      postgres:
+        image: postgres:17
+        env:
+          POSTGRES_USER: beat4beat
+          POSTGRES_PASSWORD: beat4beat
+          POSTGRES_DB: beat4beat
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U beat4beat"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+
+    env:
+      DATABASE_URL: postgres://beat4beat:beat4beat@localhost:5432/beat4beat
+
     steps:
-    - uses: actions/checkout@v4
-    - name: Build
-      run: cargo build --verbose
-    - name: Run tests
-      run: cargo test --verbose
+      - uses: actions/checkout@v4
+      - name: Install rustfmt and clippy
+        run: rustup component add rustfmt clippy
+      - name: Check formatting
+        run: cargo fmt --all -- --check
+      - name: Lint
+        run: cargo clippy --all-targets -- -D warnings
+      - name: Build
+        run: cargo build --verbose
+      - name: Run tests
+        run: cargo test --verbose
+      - name: Check generated TypeScript types are committed
+        run: |
+          changes="$(git status --porcelain -- frontEnd/src/api/generated 2>/dev/null)"
+          if [ -n "$changes" ]; then
+            echo "$changes"
+            echo "::error::Generated TypeScript types are out of date. Run cargo test locally and commit frontEnd/src/api/generated."
+            exit 1
+          fi
