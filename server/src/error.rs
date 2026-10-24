@@ -46,9 +46,78 @@ impl IntoResponse for ApiError {
     }
 }
 
+impl From<authentication::AccountError> for ApiError {
+    fn from(error: authentication::AccountError) -> Self {
+        use authentication::AccountError;
+        // i want auth errors to keep the agreed api codes
+        match error {
+            AccountError::InvalidUsername => Self::validation(Some("username")),
+            AccountError::InvalidPassword => Self::validation(Some("password")),
+            AccountError::UsernameTaken => Self::new(
+                ApiErrorCode::UsernameTaken,
+                "Username is taken",
+                Some("username"),
+            ),
+            AccountError::InvalidCredentials => Self::new(
+                ApiErrorCode::InvalidCredentials,
+                "Invalid username or password",
+                None,
+            ),
+            AccountError::SessionInvalid => Self::new(
+                ApiErrorCode::Unauthenticated,
+                "Authentication required",
+                None,
+            ),
+            AccountError::Internal => Self::internal(),
+        }
+    }
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
+
+    #[test]
+    fn maps_account_errors_to_public_responses() {
+        use authentication::AccountError;
+        for (error, status, code, field) in [
+            (
+                AccountError::InvalidUsername,
+                400,
+                "VALIDATION_FAILED",
+                Some("username"),
+            ),
+            (
+                AccountError::InvalidPassword,
+                400,
+                "VALIDATION_FAILED",
+                Some("password"),
+            ),
+            (
+                AccountError::UsernameTaken,
+                409,
+                "USERNAME_TAKEN",
+                Some("username"),
+            ),
+            (
+                AccountError::InvalidCredentials,
+                401,
+                "INVALID_CREDENTIALS",
+                None,
+            ),
+            (AccountError::SessionInvalid, 401, "UNAUTHENTICATED", None),
+            (AccountError::Internal, 500, "INTERNAL", None),
+        ] {
+            let response = ApiError::from(error);
+            assert_eq!(response.status().as_u16(), status);
+            let value = serde_json::to_value(response).unwrap();
+            assert_eq!(value["error"]["code"], code);
+            assert_eq!(
+                value["error"]["field"],
+                serde_json::to_value(field).unwrap()
+            );
+        }
+    }
 
     #[test]
     fn maps_all_error_codes() {
