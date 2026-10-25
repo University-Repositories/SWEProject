@@ -1,6 +1,7 @@
 pub mod api_types;
 pub mod app;
 pub mod config;
+pub mod cookies;
 pub mod error;
 pub mod json;
 
