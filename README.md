@@ -34,10 +34,13 @@ cd SWEProject
 
 ### 2. Create your `.env` file
 
-Create a file named `.env` at the repo root containing this line. Git ignores it.
+Create a file named `.env` at the repo root containing these lines. Git ignores it.
 
 ```
 DATABASE_URL=postgres://beat4beat:beat4beat@localhost:5432/beat4beat
+POSTGRES_USER=beat4beat
+POSTGRES_PASSWORD=beat4beat
+POSTGRES_DB=beat4beat
 ```
 
 ### 3. Start the database
@@ -46,9 +49,17 @@ DATABASE_URL=postgres://beat4beat:beat4beat@localhost:5432/beat4beat
 docker compose up -d
 ```
 
-The database user, password, and database name all default to `beat4beat`. To change them, set `POSTGRES_USER`, `POSTGRES_PASSWORD`, and `POSTGRES_DB` in `.env`, update `DATABASE_URL` to match, and run `docker compose down -v` before starting again. New values only apply to a fresh database.
+The database user, password, and database name default to `beat4beat`. Database migrations are located in `dataManagement/migrations/`.
 
-### 4. Check that it accepts connections
+### 4. Run database migrations
+
+To apply database migrations:
+
+```
+sqlx migrate run --source dataManagement/migrations
+```
+
+### 5. Check that it accepts connections
 
 ```
 docker compose exec db pg_isready -U beat4beat
@@ -56,24 +67,35 @@ docker compose exec db pg_isready -U beat4beat
 
 The output should end with `accepting connections`.
 
-### 5. Build and test everything
+### 6. Build and test everything
 
 ```
 cargo build
 cargo test
 ```
 
+### 7. (Optional) Run Catalog Import
+
+Import the MusicBrainz catalog dataset:
+
+```
+cargo run -p data_management --bin catalog_import
+```
+
 ## Everyday commands
 
-| Task                           | Command                                     |
-| ------------------------------ | ------------------------------------------- |
-| Start the database             | `docker compose up -d`                      |
-| Stop the database (keeps data) | `docker compose down`                       |
-| Stop and delete all data       | `docker compose down -v`                    |
-| Build                          | `cargo build`                               |
-| Run tests                      | `cargo test`                                |
-| Format code                    | `cargo fmt --all`                           |
-| Lint                           | `cargo clippy --all-targets -- -D warnings` |
+| Task                           | Command                                         |
+| ------------------------------ | ----------------------------------------------- |
+| Start the database             | `docker compose up -d`                          |
+| Stop the database (keeps data) | `docker compose down`                           |
+| Stop and delete all data       | `docker compose down -v`                        |
+| Run migrations                 | `sqlx migrate run --source dataManagement/migrations` |
+| Build                          | `cargo build`                                   |
+| Run all tests                  | `cargo test`                                    |
+| Run database tests             | `cargo test -p data_management --test game_db_test` |
+| Run catalog import             | `cargo run -p data_management --bin catalog_import` |
+| Format code                    | `cargo fmt --all`                               |
+| Lint                           | `cargo clippy --all-targets -- -D warnings`     |
 
 Run the format and lint commands before you push.
 

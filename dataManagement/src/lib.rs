@@ -1,16 +1,20 @@
-pub mod accounts;
+pub mod catalog_repo;
+pub mod db;
+pub mod error;
+pub mod importer;
+pub mod models;
+pub mod session_repo;
+pub mod user_repo;
 
-pub fn add(left: u64, right: u64) -> u64 {
-    left + right
-}
-
-#[cfg(test)]
-mod tests {
-    use super::*;
-
-    #[test]
-    fn it_works() {
-        let result = add(2, 2);
-        assert_eq!(result, 4);
-    }
-}
+pub use catalog_repo::CatalogRepo;
+pub use db::{create_pool, run_migrations};
+pub use error::RepoError;
+pub use importer::{
+    CatalogImporter, CoverageReport, ImportCredit, ImportRecording, load_default_subset,
+    populate_pop_songs,
+};
+pub use models::{
+    CreditEntityRow, RecordingCredit, RecordingDetailRow, RecordingSummaryRow, SessionRow, UserRow,
+};
+pub use session_repo::SessionRepo;
+pub use user_repo::UserRepo;

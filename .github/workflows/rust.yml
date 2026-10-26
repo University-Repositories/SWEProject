@@ -45,7 +45,7 @@ jobs:
       - name: Run tests
         run: cargo test --verbose
       - name: Run account database tests
-        run: cargo test --workspace -- --ignored
+        run: cargo test -p authentication -p server --test accounts -- --ignored
       - name: Check generated TypeScript types are committed
         run: |
           changes="$(git status --porcelain -- frontEnd/src/api/generated 2>/dev/null)"

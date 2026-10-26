@@ -19,7 +19,7 @@ async fn main() -> Result<(), Box<dyn Error>> {
         .await
         .map_err(|_| io::Error::other("database connection failed"))?;
     // i want the acct tables ready before serving requests
-    data_management::accounts::migrate(&pool)
+    data_management::run_migrations(&pool)
         .await
         .map_err(|_| io::Error::other("database migration failed"))?;
     let listener = tokio::net::TcpListener::bind(config.bind_address).await?;

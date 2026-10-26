@@ -1,5 +1,5 @@
 use authentication::{AccountError, service};
-use data_management::accounts;
+use data_management::{UserRepo, run_migrations};
 use sqlx::{PgPool, postgres::PgPoolOptions};
 use std::time::Duration;
 use uuid::Uuid;
@@ -19,13 +19,24 @@ impl TestDb {
             .connect(&url)
             .await
             .unwrap();
+        // i want pg_trgm in public so every test schema can use it
+        let mut setup = admin.begin().await.unwrap();
+        sqlx::query("SELECT pg_advisory_xact_lock(4242)")
+            .execute(&mut *setup)
+            .await
+            .unwrap();
+        sqlx::query("CREATE EXTENSION IF NOT EXISTS pg_trgm WITH SCHEMA public")
+            .execute(&mut *setup)
+            .await
+            .unwrap();
+        setup.commit().await.unwrap();
         let schema = format!("account_test_{}", Uuid::new_v4().simple());
         // i want each db test in its own schema
         sqlx::query(&format!("CREATE SCHEMA {schema}"))
             .execute(&admin)
             .await
             .unwrap();
-        let search_path = format!("SET search_path TO {schema}");
+        let search_path = format!("SET search_path TO {schema}, public");
         let pool = PgPoolOptions::new()
             .max_connections(3)
             .after_connect(move |connection, _| {
@@ -38,7 +49,7 @@ impl TestDb {
             .connect(&url)
             .await
             .unwrap();
-        accounts::migrate(&pool).await.unwrap();
+        run_migrations(&pool).await.unwrap();
         Self {
             pool,
             admin,
@@ -61,14 +72,15 @@ impl TestDb {
 #[ignore = "requires ACCOUNT_TEST_DATABASE_URL"]
 async fn saves_accounts_and_checks_login_credentials() {
     let db = TestDb::new().await;
-    accounts::migrate(&db.pool).await.unwrap();
+    run_migrations(&db.pool).await.unwrap();
     let user = service::register(&db.pool, "Sam", "TestPass123!")
         .await
         .unwrap();
     assert_eq!(user.username, "Sam");
     assert_eq!(user.role, "player");
     assert!(user.display_name.is_none());
-    let saved = accounts::find_credentials(&db.pool, "Sam")
+    let saved = UserRepo::new(db.pool.clone())
+        .find_by_username("Sam")
         .await
         .unwrap()
         .unwrap();
@@ -79,11 +91,11 @@ async fn saves_accounts_and_checks_login_credentials() {
         service::register(&db.pool, "Sam", "OtherPass123!").await,
         Err(AccountError::UsernameTaken)
     ));
-    for (name, password) in [
-        ("Sam", "WrongPass123!"),
-        ("Nobody", "TestPass123!"),
-        ("sam", "TestPass123!"),
-    ] {
+    assert!(matches!(
+        service::register(&db.pool, "sam", "OtherPass123!").await,
+        Err(AccountError::UsernameTaken)
+    ));
+    for (name, password) in [("Sam", "WrongPass123!"), ("Nobody", "TestPass123!")] {
         assert!(matches!(
             service::login(&db.pool, name, password, Duration::from_secs(60)).await,
             Err(AccountError::InvalidCredentials)

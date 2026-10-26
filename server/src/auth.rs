@@ -4,7 +4,7 @@ use crate::{
     cookies::{clear_session_cookie, read_session_token, session_cookie},
     json::ApiJson,
 };
-use authentication::service;
+use authentication::service::{self, UserRecord};
 use axum::{
     Extension, Json, Router,
     extract::{Request, State},
@@ -16,7 +16,6 @@ use axum::{
     response::{IntoResponse, Response},
     routing::{get, post},
 };
-use data_management::accounts::UserRecord;
 use serde::Deserialize;
 
 #[derive(Deserialize)]

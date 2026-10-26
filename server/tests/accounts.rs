@@ -26,13 +26,24 @@ impl TestApp {
             .connect(&url)
             .await
             .unwrap();
+        // i want pg_trgm in public so every test schema can use it
+        let mut setup = admin.begin().await.unwrap();
+        sqlx::query("SELECT pg_advisory_xact_lock(4242)")
+            .execute(&mut *setup)
+            .await
+            .unwrap();
+        sqlx::query("CREATE EXTENSION IF NOT EXISTS pg_trgm WITH SCHEMA public")
+            .execute(&mut *setup)
+            .await
+            .unwrap();
+        setup.commit().await.unwrap();
         let schema = format!("route_test_{}", Uuid::new_v4().simple());
         // i want route tests isolated from other db tables
         sqlx::query(&format!("CREATE SCHEMA {schema}"))
             .execute(&admin)
             .await
             .unwrap();
-        let search_path = format!("SET search_path TO {schema}");
+        let search_path = format!("SET search_path TO {schema}, public");
         let pool = PgPoolOptions::new()
             .max_connections(3)
             .after_connect(move |connection, _| {
@@ -45,7 +56,7 @@ impl TestApp {
             .connect(&url)
             .await
             .unwrap();
-        data_management::accounts::migrate(&pool).await.unwrap();
+        data_management::run_migrations(&pool).await.unwrap();
         let config = Config::from_lookup(|key| match key {
             "DATABASE_URL" => Some(url.clone()),
             "SESSION_TTL_SECONDS" => Some("60".into()),
