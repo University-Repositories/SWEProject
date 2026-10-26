@@ -26,7 +26,7 @@ pub async fn run_migrations(pool: &PgPool) -> Result<(), sqlx::migrate::MigrateE
 }
 
 pub async fn seed_dev_fixture(pool: &PgPool) -> Result<(), sqlx::Error> {
-    const FIXTURE_SQL: &str = include_str!("../dev_fixture.sql");
+    const FIXTURE_SQL: &str = include_str!("../fixtures/dev_fixture.sql");
     let mut tx = pool.begin().await?;
     sqlx::raw_sql(FIXTURE_SQL).execute(&mut *tx).await?;
     tx.commit().await?;
