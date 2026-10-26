@@ -18,6 +18,10 @@ async fn main() -> Result<(), Box<dyn Error>> {
     let pool = connect_db(&config)
         .await
         .map_err(|_| io::Error::other("database connection failed"))?;
+    // i want the acct tables ready before serving requests
+    data_management::accounts::migrate(&pool)
+        .await
+        .map_err(|_| io::Error::other("database migration failed"))?;
     let listener = tokio::net::TcpListener::bind(config.bind_address).await?;
     println!("server listening on {}", listener.local_addr()?);
     axum::serve(
