@@ -30,6 +30,7 @@ jobs:
 
     env:
       DATABASE_URL: postgres://beat4beat:beat4beat@localhost:5432/beat4beat
+      ACCOUNT_TEST_DATABASE_URL: postgres://beat4beat:beat4beat@localhost:5432/beat4beat
 
     steps:
       - uses: actions/checkout@v4
@@ -43,6 +44,8 @@ jobs:
         run: cargo build --verbose
       - name: Run tests
         run: cargo test --verbose
+      - name: Run account database tests
+        run: cargo test -p authentication -p server --test accounts -- --ignored
       - name: Check generated TypeScript types are committed
         run: |
           changes="$(git status --porcelain -- frontEnd/src/api/generated 2>/dev/null)"

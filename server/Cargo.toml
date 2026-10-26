@@ -7,3 +7,17 @@ edition = "2024"
 authentication = { version = "0.1.0", path = "../authentication" }
 data_management = { version = "0.1.0", path = "../dataManagement" }
 game_engine = { version = "0.1.0", path = "../gameEngine" }
+axum = "0.8"
+chrono = { version = "0.4", features = ["serde"] }
+cookie = "0.18"
+dotenvy = "0.15"
+serde = { version = "1", features = ["derive"] }
+sqlx = { version = "0.8", default-features = false, features = ["runtime-tokio-rustls", "postgres"] }
+tokio = { version = "1", features = ["macros", "rt-multi-thread", "net", "signal"] }
+ts-rs = { version = "12", features = ["chrono-impl", "uuid-impl"] }
+uuid = { version = "1", features = ["serde"] }
+
+[dev-dependencies]
+http-body-util = "0.1"
+serde_json = "1"
+tower = { version = "0.5", features = ["util"] }
