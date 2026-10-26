@@ -34,10 +34,13 @@ cd SWEProject
 
 ### 2. Create your `.env` file
 
-Create a file named `.env` at the repo root containing this line. Git ignores it.
+Create a file named `.env` at the repo root containing these lines. Git ignores it.
 
 ```
 DATABASE_URL=postgres://beat4beat:beat4beat@localhost:5432/beat4beat
+POSTGRES_USER=beat4beat
+POSTGRES_PASSWORD=beat4beat
+POSTGRES_DB=beat4beat
 ```
 
 ### 3. Start the database
@@ -46,7 +49,7 @@ DATABASE_URL=postgres://beat4beat:beat4beat@localhost:5432/beat4beat
 docker compose up -d
 ```
 
-The database user, password, and database name all default to `beat4beat`. To change them, set `POSTGRES_USER`, `POSTGRES_PASSWORD`, and `POSTGRES_DB` in `.env`, update `DATABASE_URL` to match, and run `docker compose down -v` before starting again. New values only apply to a fresh database.
+The database user, password, and database name default to `beat4beat`. Database tables are defined in `dataManagement/migrations/0001_init.sql`.
 
 ### 4. Check that it accepts connections
 
@@ -63,17 +66,27 @@ cargo build
 cargo test
 ```
 
+### 6. (Optional) Populate with 1000 Pop Songs
+
+Populate the songs catalog from MusicBrainz:
+
+```
+cargo run -p data_management --example populate_pop
+```
+
 ## Everyday commands
 
-| Task                           | Command                                     |
-| ------------------------------ | ------------------------------------------- |
-| Start the database             | `docker compose up -d`                      |
-| Stop the database (keeps data) | `docker compose down`                       |
-| Stop and delete all data       | `docker compose down -v`                    |
-| Build                          | `cargo build`                               |
-| Run tests                      | `cargo test`                                |
-| Format code                    | `cargo fmt --all`                           |
-| Lint                           | `cargo clippy --all-targets -- -D warnings` |
+| Task                           | Command                                         |
+| ------------------------------ | ----------------------------------------------- |
+| Start the database             | `docker compose up -d`                          |
+| Stop the database (keeps data) | `docker compose down`                           |
+| Stop and delete all data       | `docker compose down -v`                        |
+| Build                          | `cargo build`                                   |
+| Run all tests                  | `cargo test`                                    |
+| Run database tests             | `cargo test -p data_management --test game_db_test` |
+| Populate songs (1000 pop)      | `cargo run -p data_management --example populate_pop` |
+| Format code                    | `cargo fmt --all`                               |
+| Lint                           | `cargo clippy --all-targets -- -D warnings`     |
 
 Run the format and lint commands before you push.
 
