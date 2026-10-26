@@ -27,9 +27,12 @@ async fn not_found() -> ApiError {
 }
 
 pub fn router(state: AppState) -> Router {
-    // leave room for auth and catalog routes
+    // i want auth routes grouped beside the health check
+    let api = Router::new()
+        .route("/health", get(health))
+        .nest("/auth", crate::auth::router(state.clone()));
     Router::new()
-        .nest("/api", Router::new().route("/health", get(health)))
+        .nest("/api", api)
         .fallback(not_found)
         .with_state(state)
 }
@@ -84,7 +87,7 @@ mod tests {
         let response = app()
             .oneshot(
                 Request::builder()
-                    .uri("/api/auth/me")
+                    .uri("/api/missing")
                     .body(Body::empty())
                     .unwrap(),
             )
