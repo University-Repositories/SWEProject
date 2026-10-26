@@ -1,31 +1,103 @@
 [
   {
-    "id": "00000000-0000-0000-0004-000000000001",
+    "id": "03876022-777c-47fc-8575-b9d21ab6bc08",
     "title": "Under Pressure",
-    "artist_name": "David Bowie",
-    "year": 1961,
-    "release_id": "00000000-0000-0000-0005-000000000001",
+    "artist_name": "Queen",
+    "year": 1981,
+    "release_id": "0a28d0d2-2db7-57dd-9905-19f6955175b7",
     "credits": [
       {
-        "id": "00000000-0000-0000-0001-000000000002",
+        "id": "0383dadf-2a4e-4d10-a46a-e9e041da8eb3",
         "kind": "person",
-        "name": "David Bowie",
+        "name": "Queen",
         "role": "artist"
       },
       {
-        "id": "00000000-0000-0000-0002-000000000002",
+        "id": "38f29ea7-b353-34e8-a1bf-4f6cbb7311d0",
+        "kind": "album",
+        "name": "A Night at the Opera",
+        "role": "album"
+      },
+      {
+        "id": "5b40cf6d-f421-4f10-ae40-e2ef64d7c577",
         "kind": "label",
-        "name": "Columbia Records",
+        "name": "EMI",
         "role": "label"
       },
       {
-        "id": "00000000-0000-0000-0003-000000000002",
+        "id": "5441c29d-3602-4898-b1a1-b77fa23b8e50",
+        "kind": "person",
+        "name": "David Bowie",
+        "role": "producer"
+      },
+      {
+        "id": "4d5447d7-c61c-4120-ba1b-d7f4713f0f5b",
+        "kind": "person",
+        "name": "John Lennon",
+        "role": "feature"
+      }
+    ]
+  },
+  {
+    "id": "6b0c201d-5542-4f11-8e0c-c6974e6ef128",
+    "title": "Bohemian Rhapsody",
+    "artist_name": "Queen",
+    "year": 1975,
+    "release_id": "22621f66-f54f-59c3-b2d3-573156925221",
+    "credits": [
+      {
+        "id": "0383dadf-2a4e-4d10-a46a-e9e041da8eb3",
+        "kind": "person",
+        "name": "Queen",
+        "role": "artist"
+      },
+      {
+        "id": "d02330f6-953b-3d60-bf62-31d7e59b9596",
         "kind": "album",
         "name": "Heroes",
         "role": "album"
       },
       {
-        "id": "00000000-0000-0000-0001-000000000008",
+        "id": "25547a46-ea13-43c7-9b2f-488ad8d1b117",
+        "kind": "label",
+        "name": "Columbia Records",
+        "role": "label"
+      },
+      {
+        "id": "ba550d0e-adac-4864-b88b-407cab5e76af",
+        "kind": "person",
+        "name": "Paul McCartney",
+        "role": "producer"
+      }
+    ]
+  },
+  {
+    "id": "006d6493-9c87-4d76-90c7-e6f54316d8a3",
+    "title": "Billie Jean",
+    "artist_name": "Michael Jackson",
+    "year": 1982,
+    "release_id": "bb496c4c-8fd3-5a5b-8170-8fde831afe55",
+    "credits": [
+      {
+        "id": "f27ec8db-af05-4f36-916e-3d57f91ecf5e",
+        "kind": "person",
+        "name": "Michael Jackson",
+        "role": "artist"
+      },
+      {
+        "id": "8f99e28e-5b12-32a2-8869-7c427f717cf7",
+        "kind": "album",
+        "name": "Abbey Road",
+        "role": "album"
+      },
+      {
+        "id": "4899539d-2917-48f8-a006-25f0e9b33a59",
+        "kind": "label",
+        "name": "Epic Records",
+        "role": "label"
+      },
+      {
+        "id": "1ee18fb3-18a6-4c7f-8ba0-bc41c0d032d6",
         "kind": "person",
         "name": "Stevie Wonder",
         "role": "producer"
@@ -33,32 +105,308 @@
     ]
   },
   {
-    "id": "00000000-0000-0000-0004-000000000002",
-    "title": "Say Say Say",
-    "artist_name": "The Beatles",
-    "year": 1962,
-    "release_id": "00000000-0000-0000-0005-000000000002",
+    "id": "65e7d5fb-f739-4d2c-98eb-62bce8c973a9",
+    "title": "Beat It",
+    "artist_name": "Michael Jackson",
+    "year": 1982,
+    "release_id": "9ca4c0f0-2659-5d20-9777-5312eb48cc7d",
     "credits": [
       {
-        "id": "00000000-0000-0000-0001-000000000003",
+        "id": "f27ec8db-af05-4f36-916e-3d57f91ecf5e",
         "kind": "person",
-        "name": "The Beatles",
+        "name": "Michael Jackson",
         "role": "artist"
       },
       {
-        "id": "00000000-0000-0000-0002-000000000003",
+        "id": "f53995f5-f67f-38a4-9642-12798e104193",
+        "kind": "album",
+        "name": "Thriller",
+        "role": "album"
+      },
+      {
+        "id": "847f9f25-ce0a-47d0-a034-7d5eb4c3752e",
+        "kind": "label",
+        "name": "Motown",
+        "role": "label"
+      },
+      {
+        "id": "056e4f3e-d505-4dad-8ec1-d04f521cbb56",
+        "kind": "person",
+        "name": "Daft Punk",
+        "role": "producer"
+      }
+    ]
+  },
+  {
+    "id": "89297397-6a58-47fb-863a-232148419616",
+    "title": "Thriller",
+    "artist_name": "Michael Jackson",
+    "year": 1982,
+    "release_id": "b7f56a03-a48e-53f9-b033-c2c57d614081",
+    "credits": [
+      {
+        "id": "f27ec8db-af05-4f36-916e-3d57f91ecf5e",
+        "kind": "person",
+        "name": "Michael Jackson",
+        "role": "artist"
+      },
+      {
+        "id": "18ba5c4b-b010-4357-bfd2-1c05d7b561c2",
+        "kind": "album",
+        "name": "Random Access Memories",
+        "role": "album"
+      },
+      {
+        "id": "977f6b8b-8fa2-436f-876b-c744f4ff4f21",
+        "kind": "label",
+        "name": "XL Recordings",
+        "role": "label"
+      },
+      {
+        "id": "4df4e0e6-5c5f-46cb-8b5e-99933ef6696b",
+        "kind": "person",
+        "name": "Quincy Jones",
+        "role": "producer"
+      },
+      {
+        "id": "79239441-bfd5-4981-a70c-55c3f15c1287",
+        "kind": "person",
+        "name": "Madonna",
+        "role": "feature"
+      }
+    ]
+  },
+  {
+    "id": "313d39fc-aa55-4632-bd97-2a5b0665a507",
+    "title": "Get Lucky",
+    "artist_name": "Daft Punk",
+    "year": 2013,
+    "release_id": "eba6042a-81c0-567d-b7ab-5ef2373ecf9d",
+    "credits": [
+      {
+        "id": "056e4f3e-d505-4dad-8ec1-d04f521cbb56",
+        "kind": "person",
+        "name": "Daft Punk",
+        "role": "artist"
+      },
+      {
+        "id": "3279c13e-63f5-30fa-92b4-52a16d84d72d",
+        "kind": "album",
+        "name": "Songs in the Key of Life",
+        "role": "album"
+      },
+      {
+        "id": "8f3cf5df-6a31-4a6f-b27b-232f3ff3cf87",
+        "kind": "label",
+        "name": "Nonesuch Records",
+        "role": "label"
+      },
+      {
+        "id": "7b4f53ca-49d7-4663-b851-ea690ab9504a",
+        "kind": "person",
+        "name": "Dan Auerbach",
+        "role": "producer"
+      }
+    ]
+  },
+  {
+    "id": "80d19a2e-4e4b-4b2a-8ce8-7a57a3e7ef94",
+    "title": "Around the World",
+    "artist_name": "Daft Punk",
+    "year": 1997,
+    "release_id": "75072d79-9bc3-59ca-9203-75215a017bfa",
+    "credits": [
+      {
+        "id": "056e4f3e-d505-4dad-8ec1-d04f521cbb56",
+        "kind": "person",
+        "name": "Daft Punk",
+        "role": "artist"
+      },
+      {
+        "id": "0460c38f-a9db-36b6-89ec-9e2ad1cf9230",
+        "kind": "album",
+        "name": "Purple Rain",
+        "role": "album"
+      },
+      {
+        "id": "f357f8fe-74ce-4277-bc60-d5be86958a6a",
+        "kind": "label",
+        "name": "ATO Records",
+        "role": "label"
+      },
+      {
+        "id": "117ce422-2977-49f3-8fbf-bf7da6e6e22c",
+        "kind": "person",
+        "name": "Brittany Howard",
+        "role": "producer"
+      }
+    ]
+  },
+  {
+    "id": "b7e2898c-02cf-4b71-b003-82ef5ffceee7",
+    "title": "One More Time",
+    "artist_name": "Daft Punk",
+    "year": 2000,
+    "release_id": "757fe1b2-b50a-57fd-bd21-70370b7a10f7",
+    "credits": [
+      {
+        "id": "056e4f3e-d505-4dad-8ec1-d04f521cbb56",
+        "kind": "person",
+        "name": "Daft Punk",
+        "role": "artist"
+      },
+      {
+        "id": "b1bb5386-b481-3510-aee8-bc7fa2c46231",
+        "kind": "album",
+        "name": "Like a Virgin",
+        "role": "album"
+      },
+      {
+        "id": "5b40cf6d-f421-4f10-ae40-e2ef64d7c577",
+        "kind": "label",
+        "name": "EMI",
+        "role": "label"
+      },
+      {
+        "id": "b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d",
+        "kind": "person",
+        "name": "The Beatles",
+        "role": "producer"
+      }
+    ]
+  },
+  {
+    "id": "4b533db1-0943-4318-ab93-41a4a4086695",
+    "title": "Rolling in the Deep",
+    "artist_name": "Adele",
+    "year": 2010,
+    "release_id": "9ff67f44-7efb-5860-85a6-22d8ef92b980",
+    "credits": [
+      {
+        "id": "cc0b03fb-dc01-47c0-97c5-553d5247f499",
+        "kind": "person",
+        "name": "Adele",
+        "role": "artist"
+      },
+      {
+        "id": "2dcfaee0-e549-43c3-aebe-87002db6e300",
+        "kind": "album",
+        "name": "El Camino",
+        "role": "album"
+      },
+      {
+        "id": "25547a46-ea13-43c7-9b2f-488ad8d1b117",
+        "kind": "label",
+        "name": "Columbia Records",
+        "role": "label"
+      },
+      {
+        "id": "4d5447d7-c61c-4120-ba1b-d7f4713f0f5b",
+        "kind": "person",
+        "name": "John Lennon",
+        "role": "producer"
+      },
+      {
+        "id": "4df4e0e6-5c5f-46cb-8b5e-99933ef6696b",
+        "kind": "person",
+        "name": "Quincy Jones",
+        "role": "feature"
+      }
+    ]
+  },
+  {
+    "id": "8fbcf1e7-8898-4856-9a25-c6bf2659e55b",
+    "title": "Someone Like You",
+    "artist_name": "Adele",
+    "year": 2011,
+    "release_id": "78de0de6-9d5c-5643-907d-73e829ff4900",
+    "credits": [
+      {
+        "id": "cc0b03fb-dc01-47c0-97c5-553d5247f499",
+        "kind": "person",
+        "name": "Adele",
+        "role": "artist"
+      },
+      {
+        "id": "4f26046e-826d-4952-b9cf-14c622a57ef2",
+        "kind": "album",
+        "name": "21",
+        "role": "album"
+      },
+      {
+        "id": "4899539d-2917-48f8-a006-25f0e9b33a59",
         "kind": "label",
         "name": "Epic Records",
         "role": "label"
       },
       {
-        "id": "00000000-0000-0000-0003-000000000003",
+        "id": "070d193a-845c-479f-980e-bef15710653e",
+        "kind": "person",
+        "name": "Prince",
+        "role": "producer"
+      }
+    ]
+  },
+  {
+    "id": "8fbcf1e7-8898-4856-9a25-c6bf2659e55b",
+    "title": "Hello",
+    "artist_name": "Adele",
+    "year": 2015,
+    "release_id": "6e2039ac-fa68-5fb4-95af-c10f741e37e1",
+    "credits": [
+      {
+        "id": "cc0b03fb-dc01-47c0-97c5-553d5247f499",
+        "kind": "person",
+        "name": "Adele",
+        "role": "artist"
+      },
+      {
+        "id": "b7501b8e-a9ce-40bf-9ce4-e0c82f9d860e",
         "kind": "album",
-        "name": "Abbey Road",
+        "name": "Boys & Girls",
         "role": "album"
       },
       {
-        "id": "00000000-0000-0000-0001-000000000015",
+        "id": "847f9f25-ce0a-47d0-a034-7d5eb4c3752e",
+        "kind": "label",
+        "name": "Motown",
+        "role": "label"
+      },
+      {
+        "id": "936a2e4e-0a0e-4360-9366-07e0c8b3687c",
+        "kind": "person",
+        "name": "Nile Rodgers",
+        "role": "producer"
+      }
+    ]
+  },
+  {
+    "id": "e6d23485-9a64-4e78-9e6b-cf83a99e742c",
+    "title": "Lonely Boy",
+    "artist_name": "The Black Keys",
+    "year": 2011,
+    "release_id": "b1370583-03a0-5421-aaf7-0709e943c2c7",
+    "credits": [
+      {
+        "id": "d15721d8-56b4-453d-b506-c91923793612",
+        "kind": "person",
+        "name": "The Black Keys",
+        "role": "artist"
+      },
+      {
+        "id": "5534c03b-c2e8-4a66-b25c-9d62d6ea153d",
+        "kind": "album",
+        "name": "Sound & Color",
+        "role": "album"
+      },
+      {
+        "id": "977f6b8b-8fa2-436f-876b-c744f4ff4f21",
+        "kind": "label",
+        "name": "XL Recordings",
+        "role": "label"
+      },
+      {
+        "id": "c245952c-ad95-4674-8840-7ec829b01518",
         "kind": "person",
         "name": "George Martin",
         "role": "producer"
@@ -66,563 +414,1556 @@
     ]
   },
   {
-    "id": "00000000-0000-0000-0004-000000000003",
-    "title": "Get Lucky",
-    "artist_name": "Michael Jackson",
-    "year": 1963,
-    "release_id": "00000000-0000-0000-0005-000000000003",
+    "id": "c7a407e3-057d-41a3-83ea-607823522f18",
+    "title": "Tighten Up",
+    "artist_name": "The Black Keys",
+    "year": 2010,
+    "release_id": "c2c3814e-0d83-592b-bac8-ff12edcb60af",
     "credits": [
       {
-        "id": "00000000-0000-0000-0001-000000000004",
+        "id": "d15721d8-56b4-453d-b506-c91923793612",
         "kind": "person",
-        "name": "Michael Jackson",
+        "name": "The Black Keys",
         "role": "artist"
       },
       {
-        "id": "00000000-0000-0000-0002-000000000004",
-        "kind": "label",
-        "name": "Motown",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000004",
+        "id": "38f29ea7-b353-34e8-a1bf-4f6cbb7311d0",
         "kind": "album",
-        "name": "Thriller",
+        "name": "A Night at the Opera",
         "role": "album"
       },
       {
-        "id": "00000000-0000-0000-0001-000000000002",
+        "id": "8f3cf5df-6a31-4a6f-b27b-232f3ff3cf87",
+        "kind": "label",
+        "name": "Nonesuch Records",
+        "role": "label"
+      },
+      {
+        "id": "cc0b03fb-dc01-47c0-97c5-553d5247f499",
         "kind": "person",
-        "name": "David Bowie",
+        "name": "Adele",
         "role": "producer"
       },
       {
-        "id": "00000000-0000-0000-0001-000000000007",
+        "id": "cc0b03fb-dc01-47c0-97c5-553d5247f499",
         "kind": "person",
-        "name": "Elton John",
+        "name": "Adele",
         "role": "feature"
       }
     ]
   },
   {
-    "id": "00000000-0000-0000-0004-000000000004",
-    "title": "Bohemian Rhapsody",
-    "artist_name": "Paul McCartney",
-    "year": 1964,
-    "release_id": "00000000-0000-0000-0005-000000000004",
+    "id": "2ea37b67-bf1b-430c-8e89-13e618821a7d",
+    "title": "Gold on the Ceiling",
+    "artist_name": "The Black Keys",
+    "year": 2011,
+    "release_id": "292567d7-7fb3-5007-84b5-599a11722f7f",
     "credits": [
       {
-        "id": "00000000-0000-0000-0001-000000000005",
+        "id": "d15721d8-56b4-453d-b506-c91923793612",
         "kind": "person",
-        "name": "Paul McCartney",
+        "name": "The Black Keys",
         "role": "artist"
       },
       {
-        "id": "00000000-0000-0000-0002-000000000005",
-        "kind": "label",
-        "name": "Atlantic Records",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000005",
+        "id": "d02330f6-953b-3d60-bf62-31d7e59b9596",
         "kind": "album",
-        "name": "Random Access Memories",
+        "name": "Heroes",
         "role": "album"
       },
       {
-        "id": "00000000-0000-0000-0001-000000000009",
+        "id": "f357f8fe-74ce-4277-bc60-d5be86958a6a",
+        "kind": "label",
+        "name": "ATO Records",
+        "role": "label"
+      },
+      {
+        "id": "0383dadf-2a4e-4d10-a46a-e9e041da8eb3",
         "kind": "person",
-        "name": "Prince",
+        "name": "Queen",
         "role": "producer"
       }
     ]
   },
   {
-    "id": "00000000-0000-0000-0004-000000000005",
-    "title": "Billie Jean",
-    "artist_name": "John Lennon",
-    "year": 1965,
-    "release_id": "00000000-0000-0000-0005-000000000005",
+    "id": "8d227b3b-8ea9-42b4-8e54-521b7ce3a241",
+    "title": "Hold On",
+    "artist_name": "Alabama Shakes",
+    "year": 2012,
+    "release_id": "6a0bd4f0-3f83-53b6-920c-47f7335f866b",
     "credits": [
       {
-        "id": "00000000-0000-0000-0001-000000000006",
+        "id": "b6807869-d355-4422-90f7-ebbe02b11be7",
         "kind": "person",
-        "name": "John Lennon",
+        "name": "Alabama Shakes",
         "role": "artist"
       },
       {
-        "id": "00000000-0000-0000-0002-000000000001",
+        "id": "8f99e28e-5b12-32a2-8869-7c427f717cf7",
+        "kind": "album",
+        "name": "Abbey Road",
+        "role": "album"
+      },
+      {
+        "id": "5b40cf6d-f421-4f10-ae40-e2ef64d7c577",
         "kind": "label",
         "name": "EMI",
         "role": "label"
       },
       {
-        "id": "00000000-0000-0000-0003-000000000006",
-        "kind": "album",
-        "name": "Songs in the Key of Life",
-        "role": "album"
-      },
-      {
-        "id": "00000000-0000-0000-0001-000000000016",
+        "id": "f27ec8db-af05-4f36-916e-3d57f91ecf5e",
         "kind": "person",
-        "name": "Max Martin",
+        "name": "Michael Jackson",
         "role": "producer"
       }
     ]
   },
   {
-    "id": "00000000-0000-0000-0004-000000000006",
-    "title": "Song Track 6",
-    "artist_name": "Elton John",
-    "year": 1966,
-    "release_id": "00000000-0000-0000-0005-000000000006",
+    "id": "5370d061-f09b-4654-8e43-85f269a9b7ff",
+    "title": "Sound & Color",
+    "artist_name": "Alabama Shakes",
+    "year": 2015,
+    "release_id": "5f8c7369-5fea-543d-aecb-c49156e2c4c0",
     "credits": [
       {
-        "id": "00000000-0000-0000-0001-000000000007",
+        "id": "b6807869-d355-4422-90f7-ebbe02b11be7",
         "kind": "person",
-        "name": "Elton John",
+        "name": "Alabama Shakes",
         "role": "artist"
       },
       {
-        "id": "00000000-0000-0000-0002-000000000002",
+        "id": "f53995f5-f67f-38a4-9642-12798e104193",
+        "kind": "album",
+        "name": "Thriller",
+        "role": "album"
+      },
+      {
+        "id": "25547a46-ea13-43c7-9b2f-488ad8d1b117",
         "kind": "label",
         "name": "Columbia Records",
         "role": "label"
       },
       {
-        "id": "00000000-0000-0000-0003-000000000007",
-        "kind": "album",
-        "name": "Purple Rain",
-        "role": "album"
-      },
-      {
-        "id": "00000000-0000-0000-0001-000000000003",
+        "id": "b83bc61f-8451-4a5d-8b8e-7e9ed295e822",
         "kind": "person",
-        "name": "The Beatles",
+        "name": "Elton John",
         "role": "producer"
-      },
-      {
-        "id": "00000000-0000-0000-0001-000000000010",
-        "kind": "person",
-        "name": "Madonna",
-        "role": "feature"
       }
     ]
   },
   {
-    "id": "00000000-0000-0000-0004-000000000007",
-    "title": "Song Track 7",
-    "artist_name": "Stevie Wonder",
-    "year": 1967,
-    "release_id": "00000000-0000-0000-0005-000000000007",
+    "id": "2cebc19d-7f41-477d-895d-75e114ba3883",
+    "title": "Stay High",
+    "artist_name": "Brittany Howard",
+    "year": 2019,
+    "release_id": "2cf68aee-f095-5280-9d6d-8fe37d1633a7",
     "credits": [
       {
-        "id": "00000000-0000-0000-0001-000000000008",
+        "id": "117ce422-2977-49f3-8fbf-bf7da6e6e22c",
         "kind": "person",
-        "name": "Stevie Wonder",
+        "name": "Brittany Howard",
         "role": "artist"
       },
       {
-        "id": "00000000-0000-0000-0002-000000000003",
+        "id": "18ba5c4b-b010-4357-bfd2-1c05d7b561c2",
+        "kind": "album",
+        "name": "Random Access Memories",
+        "role": "album"
+      },
+      {
+        "id": "4899539d-2917-48f8-a006-25f0e9b33a59",
         "kind": "label",
         "name": "Epic Records",
         "role": "label"
       },
       {
-        "id": "00000000-0000-0000-0003-000000000008",
-        "kind": "album",
-        "name": "Like a Virgin",
-        "role": "album"
-      },
-      {
-        "id": "00000000-0000-0000-0001-000000000010",
+        "id": "79239441-bfd5-4981-a70c-55c3f15c1287",
         "kind": "person",
         "name": "Madonna",
         "role": "producer"
-      }
-    ]
-  },
-  {
-    "id": "00000000-0000-0000-0004-000000000008",
-    "title": "Song Track 8",
-    "artist_name": "Prince",
-    "year": 1968,
-    "release_id": "00000000-0000-0000-0005-000000000008",
-    "credits": [
+      },
       {
-        "id": "00000000-0000-0000-0001-000000000009",
+        "id": "5441c29d-3602-4898-b1a1-b77fa23b8e50",
         "kind": "person",
-        "name": "Prince",
-        "role": "artist"
-      },
-      {
-        "id": "00000000-0000-0000-0002-000000000004",
-        "kind": "label",
-        "name": "Motown",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000009",
-        "kind": "album",
-        "name": "1989",
-        "role": "album"
-      },
-      {
-        "id": "00000000-0000-0000-0001-000000000017",
-        "kind": "person",
-        "name": "Taylor Swift",
-        "role": "producer"
-      }
-    ]
-  },
-  {
-    "id": "00000000-0000-0000-0004-000000000009",
-    "title": "Song Track 9",
-    "artist_name": "Madonna",
-    "year": 1969,
-    "release_id": "00000000-0000-0000-0005-000000000009",
-    "credits": [
-      {
-        "id": "00000000-0000-0000-0001-000000000010",
-        "kind": "person",
-        "name": "Madonna",
-        "role": "artist"
-      },
-      {
-        "id": "00000000-0000-0000-0002-000000000005",
-        "kind": "label",
-        "name": "Atlantic Records",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000010",
-        "kind": "album",
-        "name": "25",
-        "role": "album"
-      },
-      {
-        "id": "00000000-0000-0000-0001-000000000004",
-        "kind": "person",
-        "name": "Michael Jackson",
-        "role": "producer"
-      },
-      {
-        "id": "00000000-0000-0000-0001-000000000013",
-        "kind": "person",
-        "name": "Pharrell Williams",
+        "name": "David Bowie",
         "role": "feature"
       }
     ]
   },
   {
-    "id": "00000000-0000-0000-0004-00000000000a",
-    "title": "Song Track 10",
+    "id": "653228c2-3e33-4f93-8566-f8a1e2f759a2",
+    "title": "Heroes",
+    "artist_name": "David Bowie",
+    "year": 1977,
+    "release_id": "6b629dd2-a5dd-5359-959f-caff95c2df77",
+    "credits": [
+      {
+        "id": "5441c29d-3602-4898-b1a1-b77fa23b8e50",
+        "kind": "person",
+        "name": "David Bowie",
+        "role": "artist"
+      },
+      {
+        "id": "3279c13e-63f5-30fa-92b4-52a16d84d72d",
+        "kind": "album",
+        "name": "Songs in the Key of Life",
+        "role": "album"
+      },
+      {
+        "id": "847f9f25-ce0a-47d0-a034-7d5eb4c3752e",
+        "kind": "label",
+        "name": "Motown",
+        "role": "label"
+      },
+      {
+        "id": "144ef525-85e9-40c3-8335-02c32d0861f3",
+        "kind": "person",
+        "name": "Pharrell Williams",
+        "role": "producer"
+      }
+    ]
+  },
+  {
+    "id": "610d4812-a723-44f0-8c28-98e3d81b8577",
+    "title": "Space Oddity",
+    "artist_name": "David Bowie",
+    "year": 1969,
+    "release_id": "13903350-4533-5e6a-9a2b-804ae05b85eb",
+    "credits": [
+      {
+        "id": "5441c29d-3602-4898-b1a1-b77fa23b8e50",
+        "kind": "person",
+        "name": "David Bowie",
+        "role": "artist"
+      },
+      {
+        "id": "0460c38f-a9db-36b6-89ec-9e2ad1cf9230",
+        "kind": "album",
+        "name": "Purple Rain",
+        "role": "album"
+      },
+      {
+        "id": "977f6b8b-8fa2-436f-876b-c744f4ff4f21",
+        "kind": "label",
+        "name": "XL Recordings",
+        "role": "label"
+      },
+      {
+        "id": "d15721d8-56b4-453d-b506-c91923793612",
+        "kind": "person",
+        "name": "The Black Keys",
+        "role": "producer"
+      }
+    ]
+  },
+  {
+    "id": "7cfeb523-a2eb-4581-9b16-9285090a905d",
+    "title": "Let's Dance",
+    "artist_name": "David Bowie",
+    "year": 1983,
+    "release_id": "79201db8-1417-5149-a8f1-bcbe9f703b60",
+    "credits": [
+      {
+        "id": "5441c29d-3602-4898-b1a1-b77fa23b8e50",
+        "kind": "person",
+        "name": "David Bowie",
+        "role": "artist"
+      },
+      {
+        "id": "b1bb5386-b481-3510-aee8-bc7fa2c46231",
+        "kind": "album",
+        "name": "Like a Virgin",
+        "role": "album"
+      },
+      {
+        "id": "8f3cf5df-6a31-4a6f-b27b-232f3ff3cf87",
+        "kind": "label",
+        "name": "Nonesuch Records",
+        "role": "label"
+      },
+      {
+        "id": "b6807869-d355-4422-90f7-ebbe02b11be7",
+        "kind": "person",
+        "name": "Alabama Shakes",
+        "role": "producer"
+      }
+    ]
+  },
+  {
+    "id": "9e27c02b-a4ff-4ea0-8b1d-0cf3c72b22bb",
+    "title": "Come Together",
+    "artist_name": "The Beatles",
+    "year": 1969,
+    "release_id": "61a92607-801f-5b99-b23b-83041d46fb80",
+    "credits": [
+      {
+        "id": "b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d",
+        "kind": "person",
+        "name": "The Beatles",
+        "role": "artist"
+      },
+      {
+        "id": "2dcfaee0-e549-43c3-aebe-87002db6e300",
+        "kind": "album",
+        "name": "El Camino",
+        "role": "album"
+      },
+      {
+        "id": "f357f8fe-74ce-4277-bc60-d5be86958a6a",
+        "kind": "label",
+        "name": "ATO Records",
+        "role": "label"
+      },
+      {
+        "id": "5441c29d-3602-4898-b1a1-b77fa23b8e50",
+        "kind": "person",
+        "name": "David Bowie",
+        "role": "producer"
+      },
+      {
+        "id": "4d5447d7-c61c-4120-ba1b-d7f4713f0f5b",
+        "kind": "person",
+        "name": "John Lennon",
+        "role": "feature"
+      }
+    ]
+  },
+  {
+    "id": "dbd5e975-d24b-440f-b4ec-86f3ea833a69",
+    "title": "Something",
+    "artist_name": "The Beatles",
+    "year": 1969,
+    "release_id": "7b8bc122-773f-5f36-8803-77e1ecc9968c",
+    "credits": [
+      {
+        "id": "b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d",
+        "kind": "person",
+        "name": "The Beatles",
+        "role": "artist"
+      },
+      {
+        "id": "4f26046e-826d-4952-b9cf-14c622a57ef2",
+        "kind": "album",
+        "name": "21",
+        "role": "album"
+      },
+      {
+        "id": "5b40cf6d-f421-4f10-ae40-e2ef64d7c577",
+        "kind": "label",
+        "name": "EMI",
+        "role": "label"
+      },
+      {
+        "id": "ba550d0e-adac-4864-b88b-407cab5e76af",
+        "kind": "person",
+        "name": "Paul McCartney",
+        "role": "producer"
+      }
+    ]
+  },
+  {
+    "id": "9beadfc7-cb5c-42e6-9e8c-8f921ab0730b",
+    "title": "Here Comes the Sun",
+    "artist_name": "The Beatles",
+    "year": 1969,
+    "release_id": "c92a1cb3-2de2-5d04-bab4-732cf84aa7a0",
+    "credits": [
+      {
+        "id": "b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d",
+        "kind": "person",
+        "name": "The Beatles",
+        "role": "artist"
+      },
+      {
+        "id": "b7501b8e-a9ce-40bf-9ce4-e0c82f9d860e",
+        "kind": "album",
+        "name": "Boys & Girls",
+        "role": "album"
+      },
+      {
+        "id": "25547a46-ea13-43c7-9b2f-488ad8d1b117",
+        "kind": "label",
+        "name": "Columbia Records",
+        "role": "label"
+      },
+      {
+        "id": "1ee18fb3-18a6-4c7f-8ba0-bc41c0d032d6",
+        "kind": "person",
+        "name": "Stevie Wonder",
+        "role": "producer"
+      }
+    ]
+  },
+  {
+    "id": "1e74da2b-b6fb-48ee-bd51-d4ba332b73bc",
+    "title": "Superstition",
+    "artist_name": "Stevie Wonder",
+    "year": 1972,
+    "release_id": "ba57bb61-5724-5666-b97c-778465d4ec52",
+    "credits": [
+      {
+        "id": "1ee18fb3-18a6-4c7f-8ba0-bc41c0d032d6",
+        "kind": "person",
+        "name": "Stevie Wonder",
+        "role": "artist"
+      },
+      {
+        "id": "5534c03b-c2e8-4a66-b25c-9d62d6ea153d",
+        "kind": "album",
+        "name": "Sound & Color",
+        "role": "album"
+      },
+      {
+        "id": "4899539d-2917-48f8-a006-25f0e9b33a59",
+        "kind": "label",
+        "name": "Epic Records",
+        "role": "label"
+      },
+      {
+        "id": "056e4f3e-d505-4dad-8ec1-d04f521cbb56",
+        "kind": "person",
+        "name": "Daft Punk",
+        "role": "producer"
+      }
+    ]
+  },
+  {
+    "id": "b191bb95-df72-4d2b-9e47-e21b7a2d4b9b",
+    "title": "Sir Duke",
+    "artist_name": "Stevie Wonder",
+    "year": 1976,
+    "release_id": "258ce2d0-9105-5581-83cd-9b3ebc4a3b35",
+    "credits": [
+      {
+        "id": "1ee18fb3-18a6-4c7f-8ba0-bc41c0d032d6",
+        "kind": "person",
+        "name": "Stevie Wonder",
+        "role": "artist"
+      },
+      {
+        "id": "38f29ea7-b353-34e8-a1bf-4f6cbb7311d0",
+        "kind": "album",
+        "name": "A Night at the Opera",
+        "role": "album"
+      },
+      {
+        "id": "847f9f25-ce0a-47d0-a034-7d5eb4c3752e",
+        "kind": "label",
+        "name": "Motown",
+        "role": "label"
+      },
+      {
+        "id": "4df4e0e6-5c5f-46cb-8b5e-99933ef6696b",
+        "kind": "person",
+        "name": "Quincy Jones",
+        "role": "producer"
+      },
+      {
+        "id": "79239441-bfd5-4981-a70c-55c3f15c1287",
+        "kind": "person",
+        "name": "Madonna",
+        "role": "feature"
+      }
+    ]
+  },
+  {
+    "id": "a8bc0981-671c-4395-9bf8-98e9ea75f3a1",
+    "title": "Isn't She Lovely",
+    "artist_name": "Stevie Wonder",
+    "year": 1976,
+    "release_id": "c498ed3f-cbae-5568-b09f-3b8351b4c346",
+    "credits": [
+      {
+        "id": "1ee18fb3-18a6-4c7f-8ba0-bc41c0d032d6",
+        "kind": "person",
+        "name": "Stevie Wonder",
+        "role": "artist"
+      },
+      {
+        "id": "d02330f6-953b-3d60-bf62-31d7e59b9596",
+        "kind": "album",
+        "name": "Heroes",
+        "role": "album"
+      },
+      {
+        "id": "977f6b8b-8fa2-436f-876b-c744f4ff4f21",
+        "kind": "label",
+        "name": "XL Recordings",
+        "role": "label"
+      },
+      {
+        "id": "7b4f53ca-49d7-4663-b851-ea690ab9504a",
+        "kind": "person",
+        "name": "Dan Auerbach",
+        "role": "producer"
+      }
+    ]
+  },
+  {
+    "id": "3b7cb418-4061-4177-bcce-d3f3f2255745",
+    "title": "Rocket Man",
+    "artist_name": "Elton John",
+    "year": 1972,
+    "release_id": "730eb62d-3af7-5417-b72a-582e471812e3",
+    "credits": [
+      {
+        "id": "b83bc61f-8451-4a5d-8b8e-7e9ed295e822",
+        "kind": "person",
+        "name": "Elton John",
+        "role": "artist"
+      },
+      {
+        "id": "8f99e28e-5b12-32a2-8869-7c427f717cf7",
+        "kind": "album",
+        "name": "Abbey Road",
+        "role": "album"
+      },
+      {
+        "id": "8f3cf5df-6a31-4a6f-b27b-232f3ff3cf87",
+        "kind": "label",
+        "name": "Nonesuch Records",
+        "role": "label"
+      },
+      {
+        "id": "117ce422-2977-49f3-8fbf-bf7da6e6e22c",
+        "kind": "person",
+        "name": "Brittany Howard",
+        "role": "producer"
+      }
+    ]
+  },
+  {
+    "id": "807963d8-5526-4447-b866-9304bb0f82df",
+    "title": "Tiny Dancer",
+    "artist_name": "Elton John",
+    "year": 1971,
+    "release_id": "96d7b3d6-ce72-58f6-9101-650c4d174f8c",
+    "credits": [
+      {
+        "id": "b83bc61f-8451-4a5d-8b8e-7e9ed295e822",
+        "kind": "person",
+        "name": "Elton John",
+        "role": "artist"
+      },
+      {
+        "id": "f53995f5-f67f-38a4-9642-12798e104193",
+        "kind": "album",
+        "name": "Thriller",
+        "role": "album"
+      },
+      {
+        "id": "f357f8fe-74ce-4277-bc60-d5be86958a6a",
+        "kind": "label",
+        "name": "ATO Records",
+        "role": "label"
+      },
+      {
+        "id": "b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d",
+        "kind": "person",
+        "name": "The Beatles",
+        "role": "producer"
+      }
+    ]
+  },
+  {
+    "id": "7f3cc77f-1d88-4c28-86d7-fc062f6d0f62",
+    "title": "Bennie and the Jets",
+    "artist_name": "Elton John",
+    "year": 1973,
+    "release_id": "3185db19-d8c9-5e1b-871b-3f53b26192cf",
+    "credits": [
+      {
+        "id": "b83bc61f-8451-4a5d-8b8e-7e9ed295e822",
+        "kind": "person",
+        "name": "Elton John",
+        "role": "artist"
+      },
+      {
+        "id": "18ba5c4b-b010-4357-bfd2-1c05d7b561c2",
+        "kind": "album",
+        "name": "Random Access Memories",
+        "role": "album"
+      },
+      {
+        "id": "5b40cf6d-f421-4f10-ae40-e2ef64d7c577",
+        "kind": "label",
+        "name": "EMI",
+        "role": "label"
+      },
+      {
+        "id": "4d5447d7-c61c-4120-ba1b-d7f4713f0f5b",
+        "kind": "person",
+        "name": "John Lennon",
+        "role": "producer"
+      },
+      {
+        "id": "4df4e0e6-5c5f-46cb-8b5e-99933ef6696b",
+        "kind": "person",
+        "name": "Quincy Jones",
+        "role": "feature"
+      }
+    ]
+  },
+  {
+    "id": "d3f6685f-8646-4cb4-9669-e58f001b97ca",
+    "title": "When Doves Cry",
+    "artist_name": "Prince",
+    "year": 1984,
+    "release_id": "72881efa-7f6c-5f33-ace5-e72986c7b59f",
+    "credits": [
+      {
+        "id": "070d193a-845c-479f-980e-bef15710653e",
+        "kind": "person",
+        "name": "Prince",
+        "role": "artist"
+      },
+      {
+        "id": "3279c13e-63f5-30fa-92b4-52a16d84d72d",
+        "kind": "album",
+        "name": "Songs in the Key of Life",
+        "role": "album"
+      },
+      {
+        "id": "25547a46-ea13-43c7-9b2f-488ad8d1b117",
+        "kind": "label",
+        "name": "Columbia Records",
+        "role": "label"
+      },
+      {
+        "id": "070d193a-845c-479f-980e-bef15710653e",
+        "kind": "person",
+        "name": "Prince",
+        "role": "producer"
+      }
+    ]
+  },
+  {
+    "id": "28cb0ca8-c7a2-4a0e-bc43-ea9c6a1cf881",
+    "title": "Purple Rain",
+    "artist_name": "Prince",
+    "year": 1984,
+    "release_id": "40d10033-daa6-55ad-83df-f219b617bae9",
+    "credits": [
+      {
+        "id": "070d193a-845c-479f-980e-bef15710653e",
+        "kind": "person",
+        "name": "Prince",
+        "role": "artist"
+      },
+      {
+        "id": "0460c38f-a9db-36b6-89ec-9e2ad1cf9230",
+        "kind": "album",
+        "name": "Purple Rain",
+        "role": "album"
+      },
+      {
+        "id": "4899539d-2917-48f8-a006-25f0e9b33a59",
+        "kind": "label",
+        "name": "Epic Records",
+        "role": "label"
+      },
+      {
+        "id": "936a2e4e-0a0e-4360-9366-07e0c8b3687c",
+        "kind": "person",
+        "name": "Nile Rodgers",
+        "role": "producer"
+      }
+    ]
+  },
+  {
+    "id": "53a71b87-d42f-488d-a417-be08915b22b1",
+    "title": "Kiss",
+    "artist_name": "Prince",
+    "year": 1986,
+    "release_id": "1ce177f3-82f0-5cf6-830f-6bd63d147388",
+    "credits": [
+      {
+        "id": "070d193a-845c-479f-980e-bef15710653e",
+        "kind": "person",
+        "name": "Prince",
+        "role": "artist"
+      },
+      {
+        "id": "b1bb5386-b481-3510-aee8-bc7fa2c46231",
+        "kind": "album",
+        "name": "Like a Virgin",
+        "role": "album"
+      },
+      {
+        "id": "847f9f25-ce0a-47d0-a034-7d5eb4c3752e",
+        "kind": "label",
+        "name": "Motown",
+        "role": "label"
+      },
+      {
+        "id": "c245952c-ad95-4674-8840-7ec829b01518",
+        "kind": "person",
+        "name": "George Martin",
+        "role": "producer"
+      }
+    ]
+  },
+  {
+    "id": "0b6bbfb0-bc42-49aa-971c-f232491bb402",
+    "title": "Like a Virgin",
+    "artist_name": "Madonna",
+    "year": 1984,
+    "release_id": "68c687fc-2560-5bce-88a4-f9ce8ca6c0df",
+    "credits": [
+      {
+        "id": "79239441-bfd5-4981-a70c-55c3f15c1287",
+        "kind": "person",
+        "name": "Madonna",
+        "role": "artist"
+      },
+      {
+        "id": "2dcfaee0-e549-43c3-aebe-87002db6e300",
+        "kind": "album",
+        "name": "El Camino",
+        "role": "album"
+      },
+      {
+        "id": "977f6b8b-8fa2-436f-876b-c744f4ff4f21",
+        "kind": "label",
+        "name": "XL Recordings",
+        "role": "label"
+      },
+      {
+        "id": "cc0b03fb-dc01-47c0-97c5-553d5247f499",
+        "kind": "person",
+        "name": "Adele",
+        "role": "producer"
+      },
+      {
+        "id": "cc0b03fb-dc01-47c0-97c5-553d5247f499",
+        "kind": "person",
+        "name": "Adele",
+        "role": "feature"
+      }
+    ]
+  },
+  {
+    "id": "3ef8f12a-5bf3-4dfd-82d2-8b4e28bbd9f2",
+    "title": "Material Girl",
+    "artist_name": "Madonna",
+    "year": 1984,
+    "release_id": "3bfbd361-8294-55b3-8691-095ef7cb731d",
+    "credits": [
+      {
+        "id": "79239441-bfd5-4981-a70c-55c3f15c1287",
+        "kind": "person",
+        "name": "Madonna",
+        "role": "artist"
+      },
+      {
+        "id": "4f26046e-826d-4952-b9cf-14c622a57ef2",
+        "kind": "album",
+        "name": "21",
+        "role": "album"
+      },
+      {
+        "id": "8f3cf5df-6a31-4a6f-b27b-232f3ff3cf87",
+        "kind": "label",
+        "name": "Nonesuch Records",
+        "role": "label"
+      },
+      {
+        "id": "0383dadf-2a4e-4d10-a46a-e9e041da8eb3",
+        "kind": "person",
+        "name": "Queen",
+        "role": "producer"
+      }
+    ]
+  },
+  {
+    "id": "04ad25f5-f7da-4e44-8d4e-d67b7e6ab6e0",
+    "title": "Holiday",
+    "artist_name": "Madonna",
+    "year": 1983,
+    "release_id": "cb2cc5b4-e509-53cd-9556-fbd0b6b8dd43",
+    "credits": [
+      {
+        "id": "79239441-bfd5-4981-a70c-55c3f15c1287",
+        "kind": "person",
+        "name": "Madonna",
+        "role": "artist"
+      },
+      {
+        "id": "b7501b8e-a9ce-40bf-9ce4-e0c82f9d860e",
+        "kind": "album",
+        "name": "Boys & Girls",
+        "role": "album"
+      },
+      {
+        "id": "f357f8fe-74ce-4277-bc60-d5be86958a6a",
+        "kind": "label",
+        "name": "ATO Records",
+        "role": "label"
+      },
+      {
+        "id": "f27ec8db-af05-4f36-916e-3d57f91ecf5e",
+        "kind": "person",
+        "name": "Michael Jackson",
+        "role": "producer"
+      }
+    ]
+  },
+  {
+    "id": "7a944ca3-ae56-5712-a6e5-c7ee9f8d345b",
+    "title": "The Black Keys Classic Track 1",
+    "artist_name": "The Black Keys",
+    "year": 2005,
+    "release_id": "cea7cd92-6b01-52c2-9353-4d423b3a41d7",
+    "credits": [
+      {
+        "id": "d15721d8-56b4-453d-b506-c91923793612",
+        "kind": "person",
+        "name": "The Black Keys",
+        "role": "artist"
+      },
+      {
+        "id": "5534c03b-c2e8-4a66-b25c-9d62d6ea153d",
+        "kind": "album",
+        "name": "Sound & Color",
+        "role": "album"
+      },
+      {
+        "id": "5b40cf6d-f421-4f10-ae40-e2ef64d7c577",
+        "kind": "label",
+        "name": "EMI",
+        "role": "label"
+      },
+      {
+        "id": "b83bc61f-8451-4a5d-8b8e-7e9ed295e822",
+        "kind": "person",
+        "name": "Elton John",
+        "role": "producer"
+      }
+    ]
+  },
+  {
+    "id": "be15287e-901d-5bfc-a6a6-8665f9918a2d",
+    "title": "Dan Auerbach Classic Track 2",
+    "artist_name": "Dan Auerbach",
+    "year": 2006,
+    "release_id": "c2a72734-2256-5991-bd71-df3b6cfea34f",
+    "credits": [
+      {
+        "id": "7b4f53ca-49d7-4663-b851-ea690ab9504a",
+        "kind": "person",
+        "name": "Dan Auerbach",
+        "role": "artist"
+      },
+      {
+        "id": "38f29ea7-b353-34e8-a1bf-4f6cbb7311d0",
+        "kind": "album",
+        "name": "A Night at the Opera",
+        "role": "album"
+      },
+      {
+        "id": "25547a46-ea13-43c7-9b2f-488ad8d1b117",
+        "kind": "label",
+        "name": "Columbia Records",
+        "role": "label"
+      },
+      {
+        "id": "79239441-bfd5-4981-a70c-55c3f15c1287",
+        "kind": "person",
+        "name": "Madonna",
+        "role": "producer"
+      },
+      {
+        "id": "5441c29d-3602-4898-b1a1-b77fa23b8e50",
+        "kind": "person",
+        "name": "David Bowie",
+        "role": "feature"
+      }
+    ]
+  },
+  {
+    "id": "b100aa66-418b-5250-8405-da1c96621ab6",
+    "title": "Adele Classic Track 3",
+    "artist_name": "Adele",
+    "year": 2007,
+    "release_id": "74a4dbe7-2862-5fe7-910c-2c4763f24f5f",
+    "credits": [
+      {
+        "id": "cc0b03fb-dc01-47c0-97c5-553d5247f499",
+        "kind": "person",
+        "name": "Adele",
+        "role": "artist"
+      },
+      {
+        "id": "d02330f6-953b-3d60-bf62-31d7e59b9596",
+        "kind": "album",
+        "name": "Heroes",
+        "role": "album"
+      },
+      {
+        "id": "4899539d-2917-48f8-a006-25f0e9b33a59",
+        "kind": "label",
+        "name": "Epic Records",
+        "role": "label"
+      },
+      {
+        "id": "144ef525-85e9-40c3-8335-02c32d0861f3",
+        "kind": "person",
+        "name": "Pharrell Williams",
+        "role": "producer"
+      }
+    ]
+  },
+  {
+    "id": "04bb6ff6-a391-5799-ab38-e61e374af583",
+    "title": "Alabama Shakes Classic Track 4",
+    "artist_name": "Alabama Shakes",
+    "year": 2008,
+    "release_id": "76fbbc91-7237-5a57-b0e4-09753f3a3646",
+    "credits": [
+      {
+        "id": "b6807869-d355-4422-90f7-ebbe02b11be7",
+        "kind": "person",
+        "name": "Alabama Shakes",
+        "role": "artist"
+      },
+      {
+        "id": "8f99e28e-5b12-32a2-8869-7c427f717cf7",
+        "kind": "album",
+        "name": "Abbey Road",
+        "role": "album"
+      },
+      {
+        "id": "847f9f25-ce0a-47d0-a034-7d5eb4c3752e",
+        "kind": "label",
+        "name": "Motown",
+        "role": "label"
+      },
+      {
+        "id": "d15721d8-56b4-453d-b506-c91923793612",
+        "kind": "person",
+        "name": "The Black Keys",
+        "role": "producer"
+      }
+    ]
+  },
+  {
+    "id": "271d9e49-fda2-55bb-95f2-87bcf1d46432",
+    "title": "Brittany Howard Classic Track 5",
+    "artist_name": "Brittany Howard",
+    "year": 2009,
+    "release_id": "0569feac-cb56-5ead-abce-f8d329774cee",
+    "credits": [
+      {
+        "id": "117ce422-2977-49f3-8fbf-bf7da6e6e22c",
+        "kind": "person",
+        "name": "Brittany Howard",
+        "role": "artist"
+      },
+      {
+        "id": "f53995f5-f67f-38a4-9642-12798e104193",
+        "kind": "album",
+        "name": "Thriller",
+        "role": "album"
+      },
+      {
+        "id": "977f6b8b-8fa2-436f-876b-c744f4ff4f21",
+        "kind": "label",
+        "name": "XL Recordings",
+        "role": "label"
+      },
+      {
+        "id": "b6807869-d355-4422-90f7-ebbe02b11be7",
+        "kind": "person",
+        "name": "Alabama Shakes",
+        "role": "producer"
+      }
+    ]
+  },
+  {
+    "id": "5866a2ea-40e2-51ff-b4ca-1c7f72dbb058",
+    "title": "Queen Classic Track 6",
+    "artist_name": "Queen",
+    "year": 2010,
+    "release_id": "158afa90-9084-5799-b46a-6eed4556502c",
+    "credits": [
+      {
+        "id": "0383dadf-2a4e-4d10-a46a-e9e041da8eb3",
+        "kind": "person",
+        "name": "Queen",
+        "role": "artist"
+      },
+      {
+        "id": "18ba5c4b-b010-4357-bfd2-1c05d7b561c2",
+        "kind": "album",
+        "name": "Random Access Memories",
+        "role": "album"
+      },
+      {
+        "id": "8f3cf5df-6a31-4a6f-b27b-232f3ff3cf87",
+        "kind": "label",
+        "name": "Nonesuch Records",
+        "role": "label"
+      },
+      {
+        "id": "5441c29d-3602-4898-b1a1-b77fa23b8e50",
+        "kind": "person",
+        "name": "David Bowie",
+        "role": "producer"
+      },
+      {
+        "id": "4d5447d7-c61c-4120-ba1b-d7f4713f0f5b",
+        "kind": "person",
+        "name": "John Lennon",
+        "role": "feature"
+      }
+    ]
+  },
+  {
+    "id": "f5dab856-bc24-52fb-8954-07f2581f15ea",
+    "title": "David Bowie Classic Track 7",
+    "artist_name": "David Bowie",
+    "year": 2011,
+    "release_id": "b40f6944-b5b4-5ad7-bdae-3bb42aed04f5",
+    "credits": [
+      {
+        "id": "5441c29d-3602-4898-b1a1-b77fa23b8e50",
+        "kind": "person",
+        "name": "David Bowie",
+        "role": "artist"
+      },
+      {
+        "id": "3279c13e-63f5-30fa-92b4-52a16d84d72d",
+        "kind": "album",
+        "name": "Songs in the Key of Life",
+        "role": "album"
+      },
+      {
+        "id": "f357f8fe-74ce-4277-bc60-d5be86958a6a",
+        "kind": "label",
+        "name": "ATO Records",
+        "role": "label"
+      },
+      {
+        "id": "ba550d0e-adac-4864-b88b-407cab5e76af",
+        "kind": "person",
+        "name": "Paul McCartney",
+        "role": "producer"
+      }
+    ]
+  },
+  {
+    "id": "17428e40-3e7e-56b9-aced-c54f134bccd9",
+    "title": "The Beatles Classic Track 8",
+    "artist_name": "The Beatles",
+    "year": 2012,
+    "release_id": "7ee17059-fced-5ac0-8d38-01f2c710e78a",
+    "credits": [
+      {
+        "id": "b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d",
+        "kind": "person",
+        "name": "The Beatles",
+        "role": "artist"
+      },
+      {
+        "id": "0460c38f-a9db-36b6-89ec-9e2ad1cf9230",
+        "kind": "album",
+        "name": "Purple Rain",
+        "role": "album"
+      },
+      {
+        "id": "5b40cf6d-f421-4f10-ae40-e2ef64d7c577",
+        "kind": "label",
+        "name": "EMI",
+        "role": "label"
+      },
+      {
+        "id": "1ee18fb3-18a6-4c7f-8ba0-bc41c0d032d6",
+        "kind": "person",
+        "name": "Stevie Wonder",
+        "role": "producer"
+      }
+    ]
+  },
+  {
+    "id": "29b71e6b-3c1a-5f10-b9e8-22d53b41db6d",
+    "title": "Michael Jackson Classic Track 9",
+    "artist_name": "Michael Jackson",
+    "year": 2013,
+    "release_id": "f84df81f-c858-54e3-bc10-930a3bda1ab3",
+    "credits": [
+      {
+        "id": "f27ec8db-af05-4f36-916e-3d57f91ecf5e",
+        "kind": "person",
+        "name": "Michael Jackson",
+        "role": "artist"
+      },
+      {
+        "id": "b1bb5386-b481-3510-aee8-bc7fa2c46231",
+        "kind": "album",
+        "name": "Like a Virgin",
+        "role": "album"
+      },
+      {
+        "id": "25547a46-ea13-43c7-9b2f-488ad8d1b117",
+        "kind": "label",
+        "name": "Columbia Records",
+        "role": "label"
+      },
+      {
+        "id": "056e4f3e-d505-4dad-8ec1-d04f521cbb56",
+        "kind": "person",
+        "name": "Daft Punk",
+        "role": "producer"
+      }
+    ]
+  },
+  {
+    "id": "4edb5437-b7a3-56ec-bafd-a82bb2cdd5c1",
+    "title": "Paul McCartney Classic Track 10",
+    "artist_name": "Paul McCartney",
+    "year": 2014,
+    "release_id": "d99aa3f0-a3f2-55d6-a861-8be6fdc75924",
+    "credits": [
+      {
+        "id": "ba550d0e-adac-4864-b88b-407cab5e76af",
+        "kind": "person",
+        "name": "Paul McCartney",
+        "role": "artist"
+      },
+      {
+        "id": "2dcfaee0-e549-43c3-aebe-87002db6e300",
+        "kind": "album",
+        "name": "El Camino",
+        "role": "album"
+      },
+      {
+        "id": "4899539d-2917-48f8-a006-25f0e9b33a59",
+        "kind": "label",
+        "name": "Epic Records",
+        "role": "label"
+      },
+      {
+        "id": "4df4e0e6-5c5f-46cb-8b5e-99933ef6696b",
+        "kind": "person",
+        "name": "Quincy Jones",
+        "role": "producer"
+      },
+      {
+        "id": "79239441-bfd5-4981-a70c-55c3f15c1287",
+        "kind": "person",
+        "name": "Madonna",
+        "role": "feature"
+      }
+    ]
+  },
+  {
+    "id": "b69ededa-d77d-55ba-8e50-f7edc9491985",
+    "title": "John Lennon Classic Track 11",
+    "artist_name": "John Lennon",
+    "year": 2015,
+    "release_id": "39d1b939-0321-5281-b97b-f0127bd2b303",
+    "credits": [
+      {
+        "id": "4d5447d7-c61c-4120-ba1b-d7f4713f0f5b",
+        "kind": "person",
+        "name": "John Lennon",
+        "role": "artist"
+      },
+      {
+        "id": "4f26046e-826d-4952-b9cf-14c622a57ef2",
+        "kind": "album",
+        "name": "21",
+        "role": "album"
+      },
+      {
+        "id": "847f9f25-ce0a-47d0-a034-7d5eb4c3752e",
+        "kind": "label",
+        "name": "Motown",
+        "role": "label"
+      },
+      {
+        "id": "7b4f53ca-49d7-4663-b851-ea690ab9504a",
+        "kind": "person",
+        "name": "Dan Auerbach",
+        "role": "producer"
+      }
+    ]
+  },
+  {
+    "id": "f69feb43-957d-541f-b5ed-72848a0d700f",
+    "title": "Elton John Classic Track 12",
+    "artist_name": "Elton John",
+    "year": 2016,
+    "release_id": "4d0accbb-7929-5c15-8f76-e5eb87ccc35d",
+    "credits": [
+      {
+        "id": "b83bc61f-8451-4a5d-8b8e-7e9ed295e822",
+        "kind": "person",
+        "name": "Elton John",
+        "role": "artist"
+      },
+      {
+        "id": "b7501b8e-a9ce-40bf-9ce4-e0c82f9d860e",
+        "kind": "album",
+        "name": "Boys & Girls",
+        "role": "album"
+      },
+      {
+        "id": "977f6b8b-8fa2-436f-876b-c744f4ff4f21",
+        "kind": "label",
+        "name": "XL Recordings",
+        "role": "label"
+      },
+      {
+        "id": "117ce422-2977-49f3-8fbf-bf7da6e6e22c",
+        "kind": "person",
+        "name": "Brittany Howard",
+        "role": "producer"
+      }
+    ]
+  },
+  {
+    "id": "3593a11a-8f82-5d46-8b35-903caa33f7ac",
+    "title": "Stevie Wonder Classic Track 13",
+    "artist_name": "Stevie Wonder",
+    "year": 2017,
+    "release_id": "8af86179-1803-5468-92b2-30e434f02c0a",
+    "credits": [
+      {
+        "id": "1ee18fb3-18a6-4c7f-8ba0-bc41c0d032d6",
+        "kind": "person",
+        "name": "Stevie Wonder",
+        "role": "artist"
+      },
+      {
+        "id": "5534c03b-c2e8-4a66-b25c-9d62d6ea153d",
+        "kind": "album",
+        "name": "Sound & Color",
+        "role": "album"
+      },
+      {
+        "id": "8f3cf5df-6a31-4a6f-b27b-232f3ff3cf87",
+        "kind": "label",
+        "name": "Nonesuch Records",
+        "role": "label"
+      },
+      {
+        "id": "b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d",
+        "kind": "person",
+        "name": "The Beatles",
+        "role": "producer"
+      }
+    ]
+  },
+  {
+    "id": "5b81bf55-8c0f-5ecd-84c3-8ab178afea51",
+    "title": "Prince Classic Track 14",
+    "artist_name": "Prince",
+    "year": 2018,
+    "release_id": "96c96eb6-5bff-577d-bbf2-9d2496184e98",
+    "credits": [
+      {
+        "id": "070d193a-845c-479f-980e-bef15710653e",
+        "kind": "person",
+        "name": "Prince",
+        "role": "artist"
+      },
+      {
+        "id": "38f29ea7-b353-34e8-a1bf-4f6cbb7311d0",
+        "kind": "album",
+        "name": "A Night at the Opera",
+        "role": "album"
+      },
+      {
+        "id": "f357f8fe-74ce-4277-bc60-d5be86958a6a",
+        "kind": "label",
+        "name": "ATO Records",
+        "role": "label"
+      },
+      {
+        "id": "4d5447d7-c61c-4120-ba1b-d7f4713f0f5b",
+        "kind": "person",
+        "name": "John Lennon",
+        "role": "producer"
+      },
+      {
+        "id": "4df4e0e6-5c5f-46cb-8b5e-99933ef6696b",
+        "kind": "person",
+        "name": "Quincy Jones",
+        "role": "feature"
+      }
+    ]
+  },
+  {
+    "id": "1b3eba6d-92a0-5b5d-911e-9e7b15fcc96a",
+    "title": "Madonna Classic Track 15",
+    "artist_name": "Madonna",
+    "year": 2019,
+    "release_id": "937d1341-824f-5a03-a7f3-1e73d64e71ff",
+    "credits": [
+      {
+        "id": "79239441-bfd5-4981-a70c-55c3f15c1287",
+        "kind": "person",
+        "name": "Madonna",
+        "role": "artist"
+      },
+      {
+        "id": "d02330f6-953b-3d60-bf62-31d7e59b9596",
+        "kind": "album",
+        "name": "Heroes",
+        "role": "album"
+      },
+      {
+        "id": "5b40cf6d-f421-4f10-ae40-e2ef64d7c577",
+        "kind": "label",
+        "name": "EMI",
+        "role": "label"
+      },
+      {
+        "id": "070d193a-845c-479f-980e-bef15710653e",
+        "kind": "person",
+        "name": "Prince",
+        "role": "producer"
+      }
+    ]
+  },
+  {
+    "id": "e2c0619c-94e7-5150-a7c8-22a41d785056",
+    "title": "Daft Punk Classic Track 16",
     "artist_name": "Daft Punk",
     "year": 1970,
-    "release_id": "00000000-0000-0000-0005-00000000000a",
+    "release_id": "6f859016-5774-5906-b325-b40f23cf3775",
     "credits": [
       {
-        "id": "00000000-0000-0000-0001-000000000011",
+        "id": "056e4f3e-d505-4dad-8ec1-d04f521cbb56",
         "kind": "person",
         "name": "Daft Punk",
         "role": "artist"
       },
       {
-        "id": "00000000-0000-0000-0002-000000000001",
-        "kind": "label",
-        "name": "EMI",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000001",
+        "id": "8f99e28e-5b12-32a2-8869-7c427f717cf7",
         "kind": "album",
-        "name": "A Night at the Opera",
+        "name": "Abbey Road",
         "role": "album"
       },
       {
-        "id": "00000000-0000-0000-0001-000000000011",
+        "id": "25547a46-ea13-43c7-9b2f-488ad8d1b117",
+        "kind": "label",
+        "name": "Columbia Records",
+        "role": "label"
+      },
+      {
+        "id": "936a2e4e-0a0e-4360-9366-07e0c8b3687c",
         "kind": "person",
-        "name": "Daft Punk",
+        "name": "Nile Rodgers",
         "role": "producer"
       }
     ]
   },
   {
-    "id": "00000000-0000-0000-0004-00000000000b",
-    "title": "Song Track 11",
+    "id": "d199d46c-58b6-583a-88e8-73d0c96497e1",
+    "title": "Nile Rodgers Classic Track 17",
     "artist_name": "Nile Rodgers",
     "year": 1971,
-    "release_id": "00000000-0000-0000-0005-00000000000b",
+    "release_id": "1f232805-b730-583e-a9ae-f8af2d3691f7",
     "credits": [
       {
-        "id": "00000000-0000-0000-0001-000000000012",
+        "id": "936a2e4e-0a0e-4360-9366-07e0c8b3687c",
         "kind": "person",
         "name": "Nile Rodgers",
         "role": "artist"
       },
       {
-        "id": "00000000-0000-0000-0002-000000000002",
-        "kind": "label",
-        "name": "Columbia Records",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000002",
+        "id": "f53995f5-f67f-38a4-9642-12798e104193",
         "kind": "album",
-        "name": "Heroes",
+        "name": "Thriller",
         "role": "album"
       },
       {
-        "id": "00000000-0000-0000-0001-000000000018",
+        "id": "4899539d-2917-48f8-a006-25f0e9b33a59",
+        "kind": "label",
+        "name": "Epic Records",
+        "role": "label"
+      },
+      {
+        "id": "c245952c-ad95-4674-8840-7ec829b01518",
         "kind": "person",
-        "name": "Britney Spears",
+        "name": "George Martin",
         "role": "producer"
       }
     ]
   },
   {
-    "id": "00000000-0000-0000-0004-00000000000c",
-    "title": "Song Track 12",
+    "id": "3786bfda-ac53-5b1b-8a43-8ddff5e4e749",
+    "title": "Pharrell Williams Classic Track 18",
     "artist_name": "Pharrell Williams",
     "year": 1972,
-    "release_id": "00000000-0000-0000-0005-00000000000c",
+    "release_id": "92d2d0e3-fc72-5384-a607-9d4418e35ee7",
     "credits": [
       {
-        "id": "00000000-0000-0000-0001-000000000013",
+        "id": "144ef525-85e9-40c3-8335-02c32d0861f3",
         "kind": "person",
         "name": "Pharrell Williams",
         "role": "artist"
       },
       {
-        "id": "00000000-0000-0000-0002-000000000003",
-        "kind": "label",
-        "name": "Epic Records",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000003",
+        "id": "18ba5c4b-b010-4357-bfd2-1c05d7b561c2",
         "kind": "album",
-        "name": "Abbey Road",
+        "name": "Random Access Memories",
         "role": "album"
       },
       {
-        "id": "00000000-0000-0000-0001-000000000005",
+        "id": "847f9f25-ce0a-47d0-a034-7d5eb4c3752e",
+        "kind": "label",
+        "name": "Motown",
+        "role": "label"
+      },
+      {
+        "id": "cc0b03fb-dc01-47c0-97c5-553d5247f499",
         "kind": "person",
-        "name": "Paul McCartney",
+        "name": "Adele",
         "role": "producer"
       },
       {
-        "id": "00000000-0000-0000-0001-000000000016",
+        "id": "cc0b03fb-dc01-47c0-97c5-553d5247f499",
         "kind": "person",
-        "name": "Max Martin",
+        "name": "Adele",
         "role": "feature"
       }
     ]
   },
   {
-    "id": "00000000-0000-0000-0004-00000000000d",
-    "title": "Song Track 13",
+    "id": "78dd91df-8a4e-5e2d-8ab0-cbb41cbe1505",
+    "title": "Quincy Jones Classic Track 19",
     "artist_name": "Quincy Jones",
     "year": 1973,
-    "release_id": "00000000-0000-0000-0005-00000000000d",
+    "release_id": "8e7a0aca-2c0d-58cb-9d39-800c354f3e6c",
     "credits": [
       {
-        "id": "00000000-0000-0000-0001-000000000014",
+        "id": "4df4e0e6-5c5f-46cb-8b5e-99933ef6696b",
         "kind": "person",
         "name": "Quincy Jones",
         "role": "artist"
       },
       {
-        "id": "00000000-0000-0000-0002-000000000004",
-        "kind": "label",
-        "name": "Motown",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000004",
+        "id": "3279c13e-63f5-30fa-92b4-52a16d84d72d",
         "kind": "album",
-        "name": "Thriller",
+        "name": "Songs in the Key of Life",
         "role": "album"
       },
       {
-        "id": "00000000-0000-0000-0001-000000000012",
+        "id": "977f6b8b-8fa2-436f-876b-c744f4ff4f21",
+        "kind": "label",
+        "name": "XL Recordings",
+        "role": "label"
+      },
+      {
+        "id": "0383dadf-2a4e-4d10-a46a-e9e041da8eb3",
         "kind": "person",
-        "name": "Nile Rodgers",
+        "name": "Queen",
         "role": "producer"
       }
     ]
   },
   {
-    "id": "00000000-0000-0000-0004-00000000000e",
-    "title": "Song Track 14",
+    "id": "efac086e-0514-5bb9-baa1-a10bbe02653a",
+    "title": "George Martin Classic Track 20",
     "artist_name": "George Martin",
     "year": 1974,
-    "release_id": "00000000-0000-0000-0005-00000000000e",
+    "release_id": "28e9aa7f-d358-5d80-8347-f99e0e839023",
     "credits": [
       {
-        "id": "00000000-0000-0000-0001-000000000015",
+        "id": "c245952c-ad95-4674-8840-7ec829b01518",
         "kind": "person",
         "name": "George Martin",
         "role": "artist"
       },
       {
-        "id": "00000000-0000-0000-0002-000000000005",
-        "kind": "label",
-        "name": "Atlantic Records",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000005",
-        "kind": "album",
-        "name": "Random Access Memories",
-        "role": "album"
-      },
-      {
-        "id": "00000000-0000-0000-0001-000000000019",
-        "kind": "person",
-        "name": "Adele",
-        "role": "producer"
-      }
-    ]
-  },
-  {
-    "id": "00000000-0000-0000-0004-00000000000f",
-    "title": "Song Track 15",
-    "artist_name": "Max Martin",
-    "year": 1975,
-    "release_id": "00000000-0000-0000-0005-00000000000f",
-    "credits": [
-      {
-        "id": "00000000-0000-0000-0001-000000000016",
-        "kind": "person",
-        "name": "Max Martin",
-        "role": "artist"
-      },
-      {
-        "id": "00000000-0000-0000-0002-000000000001",
-        "kind": "label",
-        "name": "EMI",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000006",
-        "kind": "album",
-        "name": "Songs in the Key of Life",
-        "role": "album"
-      },
-      {
-        "id": "00000000-0000-0000-0001-000000000006",
-        "kind": "person",
-        "name": "John Lennon",
-        "role": "producer"
-      },
-      {
-        "id": "00000000-0000-0000-0001-000000000019",
-        "kind": "person",
-        "name": "Adele",
-        "role": "feature"
-      }
-    ]
-  },
-  {
-    "id": "00000000-0000-0000-0004-000000000010",
-    "title": "Song Track 16",
-    "artist_name": "Taylor Swift",
-    "year": 1976,
-    "release_id": "00000000-0000-0000-0005-000000000010",
-    "credits": [
-      {
-        "id": "00000000-0000-0000-0001-000000000017",
-        "kind": "person",
-        "name": "Taylor Swift",
-        "role": "artist"
-      },
-      {
-        "id": "00000000-0000-0000-0002-000000000002",
-        "kind": "label",
-        "name": "Columbia Records",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000007",
+        "id": "0460c38f-a9db-36b6-89ec-9e2ad1cf9230",
         "kind": "album",
         "name": "Purple Rain",
         "role": "album"
       },
       {
-        "id": "00000000-0000-0000-0001-000000000013",
+        "id": "8f3cf5df-6a31-4a6f-b27b-232f3ff3cf87",
+        "kind": "label",
+        "name": "Nonesuch Records",
+        "role": "label"
+      },
+      {
+        "id": "f27ec8db-af05-4f36-916e-3d57f91ecf5e",
         "kind": "person",
-        "name": "Pharrell Williams",
+        "name": "Michael Jackson",
         "role": "producer"
       }
     ]
   },
   {
-    "id": "00000000-0000-0000-0004-000000000011",
-    "title": "Song Track 17",
-    "artist_name": "Britney Spears",
-    "year": 1977,
-    "release_id": "00000000-0000-0000-0005-000000000011",
+    "id": "6a39df35-6984-5d8e-995c-51b56d0f4fcd",
+    "title": "The Black Keys Classic Track 21",
+    "artist_name": "The Black Keys",
+    "year": 1975,
+    "release_id": "f886719c-748d-5292-a4c6-ced9dc01c410",
     "credits": [
       {
-        "id": "00000000-0000-0000-0001-000000000018",
+        "id": "d15721d8-56b4-453d-b506-c91923793612",
         "kind": "person",
-        "name": "Britney Spears",
+        "name": "The Black Keys",
         "role": "artist"
       },
       {
-        "id": "00000000-0000-0000-0002-000000000003",
-        "kind": "label",
-        "name": "Epic Records",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000008",
+        "id": "b1bb5386-b481-3510-aee8-bc7fa2c46231",
         "kind": "album",
         "name": "Like a Virgin",
         "role": "album"
       },
       {
-        "id": "00000000-0000-0000-0001-000000000020",
+        "id": "f357f8fe-74ce-4277-bc60-d5be86958a6a",
+        "kind": "label",
+        "name": "ATO Records",
+        "role": "label"
+      },
+      {
+        "id": "b83bc61f-8451-4a5d-8b8e-7e9ed295e822",
         "kind": "person",
-        "name": "Bruno Mars",
+        "name": "Elton John",
         "role": "producer"
       }
     ]
   },
   {
-    "id": "00000000-0000-0000-0004-000000000012",
-    "title": "Song Track 18",
-    "artist_name": "Adele",
-    "year": 1978,
-    "release_id": "00000000-0000-0000-0005-000000000012",
+    "id": "c41dbe45-2729-5ddd-88c5-9e4bfe360e20",
+    "title": "Dan Auerbach Classic Track 22",
+    "artist_name": "Dan Auerbach",
+    "year": 1976,
+    "release_id": "df4315c9-fef7-528e-9bcc-620cebf0513f",
     "credits": [
       {
-        "id": "00000000-0000-0000-0001-000000000019",
+        "id": "7b4f53ca-49d7-4663-b851-ea690ab9504a",
         "kind": "person",
-        "name": "Adele",
+        "name": "Dan Auerbach",
         "role": "artist"
       },
       {
-        "id": "00000000-0000-0000-0002-000000000004",
-        "kind": "label",
-        "name": "Motown",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000009",
+        "id": "2dcfaee0-e549-43c3-aebe-87002db6e300",
         "kind": "album",
-        "name": "1989",
+        "name": "El Camino",
         "role": "album"
       },
       {
-        "id": "00000000-0000-0000-0001-000000000007",
+        "id": "5b40cf6d-f421-4f10-ae40-e2ef64d7c577",
+        "kind": "label",
+        "name": "EMI",
+        "role": "label"
+      },
+      {
+        "id": "79239441-bfd5-4981-a70c-55c3f15c1287",
         "kind": "person",
-        "name": "Elton John",
+        "name": "Madonna",
         "role": "producer"
       },
       {
-        "id": "00000000-0000-0000-0001-000000000002",
+        "id": "5441c29d-3602-4898-b1a1-b77fa23b8e50",
         "kind": "person",
         "name": "David Bowie",
         "role": "feature"
@@ -630,977 +1971,1064 @@
     ]
   },
   {
-    "id": "00000000-0000-0000-0004-000000000013",
-    "title": "Song Track 19",
-    "artist_name": "Bruno Mars",
-    "year": 1979,
-    "release_id": "00000000-0000-0000-0005-000000000013",
+    "id": "b5e966b8-9c8b-52e0-9156-32ce329b6c54",
+    "title": "Adele Classic Track 23",
+    "artist_name": "Adele",
+    "year": 1977,
+    "release_id": "07b6e513-7d82-542b-b565-5fd9dacbc380",
     "credits": [
       {
-        "id": "00000000-0000-0000-0001-000000000020",
+        "id": "cc0b03fb-dc01-47c0-97c5-553d5247f499",
         "kind": "person",
-        "name": "Bruno Mars",
+        "name": "Adele",
         "role": "artist"
       },
       {
-        "id": "00000000-0000-0000-0002-000000000005",
-        "kind": "label",
-        "name": "Atlantic Records",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000010",
+        "id": "4f26046e-826d-4952-b9cf-14c622a57ef2",
         "kind": "album",
-        "name": "25",
+        "name": "21",
         "role": "album"
       },
       {
-        "id": "00000000-0000-0000-0001-000000000014",
+        "id": "25547a46-ea13-43c7-9b2f-488ad8d1b117",
+        "kind": "label",
+        "name": "Columbia Records",
+        "role": "label"
+      },
+      {
+        "id": "144ef525-85e9-40c3-8335-02c32d0861f3",
         "kind": "person",
-        "name": "Quincy Jones",
+        "name": "Pharrell Williams",
         "role": "producer"
       }
     ]
   },
   {
-    "id": "00000000-0000-0000-0004-000000000014",
-    "title": "Song Track 20",
+    "id": "ec8429b1-e964-569b-ab9a-db33794fb4b0",
+    "title": "Alabama Shakes Classic Track 24",
+    "artist_name": "Alabama Shakes",
+    "year": 1978,
+    "release_id": "f4ffabc8-f5d6-5f91-8dc2-1e562a17b3c6",
+    "credits": [
+      {
+        "id": "b6807869-d355-4422-90f7-ebbe02b11be7",
+        "kind": "person",
+        "name": "Alabama Shakes",
+        "role": "artist"
+      },
+      {
+        "id": "b7501b8e-a9ce-40bf-9ce4-e0c82f9d860e",
+        "kind": "album",
+        "name": "Boys & Girls",
+        "role": "album"
+      },
+      {
+        "id": "4899539d-2917-48f8-a006-25f0e9b33a59",
+        "kind": "label",
+        "name": "Epic Records",
+        "role": "label"
+      },
+      {
+        "id": "d15721d8-56b4-453d-b506-c91923793612",
+        "kind": "person",
+        "name": "The Black Keys",
+        "role": "producer"
+      }
+    ]
+  },
+  {
+    "id": "b35c7695-520c-56f7-acbd-ff82b6cbecb4",
+    "title": "Brittany Howard Classic Track 25",
+    "artist_name": "Brittany Howard",
+    "year": 1979,
+    "release_id": "b7e39e47-9304-5b50-a027-9593edb26bda",
+    "credits": [
+      {
+        "id": "117ce422-2977-49f3-8fbf-bf7da6e6e22c",
+        "kind": "person",
+        "name": "Brittany Howard",
+        "role": "artist"
+      },
+      {
+        "id": "5534c03b-c2e8-4a66-b25c-9d62d6ea153d",
+        "kind": "album",
+        "name": "Sound & Color",
+        "role": "album"
+      },
+      {
+        "id": "847f9f25-ce0a-47d0-a034-7d5eb4c3752e",
+        "kind": "label",
+        "name": "Motown",
+        "role": "label"
+      },
+      {
+        "id": "b6807869-d355-4422-90f7-ebbe02b11be7",
+        "kind": "person",
+        "name": "Alabama Shakes",
+        "role": "producer"
+      }
+    ]
+  },
+  {
+    "id": "4b07afcc-699e-5e0f-8221-b9d6d704765c",
+    "title": "Queen Classic Track 26",
     "artist_name": "Queen",
     "year": 1980,
-    "release_id": "00000000-0000-0000-0005-000000000014",
+    "release_id": "974afea0-0b14-5ffa-bf4f-5ea2c7e01c0a",
     "credits": [
       {
-        "id": "00000000-0000-0000-0001-000000000001",
+        "id": "0383dadf-2a4e-4d10-a46a-e9e041da8eb3",
         "kind": "person",
         "name": "Queen",
         "role": "artist"
       },
       {
-        "id": "00000000-0000-0000-0002-000000000001",
-        "kind": "label",
-        "name": "EMI",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000001",
+        "id": "38f29ea7-b353-34e8-a1bf-4f6cbb7311d0",
         "kind": "album",
         "name": "A Night at the Opera",
         "role": "album"
       },
       {
-        "id": "00000000-0000-0000-0001-000000000001",
+        "id": "977f6b8b-8fa2-436f-876b-c744f4ff4f21",
+        "kind": "label",
+        "name": "XL Recordings",
+        "role": "label"
+      },
+      {
+        "id": "5441c29d-3602-4898-b1a1-b77fa23b8e50",
         "kind": "person",
-        "name": "Queen",
+        "name": "David Bowie",
         "role": "producer"
+      },
+      {
+        "id": "4d5447d7-c61c-4120-ba1b-d7f4713f0f5b",
+        "kind": "person",
+        "name": "John Lennon",
+        "role": "feature"
       }
     ]
   },
   {
-    "id": "00000000-0000-0000-0004-000000000015",
-    "title": "Song Track 21",
+    "id": "952bf238-2fa4-5348-8325-1a1ee8019cd1",
+    "title": "David Bowie Classic Track 27",
     "artist_name": "David Bowie",
     "year": 1981,
-    "release_id": "00000000-0000-0000-0005-000000000015",
+    "release_id": "08cb3774-2805-57f7-9b2b-bbf5772cb7f9",
     "credits": [
       {
-        "id": "00000000-0000-0000-0001-000000000002",
+        "id": "5441c29d-3602-4898-b1a1-b77fa23b8e50",
         "kind": "person",
         "name": "David Bowie",
         "role": "artist"
       },
       {
-        "id": "00000000-0000-0000-0002-000000000002",
-        "kind": "label",
-        "name": "Columbia Records",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000002",
+        "id": "d02330f6-953b-3d60-bf62-31d7e59b9596",
         "kind": "album",
         "name": "Heroes",
         "role": "album"
       },
       {
-        "id": "00000000-0000-0000-0001-000000000008",
-        "kind": "person",
-        "name": "Stevie Wonder",
-        "role": "producer"
+        "id": "8f3cf5df-6a31-4a6f-b27b-232f3ff3cf87",
+        "kind": "label",
+        "name": "Nonesuch Records",
+        "role": "label"
       },
       {
-        "id": "00000000-0000-0000-0001-000000000005",
+        "id": "ba550d0e-adac-4864-b88b-407cab5e76af",
         "kind": "person",
         "name": "Paul McCartney",
-        "role": "feature"
+        "role": "producer"
       }
     ]
   },
   {
-    "id": "00000000-0000-0000-0004-000000000016",
-    "title": "Song Track 22",
+    "id": "9d4501c9-5405-5b36-914a-128dcae36c2d",
+    "title": "The Beatles Classic Track 28",
     "artist_name": "The Beatles",
     "year": 1982,
-    "release_id": "00000000-0000-0000-0005-000000000016",
+    "release_id": "d61ffda7-1725-51b0-9582-6c56535ef5ad",
     "credits": [
       {
-        "id": "00000000-0000-0000-0001-000000000003",
+        "id": "b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d",
         "kind": "person",
         "name": "The Beatles",
         "role": "artist"
       },
       {
-        "id": "00000000-0000-0000-0002-000000000003",
-        "kind": "label",
-        "name": "Epic Records",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000003",
+        "id": "8f99e28e-5b12-32a2-8869-7c427f717cf7",
         "kind": "album",
         "name": "Abbey Road",
         "role": "album"
       },
       {
-        "id": "00000000-0000-0000-0001-000000000015",
+        "id": "f357f8fe-74ce-4277-bc60-d5be86958a6a",
+        "kind": "label",
+        "name": "ATO Records",
+        "role": "label"
+      },
+      {
+        "id": "1ee18fb3-18a6-4c7f-8ba0-bc41c0d032d6",
         "kind": "person",
-        "name": "George Martin",
+        "name": "Stevie Wonder",
         "role": "producer"
       }
     ]
   },
   {
-    "id": "00000000-0000-0000-0004-000000000017",
-    "title": "Song Track 23",
+    "id": "fb2611ee-a8c4-5c72-a4de-6fdc21f6e959",
+    "title": "Michael Jackson Classic Track 29",
     "artist_name": "Michael Jackson",
     "year": 1983,
-    "release_id": "00000000-0000-0000-0005-000000000017",
+    "release_id": "8465223d-9a45-5669-b73e-147a73058215",
     "credits": [
       {
-        "id": "00000000-0000-0000-0001-000000000004",
+        "id": "f27ec8db-af05-4f36-916e-3d57f91ecf5e",
         "kind": "person",
         "name": "Michael Jackson",
         "role": "artist"
       },
       {
-        "id": "00000000-0000-0000-0002-000000000004",
-        "kind": "label",
-        "name": "Motown",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000004",
+        "id": "f53995f5-f67f-38a4-9642-12798e104193",
         "kind": "album",
         "name": "Thriller",
         "role": "album"
       },
       {
-        "id": "00000000-0000-0000-0001-000000000002",
+        "id": "5b40cf6d-f421-4f10-ae40-e2ef64d7c577",
+        "kind": "label",
+        "name": "EMI",
+        "role": "label"
+      },
+      {
+        "id": "056e4f3e-d505-4dad-8ec1-d04f521cbb56",
         "kind": "person",
-        "name": "David Bowie",
+        "name": "Daft Punk",
         "role": "producer"
       }
     ]
   },
   {
-    "id": "00000000-0000-0000-0004-000000000018",
-    "title": "Song Track 24",
+    "id": "71059ca1-f3b3-5bf1-a1ae-7f129d3ae8bc",
+    "title": "Paul McCartney Classic Track 30",
     "artist_name": "Paul McCartney",
     "year": 1984,
-    "release_id": "00000000-0000-0000-0005-000000000018",
+    "release_id": "f46766b6-c4e6-5aec-b671-51393b8f32b5",
     "credits": [
       {
-        "id": "00000000-0000-0000-0001-000000000005",
+        "id": "ba550d0e-adac-4864-b88b-407cab5e76af",
         "kind": "person",
         "name": "Paul McCartney",
         "role": "artist"
       },
       {
-        "id": "00000000-0000-0000-0002-000000000005",
-        "kind": "label",
-        "name": "Atlantic Records",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000005",
+        "id": "18ba5c4b-b010-4357-bfd2-1c05d7b561c2",
         "kind": "album",
         "name": "Random Access Memories",
         "role": "album"
       },
       {
-        "id": "00000000-0000-0000-0001-000000000009",
+        "id": "25547a46-ea13-43c7-9b2f-488ad8d1b117",
+        "kind": "label",
+        "name": "Columbia Records",
+        "role": "label"
+      },
+      {
+        "id": "4df4e0e6-5c5f-46cb-8b5e-99933ef6696b",
         "kind": "person",
-        "name": "Prince",
+        "name": "Quincy Jones",
         "role": "producer"
       },
       {
-        "id": "00000000-0000-0000-0001-000000000008",
+        "id": "79239441-bfd5-4981-a70c-55c3f15c1287",
         "kind": "person",
-        "name": "Stevie Wonder",
+        "name": "Madonna",
         "role": "feature"
       }
     ]
   },
   {
-    "id": "00000000-0000-0000-0004-000000000019",
-    "title": "Song Track 25",
+    "id": "1850c564-4069-59d2-8bf2-aab8c68fbd40",
+    "title": "John Lennon Classic Track 31",
     "artist_name": "John Lennon",
     "year": 1985,
-    "release_id": "00000000-0000-0000-0005-000000000019",
+    "release_id": "b07eb953-bc6e-5208-9184-94eb77b35d06",
     "credits": [
       {
-        "id": "00000000-0000-0000-0001-000000000006",
+        "id": "4d5447d7-c61c-4120-ba1b-d7f4713f0f5b",
         "kind": "person",
         "name": "John Lennon",
         "role": "artist"
       },
       {
-        "id": "00000000-0000-0000-0002-000000000001",
-        "kind": "label",
-        "name": "EMI",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000006",
+        "id": "3279c13e-63f5-30fa-92b4-52a16d84d72d",
         "kind": "album",
         "name": "Songs in the Key of Life",
         "role": "album"
       },
       {
-        "id": "00000000-0000-0000-0001-000000000016",
+        "id": "4899539d-2917-48f8-a006-25f0e9b33a59",
+        "kind": "label",
+        "name": "Epic Records",
+        "role": "label"
+      },
+      {
+        "id": "7b4f53ca-49d7-4663-b851-ea690ab9504a",
         "kind": "person",
-        "name": "Max Martin",
+        "name": "Dan Auerbach",
         "role": "producer"
       }
     ]
   },
   {
-    "id": "00000000-0000-0000-0004-00000000001a",
-    "title": "Song Track 26",
+    "id": "1f6aa253-50d6-54cd-8dc8-270efa0f0681",
+    "title": "Elton John Classic Track 32",
     "artist_name": "Elton John",
     "year": 1986,
-    "release_id": "00000000-0000-0000-0005-00000000001a",
+    "release_id": "6740b3b4-519b-58b1-a490-2f21052abec4",
     "credits": [
       {
-        "id": "00000000-0000-0000-0001-000000000007",
+        "id": "b83bc61f-8451-4a5d-8b8e-7e9ed295e822",
         "kind": "person",
         "name": "Elton John",
         "role": "artist"
       },
       {
-        "id": "00000000-0000-0000-0002-000000000002",
-        "kind": "label",
-        "name": "Columbia Records",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000007",
+        "id": "0460c38f-a9db-36b6-89ec-9e2ad1cf9230",
         "kind": "album",
         "name": "Purple Rain",
         "role": "album"
       },
       {
-        "id": "00000000-0000-0000-0001-000000000003",
+        "id": "847f9f25-ce0a-47d0-a034-7d5eb4c3752e",
+        "kind": "label",
+        "name": "Motown",
+        "role": "label"
+      },
+      {
+        "id": "117ce422-2977-49f3-8fbf-bf7da6e6e22c",
         "kind": "person",
-        "name": "The Beatles",
+        "name": "Brittany Howard",
         "role": "producer"
       }
     ]
   },
   {
-    "id": "00000000-0000-0000-0004-00000000001b",
-    "title": "Song Track 27",
+    "id": "0d2b5394-8ca8-5a9d-9150-22bfc9cac04f",
+    "title": "Stevie Wonder Classic Track 33",
     "artist_name": "Stevie Wonder",
     "year": 1987,
-    "release_id": "00000000-0000-0000-0005-00000000001b",
+    "release_id": "f3105da9-064d-5054-9bb2-377276f9a812",
     "credits": [
       {
-        "id": "00000000-0000-0000-0001-000000000008",
+        "id": "1ee18fb3-18a6-4c7f-8ba0-bc41c0d032d6",
         "kind": "person",
         "name": "Stevie Wonder",
         "role": "artist"
       },
       {
-        "id": "00000000-0000-0000-0002-000000000003",
-        "kind": "label",
-        "name": "Epic Records",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000008",
+        "id": "b1bb5386-b481-3510-aee8-bc7fa2c46231",
         "kind": "album",
         "name": "Like a Virgin",
         "role": "album"
       },
       {
-        "id": "00000000-0000-0000-0001-000000000010",
-        "kind": "person",
-        "name": "Madonna",
-        "role": "producer"
+        "id": "977f6b8b-8fa2-436f-876b-c744f4ff4f21",
+        "kind": "label",
+        "name": "XL Recordings",
+        "role": "label"
       },
       {
-        "id": "00000000-0000-0000-0001-000000000011",
+        "id": "b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d",
         "kind": "person",
-        "name": "Daft Punk",
-        "role": "feature"
+        "name": "The Beatles",
+        "role": "producer"
       }
     ]
   },
   {
-    "id": "00000000-0000-0000-0004-00000000001c",
-    "title": "Song Track 28",
+    "id": "b1477a54-9300-5d4f-9136-e91b0046ca79",
+    "title": "Prince Classic Track 34",
     "artist_name": "Prince",
     "year": 1988,
-    "release_id": "00000000-0000-0000-0005-00000000001c",
+    "release_id": "e651ebcc-0984-5a57-91d3-31caf4d1cfcc",
     "credits": [
       {
-        "id": "00000000-0000-0000-0001-000000000009",
+        "id": "070d193a-845c-479f-980e-bef15710653e",
         "kind": "person",
         "name": "Prince",
         "role": "artist"
       },
       {
-        "id": "00000000-0000-0000-0002-000000000004",
-        "kind": "label",
-        "name": "Motown",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000009",
+        "id": "2dcfaee0-e549-43c3-aebe-87002db6e300",
         "kind": "album",
-        "name": "1989",
+        "name": "El Camino",
         "role": "album"
       },
       {
-        "id": "00000000-0000-0000-0001-000000000017",
+        "id": "8f3cf5df-6a31-4a6f-b27b-232f3ff3cf87",
+        "kind": "label",
+        "name": "Nonesuch Records",
+        "role": "label"
+      },
+      {
+        "id": "4d5447d7-c61c-4120-ba1b-d7f4713f0f5b",
         "kind": "person",
-        "name": "Taylor Swift",
+        "name": "John Lennon",
         "role": "producer"
+      },
+      {
+        "id": "4df4e0e6-5c5f-46cb-8b5e-99933ef6696b",
+        "kind": "person",
+        "name": "Quincy Jones",
+        "role": "feature"
       }
     ]
   },
   {
-    "id": "00000000-0000-0000-0004-00000000001d",
-    "title": "Song Track 29",
+    "id": "771fa416-0705-54a2-85fe-b2e07f6f2bdc",
+    "title": "Madonna Classic Track 35",
     "artist_name": "Madonna",
     "year": 1989,
-    "release_id": "00000000-0000-0000-0005-00000000001d",
+    "release_id": "770ece07-9dcd-531d-a157-a2eaa228e123",
     "credits": [
       {
-        "id": "00000000-0000-0000-0001-000000000010",
+        "id": "79239441-bfd5-4981-a70c-55c3f15c1287",
         "kind": "person",
         "name": "Madonna",
         "role": "artist"
       },
       {
-        "id": "00000000-0000-0000-0002-000000000005",
-        "kind": "label",
-        "name": "Atlantic Records",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000010",
+        "id": "4f26046e-826d-4952-b9cf-14c622a57ef2",
         "kind": "album",
-        "name": "25",
+        "name": "21",
         "role": "album"
       },
       {
-        "id": "00000000-0000-0000-0001-000000000004",
+        "id": "f357f8fe-74ce-4277-bc60-d5be86958a6a",
+        "kind": "label",
+        "name": "ATO Records",
+        "role": "label"
+      },
+      {
+        "id": "070d193a-845c-479f-980e-bef15710653e",
         "kind": "person",
-        "name": "Michael Jackson",
+        "name": "Prince",
         "role": "producer"
       }
     ]
   },
   {
-    "id": "00000000-0000-0000-0004-00000000001e",
-    "title": "Song Track 30",
+    "id": "d08e08ed-8e23-596a-8f78-d06bb81bfed3",
+    "title": "Daft Punk Classic Track 36",
     "artist_name": "Daft Punk",
     "year": 1990,
-    "release_id": "00000000-0000-0000-0005-00000000001e",
+    "release_id": "56878051-f0a7-5a1c-a7a9-ef2c55ed4b67",
     "credits": [
       {
-        "id": "00000000-0000-0000-0001-000000000011",
+        "id": "056e4f3e-d505-4dad-8ec1-d04f521cbb56",
         "kind": "person",
         "name": "Daft Punk",
         "role": "artist"
       },
       {
-        "id": "00000000-0000-0000-0002-000000000001",
+        "id": "b7501b8e-a9ce-40bf-9ce4-e0c82f9d860e",
+        "kind": "album",
+        "name": "Boys & Girls",
+        "role": "album"
+      },
+      {
+        "id": "5b40cf6d-f421-4f10-ae40-e2ef64d7c577",
         "kind": "label",
         "name": "EMI",
         "role": "label"
       },
       {
-        "id": "00000000-0000-0000-0003-000000000001",
-        "kind": "album",
-        "name": "A Night at the Opera",
-        "role": "album"
-      },
-      {
-        "id": "00000000-0000-0000-0001-000000000011",
+        "id": "936a2e4e-0a0e-4360-9366-07e0c8b3687c",
         "kind": "person",
-        "name": "Daft Punk",
+        "name": "Nile Rodgers",
         "role": "producer"
-      },
-      {
-        "id": "00000000-0000-0000-0001-000000000014",
-        "kind": "person",
-        "name": "Quincy Jones",
-        "role": "feature"
       }
     ]
   },
   {
-    "id": "00000000-0000-0000-0004-00000000001f",
-    "title": "Song Track 31",
+    "id": "eb01fd55-6b0b-54ca-ad3c-c1cb03560f92",
+    "title": "Nile Rodgers Classic Track 37",
     "artist_name": "Nile Rodgers",
     "year": 1991,
-    "release_id": "00000000-0000-0000-0005-00000000001f",
+    "release_id": "13a78f7c-b19a-5a22-8407-b702c217d7c7",
     "credits": [
       {
-        "id": "00000000-0000-0000-0001-000000000012",
+        "id": "936a2e4e-0a0e-4360-9366-07e0c8b3687c",
         "kind": "person",
         "name": "Nile Rodgers",
         "role": "artist"
       },
       {
-        "id": "00000000-0000-0000-0002-000000000002",
+        "id": "5534c03b-c2e8-4a66-b25c-9d62d6ea153d",
+        "kind": "album",
+        "name": "Sound & Color",
+        "role": "album"
+      },
+      {
+        "id": "25547a46-ea13-43c7-9b2f-488ad8d1b117",
         "kind": "label",
         "name": "Columbia Records",
         "role": "label"
       },
       {
-        "id": "00000000-0000-0000-0003-000000000002",
-        "kind": "album",
-        "name": "Heroes",
-        "role": "album"
-      },
-      {
-        "id": "00000000-0000-0000-0001-000000000018",
+        "id": "c245952c-ad95-4674-8840-7ec829b01518",
         "kind": "person",
-        "name": "Britney Spears",
+        "name": "George Martin",
         "role": "producer"
       }
     ]
   },
   {
-    "id": "00000000-0000-0000-0004-000000000020",
-    "title": "Song Track 32",
+    "id": "786fba09-5586-586e-aa69-1cf90d18abed",
+    "title": "Pharrell Williams Classic Track 38",
     "artist_name": "Pharrell Williams",
     "year": 1992,
-    "release_id": "00000000-0000-0000-0005-000000000020",
+    "release_id": "8622588c-9751-5cc5-b404-1cccd6e0cff8",
     "credits": [
       {
-        "id": "00000000-0000-0000-0001-000000000013",
+        "id": "144ef525-85e9-40c3-8335-02c32d0861f3",
         "kind": "person",
         "name": "Pharrell Williams",
         "role": "artist"
       },
       {
-        "id": "00000000-0000-0000-0002-000000000003",
-        "kind": "label",
-        "name": "Epic Records",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000003",
-        "kind": "album",
-        "name": "Abbey Road",
-        "role": "album"
-      },
-      {
-        "id": "00000000-0000-0000-0001-000000000005",
-        "kind": "person",
-        "name": "Paul McCartney",
-        "role": "producer"
-      }
-    ]
-  },
-  {
-    "id": "00000000-0000-0000-0004-000000000021",
-    "title": "Song Track 33",
-    "artist_name": "Quincy Jones",
-    "year": 1993,
-    "release_id": "00000000-0000-0000-0005-000000000021",
-    "credits": [
-      {
-        "id": "00000000-0000-0000-0001-000000000014",
-        "kind": "person",
-        "name": "Quincy Jones",
-        "role": "artist"
-      },
-      {
-        "id": "00000000-0000-0000-0002-000000000004",
-        "kind": "label",
-        "name": "Motown",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000004",
-        "kind": "album",
-        "name": "Thriller",
-        "role": "album"
-      },
-      {
-        "id": "00000000-0000-0000-0001-000000000012",
-        "kind": "person",
-        "name": "Nile Rodgers",
-        "role": "producer"
-      },
-      {
-        "id": "00000000-0000-0000-0001-000000000017",
-        "kind": "person",
-        "name": "Taylor Swift",
-        "role": "feature"
-      }
-    ]
-  },
-  {
-    "id": "00000000-0000-0000-0004-000000000022",
-    "title": "Song Track 34",
-    "artist_name": "George Martin",
-    "year": 1994,
-    "release_id": "00000000-0000-0000-0005-000000000022",
-    "credits": [
-      {
-        "id": "00000000-0000-0000-0001-000000000015",
-        "kind": "person",
-        "name": "George Martin",
-        "role": "artist"
-      },
-      {
-        "id": "00000000-0000-0000-0002-000000000005",
-        "kind": "label",
-        "name": "Atlantic Records",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000005",
-        "kind": "album",
-        "name": "Random Access Memories",
-        "role": "album"
-      },
-      {
-        "id": "00000000-0000-0000-0001-000000000019",
-        "kind": "person",
-        "name": "Adele",
-        "role": "producer"
-      }
-    ]
-  },
-  {
-    "id": "00000000-0000-0000-0004-000000000023",
-    "title": "Song Track 35",
-    "artist_name": "Max Martin",
-    "year": 1995,
-    "release_id": "00000000-0000-0000-0005-000000000023",
-    "credits": [
-      {
-        "id": "00000000-0000-0000-0001-000000000016",
-        "kind": "person",
-        "name": "Max Martin",
-        "role": "artist"
-      },
-      {
-        "id": "00000000-0000-0000-0002-000000000001",
-        "kind": "label",
-        "name": "EMI",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000006",
-        "kind": "album",
-        "name": "Songs in the Key of Life",
-        "role": "album"
-      },
-      {
-        "id": "00000000-0000-0000-0001-000000000006",
-        "kind": "person",
-        "name": "John Lennon",
-        "role": "producer"
-      }
-    ]
-  },
-  {
-    "id": "00000000-0000-0000-0004-000000000024",
-    "title": "Song Track 36",
-    "artist_name": "Taylor Swift",
-    "year": 1996,
-    "release_id": "00000000-0000-0000-0005-000000000024",
-    "credits": [
-      {
-        "id": "00000000-0000-0000-0001-000000000017",
-        "kind": "person",
-        "name": "Taylor Swift",
-        "role": "artist"
-      },
-      {
-        "id": "00000000-0000-0000-0002-000000000002",
-        "kind": "label",
-        "name": "Columbia Records",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000007",
-        "kind": "album",
-        "name": "Purple Rain",
-        "role": "album"
-      },
-      {
-        "id": "00000000-0000-0000-0001-000000000013",
-        "kind": "person",
-        "name": "Pharrell Williams",
-        "role": "producer"
-      },
-      {
-        "id": "00000000-0000-0000-0001-000000000020",
-        "kind": "person",
-        "name": "Bruno Mars",
-        "role": "feature"
-      }
-    ]
-  },
-  {
-    "id": "00000000-0000-0000-0004-000000000025",
-    "title": "Song Track 37",
-    "artist_name": "Britney Spears",
-    "year": 1997,
-    "release_id": "00000000-0000-0000-0005-000000000025",
-    "credits": [
-      {
-        "id": "00000000-0000-0000-0001-000000000018",
-        "kind": "person",
-        "name": "Britney Spears",
-        "role": "artist"
-      },
-      {
-        "id": "00000000-0000-0000-0002-000000000003",
-        "kind": "label",
-        "name": "Epic Records",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000008",
-        "kind": "album",
-        "name": "Like a Virgin",
-        "role": "album"
-      },
-      {
-        "id": "00000000-0000-0000-0001-000000000020",
-        "kind": "person",
-        "name": "Bruno Mars",
-        "role": "producer"
-      }
-    ]
-  },
-  {
-    "id": "00000000-0000-0000-0004-000000000026",
-    "title": "Song Track 38",
-    "artist_name": "Adele",
-    "year": 1998,
-    "release_id": "00000000-0000-0000-0005-000000000026",
-    "credits": [
-      {
-        "id": "00000000-0000-0000-0001-000000000019",
-        "kind": "person",
-        "name": "Adele",
-        "role": "artist"
-      },
-      {
-        "id": "00000000-0000-0000-0002-000000000004",
-        "kind": "label",
-        "name": "Motown",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000009",
-        "kind": "album",
-        "name": "1989",
-        "role": "album"
-      },
-      {
-        "id": "00000000-0000-0000-0001-000000000007",
-        "kind": "person",
-        "name": "Elton John",
-        "role": "producer"
-      }
-    ]
-  },
-  {
-    "id": "00000000-0000-0000-0004-000000000027",
-    "title": "Song Track 39",
-    "artist_name": "Bruno Mars",
-    "year": 1999,
-    "release_id": "00000000-0000-0000-0005-000000000027",
-    "credits": [
-      {
-        "id": "00000000-0000-0000-0001-000000000020",
-        "kind": "person",
-        "name": "Bruno Mars",
-        "role": "artist"
-      },
-      {
-        "id": "00000000-0000-0000-0002-000000000005",
-        "kind": "label",
-        "name": "Atlantic Records",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000010",
-        "kind": "album",
-        "name": "25",
-        "role": "album"
-      },
-      {
-        "id": "00000000-0000-0000-0001-000000000014",
-        "kind": "person",
-        "name": "Quincy Jones",
-        "role": "producer"
-      },
-      {
-        "id": "00000000-0000-0000-0001-000000000003",
-        "kind": "person",
-        "name": "The Beatles",
-        "role": "feature"
-      }
-    ]
-  },
-  {
-    "id": "00000000-0000-0000-0004-000000000028",
-    "title": "Song Track 40",
-    "artist_name": "Queen",
-    "year": 2000,
-    "release_id": "00000000-0000-0000-0005-000000000028",
-    "credits": [
-      {
-        "id": "00000000-0000-0000-0001-000000000001",
-        "kind": "person",
-        "name": "Queen",
-        "role": "artist"
-      },
-      {
-        "id": "00000000-0000-0000-0002-000000000001",
-        "kind": "label",
-        "name": "EMI",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000001",
+        "id": "38f29ea7-b353-34e8-a1bf-4f6cbb7311d0",
         "kind": "album",
         "name": "A Night at the Opera",
         "role": "album"
       },
       {
-        "id": "00000000-0000-0000-0001-000000000001",
+        "id": "4899539d-2917-48f8-a006-25f0e9b33a59",
+        "kind": "label",
+        "name": "Epic Records",
+        "role": "label"
+      },
+      {
+        "id": "cc0b03fb-dc01-47c0-97c5-553d5247f499",
         "kind": "person",
-        "name": "Queen",
+        "name": "Adele",
         "role": "producer"
+      },
+      {
+        "id": "cc0b03fb-dc01-47c0-97c5-553d5247f499",
+        "kind": "person",
+        "name": "Adele",
+        "role": "feature"
       }
     ]
   },
   {
-    "id": "00000000-0000-0000-0004-000000000029",
-    "title": "Song Track 41",
-    "artist_name": "David Bowie",
-    "year": 2001,
-    "release_id": "00000000-0000-0000-0005-000000000029",
+    "id": "f96922db-d993-5328-b984-932a8637e635",
+    "title": "Quincy Jones Classic Track 39",
+    "artist_name": "Quincy Jones",
+    "year": 1993,
+    "release_id": "107b2798-6e64-5e77-9d0d-e19e488bea46",
     "credits": [
       {
-        "id": "00000000-0000-0000-0001-000000000002",
+        "id": "4df4e0e6-5c5f-46cb-8b5e-99933ef6696b",
         "kind": "person",
-        "name": "David Bowie",
+        "name": "Quincy Jones",
         "role": "artist"
       },
       {
-        "id": "00000000-0000-0000-0002-000000000002",
-        "kind": "label",
-        "name": "Columbia Records",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000002",
+        "id": "d02330f6-953b-3d60-bf62-31d7e59b9596",
         "kind": "album",
         "name": "Heroes",
         "role": "album"
       },
       {
-        "id": "00000000-0000-0000-0001-000000000008",
+        "id": "847f9f25-ce0a-47d0-a034-7d5eb4c3752e",
+        "kind": "label",
+        "name": "Motown",
+        "role": "label"
+      },
+      {
+        "id": "0383dadf-2a4e-4d10-a46a-e9e041da8eb3",
         "kind": "person",
-        "name": "Stevie Wonder",
+        "name": "Queen",
         "role": "producer"
       }
     ]
   },
   {
-    "id": "00000000-0000-0000-0004-00000000002a",
-    "title": "Song Track 42",
-    "artist_name": "The Beatles",
-    "year": 2002,
-    "release_id": "00000000-0000-0000-0005-00000000002a",
+    "id": "e34171d6-1fb8-54a7-babf-83088074ee94",
+    "title": "George Martin Classic Track 40",
+    "artist_name": "George Martin",
+    "year": 1994,
+    "release_id": "0a063531-8e96-5685-9dd0-0d66e208c21f",
     "credits": [
       {
-        "id": "00000000-0000-0000-0001-000000000003",
+        "id": "c245952c-ad95-4674-8840-7ec829b01518",
         "kind": "person",
-        "name": "The Beatles",
+        "name": "George Martin",
         "role": "artist"
       },
       {
-        "id": "00000000-0000-0000-0002-000000000003",
-        "kind": "label",
-        "name": "Epic Records",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000003",
+        "id": "8f99e28e-5b12-32a2-8869-7c427f717cf7",
         "kind": "album",
         "name": "Abbey Road",
         "role": "album"
       },
       {
-        "id": "00000000-0000-0000-0001-000000000015",
-        "kind": "person",
-        "name": "George Martin",
-        "role": "producer"
+        "id": "977f6b8b-8fa2-436f-876b-c744f4ff4f21",
+        "kind": "label",
+        "name": "XL Recordings",
+        "role": "label"
       },
       {
-        "id": "00000000-0000-0000-0001-000000000006",
+        "id": "f27ec8db-af05-4f36-916e-3d57f91ecf5e",
         "kind": "person",
-        "name": "John Lennon",
-        "role": "feature"
+        "name": "Michael Jackson",
+        "role": "producer"
       }
     ]
   },
   {
-    "id": "00000000-0000-0000-0004-00000000002b",
-    "title": "Song Track 43",
-    "artist_name": "Michael Jackson",
-    "year": 2003,
-    "release_id": "00000000-0000-0000-0005-00000000002b",
+    "id": "e15479b2-2177-5acb-91fb-44203b4cbf5d",
+    "title": "The Black Keys Classic Track 41",
+    "artist_name": "The Black Keys",
+    "year": 1995,
+    "release_id": "846b59fb-1606-5f85-9bcb-21dc7281dfcd",
     "credits": [
       {
-        "id": "00000000-0000-0000-0001-000000000004",
+        "id": "d15721d8-56b4-453d-b506-c91923793612",
         "kind": "person",
-        "name": "Michael Jackson",
+        "name": "The Black Keys",
         "role": "artist"
       },
       {
-        "id": "00000000-0000-0000-0002-000000000004",
-        "kind": "label",
-        "name": "Motown",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000004",
+        "id": "f53995f5-f67f-38a4-9642-12798e104193",
         "kind": "album",
         "name": "Thriller",
         "role": "album"
       },
       {
-        "id": "00000000-0000-0000-0001-000000000002",
+        "id": "8f3cf5df-6a31-4a6f-b27b-232f3ff3cf87",
+        "kind": "label",
+        "name": "Nonesuch Records",
+        "role": "label"
+      },
+      {
+        "id": "b83bc61f-8451-4a5d-8b8e-7e9ed295e822",
         "kind": "person",
-        "name": "David Bowie",
+        "name": "Elton John",
         "role": "producer"
       }
     ]
   },
   {
-    "id": "00000000-0000-0000-0004-00000000002c",
-    "title": "Song Track 44",
-    "artist_name": "Paul McCartney",
-    "year": 2004,
-    "release_id": "00000000-0000-0000-0005-00000000002c",
+    "id": "bc5b1b6e-8130-5065-8a55-3ca524d85980",
+    "title": "Dan Auerbach Classic Track 42",
+    "artist_name": "Dan Auerbach",
+    "year": 1996,
+    "release_id": "70ec747b-0de3-5635-90c8-e788cf022632",
     "credits": [
       {
-        "id": "00000000-0000-0000-0001-000000000005",
+        "id": "7b4f53ca-49d7-4663-b851-ea690ab9504a",
         "kind": "person",
-        "name": "Paul McCartney",
+        "name": "Dan Auerbach",
         "role": "artist"
       },
       {
-        "id": "00000000-0000-0000-0002-000000000005",
-        "kind": "label",
-        "name": "Atlantic Records",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000005",
+        "id": "18ba5c4b-b010-4357-bfd2-1c05d7b561c2",
         "kind": "album",
         "name": "Random Access Memories",
         "role": "album"
       },
       {
-        "id": "00000000-0000-0000-0001-000000000009",
-        "kind": "person",
-        "name": "Prince",
-        "role": "producer"
-      }
-    ]
-  },
-  {
-    "id": "00000000-0000-0000-0004-00000000002d",
-    "title": "Song Track 45",
-    "artist_name": "John Lennon",
-    "year": 2005,
-    "release_id": "00000000-0000-0000-0005-00000000002d",
-    "credits": [
-      {
-        "id": "00000000-0000-0000-0001-000000000006",
-        "kind": "person",
-        "name": "John Lennon",
-        "role": "artist"
-      },
-      {
-        "id": "00000000-0000-0000-0002-000000000001",
+        "id": "f357f8fe-74ce-4277-bc60-d5be86958a6a",
         "kind": "label",
-        "name": "EMI",
+        "name": "ATO Records",
         "role": "label"
       },
       {
-        "id": "00000000-0000-0000-0003-000000000006",
-        "kind": "album",
-        "name": "Songs in the Key of Life",
-        "role": "album"
-      },
-      {
-        "id": "00000000-0000-0000-0001-000000000016",
+        "id": "79239441-bfd5-4981-a70c-55c3f15c1287",
         "kind": "person",
-        "name": "Max Martin",
+        "name": "Madonna",
         "role": "producer"
       },
       {
-        "id": "00000000-0000-0000-0001-000000000009",
+        "id": "5441c29d-3602-4898-b1a1-b77fa23b8e50",
         "kind": "person",
-        "name": "Prince",
+        "name": "David Bowie",
         "role": "feature"
       }
     ]
   },
   {
-    "id": "00000000-0000-0000-0004-00000000002e",
-    "title": "Song Track 46",
-    "artist_name": "Elton John",
-    "year": 2006,
-    "release_id": "00000000-0000-0000-0005-00000000002e",
+    "id": "ac638d30-3e74-5576-a8f1-9731b5f206af",
+    "title": "Adele Classic Track 43",
+    "artist_name": "Adele",
+    "year": 1997,
+    "release_id": "860251bb-d722-5f1d-8c22-0615c8a7db51",
     "credits": [
       {
-        "id": "00000000-0000-0000-0001-000000000007",
+        "id": "cc0b03fb-dc01-47c0-97c5-553d5247f499",
         "kind": "person",
-        "name": "Elton John",
+        "name": "Adele",
         "role": "artist"
       },
       {
-        "id": "00000000-0000-0000-0002-000000000002",
+        "id": "3279c13e-63f5-30fa-92b4-52a16d84d72d",
+        "kind": "album",
+        "name": "Songs in the Key of Life",
+        "role": "album"
+      },
+      {
+        "id": "5b40cf6d-f421-4f10-ae40-e2ef64d7c577",
         "kind": "label",
-        "name": "Columbia Records",
+        "name": "EMI",
         "role": "label"
       },
       {
-        "id": "00000000-0000-0000-0003-000000000007",
+        "id": "144ef525-85e9-40c3-8335-02c32d0861f3",
+        "kind": "person",
+        "name": "Pharrell Williams",
+        "role": "producer"
+      }
+    ]
+  },
+  {
+    "id": "26b82c1b-a191-5012-b496-bfdad9605f41",
+    "title": "Alabama Shakes Classic Track 44",
+    "artist_name": "Alabama Shakes",
+    "year": 1998,
+    "release_id": "bcc7699e-f8a7-59d6-b3ab-77268a805f83",
+    "credits": [
+      {
+        "id": "b6807869-d355-4422-90f7-ebbe02b11be7",
+        "kind": "person",
+        "name": "Alabama Shakes",
+        "role": "artist"
+      },
+      {
+        "id": "0460c38f-a9db-36b6-89ec-9e2ad1cf9230",
         "kind": "album",
         "name": "Purple Rain",
         "role": "album"
       },
       {
-        "id": "00000000-0000-0000-0001-000000000003",
+        "id": "25547a46-ea13-43c7-9b2f-488ad8d1b117",
+        "kind": "label",
+        "name": "Columbia Records",
+        "role": "label"
+      },
+      {
+        "id": "d15721d8-56b4-453d-b506-c91923793612",
+        "kind": "person",
+        "name": "The Black Keys",
+        "role": "producer"
+      }
+    ]
+  },
+  {
+    "id": "b3b3ba5c-df6f-5f59-9679-260df254d123",
+    "title": "Brittany Howard Classic Track 45",
+    "artist_name": "Brittany Howard",
+    "year": 1999,
+    "release_id": "13862456-6d9c-53c6-a3b0-76401e2cd447",
+    "credits": [
+      {
+        "id": "117ce422-2977-49f3-8fbf-bf7da6e6e22c",
+        "kind": "person",
+        "name": "Brittany Howard",
+        "role": "artist"
+      },
+      {
+        "id": "b1bb5386-b481-3510-aee8-bc7fa2c46231",
+        "kind": "album",
+        "name": "Like a Virgin",
+        "role": "album"
+      },
+      {
+        "id": "4899539d-2917-48f8-a006-25f0e9b33a59",
+        "kind": "label",
+        "name": "Epic Records",
+        "role": "label"
+      },
+      {
+        "id": "b6807869-d355-4422-90f7-ebbe02b11be7",
+        "kind": "person",
+        "name": "Alabama Shakes",
+        "role": "producer"
+      }
+    ]
+  },
+  {
+    "id": "551225bf-81b3-56de-95ea-a7062ddf8a43",
+    "title": "Queen Classic Track 46",
+    "artist_name": "Queen",
+    "year": 2000,
+    "release_id": "04fe30b8-51b8-5e04-8917-2ee5ff3ab34e",
+    "credits": [
+      {
+        "id": "0383dadf-2a4e-4d10-a46a-e9e041da8eb3",
+        "kind": "person",
+        "name": "Queen",
+        "role": "artist"
+      },
+      {
+        "id": "2dcfaee0-e549-43c3-aebe-87002db6e300",
+        "kind": "album",
+        "name": "El Camino",
+        "role": "album"
+      },
+      {
+        "id": "847f9f25-ce0a-47d0-a034-7d5eb4c3752e",
+        "kind": "label",
+        "name": "Motown",
+        "role": "label"
+      },
+      {
+        "id": "5441c29d-3602-4898-b1a1-b77fa23b8e50",
+        "kind": "person",
+        "name": "David Bowie",
+        "role": "producer"
+      },
+      {
+        "id": "4d5447d7-c61c-4120-ba1b-d7f4713f0f5b",
+        "kind": "person",
+        "name": "John Lennon",
+        "role": "feature"
+      }
+    ]
+  },
+  {
+    "id": "2fe80190-9217-5498-b9e7-0bbe194babe9",
+    "title": "David Bowie Classic Track 47",
+    "artist_name": "David Bowie",
+    "year": 2001,
+    "release_id": "64deac5a-f379-5d16-be49-d52bceada86a",
+    "credits": [
+      {
+        "id": "5441c29d-3602-4898-b1a1-b77fa23b8e50",
+        "kind": "person",
+        "name": "David Bowie",
+        "role": "artist"
+      },
+      {
+        "id": "4f26046e-826d-4952-b9cf-14c622a57ef2",
+        "kind": "album",
+        "name": "21",
+        "role": "album"
+      },
+      {
+        "id": "977f6b8b-8fa2-436f-876b-c744f4ff4f21",
+        "kind": "label",
+        "name": "XL Recordings",
+        "role": "label"
+      },
+      {
+        "id": "ba550d0e-adac-4864-b88b-407cab5e76af",
+        "kind": "person",
+        "name": "Paul McCartney",
+        "role": "producer"
+      }
+    ]
+  },
+  {
+    "id": "0334852f-c991-50ae-bae3-066018ceaa46",
+    "title": "The Beatles Classic Track 48",
+    "artist_name": "The Beatles",
+    "year": 2002,
+    "release_id": "4a67c437-87b5-5739-901a-ffe280dfca65",
+    "credits": [
+      {
+        "id": "b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d",
+        "kind": "person",
+        "name": "The Beatles",
+        "role": "artist"
+      },
+      {
+        "id": "b7501b8e-a9ce-40bf-9ce4-e0c82f9d860e",
+        "kind": "album",
+        "name": "Boys & Girls",
+        "role": "album"
+      },
+      {
+        "id": "8f3cf5df-6a31-4a6f-b27b-232f3ff3cf87",
+        "kind": "label",
+        "name": "Nonesuch Records",
+        "role": "label"
+      },
+      {
+        "id": "1ee18fb3-18a6-4c7f-8ba0-bc41c0d032d6",
+        "kind": "person",
+        "name": "Stevie Wonder",
+        "role": "producer"
+      }
+    ]
+  },
+  {
+    "id": "4dd18abd-3d9a-5b4c-a35b-81b2eba0b1f4",
+    "title": "Michael Jackson Classic Track 49",
+    "artist_name": "Michael Jackson",
+    "year": 2003,
+    "release_id": "950e669e-4034-5af1-bc9a-d01195caaa10",
+    "credits": [
+      {
+        "id": "f27ec8db-af05-4f36-916e-3d57f91ecf5e",
+        "kind": "person",
+        "name": "Michael Jackson",
+        "role": "artist"
+      },
+      {
+        "id": "5534c03b-c2e8-4a66-b25c-9d62d6ea153d",
+        "kind": "album",
+        "name": "Sound & Color",
+        "role": "album"
+      },
+      {
+        "id": "f357f8fe-74ce-4277-bc60-d5be86958a6a",
+        "kind": "label",
+        "name": "ATO Records",
+        "role": "label"
+      },
+      {
+        "id": "056e4f3e-d505-4dad-8ec1-d04f521cbb56",
+        "kind": "person",
+        "name": "Daft Punk",
+        "role": "producer"
+      }
+    ]
+  },
+  {
+    "id": "1ee884b8-75a1-5491-9d01-5a00f4e61a98",
+    "title": "Paul McCartney Classic Track 50",
+    "artist_name": "Paul McCartney",
+    "year": 2004,
+    "release_id": "4d986e0e-124a-5e27-856f-fa8ab5b2ae6e",
+    "credits": [
+      {
+        "id": "ba550d0e-adac-4864-b88b-407cab5e76af",
+        "kind": "person",
+        "name": "Paul McCartney",
+        "role": "artist"
+      },
+      {
+        "id": "38f29ea7-b353-34e8-a1bf-4f6cbb7311d0",
+        "kind": "album",
+        "name": "A Night at the Opera",
+        "role": "album"
+      },
+      {
+        "id": "5b40cf6d-f421-4f10-ae40-e2ef64d7c577",
+        "kind": "label",
+        "name": "EMI",
+        "role": "label"
+      },
+      {
+        "id": "4df4e0e6-5c5f-46cb-8b5e-99933ef6696b",
+        "kind": "person",
+        "name": "Quincy Jones",
+        "role": "producer"
+      },
+      {
+        "id": "79239441-bfd5-4981-a70c-55c3f15c1287",
+        "kind": "person",
+        "name": "Madonna",
+        "role": "feature"
+      }
+    ]
+  },
+  {
+    "id": "fd272657-bddd-52ab-9f14-560342491603",
+    "title": "John Lennon Classic Track 51",
+    "artist_name": "John Lennon",
+    "year": 2005,
+    "release_id": "fb85a0e8-4b32-588e-9d54-6260be724c5a",
+    "credits": [
+      {
+        "id": "4d5447d7-c61c-4120-ba1b-d7f4713f0f5b",
+        "kind": "person",
+        "name": "John Lennon",
+        "role": "artist"
+      },
+      {
+        "id": "d02330f6-953b-3d60-bf62-31d7e59b9596",
+        "kind": "album",
+        "name": "Heroes",
+        "role": "album"
+      },
+      {
+        "id": "25547a46-ea13-43c7-9b2f-488ad8d1b117",
+        "kind": "label",
+        "name": "Columbia Records",
+        "role": "label"
+      },
+      {
+        "id": "7b4f53ca-49d7-4663-b851-ea690ab9504a",
+        "kind": "person",
+        "name": "Dan Auerbach",
+        "role": "producer"
+      }
+    ]
+  },
+  {
+    "id": "723997af-0ecf-5396-81b9-b643984ff062",
+    "title": "Elton John Classic Track 52",
+    "artist_name": "Elton John",
+    "year": 2006,
+    "release_id": "65d1260d-0c8c-5931-9b0d-caffac448399",
+    "credits": [
+      {
+        "id": "b83bc61f-8451-4a5d-8b8e-7e9ed295e822",
+        "kind": "person",
+        "name": "Elton John",
+        "role": "artist"
+      },
+      {
+        "id": "8f99e28e-5b12-32a2-8869-7c427f717cf7",
+        "kind": "album",
+        "name": "Abbey Road",
+        "role": "album"
+      },
+      {
+        "id": "4899539d-2917-48f8-a006-25f0e9b33a59",
+        "kind": "label",
+        "name": "Epic Records",
+        "role": "label"
+      },
+      {
+        "id": "117ce422-2977-49f3-8fbf-bf7da6e6e22c",
+        "kind": "person",
+        "name": "Brittany Howard",
+        "role": "producer"
+      }
+    ]
+  },
+  {
+    "id": "5cd55aa9-9ee8-5d45-9ea3-3e07726bd78c",
+    "title": "Stevie Wonder Classic Track 53",
+    "artist_name": "Stevie Wonder",
+    "year": 2007,
+    "release_id": "5efd5003-28fb-5204-80f7-c0b49052ddce",
+    "credits": [
+      {
+        "id": "1ee18fb3-18a6-4c7f-8ba0-bc41c0d032d6",
+        "kind": "person",
+        "name": "Stevie Wonder",
+        "role": "artist"
+      },
+      {
+        "id": "f53995f5-f67f-38a4-9642-12798e104193",
+        "kind": "album",
+        "name": "Thriller",
+        "role": "album"
+      },
+      {
+        "id": "847f9f25-ce0a-47d0-a034-7d5eb4c3752e",
+        "kind": "label",
+        "name": "Motown",
+        "role": "label"
+      },
+      {
+        "id": "b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d",
         "kind": "person",
         "name": "The Beatles",
         "role": "producer"
@@ -1608,2384 +3036,1106 @@
     ]
   },
   {
-    "id": "00000000-0000-0000-0004-00000000002f",
-    "title": "Song Track 47",
-    "artist_name": "Stevie Wonder",
-    "year": 2007,
-    "release_id": "00000000-0000-0000-0005-00000000002f",
-    "credits": [
-      {
-        "id": "00000000-0000-0000-0001-000000000008",
-        "kind": "person",
-        "name": "Stevie Wonder",
-        "role": "artist"
-      },
-      {
-        "id": "00000000-0000-0000-0002-000000000003",
-        "kind": "label",
-        "name": "Epic Records",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000008",
-        "kind": "album",
-        "name": "Like a Virgin",
-        "role": "album"
-      },
-      {
-        "id": "00000000-0000-0000-0001-000000000010",
-        "kind": "person",
-        "name": "Madonna",
-        "role": "producer"
-      }
-    ]
-  },
-  {
-    "id": "00000000-0000-0000-0004-000000000030",
-    "title": "Song Track 48",
+    "id": "047e6892-723d-507d-bc9f-33e199818245",
+    "title": "Prince Classic Track 54",
     "artist_name": "Prince",
     "year": 2008,
-    "release_id": "00000000-0000-0000-0005-000000000030",
+    "release_id": "f3684a6a-0251-57c4-8aff-42e8298842e6",
     "credits": [
       {
-        "id": "00000000-0000-0000-0001-000000000009",
+        "id": "070d193a-845c-479f-980e-bef15710653e",
         "kind": "person",
         "name": "Prince",
         "role": "artist"
       },
       {
-        "id": "00000000-0000-0000-0002-000000000004",
-        "kind": "label",
-        "name": "Motown",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000009",
+        "id": "18ba5c4b-b010-4357-bfd2-1c05d7b561c2",
         "kind": "album",
-        "name": "1989",
+        "name": "Random Access Memories",
         "role": "album"
       },
       {
-        "id": "00000000-0000-0000-0001-000000000017",
+        "id": "977f6b8b-8fa2-436f-876b-c744f4ff4f21",
+        "kind": "label",
+        "name": "XL Recordings",
+        "role": "label"
+      },
+      {
+        "id": "4d5447d7-c61c-4120-ba1b-d7f4713f0f5b",
         "kind": "person",
-        "name": "Taylor Swift",
+        "name": "John Lennon",
         "role": "producer"
       },
       {
-        "id": "00000000-0000-0000-0001-000000000012",
+        "id": "4df4e0e6-5c5f-46cb-8b5e-99933ef6696b",
         "kind": "person",
-        "name": "Nile Rodgers",
+        "name": "Quincy Jones",
         "role": "feature"
       }
     ]
   },
   {
-    "id": "00000000-0000-0000-0004-000000000031",
-    "title": "Song Track 49",
+    "id": "706a053f-1617-54f6-8c64-1ed7caf7b40f",
+    "title": "Madonna Classic Track 55",
     "artist_name": "Madonna",
     "year": 2009,
-    "release_id": "00000000-0000-0000-0005-000000000031",
+    "release_id": "716a3921-8439-5e04-a741-22fd67664d03",
     "credits": [
       {
-        "id": "00000000-0000-0000-0001-000000000010",
+        "id": "79239441-bfd5-4981-a70c-55c3f15c1287",
         "kind": "person",
         "name": "Madonna",
         "role": "artist"
       },
       {
-        "id": "00000000-0000-0000-0002-000000000005",
-        "kind": "label",
-        "name": "Atlantic Records",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000010",
+        "id": "3279c13e-63f5-30fa-92b4-52a16d84d72d",
         "kind": "album",
-        "name": "25",
+        "name": "Songs in the Key of Life",
         "role": "album"
       },
       {
-        "id": "00000000-0000-0000-0001-000000000004",
+        "id": "8f3cf5df-6a31-4a6f-b27b-232f3ff3cf87",
+        "kind": "label",
+        "name": "Nonesuch Records",
+        "role": "label"
+      },
+      {
+        "id": "070d193a-845c-479f-980e-bef15710653e",
         "kind": "person",
-        "name": "Michael Jackson",
+        "name": "Prince",
         "role": "producer"
       }
     ]
   },
   {
-    "id": "00000000-0000-0000-0004-000000000032",
-    "title": "Song Track 50",
+    "id": "cb059ffb-23c8-5173-935f-ef69251f2127",
+    "title": "Daft Punk Classic Track 56",
     "artist_name": "Daft Punk",
     "year": 2010,
-    "release_id": "00000000-0000-0000-0005-000000000032",
+    "release_id": "35f847a6-df44-5ef1-b3db-4e06641c2bb4",
     "credits": [
       {
-        "id": "00000000-0000-0000-0001-000000000011",
+        "id": "056e4f3e-d505-4dad-8ec1-d04f521cbb56",
         "kind": "person",
         "name": "Daft Punk",
         "role": "artist"
       },
       {
-        "id": "00000000-0000-0000-0002-000000000001",
-        "kind": "label",
-        "name": "EMI",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000001",
+        "id": "0460c38f-a9db-36b6-89ec-9e2ad1cf9230",
         "kind": "album",
-        "name": "A Night at the Opera",
+        "name": "Purple Rain",
         "role": "album"
       },
       {
-        "id": "00000000-0000-0000-0001-000000000011",
+        "id": "f357f8fe-74ce-4277-bc60-d5be86958a6a",
+        "kind": "label",
+        "name": "ATO Records",
+        "role": "label"
+      },
+      {
+        "id": "936a2e4e-0a0e-4360-9366-07e0c8b3687c",
         "kind": "person",
-        "name": "Daft Punk",
+        "name": "Nile Rodgers",
         "role": "producer"
       }
     ]
   },
   {
-    "id": "00000000-0000-0000-0004-000000000033",
-    "title": "Song Track 51",
+    "id": "b2263447-f78b-56bb-a9b6-d0d13a141484",
+    "title": "Nile Rodgers Classic Track 57",
     "artist_name": "Nile Rodgers",
     "year": 2011,
-    "release_id": "00000000-0000-0000-0005-000000000033",
+    "release_id": "7d4b8a99-cb90-5aa7-bf2a-6491143da504",
     "credits": [
       {
-        "id": "00000000-0000-0000-0001-000000000012",
+        "id": "936a2e4e-0a0e-4360-9366-07e0c8b3687c",
         "kind": "person",
         "name": "Nile Rodgers",
         "role": "artist"
       },
       {
-        "id": "00000000-0000-0000-0002-000000000002",
-        "kind": "label",
-        "name": "Columbia Records",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000002",
+        "id": "b1bb5386-b481-3510-aee8-bc7fa2c46231",
         "kind": "album",
-        "name": "Heroes",
+        "name": "Like a Virgin",
         "role": "album"
       },
       {
-        "id": "00000000-0000-0000-0001-000000000018",
-        "kind": "person",
-        "name": "Britney Spears",
-        "role": "producer"
+        "id": "5b40cf6d-f421-4f10-ae40-e2ef64d7c577",
+        "kind": "label",
+        "name": "EMI",
+        "role": "label"
       },
       {
-        "id": "00000000-0000-0000-0001-000000000015",
+        "id": "c245952c-ad95-4674-8840-7ec829b01518",
         "kind": "person",
         "name": "George Martin",
-        "role": "feature"
+        "role": "producer"
       }
     ]
   },
   {
-    "id": "00000000-0000-0000-0004-000000000034",
-    "title": "Song Track 52",
+    "id": "fb6d023c-32d6-5800-b0e5-db8c22a3cc0d",
+    "title": "Pharrell Williams Classic Track 58",
     "artist_name": "Pharrell Williams",
     "year": 2012,
-    "release_id": "00000000-0000-0000-0005-000000000034",
+    "release_id": "e1acaf4d-24e0-5459-806a-e776c99ec184",
     "credits": [
       {
-        "id": "00000000-0000-0000-0001-000000000013",
+        "id": "144ef525-85e9-40c3-8335-02c32d0861f3",
         "kind": "person",
         "name": "Pharrell Williams",
         "role": "artist"
       },
       {
-        "id": "00000000-0000-0000-0002-000000000003",
-        "kind": "label",
-        "name": "Epic Records",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000003",
+        "id": "2dcfaee0-e549-43c3-aebe-87002db6e300",
         "kind": "album",
-        "name": "Abbey Road",
+        "name": "El Camino",
         "role": "album"
       },
       {
-        "id": "00000000-0000-0000-0001-000000000005",
+        "id": "25547a46-ea13-43c7-9b2f-488ad8d1b117",
+        "kind": "label",
+        "name": "Columbia Records",
+        "role": "label"
+      },
+      {
+        "id": "cc0b03fb-dc01-47c0-97c5-553d5247f499",
         "kind": "person",
-        "name": "Paul McCartney",
+        "name": "Adele",
         "role": "producer"
+      },
+      {
+        "id": "cc0b03fb-dc01-47c0-97c5-553d5247f499",
+        "kind": "person",
+        "name": "Adele",
+        "role": "feature"
       }
     ]
   },
   {
-    "id": "00000000-0000-0000-0004-000000000035",
-    "title": "Song Track 53",
+    "id": "42d2c948-05f6-54b1-a0dc-ed7c81891ae0",
+    "title": "Quincy Jones Classic Track 59",
     "artist_name": "Quincy Jones",
     "year": 2013,
-    "release_id": "00000000-0000-0000-0005-000000000035",
+    "release_id": "6d9447aa-67bd-5e89-b22a-f5096b190793",
     "credits": [
       {
-        "id": "00000000-0000-0000-0001-000000000014",
+        "id": "4df4e0e6-5c5f-46cb-8b5e-99933ef6696b",
         "kind": "person",
         "name": "Quincy Jones",
         "role": "artist"
       },
       {
-        "id": "00000000-0000-0000-0002-000000000004",
-        "kind": "label",
-        "name": "Motown",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000004",
+        "id": "4f26046e-826d-4952-b9cf-14c622a57ef2",
         "kind": "album",
-        "name": "Thriller",
+        "name": "21",
         "role": "album"
       },
       {
-        "id": "00000000-0000-0000-0001-000000000012",
+        "id": "4899539d-2917-48f8-a006-25f0e9b33a59",
+        "kind": "label",
+        "name": "Epic Records",
+        "role": "label"
+      },
+      {
+        "id": "0383dadf-2a4e-4d10-a46a-e9e041da8eb3",
         "kind": "person",
-        "name": "Nile Rodgers",
+        "name": "Queen",
         "role": "producer"
       }
     ]
   },
   {
-    "id": "00000000-0000-0000-0004-000000000036",
-    "title": "Song Track 54",
+    "id": "8540cda4-70e4-502e-be05-02fa8ec6efbc",
+    "title": "George Martin Classic Track 60",
     "artist_name": "George Martin",
     "year": 2014,
-    "release_id": "00000000-0000-0000-0005-000000000036",
+    "release_id": "a8448ecf-ea8b-5e26-bd6c-1454a7c83b60",
     "credits": [
       {
-        "id": "00000000-0000-0000-0001-000000000015",
+        "id": "c245952c-ad95-4674-8840-7ec829b01518",
         "kind": "person",
         "name": "George Martin",
         "role": "artist"
       },
       {
-        "id": "00000000-0000-0000-0002-000000000005",
-        "kind": "label",
-        "name": "Atlantic Records",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000005",
+        "id": "b7501b8e-a9ce-40bf-9ce4-e0c82f9d860e",
         "kind": "album",
-        "name": "Random Access Memories",
+        "name": "Boys & Girls",
         "role": "album"
       },
       {
-        "id": "00000000-0000-0000-0001-000000000019",
-        "kind": "person",
-        "name": "Adele",
-        "role": "producer"
+        "id": "847f9f25-ce0a-47d0-a034-7d5eb4c3752e",
+        "kind": "label",
+        "name": "Motown",
+        "role": "label"
       },
       {
-        "id": "00000000-0000-0000-0001-000000000018",
+        "id": "f27ec8db-af05-4f36-916e-3d57f91ecf5e",
         "kind": "person",
-        "name": "Britney Spears",
-        "role": "feature"
+        "name": "Michael Jackson",
+        "role": "producer"
       }
     ]
   },
   {
-    "id": "00000000-0000-0000-0004-000000000037",
-    "title": "Song Track 55",
-    "artist_name": "Max Martin",
+    "id": "ba070991-3536-512c-90bb-e3d23a1526c8",
+    "title": "The Black Keys Classic Track 61",
+    "artist_name": "The Black Keys",
     "year": 2015,
-    "release_id": "00000000-0000-0000-0005-000000000037",
+    "release_id": "e626d147-a906-5f44-b382-3440918a846d",
     "credits": [
       {
-        "id": "00000000-0000-0000-0001-000000000016",
+        "id": "d15721d8-56b4-453d-b506-c91923793612",
         "kind": "person",
-        "name": "Max Martin",
+        "name": "The Black Keys",
         "role": "artist"
       },
       {
-        "id": "00000000-0000-0000-0002-000000000001",
-        "kind": "label",
-        "name": "EMI",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000006",
+        "id": "5534c03b-c2e8-4a66-b25c-9d62d6ea153d",
         "kind": "album",
-        "name": "Songs in the Key of Life",
+        "name": "Sound & Color",
         "role": "album"
       },
       {
-        "id": "00000000-0000-0000-0001-000000000006",
+        "id": "977f6b8b-8fa2-436f-876b-c744f4ff4f21",
+        "kind": "label",
+        "name": "XL Recordings",
+        "role": "label"
+      },
+      {
+        "id": "b83bc61f-8451-4a5d-8b8e-7e9ed295e822",
         "kind": "person",
-        "name": "John Lennon",
+        "name": "Elton John",
         "role": "producer"
       }
     ]
   },
   {
-    "id": "00000000-0000-0000-0004-000000000038",
-    "title": "Song Track 56",
-    "artist_name": "Taylor Swift",
+    "id": "d56d649a-fd5f-5e26-9e3d-49a9484db0b7",
+    "title": "Dan Auerbach Classic Track 62",
+    "artist_name": "Dan Auerbach",
     "year": 2016,
-    "release_id": "00000000-0000-0000-0005-000000000038",
+    "release_id": "e0009a21-f7ad-54b7-9a56-ca2d7cc3ee8c",
     "credits": [
       {
-        "id": "00000000-0000-0000-0001-000000000017",
+        "id": "7b4f53ca-49d7-4663-b851-ea690ab9504a",
         "kind": "person",
-        "name": "Taylor Swift",
+        "name": "Dan Auerbach",
         "role": "artist"
       },
       {
-        "id": "00000000-0000-0000-0002-000000000002",
-        "kind": "label",
-        "name": "Columbia Records",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000007",
+        "id": "38f29ea7-b353-34e8-a1bf-4f6cbb7311d0",
         "kind": "album",
-        "name": "Purple Rain",
+        "name": "A Night at the Opera",
         "role": "album"
       },
       {
-        "id": "00000000-0000-0000-0001-000000000013",
+        "id": "8f3cf5df-6a31-4a6f-b27b-232f3ff3cf87",
+        "kind": "label",
+        "name": "Nonesuch Records",
+        "role": "label"
+      },
+      {
+        "id": "79239441-bfd5-4981-a70c-55c3f15c1287",
         "kind": "person",
-        "name": "Pharrell Williams",
+        "name": "Madonna",
         "role": "producer"
+      },
+      {
+        "id": "5441c29d-3602-4898-b1a1-b77fa23b8e50",
+        "kind": "person",
+        "name": "David Bowie",
+        "role": "feature"
       }
     ]
   },
   {
-    "id": "00000000-0000-0000-0004-000000000039",
-    "title": "Song Track 57",
-    "artist_name": "Britney Spears",
+    "id": "88d2d557-8244-5cb3-a245-3e352e683008",
+    "title": "Adele Classic Track 63",
+    "artist_name": "Adele",
     "year": 2017,
-    "release_id": "00000000-0000-0000-0005-000000000039",
+    "release_id": "fb77e2c7-f81c-53f3-a99d-53f29e589eaa",
     "credits": [
       {
-        "id": "00000000-0000-0000-0001-000000000018",
+        "id": "cc0b03fb-dc01-47c0-97c5-553d5247f499",
         "kind": "person",
-        "name": "Britney Spears",
+        "name": "Adele",
         "role": "artist"
       },
       {
-        "id": "00000000-0000-0000-0002-000000000003",
-        "kind": "label",
-        "name": "Epic Records",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000008",
+        "id": "d02330f6-953b-3d60-bf62-31d7e59b9596",
         "kind": "album",
-        "name": "Like a Virgin",
+        "name": "Heroes",
         "role": "album"
       },
       {
-        "id": "00000000-0000-0000-0001-000000000020",
-        "kind": "person",
-        "name": "Bruno Mars",
-        "role": "producer"
+        "id": "f357f8fe-74ce-4277-bc60-d5be86958a6a",
+        "kind": "label",
+        "name": "ATO Records",
+        "role": "label"
       },
       {
-        "id": "00000000-0000-0000-0001-000000000001",
+        "id": "144ef525-85e9-40c3-8335-02c32d0861f3",
         "kind": "person",
-        "name": "Queen",
-        "role": "feature"
+        "name": "Pharrell Williams",
+        "role": "producer"
       }
     ]
   },
   {
-    "id": "00000000-0000-0000-0004-00000000003a",
-    "title": "Song Track 58",
-    "artist_name": "Adele",
+    "id": "736bd4c6-5290-5cb3-bf1c-b49aa82603c8",
+    "title": "Alabama Shakes Classic Track 64",
+    "artist_name": "Alabama Shakes",
     "year": 2018,
-    "release_id": "00000000-0000-0000-0005-00000000003a",
+    "release_id": "4a5177ac-d7b4-5d0f-94a8-391cd0e243b2",
     "credits": [
       {
-        "id": "00000000-0000-0000-0001-000000000019",
+        "id": "b6807869-d355-4422-90f7-ebbe02b11be7",
         "kind": "person",
-        "name": "Adele",
+        "name": "Alabama Shakes",
         "role": "artist"
       },
       {
-        "id": "00000000-0000-0000-0002-000000000004",
-        "kind": "label",
-        "name": "Motown",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000009",
+        "id": "8f99e28e-5b12-32a2-8869-7c427f717cf7",
         "kind": "album",
-        "name": "1989",
+        "name": "Abbey Road",
         "role": "album"
       },
       {
-        "id": "00000000-0000-0000-0001-000000000007",
+        "id": "5b40cf6d-f421-4f10-ae40-e2ef64d7c577",
+        "kind": "label",
+        "name": "EMI",
+        "role": "label"
+      },
+      {
+        "id": "d15721d8-56b4-453d-b506-c91923793612",
         "kind": "person",
-        "name": "Elton John",
+        "name": "The Black Keys",
         "role": "producer"
       }
     ]
   },
   {
-    "id": "00000000-0000-0000-0004-00000000003b",
-    "title": "Song Track 59",
-    "artist_name": "Bruno Mars",
+    "id": "fe16ba19-b393-5e2f-88da-fbd45ce60191",
+    "title": "Brittany Howard Classic Track 65",
+    "artist_name": "Brittany Howard",
     "year": 2019,
-    "release_id": "00000000-0000-0000-0005-00000000003b",
+    "release_id": "fc8fb82e-d1a0-5019-b143-616cc3096dd0",
     "credits": [
       {
-        "id": "00000000-0000-0000-0001-000000000020",
+        "id": "117ce422-2977-49f3-8fbf-bf7da6e6e22c",
         "kind": "person",
-        "name": "Bruno Mars",
+        "name": "Brittany Howard",
         "role": "artist"
       },
       {
-        "id": "00000000-0000-0000-0002-000000000005",
-        "kind": "label",
-        "name": "Atlantic Records",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000010",
+        "id": "f53995f5-f67f-38a4-9642-12798e104193",
         "kind": "album",
-        "name": "25",
+        "name": "Thriller",
         "role": "album"
       },
       {
-        "id": "00000000-0000-0000-0001-000000000014",
+        "id": "25547a46-ea13-43c7-9b2f-488ad8d1b117",
+        "kind": "label",
+        "name": "Columbia Records",
+        "role": "label"
+      },
+      {
+        "id": "b6807869-d355-4422-90f7-ebbe02b11be7",
         "kind": "person",
-        "name": "Quincy Jones",
+        "name": "Alabama Shakes",
         "role": "producer"
       }
     ]
   },
   {
-    "id": "00000000-0000-0000-0004-00000000003c",
-    "title": "Song Track 60",
+    "id": "56783a48-e0c0-5291-8ca7-30d1800f2547",
+    "title": "Queen Classic Track 66",
     "artist_name": "Queen",
-    "year": 2020,
-    "release_id": "00000000-0000-0000-0005-00000000003c",
-    "credits": [
-      {
-        "id": "00000000-0000-0000-0001-000000000001",
-        "kind": "person",
-        "name": "Queen",
-        "role": "artist"
-      },
-      {
-        "id": "00000000-0000-0000-0002-000000000001",
-        "kind": "label",
-        "name": "EMI",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000001",
-        "kind": "album",
-        "name": "A Night at the Opera",
-        "role": "album"
-      },
-      {
-        "id": "00000000-0000-0000-0001-000000000001",
-        "kind": "person",
-        "name": "Queen",
-        "role": "producer"
-      },
-      {
-        "id": "00000000-0000-0000-0001-000000000004",
-        "kind": "person",
-        "name": "Michael Jackson",
-        "role": "feature"
-      }
-    ]
-  },
-  {
-    "id": "00000000-0000-0000-0004-00000000003d",
-    "title": "Song Track 61",
-    "artist_name": "David Bowie",
-    "year": 2021,
-    "release_id": "00000000-0000-0000-0005-00000000003d",
-    "credits": [
-      {
-        "id": "00000000-0000-0000-0001-000000000002",
-        "kind": "person",
-        "name": "David Bowie",
-        "role": "artist"
-      },
-      {
-        "id": "00000000-0000-0000-0002-000000000002",
-        "kind": "label",
-        "name": "Columbia Records",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000002",
-        "kind": "album",
-        "name": "Heroes",
-        "role": "album"
-      },
-      {
-        "id": "00000000-0000-0000-0001-000000000008",
-        "kind": "person",
-        "name": "Stevie Wonder",
-        "role": "producer"
-      }
-    ]
-  },
-  {
-    "id": "00000000-0000-0000-0004-00000000003e",
-    "title": "Song Track 62",
-    "artist_name": "The Beatles",
-    "year": 2022,
-    "release_id": "00000000-0000-0000-0005-00000000003e",
-    "credits": [
-      {
-        "id": "00000000-0000-0000-0001-000000000003",
-        "kind": "person",
-        "name": "The Beatles",
-        "role": "artist"
-      },
-      {
-        "id": "00000000-0000-0000-0002-000000000003",
-        "kind": "label",
-        "name": "Epic Records",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000003",
-        "kind": "album",
-        "name": "Abbey Road",
-        "role": "album"
-      },
-      {
-        "id": "00000000-0000-0000-0001-000000000015",
-        "kind": "person",
-        "name": "George Martin",
-        "role": "producer"
-      }
-    ]
-  },
-  {
-    "id": "00000000-0000-0000-0004-00000000003f",
-    "title": "Song Track 63",
-    "artist_name": "Michael Jackson",
-    "year": 2023,
-    "release_id": "00000000-0000-0000-0005-00000000003f",
-    "credits": [
-      {
-        "id": "00000000-0000-0000-0001-000000000004",
-        "kind": "person",
-        "name": "Michael Jackson",
-        "role": "artist"
-      },
-      {
-        "id": "00000000-0000-0000-0002-000000000004",
-        "kind": "label",
-        "name": "Motown",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000004",
-        "kind": "album",
-        "name": "Thriller",
-        "role": "album"
-      },
-      {
-        "id": "00000000-0000-0000-0001-000000000002",
-        "kind": "person",
-        "name": "David Bowie",
-        "role": "producer"
-      },
-      {
-        "id": "00000000-0000-0000-0001-000000000007",
-        "kind": "person",
-        "name": "Elton John",
-        "role": "feature"
-      }
-    ]
-  },
-  {
-    "id": "00000000-0000-0000-0004-000000000040",
-    "title": "Song Track 64",
-    "artist_name": "Paul McCartney",
-    "year": 1960,
-    "release_id": "00000000-0000-0000-0005-000000000040",
-    "credits": [
-      {
-        "id": "00000000-0000-0000-0001-000000000005",
-        "kind": "person",
-        "name": "Paul McCartney",
-        "role": "artist"
-      },
-      {
-        "id": "00000000-0000-0000-0002-000000000005",
-        "kind": "label",
-        "name": "Atlantic Records",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000005",
-        "kind": "album",
-        "name": "Random Access Memories",
-        "role": "album"
-      },
-      {
-        "id": "00000000-0000-0000-0001-000000000009",
-        "kind": "person",
-        "name": "Prince",
-        "role": "producer"
-      }
-    ]
-  },
-  {
-    "id": "00000000-0000-0000-0004-000000000041",
-    "title": "Song Track 65",
-    "artist_name": "John Lennon",
-    "year": 1961,
-    "release_id": "00000000-0000-0000-0005-000000000041",
-    "credits": [
-      {
-        "id": "00000000-0000-0000-0001-000000000006",
-        "kind": "person",
-        "name": "John Lennon",
-        "role": "artist"
-      },
-      {
-        "id": "00000000-0000-0000-0002-000000000001",
-        "kind": "label",
-        "name": "EMI",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000006",
-        "kind": "album",
-        "name": "Songs in the Key of Life",
-        "role": "album"
-      },
-      {
-        "id": "00000000-0000-0000-0001-000000000016",
-        "kind": "person",
-        "name": "Max Martin",
-        "role": "producer"
-      }
-    ]
-  },
-  {
-    "id": "00000000-0000-0000-0004-000000000042",
-    "title": "Song Track 66",
-    "artist_name": "Elton John",
-    "year": 1962,
-    "release_id": "00000000-0000-0000-0005-000000000042",
-    "credits": [
-      {
-        "id": "00000000-0000-0000-0001-000000000007",
-        "kind": "person",
-        "name": "Elton John",
-        "role": "artist"
-      },
-      {
-        "id": "00000000-0000-0000-0002-000000000002",
-        "kind": "label",
-        "name": "Columbia Records",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000007",
-        "kind": "album",
-        "name": "Purple Rain",
-        "role": "album"
-      },
-      {
-        "id": "00000000-0000-0000-0001-000000000003",
-        "kind": "person",
-        "name": "The Beatles",
-        "role": "producer"
-      },
-      {
-        "id": "00000000-0000-0000-0001-000000000010",
-        "kind": "person",
-        "name": "Madonna",
-        "role": "feature"
-      }
-    ]
-  },
-  {
-    "id": "00000000-0000-0000-0004-000000000043",
-    "title": "Song Track 67",
-    "artist_name": "Stevie Wonder",
-    "year": 1963,
-    "release_id": "00000000-0000-0000-0005-000000000043",
-    "credits": [
-      {
-        "id": "00000000-0000-0000-0001-000000000008",
-        "kind": "person",
-        "name": "Stevie Wonder",
-        "role": "artist"
-      },
-      {
-        "id": "00000000-0000-0000-0002-000000000003",
-        "kind": "label",
-        "name": "Epic Records",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000008",
-        "kind": "album",
-        "name": "Like a Virgin",
-        "role": "album"
-      },
-      {
-        "id": "00000000-0000-0000-0001-000000000010",
-        "kind": "person",
-        "name": "Madonna",
-        "role": "producer"
-      }
-    ]
-  },
-  {
-    "id": "00000000-0000-0000-0004-000000000044",
-    "title": "Song Track 68",
-    "artist_name": "Prince",
-    "year": 1964,
-    "release_id": "00000000-0000-0000-0005-000000000044",
-    "credits": [
-      {
-        "id": "00000000-0000-0000-0001-000000000009",
-        "kind": "person",
-        "name": "Prince",
-        "role": "artist"
-      },
-      {
-        "id": "00000000-0000-0000-0002-000000000004",
-        "kind": "label",
-        "name": "Motown",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000009",
-        "kind": "album",
-        "name": "1989",
-        "role": "album"
-      },
-      {
-        "id": "00000000-0000-0000-0001-000000000017",
-        "kind": "person",
-        "name": "Taylor Swift",
-        "role": "producer"
-      }
-    ]
-  },
-  {
-    "id": "00000000-0000-0000-0004-000000000045",
-    "title": "Song Track 69",
-    "artist_name": "Madonna",
-    "year": 1965,
-    "release_id": "00000000-0000-0000-0005-000000000045",
-    "credits": [
-      {
-        "id": "00000000-0000-0000-0001-000000000010",
-        "kind": "person",
-        "name": "Madonna",
-        "role": "artist"
-      },
-      {
-        "id": "00000000-0000-0000-0002-000000000005",
-        "kind": "label",
-        "name": "Atlantic Records",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000010",
-        "kind": "album",
-        "name": "25",
-        "role": "album"
-      },
-      {
-        "id": "00000000-0000-0000-0001-000000000004",
-        "kind": "person",
-        "name": "Michael Jackson",
-        "role": "producer"
-      },
-      {
-        "id": "00000000-0000-0000-0001-000000000013",
-        "kind": "person",
-        "name": "Pharrell Williams",
-        "role": "feature"
-      }
-    ]
-  },
-  {
-    "id": "00000000-0000-0000-0004-000000000046",
-    "title": "Song Track 70",
-    "artist_name": "Daft Punk",
-    "year": 1966,
-    "release_id": "00000000-0000-0000-0005-000000000046",
-    "credits": [
-      {
-        "id": "00000000-0000-0000-0001-000000000011",
-        "kind": "person",
-        "name": "Daft Punk",
-        "role": "artist"
-      },
-      {
-        "id": "00000000-0000-0000-0002-000000000001",
-        "kind": "label",
-        "name": "EMI",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000001",
-        "kind": "album",
-        "name": "A Night at the Opera",
-        "role": "album"
-      },
-      {
-        "id": "00000000-0000-0000-0001-000000000011",
-        "kind": "person",
-        "name": "Daft Punk",
-        "role": "producer"
-      }
-    ]
-  },
-  {
-    "id": "00000000-0000-0000-0004-000000000047",
-    "title": "Song Track 71",
-    "artist_name": "Nile Rodgers",
-    "year": 1967,
-    "release_id": "00000000-0000-0000-0005-000000000047",
-    "credits": [
-      {
-        "id": "00000000-0000-0000-0001-000000000012",
-        "kind": "person",
-        "name": "Nile Rodgers",
-        "role": "artist"
-      },
-      {
-        "id": "00000000-0000-0000-0002-000000000002",
-        "kind": "label",
-        "name": "Columbia Records",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000002",
-        "kind": "album",
-        "name": "Heroes",
-        "role": "album"
-      },
-      {
-        "id": "00000000-0000-0000-0001-000000000018",
-        "kind": "person",
-        "name": "Britney Spears",
-        "role": "producer"
-      }
-    ]
-  },
-  {
-    "id": "00000000-0000-0000-0004-000000000048",
-    "title": "Song Track 72",
-    "artist_name": "Pharrell Williams",
-    "year": 1968,
-    "release_id": "00000000-0000-0000-0005-000000000048",
-    "credits": [
-      {
-        "id": "00000000-0000-0000-0001-000000000013",
-        "kind": "person",
-        "name": "Pharrell Williams",
-        "role": "artist"
-      },
-      {
-        "id": "00000000-0000-0000-0002-000000000003",
-        "kind": "label",
-        "name": "Epic Records",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000003",
-        "kind": "album",
-        "name": "Abbey Road",
-        "role": "album"
-      },
-      {
-        "id": "00000000-0000-0000-0001-000000000005",
-        "kind": "person",
-        "name": "Paul McCartney",
-        "role": "producer"
-      },
-      {
-        "id": "00000000-0000-0000-0001-000000000016",
-        "kind": "person",
-        "name": "Max Martin",
-        "role": "feature"
-      }
-    ]
-  },
-  {
-    "id": "00000000-0000-0000-0004-000000000049",
-    "title": "Song Track 73",
-    "artist_name": "Quincy Jones",
-    "year": 1969,
-    "release_id": "00000000-0000-0000-0005-000000000049",
-    "credits": [
-      {
-        "id": "00000000-0000-0000-0001-000000000014",
-        "kind": "person",
-        "name": "Quincy Jones",
-        "role": "artist"
-      },
-      {
-        "id": "00000000-0000-0000-0002-000000000004",
-        "kind": "label",
-        "name": "Motown",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000004",
-        "kind": "album",
-        "name": "Thriller",
-        "role": "album"
-      },
-      {
-        "id": "00000000-0000-0000-0001-000000000012",
-        "kind": "person",
-        "name": "Nile Rodgers",
-        "role": "producer"
-      }
-    ]
-  },
-  {
-    "id": "00000000-0000-0000-0004-00000000004a",
-    "title": "Song Track 74",
-    "artist_name": "George Martin",
     "year": 1970,
-    "release_id": "00000000-0000-0000-0005-00000000004a",
+    "release_id": "31fffac5-ec89-500c-83ae-5f594c329d7c",
     "credits": [
       {
-        "id": "00000000-0000-0000-0001-000000000015",
+        "id": "0383dadf-2a4e-4d10-a46a-e9e041da8eb3",
         "kind": "person",
-        "name": "George Martin",
+        "name": "Queen",
         "role": "artist"
       },
       {
-        "id": "00000000-0000-0000-0002-000000000005",
-        "kind": "label",
-        "name": "Atlantic Records",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000005",
+        "id": "18ba5c4b-b010-4357-bfd2-1c05d7b561c2",
         "kind": "album",
         "name": "Random Access Memories",
         "role": "album"
       },
       {
-        "id": "00000000-0000-0000-0001-000000000019",
+        "id": "4899539d-2917-48f8-a006-25f0e9b33a59",
+        "kind": "label",
+        "name": "Epic Records",
+        "role": "label"
+      },
+      {
+        "id": "5441c29d-3602-4898-b1a1-b77fa23b8e50",
         "kind": "person",
-        "name": "Adele",
+        "name": "David Bowie",
         "role": "producer"
+      },
+      {
+        "id": "4d5447d7-c61c-4120-ba1b-d7f4713f0f5b",
+        "kind": "person",
+        "name": "John Lennon",
+        "role": "feature"
       }
     ]
   },
   {
-    "id": "00000000-0000-0000-0004-00000000004b",
-    "title": "Song Track 75",
-    "artist_name": "Max Martin",
+    "id": "701a98c3-673e-554b-b586-e26c150770b5",
+    "title": "David Bowie Classic Track 67",
+    "artist_name": "David Bowie",
     "year": 1971,
-    "release_id": "00000000-0000-0000-0005-00000000004b",
+    "release_id": "acae2c7e-4946-5f0f-9c0e-8f2caca28327",
     "credits": [
       {
-        "id": "00000000-0000-0000-0001-000000000016",
+        "id": "5441c29d-3602-4898-b1a1-b77fa23b8e50",
         "kind": "person",
-        "name": "Max Martin",
+        "name": "David Bowie",
         "role": "artist"
       },
       {
-        "id": "00000000-0000-0000-0002-000000000001",
-        "kind": "label",
-        "name": "EMI",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000006",
+        "id": "3279c13e-63f5-30fa-92b4-52a16d84d72d",
         "kind": "album",
         "name": "Songs in the Key of Life",
         "role": "album"
       },
       {
-        "id": "00000000-0000-0000-0001-000000000006",
-        "kind": "person",
-        "name": "John Lennon",
-        "role": "producer"
+        "id": "847f9f25-ce0a-47d0-a034-7d5eb4c3752e",
+        "kind": "label",
+        "name": "Motown",
+        "role": "label"
       },
       {
-        "id": "00000000-0000-0000-0001-000000000019",
+        "id": "ba550d0e-adac-4864-b88b-407cab5e76af",
         "kind": "person",
-        "name": "Adele",
-        "role": "feature"
+        "name": "Paul McCartney",
+        "role": "producer"
       }
     ]
   },
   {
-    "id": "00000000-0000-0000-0004-00000000004c",
-    "title": "Song Track 76",
-    "artist_name": "Taylor Swift",
+    "id": "3154deee-87e1-5cb0-8fc0-01d9cca0556d",
+    "title": "The Beatles Classic Track 68",
+    "artist_name": "The Beatles",
     "year": 1972,
-    "release_id": "00000000-0000-0000-0005-00000000004c",
+    "release_id": "bf044dbd-220b-5234-a738-ddf2ab067a80",
     "credits": [
       {
-        "id": "00000000-0000-0000-0001-000000000017",
+        "id": "b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d",
         "kind": "person",
-        "name": "Taylor Swift",
+        "name": "The Beatles",
         "role": "artist"
       },
       {
-        "id": "00000000-0000-0000-0002-000000000002",
-        "kind": "label",
-        "name": "Columbia Records",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000007",
+        "id": "0460c38f-a9db-36b6-89ec-9e2ad1cf9230",
         "kind": "album",
         "name": "Purple Rain",
         "role": "album"
       },
       {
-        "id": "00000000-0000-0000-0001-000000000013",
+        "id": "977f6b8b-8fa2-436f-876b-c744f4ff4f21",
+        "kind": "label",
+        "name": "XL Recordings",
+        "role": "label"
+      },
+      {
+        "id": "1ee18fb3-18a6-4c7f-8ba0-bc41c0d032d6",
         "kind": "person",
-        "name": "Pharrell Williams",
+        "name": "Stevie Wonder",
         "role": "producer"
       }
     ]
   },
   {
-    "id": "00000000-0000-0000-0004-00000000004d",
-    "title": "Song Track 77",
-    "artist_name": "Britney Spears",
+    "id": "9392b0c2-296c-56c5-951d-ed5abd657b63",
+    "title": "Michael Jackson Classic Track 69",
+    "artist_name": "Michael Jackson",
     "year": 1973,
-    "release_id": "00000000-0000-0000-0005-00000000004d",
+    "release_id": "7626ac67-9cfe-5a25-b309-83fa6d560c78",
     "credits": [
       {
-        "id": "00000000-0000-0000-0001-000000000018",
+        "id": "f27ec8db-af05-4f36-916e-3d57f91ecf5e",
         "kind": "person",
-        "name": "Britney Spears",
+        "name": "Michael Jackson",
         "role": "artist"
       },
       {
-        "id": "00000000-0000-0000-0002-000000000003",
-        "kind": "label",
-        "name": "Epic Records",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000008",
+        "id": "b1bb5386-b481-3510-aee8-bc7fa2c46231",
         "kind": "album",
         "name": "Like a Virgin",
         "role": "album"
       },
       {
-        "id": "00000000-0000-0000-0001-000000000020",
+        "id": "8f3cf5df-6a31-4a6f-b27b-232f3ff3cf87",
+        "kind": "label",
+        "name": "Nonesuch Records",
+        "role": "label"
+      },
+      {
+        "id": "056e4f3e-d505-4dad-8ec1-d04f521cbb56",
         "kind": "person",
-        "name": "Bruno Mars",
+        "name": "Daft Punk",
         "role": "producer"
       }
     ]
   },
   {
-    "id": "00000000-0000-0000-0004-00000000004e",
-    "title": "Song Track 78",
-    "artist_name": "Adele",
+    "id": "a601ee22-bc17-50e1-a358-8ddaf7f8c60b",
+    "title": "Paul McCartney Classic Track 70",
+    "artist_name": "Paul McCartney",
     "year": 1974,
-    "release_id": "00000000-0000-0000-0005-00000000004e",
+    "release_id": "c3d7ea33-f1b6-50c6-9501-b17c9ff3da5a",
     "credits": [
       {
-        "id": "00000000-0000-0000-0001-000000000019",
+        "id": "ba550d0e-adac-4864-b88b-407cab5e76af",
         "kind": "person",
-        "name": "Adele",
+        "name": "Paul McCartney",
         "role": "artist"
       },
       {
-        "id": "00000000-0000-0000-0002-000000000004",
-        "kind": "label",
-        "name": "Motown",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000009",
+        "id": "2dcfaee0-e549-43c3-aebe-87002db6e300",
         "kind": "album",
-        "name": "1989",
+        "name": "El Camino",
         "role": "album"
       },
       {
-        "id": "00000000-0000-0000-0001-000000000007",
+        "id": "f357f8fe-74ce-4277-bc60-d5be86958a6a",
+        "kind": "label",
+        "name": "ATO Records",
+        "role": "label"
+      },
+      {
+        "id": "4df4e0e6-5c5f-46cb-8b5e-99933ef6696b",
         "kind": "person",
-        "name": "Elton John",
+        "name": "Quincy Jones",
         "role": "producer"
       },
       {
-        "id": "00000000-0000-0000-0001-000000000002",
+        "id": "79239441-bfd5-4981-a70c-55c3f15c1287",
         "kind": "person",
-        "name": "David Bowie",
+        "name": "Madonna",
         "role": "feature"
       }
     ]
   },
   {
-    "id": "00000000-0000-0000-0004-00000000004f",
-    "title": "Song Track 79",
-    "artist_name": "Bruno Mars",
+    "id": "4a67d147-55d2-55a5-96ff-e8e99ca4c4cc",
+    "title": "John Lennon Classic Track 71",
+    "artist_name": "John Lennon",
     "year": 1975,
-    "release_id": "00000000-0000-0000-0005-00000000004f",
+    "release_id": "4e0e7c5c-5c5a-526d-a6e7-9220cbe75be2",
     "credits": [
       {
-        "id": "00000000-0000-0000-0001-000000000020",
+        "id": "4d5447d7-c61c-4120-ba1b-d7f4713f0f5b",
         "kind": "person",
-        "name": "Bruno Mars",
+        "name": "John Lennon",
         "role": "artist"
       },
       {
-        "id": "00000000-0000-0000-0002-000000000005",
-        "kind": "label",
-        "name": "Atlantic Records",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000010",
+        "id": "4f26046e-826d-4952-b9cf-14c622a57ef2",
         "kind": "album",
-        "name": "25",
+        "name": "21",
         "role": "album"
       },
       {
-        "id": "00000000-0000-0000-0001-000000000014",
+        "id": "5b40cf6d-f421-4f10-ae40-e2ef64d7c577",
+        "kind": "label",
+        "name": "EMI",
+        "role": "label"
+      },
+      {
+        "id": "7b4f53ca-49d7-4663-b851-ea690ab9504a",
         "kind": "person",
-        "name": "Quincy Jones",
+        "name": "Dan Auerbach",
         "role": "producer"
       }
     ]
   },
   {
-    "id": "00000000-0000-0000-0004-000000000050",
-    "title": "Song Track 80",
-    "artist_name": "Queen",
+    "id": "25f629ea-9953-539b-87ee-98d9aa9b4b5f",
+    "title": "Elton John Classic Track 72",
+    "artist_name": "Elton John",
     "year": 1976,
-    "release_id": "00000000-0000-0000-0005-000000000050",
+    "release_id": "bf8dc60d-d9f2-5315-bf33-19778ce305b0",
     "credits": [
       {
-        "id": "00000000-0000-0000-0001-000000000001",
+        "id": "b83bc61f-8451-4a5d-8b8e-7e9ed295e822",
         "kind": "person",
-        "name": "Queen",
+        "name": "Elton John",
         "role": "artist"
       },
       {
-        "id": "00000000-0000-0000-0002-000000000001",
-        "kind": "label",
-        "name": "EMI",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000001",
+        "id": "b7501b8e-a9ce-40bf-9ce4-e0c82f9d860e",
         "kind": "album",
-        "name": "A Night at the Opera",
+        "name": "Boys & Girls",
         "role": "album"
       },
       {
-        "id": "00000000-0000-0000-0001-000000000001",
+        "id": "25547a46-ea13-43c7-9b2f-488ad8d1b117",
+        "kind": "label",
+        "name": "Columbia Records",
+        "role": "label"
+      },
+      {
+        "id": "117ce422-2977-49f3-8fbf-bf7da6e6e22c",
         "kind": "person",
-        "name": "Queen",
+        "name": "Brittany Howard",
         "role": "producer"
       }
     ]
   },
   {
-    "id": "00000000-0000-0000-0004-000000000051",
-    "title": "Song Track 81",
-    "artist_name": "David Bowie",
+    "id": "4f1a1171-389e-5868-8cca-c856151dcbbf",
+    "title": "Stevie Wonder Classic Track 73",
+    "artist_name": "Stevie Wonder",
     "year": 1977,
-    "release_id": "00000000-0000-0000-0005-000000000051",
+    "release_id": "089ef2f8-1a41-5ba6-9e00-3d4116e36c3f",
     "credits": [
       {
-        "id": "00000000-0000-0000-0001-000000000002",
+        "id": "1ee18fb3-18a6-4c7f-8ba0-bc41c0d032d6",
         "kind": "person",
-        "name": "David Bowie",
+        "name": "Stevie Wonder",
         "role": "artist"
       },
       {
-        "id": "00000000-0000-0000-0002-000000000002",
-        "kind": "label",
-        "name": "Columbia Records",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000002",
+        "id": "5534c03b-c2e8-4a66-b25c-9d62d6ea153d",
         "kind": "album",
-        "name": "Heroes",
+        "name": "Sound & Color",
         "role": "album"
       },
       {
-        "id": "00000000-0000-0000-0001-000000000008",
-        "kind": "person",
-        "name": "Stevie Wonder",
-        "role": "producer"
+        "id": "4899539d-2917-48f8-a006-25f0e9b33a59",
+        "kind": "label",
+        "name": "Epic Records",
+        "role": "label"
       },
       {
-        "id": "00000000-0000-0000-0001-000000000005",
+        "id": "b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d",
         "kind": "person",
-        "name": "Paul McCartney",
-        "role": "feature"
+        "name": "The Beatles",
+        "role": "producer"
       }
     ]
   },
   {
-    "id": "00000000-0000-0000-0004-000000000052",
-    "title": "Song Track 82",
-    "artist_name": "The Beatles",
+    "id": "0c0d397a-7cf4-5323-b02a-3cb6efe8470b",
+    "title": "Prince Classic Track 74",
+    "artist_name": "Prince",
     "year": 1978,
-    "release_id": "00000000-0000-0000-0005-000000000052",
+    "release_id": "df1d6b12-7b33-58b1-af31-4e62ca4ca499",
     "credits": [
       {
-        "id": "00000000-0000-0000-0001-000000000003",
+        "id": "070d193a-845c-479f-980e-bef15710653e",
         "kind": "person",
-        "name": "The Beatles",
+        "name": "Prince",
         "role": "artist"
       },
       {
-        "id": "00000000-0000-0000-0002-000000000003",
-        "kind": "label",
-        "name": "Epic Records",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000003",
+        "id": "38f29ea7-b353-34e8-a1bf-4f6cbb7311d0",
         "kind": "album",
-        "name": "Abbey Road",
+        "name": "A Night at the Opera",
         "role": "album"
       },
       {
-        "id": "00000000-0000-0000-0001-000000000015",
+        "id": "847f9f25-ce0a-47d0-a034-7d5eb4c3752e",
+        "kind": "label",
+        "name": "Motown",
+        "role": "label"
+      },
+      {
+        "id": "4d5447d7-c61c-4120-ba1b-d7f4713f0f5b",
         "kind": "person",
-        "name": "George Martin",
+        "name": "John Lennon",
         "role": "producer"
+      },
+      {
+        "id": "4df4e0e6-5c5f-46cb-8b5e-99933ef6696b",
+        "kind": "person",
+        "name": "Quincy Jones",
+        "role": "feature"
       }
     ]
   },
   {
-    "id": "00000000-0000-0000-0004-000000000053",
-    "title": "Song Track 83",
-    "artist_name": "Michael Jackson",
+    "id": "db724778-e24c-504f-ba65-c7d42d680b72",
+    "title": "Madonna Classic Track 75",
+    "artist_name": "Madonna",
     "year": 1979,
-    "release_id": "00000000-0000-0000-0005-000000000053",
+    "release_id": "395fd019-4ec2-5fea-b6a3-556eafd85ffa",
     "credits": [
       {
-        "id": "00000000-0000-0000-0001-000000000004",
+        "id": "79239441-bfd5-4981-a70c-55c3f15c1287",
         "kind": "person",
-        "name": "Michael Jackson",
+        "name": "Madonna",
         "role": "artist"
       },
       {
-        "id": "00000000-0000-0000-0002-000000000004",
-        "kind": "label",
-        "name": "Motown",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000004",
+        "id": "d02330f6-953b-3d60-bf62-31d7e59b9596",
         "kind": "album",
-        "name": "Thriller",
+        "name": "Heroes",
         "role": "album"
       },
       {
-        "id": "00000000-0000-0000-0001-000000000002",
+        "id": "977f6b8b-8fa2-436f-876b-c744f4ff4f21",
+        "kind": "label",
+        "name": "XL Recordings",
+        "role": "label"
+      },
+      {
+        "id": "070d193a-845c-479f-980e-bef15710653e",
         "kind": "person",
-        "name": "David Bowie",
+        "name": "Prince",
         "role": "producer"
       }
     ]
   },
   {
-    "id": "00000000-0000-0000-0004-000000000054",
-    "title": "Song Track 84",
-    "artist_name": "Paul McCartney",
+    "id": "d515e12a-ace5-51ed-983c-18ee55134e16",
+    "title": "Daft Punk Classic Track 76",
+    "artist_name": "Daft Punk",
     "year": 1980,
-    "release_id": "00000000-0000-0000-0005-000000000054",
+    "release_id": "0523671a-1801-5442-9134-8f72a7d34974",
     "credits": [
       {
-        "id": "00000000-0000-0000-0001-000000000005",
+        "id": "056e4f3e-d505-4dad-8ec1-d04f521cbb56",
         "kind": "person",
-        "name": "Paul McCartney",
+        "name": "Daft Punk",
         "role": "artist"
       },
       {
-        "id": "00000000-0000-0000-0002-000000000005",
-        "kind": "label",
-        "name": "Atlantic Records",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000005",
+        "id": "8f99e28e-5b12-32a2-8869-7c427f717cf7",
         "kind": "album",
-        "name": "Random Access Memories",
+        "name": "Abbey Road",
         "role": "album"
       },
       {
-        "id": "00000000-0000-0000-0001-000000000009",
-        "kind": "person",
-        "name": "Prince",
-        "role": "producer"
+        "id": "8f3cf5df-6a31-4a6f-b27b-232f3ff3cf87",
+        "kind": "label",
+        "name": "Nonesuch Records",
+        "role": "label"
       },
       {
-        "id": "00000000-0000-0000-0001-000000000008",
+        "id": "936a2e4e-0a0e-4360-9366-07e0c8b3687c",
         "kind": "person",
-        "name": "Stevie Wonder",
-        "role": "feature"
+        "name": "Nile Rodgers",
+        "role": "producer"
       }
     ]
   },
   {
-    "id": "00000000-0000-0000-0004-000000000055",
-    "title": "Song Track 85",
-    "artist_name": "John Lennon",
+    "id": "30f4b7ad-2f8d-5e59-a600-2226d638961e",
+    "title": "Nile Rodgers Classic Track 77",
+    "artist_name": "Nile Rodgers",
     "year": 1981,
-    "release_id": "00000000-0000-0000-0005-000000000055",
+    "release_id": "d45ecf2f-07e0-518e-9ccc-5c1f979b6b90",
     "credits": [
       {
-        "id": "00000000-0000-0000-0001-000000000006",
+        "id": "936a2e4e-0a0e-4360-9366-07e0c8b3687c",
         "kind": "person",
-        "name": "John Lennon",
+        "name": "Nile Rodgers",
         "role": "artist"
       },
       {
-        "id": "00000000-0000-0000-0002-000000000001",
-        "kind": "label",
-        "name": "EMI",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000006",
+        "id": "f53995f5-f67f-38a4-9642-12798e104193",
         "kind": "album",
-        "name": "Songs in the Key of Life",
+        "name": "Thriller",
         "role": "album"
       },
       {
-        "id": "00000000-0000-0000-0001-000000000016",
+        "id": "f357f8fe-74ce-4277-bc60-d5be86958a6a",
+        "kind": "label",
+        "name": "ATO Records",
+        "role": "label"
+      },
+      {
+        "id": "c245952c-ad95-4674-8840-7ec829b01518",
         "kind": "person",
-        "name": "Max Martin",
+        "name": "George Martin",
         "role": "producer"
       }
     ]
   },
   {
-    "id": "00000000-0000-0000-0004-000000000056",
-    "title": "Song Track 86",
-    "artist_name": "Elton John",
+    "id": "76a9306b-4442-50e6-a99f-c365a1bc5809",
+    "title": "Pharrell Williams Classic Track 78",
+    "artist_name": "Pharrell Williams",
     "year": 1982,
-    "release_id": "00000000-0000-0000-0005-000000000056",
+    "release_id": "0483d38d-9b4a-536d-96bc-defac93d0b72",
     "credits": [
       {
-        "id": "00000000-0000-0000-0001-000000000007",
+        "id": "144ef525-85e9-40c3-8335-02c32d0861f3",
         "kind": "person",
-        "name": "Elton John",
+        "name": "Pharrell Williams",
         "role": "artist"
       },
       {
-        "id": "00000000-0000-0000-0002-000000000002",
-        "kind": "label",
-        "name": "Columbia Records",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000007",
+        "id": "18ba5c4b-b010-4357-bfd2-1c05d7b561c2",
         "kind": "album",
-        "name": "Purple Rain",
+        "name": "Random Access Memories",
         "role": "album"
       },
       {
-        "id": "00000000-0000-0000-0001-000000000003",
+        "id": "5b40cf6d-f421-4f10-ae40-e2ef64d7c577",
+        "kind": "label",
+        "name": "EMI",
+        "role": "label"
+      },
+      {
+        "id": "cc0b03fb-dc01-47c0-97c5-553d5247f499",
         "kind": "person",
-        "name": "The Beatles",
+        "name": "Adele",
         "role": "producer"
+      },
+      {
+        "id": "cc0b03fb-dc01-47c0-97c5-553d5247f499",
+        "kind": "person",
+        "name": "Adele",
+        "role": "feature"
       }
     ]
   },
   {
-    "id": "00000000-0000-0000-0004-000000000057",
-    "title": "Song Track 87",
-    "artist_name": "Stevie Wonder",
+    "id": "bbd5fdd5-e08d-55d1-8dc8-5a09fdde6818",
+    "title": "Quincy Jones Classic Track 79",
+    "artist_name": "Quincy Jones",
     "year": 1983,
-    "release_id": "00000000-0000-0000-0005-000000000057",
+    "release_id": "243bcf3b-d8d9-5e2d-b589-7ad0018e707e",
     "credits": [
       {
-        "id": "00000000-0000-0000-0001-000000000008",
+        "id": "4df4e0e6-5c5f-46cb-8b5e-99933ef6696b",
         "kind": "person",
-        "name": "Stevie Wonder",
+        "name": "Quincy Jones",
         "role": "artist"
       },
       {
-        "id": "00000000-0000-0000-0002-000000000003",
-        "kind": "label",
-        "name": "Epic Records",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000008",
+        "id": "3279c13e-63f5-30fa-92b4-52a16d84d72d",
         "kind": "album",
-        "name": "Like a Virgin",
+        "name": "Songs in the Key of Life",
         "role": "album"
       },
       {
-        "id": "00000000-0000-0000-0001-000000000010",
-        "kind": "person",
-        "name": "Madonna",
-        "role": "producer"
+        "id": "25547a46-ea13-43c7-9b2f-488ad8d1b117",
+        "kind": "label",
+        "name": "Columbia Records",
+        "role": "label"
       },
       {
-        "id": "00000000-0000-0000-0001-000000000011",
+        "id": "0383dadf-2a4e-4d10-a46a-e9e041da8eb3",
         "kind": "person",
-        "name": "Daft Punk",
-        "role": "feature"
+        "name": "Queen",
+        "role": "producer"
       }
     ]
   },
   {
-    "id": "00000000-0000-0000-0004-000000000058",
-    "title": "Song Track 88",
-    "artist_name": "Prince",
+    "id": "335505a5-1cc3-591b-8c0c-f33efc5e2e07",
+    "title": "George Martin Classic Track 80",
+    "artist_name": "George Martin",
     "year": 1984,
-    "release_id": "00000000-0000-0000-0005-000000000058",
+    "release_id": "0b6b9ffc-894b-5109-87aa-8f2e72be714a",
     "credits": [
       {
-        "id": "00000000-0000-0000-0001-000000000009",
+        "id": "c245952c-ad95-4674-8840-7ec829b01518",
         "kind": "person",
-        "name": "Prince",
+        "name": "George Martin",
         "role": "artist"
       },
       {
-        "id": "00000000-0000-0000-0002-000000000004",
-        "kind": "label",
-        "name": "Motown",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000009",
+        "id": "0460c38f-a9db-36b6-89ec-9e2ad1cf9230",
         "kind": "album",
-        "name": "1989",
+        "name": "Purple Rain",
         "role": "album"
       },
       {
-        "id": "00000000-0000-0000-0001-000000000017",
+        "id": "4899539d-2917-48f8-a006-25f0e9b33a59",
+        "kind": "label",
+        "name": "Epic Records",
+        "role": "label"
+      },
+      {
+        "id": "f27ec8db-af05-4f36-916e-3d57f91ecf5e",
         "kind": "person",
-        "name": "Taylor Swift",
+        "name": "Michael Jackson",
         "role": "producer"
       }
     ]
   },
   {
-    "id": "00000000-0000-0000-0004-000000000059",
-    "title": "Song Track 89",
-    "artist_name": "Madonna",
+    "id": "e8cc5b24-8f27-59eb-8bcc-4bf1c81cdbe4",
+    "title": "The Black Keys Classic Track 81",
+    "artist_name": "The Black Keys",
     "year": 1985,
-    "release_id": "00000000-0000-0000-0005-000000000059",
+    "release_id": "07c1d9b9-beb8-52b4-9194-f34996f2e97a",
     "credits": [
       {
-        "id": "00000000-0000-0000-0001-000000000010",
+        "id": "d15721d8-56b4-453d-b506-c91923793612",
         "kind": "person",
-        "name": "Madonna",
+        "name": "The Black Keys",
         "role": "artist"
       },
       {
-        "id": "00000000-0000-0000-0002-000000000005",
-        "kind": "label",
-        "name": "Atlantic Records",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000010",
+        "id": "b1bb5386-b481-3510-aee8-bc7fa2c46231",
         "kind": "album",
-        "name": "25",
+        "name": "Like a Virgin",
         "role": "album"
       },
       {
-        "id": "00000000-0000-0000-0001-000000000004",
+        "id": "847f9f25-ce0a-47d0-a034-7d5eb4c3752e",
+        "kind": "label",
+        "name": "Motown",
+        "role": "label"
+      },
+      {
+        "id": "b83bc61f-8451-4a5d-8b8e-7e9ed295e822",
         "kind": "person",
-        "name": "Michael Jackson",
+        "name": "Elton John",
         "role": "producer"
       }
     ]
   },
   {
-    "id": "00000000-0000-0000-0004-00000000005a",
-    "title": "Song Track 90",
-    "artist_name": "Daft Punk",
+    "id": "198f8fb3-16fc-50df-adf1-98a45e878916",
+    "title": "Dan Auerbach Classic Track 82",
+    "artist_name": "Dan Auerbach",
     "year": 1986,
-    "release_id": "00000000-0000-0000-0005-00000000005a",
+    "release_id": "eb63ceff-960e-572c-a04e-5965a3d5bcb5",
     "credits": [
       {
-        "id": "00000000-0000-0000-0001-000000000011",
+        "id": "7b4f53ca-49d7-4663-b851-ea690ab9504a",
         "kind": "person",
-        "name": "Daft Punk",
+        "name": "Dan Auerbach",
         "role": "artist"
       },
       {
-        "id": "00000000-0000-0000-0002-000000000001",
-        "kind": "label",
-        "name": "EMI",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000001",
+        "id": "2dcfaee0-e549-43c3-aebe-87002db6e300",
         "kind": "album",
-        "name": "A Night at the Opera",
+        "name": "El Camino",
         "role": "album"
       },
       {
-        "id": "00000000-0000-0000-0001-000000000011",
+        "id": "977f6b8b-8fa2-436f-876b-c744f4ff4f21",
+        "kind": "label",
+        "name": "XL Recordings",
+        "role": "label"
+      },
+      {
+        "id": "79239441-bfd5-4981-a70c-55c3f15c1287",
         "kind": "person",
-        "name": "Daft Punk",
+        "name": "Madonna",
         "role": "producer"
       },
       {
-        "id": "00000000-0000-0000-0001-000000000014",
+        "id": "5441c29d-3602-4898-b1a1-b77fa23b8e50",
         "kind": "person",
-        "name": "Quincy Jones",
+        "name": "David Bowie",
         "role": "feature"
       }
     ]
   },
   {
-    "id": "00000000-0000-0000-0004-00000000005b",
-    "title": "Song Track 91",
-    "artist_name": "Nile Rodgers",
-    "year": 1987,
-    "release_id": "00000000-0000-0000-0005-00000000005b",
-    "credits": [
-      {
-        "id": "00000000-0000-0000-0001-000000000012",
-        "kind": "person",
-        "name": "Nile Rodgers",
-        "role": "artist"
-      },
-      {
-        "id": "00000000-0000-0000-0002-000000000002",
-        "kind": "label",
-        "name": "Columbia Records",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000002",
-        "kind": "album",
-        "name": "Heroes",
-        "role": "album"
-      },
-      {
-        "id": "00000000-0000-0000-0001-000000000018",
-        "kind": "person",
-        "name": "Britney Spears",
-        "role": "producer"
-      }
-    ]
-  },
-  {
-    "id": "00000000-0000-0000-0004-00000000005c",
-    "title": "Song Track 92",
-    "artist_name": "Pharrell Williams",
-    "year": 1988,
-    "release_id": "00000000-0000-0000-0005-00000000005c",
-    "credits": [
-      {
-        "id": "00000000-0000-0000-0001-000000000013",
-        "kind": "person",
-        "name": "Pharrell Williams",
-        "role": "artist"
-      },
-      {
-        "id": "00000000-0000-0000-0002-000000000003",
-        "kind": "label",
-        "name": "Epic Records",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000003",
-        "kind": "album",
-        "name": "Abbey Road",
-        "role": "album"
-      },
-      {
-        "id": "00000000-0000-0000-0001-000000000005",
-        "kind": "person",
-        "name": "Paul McCartney",
-        "role": "producer"
-      }
-    ]
-  },
-  {
-    "id": "00000000-0000-0000-0004-00000000005d",
-    "title": "Song Track 93",
-    "artist_name": "Quincy Jones",
-    "year": 1989,
-    "release_id": "00000000-0000-0000-0005-00000000005d",
-    "credits": [
-      {
-        "id": "00000000-0000-0000-0001-000000000014",
-        "kind": "person",
-        "name": "Quincy Jones",
-        "role": "artist"
-      },
-      {
-        "id": "00000000-0000-0000-0002-000000000004",
-        "kind": "label",
-        "name": "Motown",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000004",
-        "kind": "album",
-        "name": "Thriller",
-        "role": "album"
-      },
-      {
-        "id": "00000000-0000-0000-0001-000000000012",
-        "kind": "person",
-        "name": "Nile Rodgers",
-        "role": "producer"
-      },
-      {
-        "id": "00000000-0000-0000-0001-000000000017",
-        "kind": "person",
-        "name": "Taylor Swift",
-        "role": "feature"
-      }
-    ]
-  },
-  {
-    "id": "00000000-0000-0000-0004-00000000005e",
-    "title": "Song Track 94",
-    "artist_name": "George Martin",
-    "year": 1990,
-    "release_id": "00000000-0000-0000-0005-00000000005e",
-    "credits": [
-      {
-        "id": "00000000-0000-0000-0001-000000000015",
-        "kind": "person",
-        "name": "George Martin",
-        "role": "artist"
-      },
-      {
-        "id": "00000000-0000-0000-0002-000000000005",
-        "kind": "label",
-        "name": "Atlantic Records",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000005",
-        "kind": "album",
-        "name": "Random Access Memories",
-        "role": "album"
-      },
-      {
-        "id": "00000000-0000-0000-0001-000000000019",
-        "kind": "person",
-        "name": "Adele",
-        "role": "producer"
-      }
-    ]
-  },
-  {
-    "id": "00000000-0000-0000-0004-00000000005f",
-    "title": "Song Track 95",
-    "artist_name": "Max Martin",
-    "year": 1991,
-    "release_id": "00000000-0000-0000-0005-00000000005f",
-    "credits": [
-      {
-        "id": "00000000-0000-0000-0001-000000000016",
-        "kind": "person",
-        "name": "Max Martin",
-        "role": "artist"
-      },
-      {
-        "id": "00000000-0000-0000-0002-000000000001",
-        "kind": "label",
-        "name": "EMI",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000006",
-        "kind": "album",
-        "name": "Songs in the Key of Life",
-        "role": "album"
-      },
-      {
-        "id": "00000000-0000-0000-0001-000000000006",
-        "kind": "person",
-        "name": "John Lennon",
-        "role": "producer"
-      }
-    ]
-  },
-  {
-    "id": "00000000-0000-0000-0004-000000000060",
-    "title": "Song Track 96",
-    "artist_name": "Taylor Swift",
-    "year": 1992,
-    "release_id": "00000000-0000-0000-0005-000000000060",
-    "credits": [
-      {
-        "id": "00000000-0000-0000-0001-000000000017",
-        "kind": "person",
-        "name": "Taylor Swift",
-        "role": "artist"
-      },
-      {
-        "id": "00000000-0000-0000-0002-000000000002",
-        "kind": "label",
-        "name": "Columbia Records",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000007",
-        "kind": "album",
-        "name": "Purple Rain",
-        "role": "album"
-      },
-      {
-        "id": "00000000-0000-0000-0001-000000000013",
-        "kind": "person",
-        "name": "Pharrell Williams",
-        "role": "producer"
-      },
-      {
-        "id": "00000000-0000-0000-0001-000000000020",
-        "kind": "person",
-        "name": "Bruno Mars",
-        "role": "feature"
-      }
-    ]
-  },
-  {
-    "id": "00000000-0000-0000-0004-000000000061",
-    "title": "Song Track 97",
-    "artist_name": "Britney Spears",
-    "year": 1993,
-    "release_id": "00000000-0000-0000-0005-000000000061",
-    "credits": [
-      {
-        "id": "00000000-0000-0000-0001-000000000018",
-        "kind": "person",
-        "name": "Britney Spears",
-        "role": "artist"
-      },
-      {
-        "id": "00000000-0000-0000-0002-000000000003",
-        "kind": "label",
-        "name": "Epic Records",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000008",
-        "kind": "album",
-        "name": "Like a Virgin",
-        "role": "album"
-      },
-      {
-        "id": "00000000-0000-0000-0001-000000000020",
-        "kind": "person",
-        "name": "Bruno Mars",
-        "role": "producer"
-      }
-    ]
-  },
-  {
-    "id": "00000000-0000-0000-0004-000000000062",
-    "title": "Song Track 98",
+    "id": "e62ba559-0a8b-5191-85d6-f628e7a8961d",
+    "title": "Adele Classic Track 83",
     "artist_name": "Adele",
-    "year": 1994,
-    "release_id": "00000000-0000-0000-0005-000000000062",
+    "year": 1987,
+    "release_id": "ee471fb6-e627-5e21-900a-2095e244a624",
     "credits": [
       {
-        "id": "00000000-0000-0000-0001-000000000019",
+        "id": "cc0b03fb-dc01-47c0-97c5-553d5247f499",
         "kind": "person",
         "name": "Adele",
         "role": "artist"
       },
       {
-        "id": "00000000-0000-0000-0002-000000000004",
-        "kind": "label",
-        "name": "Motown",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000009",
+        "id": "4f26046e-826d-4952-b9cf-14c622a57ef2",
         "kind": "album",
-        "name": "1989",
+        "name": "21",
         "role": "album"
       },
       {
-        "id": "00000000-0000-0000-0001-000000000007",
-        "kind": "person",
-        "name": "Elton John",
-        "role": "producer"
-      }
-    ]
-  },
-  {
-    "id": "00000000-0000-0000-0004-000000000063",
-    "title": "Song Track 99",
-    "artist_name": "Bruno Mars",
-    "year": 1995,
-    "release_id": "00000000-0000-0000-0005-000000000063",
-    "credits": [
-      {
-        "id": "00000000-0000-0000-0001-000000000020",
-        "kind": "person",
-        "name": "Bruno Mars",
-        "role": "artist"
-      },
-      {
-        "id": "00000000-0000-0000-0002-000000000005",
+        "id": "8f3cf5df-6a31-4a6f-b27b-232f3ff3cf87",
         "kind": "label",
-        "name": "Atlantic Records",
+        "name": "Nonesuch Records",
         "role": "label"
       },
       {
-        "id": "00000000-0000-0000-0003-000000000010",
-        "kind": "album",
-        "name": "25",
-        "role": "album"
-      },
-      {
-        "id": "00000000-0000-0000-0001-000000000014",
-        "kind": "person",
-        "name": "Quincy Jones",
-        "role": "producer"
-      },
-      {
-        "id": "00000000-0000-0000-0001-000000000003",
-        "kind": "person",
-        "name": "The Beatles",
-        "role": "feature"
-      }
-    ]
-  },
-  {
-    "id": "00000000-0000-0000-0004-000000000064",
-    "title": "Song Track 100",
-    "artist_name": "Queen",
-    "year": 1996,
-    "release_id": "00000000-0000-0000-0005-000000000064",
-    "credits": [
-      {
-        "id": "00000000-0000-0000-0001-000000000001",
-        "kind": "person",
-        "name": "Queen",
-        "role": "artist"
-      },
-      {
-        "id": "00000000-0000-0000-0002-000000000001",
-        "kind": "label",
-        "name": "EMI",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000001",
-        "kind": "album",
-        "name": "A Night at the Opera",
-        "role": "album"
-      },
-      {
-        "id": "00000000-0000-0000-0001-000000000001",
-        "kind": "person",
-        "name": "Queen",
-        "role": "producer"
-      }
-    ]
-  },
-  {
-    "id": "00000000-0000-0000-0004-000000000065",
-    "title": "Song Track 101",
-    "artist_name": "David Bowie",
-    "year": 1997,
-    "release_id": "00000000-0000-0000-0005-000000000065",
-    "credits": [
-      {
-        "id": "00000000-0000-0000-0001-000000000002",
-        "kind": "person",
-        "name": "David Bowie",
-        "role": "artist"
-      },
-      {
-        "id": "00000000-0000-0000-0002-000000000002",
-        "kind": "label",
-        "name": "Columbia Records",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000002",
-        "kind": "album",
-        "name": "Heroes",
-        "role": "album"
-      },
-      {
-        "id": "00000000-0000-0000-0001-000000000008",
-        "kind": "person",
-        "name": "Stevie Wonder",
-        "role": "producer"
-      }
-    ]
-  },
-  {
-    "id": "00000000-0000-0000-0004-000000000066",
-    "title": "Song Track 102",
-    "artist_name": "The Beatles",
-    "year": 1998,
-    "release_id": "00000000-0000-0000-0005-000000000066",
-    "credits": [
-      {
-        "id": "00000000-0000-0000-0001-000000000003",
-        "kind": "person",
-        "name": "The Beatles",
-        "role": "artist"
-      },
-      {
-        "id": "00000000-0000-0000-0002-000000000003",
-        "kind": "label",
-        "name": "Epic Records",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000003",
-        "kind": "album",
-        "name": "Abbey Road",
-        "role": "album"
-      },
-      {
-        "id": "00000000-0000-0000-0001-000000000015",
-        "kind": "person",
-        "name": "George Martin",
-        "role": "producer"
-      },
-      {
-        "id": "00000000-0000-0000-0001-000000000006",
-        "kind": "person",
-        "name": "John Lennon",
-        "role": "feature"
-      }
-    ]
-  },
-  {
-    "id": "00000000-0000-0000-0004-000000000067",
-    "title": "Song Track 103",
-    "artist_name": "Michael Jackson",
-    "year": 1999,
-    "release_id": "00000000-0000-0000-0005-000000000067",
-    "credits": [
-      {
-        "id": "00000000-0000-0000-0001-000000000004",
-        "kind": "person",
-        "name": "Michael Jackson",
-        "role": "artist"
-      },
-      {
-        "id": "00000000-0000-0000-0002-000000000004",
-        "kind": "label",
-        "name": "Motown",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000004",
-        "kind": "album",
-        "name": "Thriller",
-        "role": "album"
-      },
-      {
-        "id": "00000000-0000-0000-0001-000000000002",
-        "kind": "person",
-        "name": "David Bowie",
-        "role": "producer"
-      }
-    ]
-  },
-  {
-    "id": "00000000-0000-0000-0004-000000000068",
-    "title": "Song Track 104",
-    "artist_name": "Paul McCartney",
-    "year": 2000,
-    "release_id": "00000000-0000-0000-0005-000000000068",
-    "credits": [
-      {
-        "id": "00000000-0000-0000-0001-000000000005",
-        "kind": "person",
-        "name": "Paul McCartney",
-        "role": "artist"
-      },
-      {
-        "id": "00000000-0000-0000-0002-000000000005",
-        "kind": "label",
-        "name": "Atlantic Records",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000005",
-        "kind": "album",
-        "name": "Random Access Memories",
-        "role": "album"
-      },
-      {
-        "id": "00000000-0000-0000-0001-000000000009",
-        "kind": "person",
-        "name": "Prince",
-        "role": "producer"
-      }
-    ]
-  },
-  {
-    "id": "00000000-0000-0000-0004-000000000069",
-    "title": "Song Track 105",
-    "artist_name": "John Lennon",
-    "year": 2001,
-    "release_id": "00000000-0000-0000-0005-000000000069",
-    "credits": [
-      {
-        "id": "00000000-0000-0000-0001-000000000006",
-        "kind": "person",
-        "name": "John Lennon",
-        "role": "artist"
-      },
-      {
-        "id": "00000000-0000-0000-0002-000000000001",
-        "kind": "label",
-        "name": "EMI",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000006",
-        "kind": "album",
-        "name": "Songs in the Key of Life",
-        "role": "album"
-      },
-      {
-        "id": "00000000-0000-0000-0001-000000000016",
-        "kind": "person",
-        "name": "Max Martin",
-        "role": "producer"
-      },
-      {
-        "id": "00000000-0000-0000-0001-000000000009",
-        "kind": "person",
-        "name": "Prince",
-        "role": "feature"
-      }
-    ]
-  },
-  {
-    "id": "00000000-0000-0000-0004-00000000006a",
-    "title": "Song Track 106",
-    "artist_name": "Elton John",
-    "year": 2002,
-    "release_id": "00000000-0000-0000-0005-00000000006a",
-    "credits": [
-      {
-        "id": "00000000-0000-0000-0001-000000000007",
-        "kind": "person",
-        "name": "Elton John",
-        "role": "artist"
-      },
-      {
-        "id": "00000000-0000-0000-0002-000000000002",
-        "kind": "label",
-        "name": "Columbia Records",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000007",
-        "kind": "album",
-        "name": "Purple Rain",
-        "role": "album"
-      },
-      {
-        "id": "00000000-0000-0000-0001-000000000003",
-        "kind": "person",
-        "name": "The Beatles",
-        "role": "producer"
-      }
-    ]
-  },
-  {
-    "id": "00000000-0000-0000-0004-00000000006b",
-    "title": "Song Track 107",
-    "artist_name": "Stevie Wonder",
-    "year": 2003,
-    "release_id": "00000000-0000-0000-0005-00000000006b",
-    "credits": [
-      {
-        "id": "00000000-0000-0000-0001-000000000008",
-        "kind": "person",
-        "name": "Stevie Wonder",
-        "role": "artist"
-      },
-      {
-        "id": "00000000-0000-0000-0002-000000000003",
-        "kind": "label",
-        "name": "Epic Records",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000008",
-        "kind": "album",
-        "name": "Like a Virgin",
-        "role": "album"
-      },
-      {
-        "id": "00000000-0000-0000-0001-000000000010",
-        "kind": "person",
-        "name": "Madonna",
-        "role": "producer"
-      }
-    ]
-  },
-  {
-    "id": "00000000-0000-0000-0004-00000000006c",
-    "title": "Song Track 108",
-    "artist_name": "Prince",
-    "year": 2004,
-    "release_id": "00000000-0000-0000-0005-00000000006c",
-    "credits": [
-      {
-        "id": "00000000-0000-0000-0001-000000000009",
-        "kind": "person",
-        "name": "Prince",
-        "role": "artist"
-      },
-      {
-        "id": "00000000-0000-0000-0002-000000000004",
-        "kind": "label",
-        "name": "Motown",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000009",
-        "kind": "album",
-        "name": "1989",
-        "role": "album"
-      },
-      {
-        "id": "00000000-0000-0000-0001-000000000017",
-        "kind": "person",
-        "name": "Taylor Swift",
-        "role": "producer"
-      },
-      {
-        "id": "00000000-0000-0000-0001-000000000012",
-        "kind": "person",
-        "name": "Nile Rodgers",
-        "role": "feature"
-      }
-    ]
-  },
-  {
-    "id": "00000000-0000-0000-0004-00000000006d",
-    "title": "Song Track 109",
-    "artist_name": "Madonna",
-    "year": 2005,
-    "release_id": "00000000-0000-0000-0005-00000000006d",
-    "credits": [
-      {
-        "id": "00000000-0000-0000-0001-000000000010",
-        "kind": "person",
-        "name": "Madonna",
-        "role": "artist"
-      },
-      {
-        "id": "00000000-0000-0000-0002-000000000005",
-        "kind": "label",
-        "name": "Atlantic Records",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000010",
-        "kind": "album",
-        "name": "25",
-        "role": "album"
-      },
-      {
-        "id": "00000000-0000-0000-0001-000000000004",
-        "kind": "person",
-        "name": "Michael Jackson",
-        "role": "producer"
-      }
-    ]
-  },
-  {
-    "id": "00000000-0000-0000-0004-00000000006e",
-    "title": "Song Track 110",
-    "artist_name": "Daft Punk",
-    "year": 2006,
-    "release_id": "00000000-0000-0000-0005-00000000006e",
-    "credits": [
-      {
-        "id": "00000000-0000-0000-0001-000000000011",
-        "kind": "person",
-        "name": "Daft Punk",
-        "role": "artist"
-      },
-      {
-        "id": "00000000-0000-0000-0002-000000000001",
-        "kind": "label",
-        "name": "EMI",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000001",
-        "kind": "album",
-        "name": "A Night at the Opera",
-        "role": "album"
-      },
-      {
-        "id": "00000000-0000-0000-0001-000000000011",
-        "kind": "person",
-        "name": "Daft Punk",
-        "role": "producer"
-      }
-    ]
-  },
-  {
-    "id": "00000000-0000-0000-0004-00000000006f",
-    "title": "Song Track 111",
-    "artist_name": "Nile Rodgers",
-    "year": 2007,
-    "release_id": "00000000-0000-0000-0005-00000000006f",
-    "credits": [
-      {
-        "id": "00000000-0000-0000-0001-000000000012",
-        "kind": "person",
-        "name": "Nile Rodgers",
-        "role": "artist"
-      },
-      {
-        "id": "00000000-0000-0000-0002-000000000002",
-        "kind": "label",
-        "name": "Columbia Records",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000002",
-        "kind": "album",
-        "name": "Heroes",
-        "role": "album"
-      },
-      {
-        "id": "00000000-0000-0000-0001-000000000018",
-        "kind": "person",
-        "name": "Britney Spears",
-        "role": "producer"
-      },
-      {
-        "id": "00000000-0000-0000-0001-000000000015",
-        "kind": "person",
-        "name": "George Martin",
-        "role": "feature"
-      }
-    ]
-  },
-  {
-    "id": "00000000-0000-0000-0004-000000000070",
-    "title": "Song Track 112",
-    "artist_name": "Pharrell Williams",
-    "year": 2008,
-    "release_id": "00000000-0000-0000-0005-000000000070",
-    "credits": [
-      {
-        "id": "00000000-0000-0000-0001-000000000013",
+        "id": "144ef525-85e9-40c3-8335-02c32d0861f3",
         "kind": "person",
         "name": "Pharrell Williams",
-        "role": "artist"
-      },
-      {
-        "id": "00000000-0000-0000-0002-000000000003",
-        "kind": "label",
-        "name": "Epic Records",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000003",
-        "kind": "album",
-        "name": "Abbey Road",
-        "role": "album"
-      },
-      {
-        "id": "00000000-0000-0000-0001-000000000005",
-        "kind": "person",
-        "name": "Paul McCartney",
         "role": "producer"
       }
     ]
   },
   {
-    "id": "00000000-0000-0000-0004-000000000071",
-    "title": "Song Track 113",
-    "artist_name": "Quincy Jones",
-    "year": 2009,
-    "release_id": "00000000-0000-0000-0005-000000000071",
+    "id": "000b0040-63e2-5910-b54b-11fd5241e7a2",
+    "title": "Alabama Shakes Classic Track 84",
+    "artist_name": "Alabama Shakes",
+    "year": 1988,
+    "release_id": "5f66585b-fa06-5730-a175-0849a3da07ba",
     "credits": [
       {
-        "id": "00000000-0000-0000-0001-000000000014",
+        "id": "b6807869-d355-4422-90f7-ebbe02b11be7",
         "kind": "person",
-        "name": "Quincy Jones",
+        "name": "Alabama Shakes",
         "role": "artist"
       },
       {
-        "id": "00000000-0000-0000-0002-000000000004",
-        "kind": "label",
-        "name": "Motown",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000004",
+        "id": "b7501b8e-a9ce-40bf-9ce4-e0c82f9d860e",
         "kind": "album",
-        "name": "Thriller",
+        "name": "Boys & Girls",
         "role": "album"
       },
       {
-        "id": "00000000-0000-0000-0001-000000000012",
+        "id": "f357f8fe-74ce-4277-bc60-d5be86958a6a",
+        "kind": "label",
+        "name": "ATO Records",
+        "role": "label"
+      },
+      {
+        "id": "d15721d8-56b4-453d-b506-c91923793612",
         "kind": "person",
-        "name": "Nile Rodgers",
+        "name": "The Black Keys",
         "role": "producer"
       }
     ]
   },
   {
-    "id": "00000000-0000-0000-0004-000000000072",
-    "title": "Song Track 114",
-    "artist_name": "George Martin",
-    "year": 2010,
-    "release_id": "00000000-0000-0000-0005-000000000072",
+    "id": "0018c02b-ae7b-589f-8e36-a25cd06105e1",
+    "title": "Brittany Howard Classic Track 85",
+    "artist_name": "Brittany Howard",
+    "year": 1989,
+    "release_id": "63a5e218-f5b0-5615-a8b6-deff7a950d87",
     "credits": [
       {
-        "id": "00000000-0000-0000-0001-000000000015",
+        "id": "117ce422-2977-49f3-8fbf-bf7da6e6e22c",
         "kind": "person",
-        "name": "George Martin",
+        "name": "Brittany Howard",
         "role": "artist"
       },
       {
-        "id": "00000000-0000-0000-0002-000000000005",
-        "kind": "label",
-        "name": "Atlantic Records",
-        "role": "label"
-      },
-      {
-        "id": "00000000-0000-0000-0003-000000000005",
+        "id": "5534c03b-c2e8-4a66-b25c-9d62d6ea153d",
         "kind": "album",
-        "name": "Random Access Memories",
+        "name": "Sound & Color",
         "role": "album"
       },
       {
-        "id": "00000000-0000-0000-0001-000000000019",
-        "kind": "person",
-        "name": "Adele",
-        "role": "producer"
+        "id": "5b40cf6d-f421-4f10-ae40-e2ef64d7c577",
+        "kind": "label",
+        "name": "EMI",
+        "role": "label"
       },
       {
-        "id": "00000000-0000-0000-0001-000000000018",
+        "id": "b6807869-d355-4422-90f7-ebbe02b11be7",
         "kind": "person",
-        "name": "Britney Spears",
-        "role": "feature"
+        "name": "Alabama Shakes",
+        "role": "producer"
       }
     ]
   }
