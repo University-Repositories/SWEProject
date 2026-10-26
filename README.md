@@ -49,9 +49,17 @@ POSTGRES_DB=beat4beat
 docker compose up -d
 ```
 
-The database user, password, and database name default to `beat4beat`. Database tables are defined in `dataManagement/migrations/0001_init.sql`.
+The database user, password, and database name default to `beat4beat`. Database migrations are located in `dataManagement/migrations/`.
 
-### 4. Check that it accepts connections
+### 4. Run database migrations
+
+To apply database migrations:
+
+```
+sqlx migrate run --source dataManagement/migrations
+```
+
+### 5. Check that it accepts connections
 
 ```
 docker compose exec db pg_isready -U beat4beat
@@ -59,19 +67,19 @@ docker compose exec db pg_isready -U beat4beat
 
 The output should end with `accepting connections`.
 
-### 5. Build and test everything
+### 6. Build and test everything
 
 ```
 cargo build
 cargo test
 ```
 
-### 6. (Optional) Populate with 1000 Pop Songs
+### 7. (Optional) Run Catalog Import
 
-Populate the songs catalog from MusicBrainz:
+Import the MusicBrainz catalog dataset:
 
 ```
-cargo run -p data_management --example populate_pop
+cargo run -p data_management --bin catalog_import
 ```
 
 ## Everyday commands
@@ -81,10 +89,11 @@ cargo run -p data_management --example populate_pop
 | Start the database             | `docker compose up -d`                          |
 | Stop the database (keeps data) | `docker compose down`                           |
 | Stop and delete all data       | `docker compose down -v`                        |
+| Run migrations                 | `sqlx migrate run --source dataManagement/migrations` |
 | Build                          | `cargo build`                                   |
 | Run all tests                  | `cargo test`                                    |
 | Run database tests             | `cargo test -p data_management --test game_db_test` |
-| Populate songs (1000 pop)      | `cargo run -p data_management --example populate_pop` |
+| Run catalog import             | `cargo run -p data_management --bin catalog_import` |
 | Format code                    | `cargo fmt --all`                               |
 | Lint                           | `cargo clippy --all-targets -- -D warnings`     |
 

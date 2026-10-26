@@ -1,13 +1,11 @@
+use musicbrainz_rs::MusicBrainzClient;
 use musicbrainz_rs::entity::recording::{Recording, RecordingSearchQuery};
 use musicbrainz_rs::prelude::*;
-use musicbrainz_rs::MusicBrainzClient;
 
 fn main() -> Result<(), Box<dyn std::error::Error>> {
     let client = MusicBrainzClient::new("Beat4Beat/0.1.0 ( contact@yourproject.org )");
 
-    let query_str = RecordingSearchQuery::query_builder()
-        .tag("pop")
-        .build();
+    let query_str = RecordingSearchQuery::query_builder().tag("pop").build();
 
     let mut search_query = Recording::search(query_str);
     search_query.limit(5);
