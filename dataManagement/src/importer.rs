@@ -3,7 +3,7 @@ use sqlx::PgPool;
 use std::collections::HashSet;
 use uuid::Uuid;
 
-use crate::error::RepoError;
+use crate::RepoError;
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct ImportCredit {

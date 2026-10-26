@@ -277,7 +277,7 @@ async fn test_get_credit_ids_deduplication() {
 #[tokio::test]
 async fn test_dev_fixture_applies_cleanly() {
     let pool = setup_db().await;
-    let fixture_sql = include_str!("../fixtures/dev_fixture.sql");
+    let fixture_sql = include_str!("../dev_fixture.sql");
 
     // Execute the seed SQL
     let mut tx = pool.begin().await.unwrap();
