@@ -36,9 +36,18 @@ All repository methods also offer an `_with_executor` variant for use inside tra
 
 ---
 
-## 3. Catalog Import
+## 3. Catalog Import & Dev Fixture
 
-To run the catalog import binary:
+To seed the development fixture (12 interconnected songs for dev/testing):
+```bash
+# Via CLI:
+cargo run -p data_management --bin catalog_import -- --fixture
+
+# Or programmatically in Rust (e.g., in service setup or tests):
+data_management::seed_dev_fixture(&pool).await?;
+```
+
+To run the full MusicBrainz catalog import:
 ```bash
 cargo run -p data_management --bin catalog_import
 ```
