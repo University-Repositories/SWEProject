@@ -1,5 +1,5 @@
 use chrono::{DateTime, Utc};
-use serde::Serialize;
+use serde::{Deserialize, Serialize};
 use ts_rs::TS;
 use uuid::Uuid;
 
@@ -14,8 +14,6 @@ pub enum Role {
 #[derive(Debug, Clone, Serialize, TS)]
 #[serde(rename_all = "camelCase")]
 #[ts(export)]
-// snake case vars become camel case in json 🐍
-// shared api user without private account fields
 pub struct User {
     pub id: Uuid,
     pub username: String,
@@ -53,6 +51,66 @@ pub struct ApiError {
     pub error: ApiErrorDetail,
 }
 
+// --- Catalog Wire Types (PBI 07) ---
+
+#[derive(Debug, Clone, Serialize, Deserialize, TS)]
+#[ts(export)]
+#[serde(rename_all = "camelCase")]
+pub struct RecordingSummary {
+    pub id: Uuid,
+    pub title: String,
+    pub artist_name: String,
+    pub year: Option<i32>,
+    pub release_id: Option<Uuid>,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize, TS)]
+#[ts(export)]
+#[serde(rename_all = "camelCase")]
+pub struct RecordingDetail {
+    #[serde(flatten)]
+    pub summary: RecordingSummary,
+    pub credits: Vec<Credit>,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize, TS)]
+#[ts(export)]
+#[serde(rename_all = "camelCase")]
+pub struct Credit {
+    pub credit_id: Uuid,
+    pub name: String,
+    pub kind: CreditKind,
+    pub role: CreditRole,
+}
+
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize, Deserialize, TS)]
+#[ts(export)]
+#[serde(rename_all = "camelCase")]
+pub enum CreditKind {
+    Person,
+    Label,
+    Album,
+}
+
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize, Deserialize, TS)]
+#[ts(export)]
+#[serde(rename_all = "camelCase")]
+pub enum CreditRole {
+    Artist,
+    Feature,
+    Producer,
+    Writer,
+    Label,
+    Album,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize, TS)]
+#[ts(export)]
+#[serde(rename_all = "camelCase")]
+pub struct SearchResultsResponse {
+    pub results: Vec<RecordingSummary>,
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -73,5 +131,15 @@ mod tests {
         assert_eq!(value["createdAt"], "2026-10-22T12:00:00Z");
         assert!(value.get("displayName").unwrap().is_null());
         assert_eq!(value.as_object().unwrap().len(), 5);
+    }
+
+    #[test]
+    fn trigger_catalog_ts_export() {
+        let _ = std::mem::size_of::<RecordingSummary>();
+        let _ = std::mem::size_of::<RecordingDetail>();
+        let _ = std::mem::size_of::<Credit>();
+        let _ = std::mem::size_of::<CreditKind>();
+        let _ = std::mem::size_of::<CreditRole>();
+        let _ = std::mem::size_of::<SearchResultsResponse>();
     }
 }
