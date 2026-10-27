@@ -53,7 +53,7 @@ Landing-page local state:
 | Function | Parameters | Return/output | Current behavior and backend relevance |
 |---|---|---|---|
 | `createAlbumImage()` | None | `string` data URI | Creates the same inline SVG sample album art for each generated song. Replace `albumImage` with a backend/media URL or asset reference. |
-| `createSong(title, owner)` | `title: string`; `owner: 'starting' \| 'player-one' \| 'player-two'` (defaults to `'player-one'`) | `Song` | Creates a sample song. Artist, genre, lyrics, and art are hard-coded; `id` is generated locally using `Date.now() + Math.random()`. Backend song search should return these fields plus stable identifiers and the user/player who made the connection. |
+| `createSong(title, owner)` | `title: string`; `owner: 'starting' \| 'player-one' \| 'player-two'` (defaults to `'player-one'`) | `Song` | Creates a sample song. Artist, year, credits, and art are hard-coded; `id` is generated locally using `Date.now() + Math.random()`. Backend song search should return these fields plus stable identifiers and the user/player who made the connection. |
 | `createInitialSongs()` | None | `Song[]` | Creates one starting card titled `"Neon Skyline"` with `playerId: "starting"` and an empty player name. Replace with the match's initial/seed song. |
 | `App()` | None | React element | Renders the match header, connection form, song chain, chat, and exit dialog. Owns all current match state locally. |
 | `showInputFeedback(kind)` | `kind: 'wrong' \| 'valid'` | `void` | Displays red or green input feedback, then clears it after 2.2 seconds. It cancels any earlier feedback timer/frame before showing new feedback. |
@@ -68,8 +68,8 @@ type Song = {
   id: number
   title: string
   artist: string
-  genre: string
-  lyrics: string
+  year: number
+  credits: string
   albumImage: string
   playerId: 'starting' | 'player-one' | 'player-two'
   playerName: string

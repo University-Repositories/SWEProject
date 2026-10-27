@@ -397,13 +397,23 @@
   overflow-wrap: anywhere;
 }
 
-.song-genre {
-  margin: 4px 0 12px;
+.song-year {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin: 8px 0 12px;
   color: #c5fa57;
   font-size: 12px;
 }
 
-.song-artist {
+.song-year span {
+  color: #9294a0;
+  font-family: var(--mono);
+  font-size: 9px;
+}
+
+.song-artist,
+.song-credits {
   display: flex;
   flex-direction: column;
   gap: 3px;
@@ -411,18 +421,18 @@
   font-size: 12px;
 }
 
-.song-artist span {
+.song-artist span,
+.song-credits span {
   color: #9294a0;
   font-family: var(--mono);
   font-size: 9px;
 }
 
-.song-lyrics {
+.song-credits {
   margin: 0;
   color: #a9aab4;
   font-size: 11px;
   line-height: 1.6;
-  white-space: pre-line;
 }
 
 .song-connector {

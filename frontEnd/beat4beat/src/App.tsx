@@ -6,8 +6,8 @@ type Song = {
   id: number
   title: string
   artist: string
-  genre: string
-  lyrics: string
+  year: number
+  credits: string
   albumImage: string
   playerId: 'starting' | 'player-one' | 'player-two'
   playerName: string
@@ -37,8 +37,8 @@ function createSong(title: string, owner: Song['playerId'] = playerId): Song {
     id: Date.now() + Math.random(),
     title,
     artist: 'The Midnight Collective',
-    genre: 'Synthwave',
-    lyrics: 'Running through the city lights\nChasing echoes in the night',
+    year: 2024,
+    credits: 'Written and performed by The Midnight Collective',
     albumImage: createAlbumImage(),
     playerId: owner,
     playerName: owner === 'starting' ? '' : playerName,
@@ -192,9 +192,9 @@ function App() {
                   <div className="song-details">
                     <p className="song-label">TRACK CONNECTION</p>
                     <h2>{song.title}</h2>
-                    <p className="song-genre">{song.genre}</p>
+                    <p className="song-year"><span>YEAR</span>{song.year}</p>
                     <p className="song-artist"><span>ARTIST</span>{song.artist}</p>
-                    <p className="song-lyrics">“{song.lyrics}”</p>
+                    <p className="song-credits"><span>CREDITS</span>{song.credits}</p>
                   </div>
                 </article>
                 {index < songs.length - 1 && (
