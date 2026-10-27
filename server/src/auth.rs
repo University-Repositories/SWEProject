@@ -81,7 +81,7 @@ async fn logout(
     Ok((StatusCode::NO_CONTENT, [(SET_COOKIE, cookie)]))
 }
 
-async fn require_session(
+pub(crate) async fn require_session(
     State(state): State<AppState>,
     mut request: Request,
     next: Next,
