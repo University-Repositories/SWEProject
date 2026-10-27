@@ -2,6 +2,7 @@ use axum::{
     Json, Router,
     extract::{Path, Query, State},
     http::StatusCode,
+    middleware,
     routing::get,
 };
 use data_management::CatalogRepo;
@@ -14,6 +15,7 @@ use crate::{
         RecordingSummary, SearchResultsResponse,
     },
     app::AppState,
+    auth::require_session,
 };
 
 #[derive(Debug, Deserialize)]
@@ -26,7 +28,15 @@ pub fn router(state: AppState) -> Router<AppState> {
     Router::new()
         .route("/search", get(search))
         .route("/recordings/{id}", get(get_recording))
+        .route_layer(middleware::from_fn_with_state(
+            state.clone(),
+            require_session,
+        ))
         .with_state(state)
+}
+
+fn resolve_limit(limit: Option<usize>) -> i64 {
+    limit.unwrap_or(20).clamp(1, 50) as i64
 }
 
 async fn search(
@@ -34,13 +44,27 @@ async fn search(
     Query(params): Query<SearchParams>,
 ) -> Result<Json<SearchResultsResponse>, (StatusCode, Json<ApiError>)> {
     let query_str = params.q.unwrap_or_default().trim().to_string();
-    if query_str.is_empty() {
+
+    if query_str.chars().count() > 100 {
+        return Err((
+            StatusCode::BAD_REQUEST,
+            Json(ApiError {
+                error: ApiErrorDetail {
+                    code: ApiErrorCode::ValidationFailed,
+                    message: "Query parameter 'q' must not exceed 100 characters".into(),
+                    field: Some("q".into()),
+                },
+            }),
+        ));
+    }
+
+    if query_str.len() < 2 {
         return Ok(Json(SearchResultsResponse {
             results: Vec::new(),
         }));
     }
 
-    let limit = params.limit.unwrap_or(20).clamp(1, 100) as i64;
+    let limit = resolve_limit(params.limit);
     let repo = CatalogRepo::new(state.pool);
 
     match repo.search(&query_str, limit).await {
@@ -169,7 +193,7 @@ mod tests {
 
     fn test_app() -> axum::Router {
         let config = Config::from_lookup(|key| match key {
-            "DATABASE_URL" => Some("postgres://localhost/beat4beat".into()),
+            "DATABASE_URL" => Some("postgres://localhost/unused".into()),
             "SESSION_TTL_SECONDS" => Some("604800".into()),
             "COOKIE_SECURE" => Some("false".into()),
             _ => None,
@@ -182,41 +206,28 @@ mod tests {
     }
 
     #[tokio::test]
-    async fn empty_search_returns_empty_results() {
+    async fn rejects_unauthenticated_requests() {
         let app = test_app();
-        let response = app
-            .oneshot(
-                Request::builder()
-                    .uri("/api/catalog/search?q=")
-                    .body(Body::empty())
-                    .unwrap(),
-            )
-            .await
-            .unwrap();
+        for path in [
+            "/api/catalog/search?q=test",
+            "/api/catalog/recordings/00000000-0000-0000-0000-000000000000",
+        ] {
+            let response = app
+                .clone()
+                .oneshot(Request::builder().uri(path).body(Body::empty()).unwrap())
+                .await
+                .unwrap();
 
-        assert_eq!(response.status(), StatusCode::OK);
-        let bytes = response.into_body().collect().await.unwrap().to_bytes();
-        let json: SearchResultsResponse = serde_json::from_slice(&bytes).unwrap();
-        assert!(json.results.is_empty());
+            assert_eq!(response.status(), StatusCode::UNAUTHORIZED);
+            let bytes = response.into_body().collect().await.unwrap().to_bytes();
+            let val: serde_json::Value = serde_json::from_slice(&bytes).unwrap();
+            assert_eq!(val["error"]["code"], "UNAUTHENTICATED");
+        }
     }
 
-    #[tokio::test]
-    async fn invalid_uuid_recording_returns_bad_request() {
-        let app = test_app();
-        let response = app
-            .oneshot(
-                Request::builder()
-                    .uri("/api/catalog/recordings/not-a-valid-uuid")
-                    .body(Body::empty())
-                    .unwrap(),
-            )
-            .await
-            .unwrap();
-
-        assert_eq!(response.status(), StatusCode::BAD_REQUEST);
-        let bytes = response.into_body().collect().await.unwrap().to_bytes();
-        let value: serde_json::Value = serde_json::from_slice(&bytes).unwrap();
-        assert_eq!(value["error"]["code"], "VALIDATION_FAILED");
-        assert_eq!(value["error"]["field"], "id");
+    #[test]
+    fn limits_clamp_to_fifty_maximum() {
+        assert_eq!(resolve_limit(Some(500)), 50);
+        assert_eq!(resolve_limit(None), 20);
     }
 }
