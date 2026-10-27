@@ -30,7 +30,8 @@ pub fn router(state: AppState) -> Router {
     // i want auth routes grouped beside the health check
     let api = Router::new()
         .route("/health", get(health))
-        .nest("/auth", crate::auth::router(state.clone()));
+        .nest("/auth", crate::auth::router(state.clone()))
+        .nest("/catalog", crate::catalog::router(state.clone()));
     Router::new()
         .nest("/api", api)
         .fallback(not_found)
