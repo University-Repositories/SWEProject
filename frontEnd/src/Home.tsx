@@ -1,5 +1,7 @@
-import { useState } from 'react'
+import { useEffect, useState, type FormEvent } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { describeAuthError, getCurrentUser, login, logout, register } from './api/auth'
+import type { User } from './api/generated/User'
 import './Home.css'
 
 type LandingStats = {
@@ -24,7 +26,25 @@ function Home() {
   const [lobbyCode, setLobbyCode] = useState('')
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
+  const [user, setUser] = useState<User | null>(null)
+  const [authError, setAuthError] = useState('')
+  const [isSubmitting, setIsSubmitting] = useState(false)
   const stats = getLandingStats()
+
+  // On page load, ask the server whether the session cookie is still valid.
+  useEffect(() => {
+    let cancelled = false
+    getCurrentUser()
+      .then((current) => {
+        if (!cancelled) setUser(current)
+      })
+      .catch(() => {
+        if (!cancelled) setUser(null)
+      })
+    return () => {
+      cancelled = true
+    }
+  }, [])
 
   function handleSettings() {
     console.log('[Beat4Beat] Settings button clicked')
@@ -34,11 +54,58 @@ function Home() {
     console.log('[Beat4Beat] Create lobby clicked')
   }
 
-  function logAuthAction(action: 'Sign in' | 'Sign up') {
-    console.log(`[Beat4Beat] ${action} requested`, {
-      username,
-      password,
+  function openSignIn() {
+    setAuthError('')
+    setIsSignInOpen(true)
+  }
+
+  function closeSignIn() {
+    setIsSignInOpen(false)
+    setAuthError('')
+  }
+
+  // Runs a sign-in or sign-up action, then loads the user from the new session.
+  async function runAuth(action: () => Promise<void>) {
+    if (isSubmitting) return
+    setIsSubmitting(true)
+    setAuthError('')
+    try {
+      await action()
+      const current = await getCurrentUser()
+      if (!current) {
+        setAuthError('Signed in, but no session was saved. Check that the server and dev proxy are running.')
+        return
+      }
+      setUser(current)
+      setPassword('')
+      setIsSignInOpen(false)
+    } catch (error) {
+      setAuthError(describeAuthError(error))
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
+
+  function handleSignIn(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault()
+    void runAuth(() => login(username, password))
+  }
+
+  // Register does not log in, so sign up is register followed by login.
+  function handleSignUp() {
+    void runAuth(async () => {
+      await register(username, password)
+      await login(username, password)
     })
+  }
+
+  async function handleLogout() {
+    try {
+      await logout()
+    } catch (error) {
+      console.error('[Beat4Beat] Logout failed', error)
+    }
+    setUser(null)
   }
 
   function handleJoinLobby(code: string) {
@@ -62,13 +129,18 @@ function Home() {
             <span aria-hidden="true">⚙</span>
             Settings
           </button>
-          <button
-            className="sign-in-button"
-            type="button"
-            onClick={() => setIsSignInOpen(true)}
-          >
-            Sign in
-          </button>
+          {user ? (
+            <>
+              <span className="signed-in-name">{user.username}</span>
+              <button className="sign-in-button" type="button" onClick={() => void handleLogout()}>
+                Log out
+              </button>
+            </>
+          ) : (
+            <button className="sign-in-button" type="button" onClick={openSignIn}>
+              Sign in
+            </button>
+          )}
         </nav>
       </header>
 
@@ -148,7 +220,7 @@ function Home() {
         <div
           className="modal-backdrop"
           onMouseDown={(event) => {
-            if (event.target === event.currentTarget) setIsSignInOpen(false)
+            if (event.target === event.currentTarget) closeSignIn()
           }}
         >
           <section
@@ -161,13 +233,13 @@ function Home() {
               className="modal-close"
               type="button"
               aria-label="Close sign in dialog"
-              onClick={() => setIsSignInOpen(false)}
+              onClick={closeSignIn}
             >
               ×
             </button>
             <p className="modal-kicker">WELCOME BACK</p>
             <h2 id="sign-in-title">Get in the game.</h2>
-            <form className="auth-form" onSubmit={(event) => event.preventDefault()}>
+            <form className="auth-form" onSubmit={handleSignIn}>
               <label htmlFor="username">Username</label>
               <input
                 id="username"
@@ -186,20 +258,26 @@ function Home() {
                 value={password}
                 onChange={(event) => setPassword(event.target.value)}
               />
+              {authError && (
+                <p className="auth-error" role="alert">
+                  {authError}
+                </p>
+              )}
               <div className="auth-actions">
-                <button type="button" onClick={() => logAuthAction('Sign in')}>
+                <button type="submit" disabled={isSubmitting}>
                   SIGN IN
                 </button>
                 <button
                   className="signup-action"
                   type="button"
-                  onClick={() => logAuthAction('Sign up')}
+                  disabled={isSubmitting}
+                  onClick={handleSignUp}
                 >
                   SIGN UP
                 </button>
               </div>
             </form>
-            <button className="modal-cancel" type="button" onClick={() => setIsSignInOpen(false)}>
+            <button className="modal-cancel" type="button" onClick={closeSignIn}>
               Cancel
             </button>
           </section>
