@@ -2,6 +2,7 @@ pub mod api_types;
 pub mod app;
 pub mod auth;
 pub mod catalog;
+pub mod chain;
 pub mod config;
 pub mod cookies;
 pub mod error;

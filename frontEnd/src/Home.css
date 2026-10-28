@@ -422,6 +422,28 @@ button.mode-card:hover {
   color: var(--accent);
 }
 
+.auth-actions button:disabled {
+  cursor: wait;
+  opacity: 0.6;
+}
+
+.auth-error {
+  margin: 0 0 14px;
+  color: #ff8a80;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.signed-in-name {
+  max-width: 160px;
+  overflow: hidden;
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 600;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .modal-cancel {
   display: block;
   margin: 18px auto 0;
@@ -492,6 +514,10 @@ button.mode-card:hover {
 
   .settings-button span {
     font-size: 18px;
+  }
+
+  .signed-in-name {
+    max-width: 90px;
   }
 
   .sign-in-modal {
