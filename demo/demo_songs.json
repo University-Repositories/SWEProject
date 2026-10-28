@@ -1,0 +1,839 @@
+[
+  {
+    "id": "2da4f188-f6f0-55ba-be05-254183e1a274",
+    "title": "Bohemian Rhapsody",
+    "artist_name": "Queen",
+    "year": 1975,
+    "release_id": null,
+    "credits": [
+      {
+        "id": "7815d635-1620-5d25-aec4-4f5b5edc3fbe",
+        "kind": "person",
+        "name": "Queen",
+        "role": "artist"
+      },
+      {
+        "id": "9e94fba5-f7f4-5612-bda9-bfcd3e6cc628",
+        "kind": "album",
+        "name": "A Night at the Opera",
+        "role": "album"
+      },
+      {
+        "id": "ebd2ab2e-3429-5d32-ab14-c9d9962c08bd",
+        "kind": "person",
+        "name": "Roy Thomas Baker",
+        "role": "producer"
+      },
+      {
+        "id": "b0136427-5ee5-52d4-b447-82ce2ea4d2c1",
+        "kind": "person",
+        "name": "Freddie Mercury",
+        "role": "writer"
+      }
+    ]
+  },
+  {
+    "id": "93012d87-fc4f-5ee3-9849-80e714e4d013",
+    "title": "Killer Queen",
+    "artist_name": "Queen",
+    "year": 1974,
+    "release_id": null,
+    "credits": [
+      {
+        "id": "7815d635-1620-5d25-aec4-4f5b5edc3fbe",
+        "kind": "person",
+        "name": "Queen",
+        "role": "artist"
+      },
+      {
+        "id": "f119e921-2325-5cf6-a2c5-f5758b62129d",
+        "kind": "album",
+        "name": "Sheer Heart Attack",
+        "role": "album"
+      },
+      {
+        "id": "ebd2ab2e-3429-5d32-ab14-c9d9962c08bd",
+        "kind": "person",
+        "name": "Roy Thomas Baker",
+        "role": "producer"
+      },
+      {
+        "id": "b0136427-5ee5-52d4-b447-82ce2ea4d2c1",
+        "kind": "person",
+        "name": "Freddie Mercury",
+        "role": "writer"
+      }
+    ]
+  },
+  {
+    "id": "e085332f-be68-53aa-98ba-43d8f0c766b0",
+    "title": "Under Pressure",
+    "artist_name": "Queen & David Bowie",
+    "year": 1981,
+    "release_id": null,
+    "credits": [
+      {
+        "id": "7815d635-1620-5d25-aec4-4f5b5edc3fbe",
+        "kind": "person",
+        "name": "Queen",
+        "role": "artist"
+      },
+      {
+        "id": "fbe5816e-f2d7-5661-ada0-2b74cb81fd8c",
+        "kind": "person",
+        "name": "David Bowie",
+        "role": "artist"
+      },
+      {
+        "id": "2248b7a6-11eb-529b-91c8-01ae7542b6a4",
+        "kind": "album",
+        "name": "Hot Space",
+        "role": "album"
+      }
+    ]
+  },
+  {
+    "id": "40879385-4bbb-5ad6-ba14-054ce51f4c2e",
+    "title": "Let's Dance",
+    "artist_name": "David Bowie",
+    "year": 1983,
+    "release_id": null,
+    "credits": [
+      {
+        "id": "fbe5816e-f2d7-5661-ada0-2b74cb81fd8c",
+        "kind": "person",
+        "name": "David Bowie",
+        "role": "artist"
+      },
+      {
+        "id": "8bf7e6c3-e61f-5cb5-8717-ba2cdaab9f76",
+        "kind": "person",
+        "name": "Nile Rodgers",
+        "role": "producer"
+      },
+      {
+        "id": "1a4dbb03-39fc-530f-bbe7-02c6c06d63c8",
+        "kind": "album",
+        "name": "Let's Dance",
+        "role": "album"
+      }
+    ]
+  },
+  {
+    "id": "0ea7d21c-a7a4-5dcb-ab30-f2c385c40341",
+    "title": "Modern Love",
+    "artist_name": "David Bowie",
+    "year": 1983,
+    "release_id": null,
+    "credits": [
+      {
+        "id": "fbe5816e-f2d7-5661-ada0-2b74cb81fd8c",
+        "kind": "person",
+        "name": "David Bowie",
+        "role": "artist"
+      },
+      {
+        "id": "8bf7e6c3-e61f-5cb5-8717-ba2cdaab9f76",
+        "kind": "person",
+        "name": "Nile Rodgers",
+        "role": "producer"
+      },
+      {
+        "id": "1a4dbb03-39fc-530f-bbe7-02c6c06d63c8",
+        "kind": "album",
+        "name": "Let's Dance",
+        "role": "album"
+      }
+    ]
+  },
+  {
+    "id": "dcd7e11d-87df-514f-b0ee-7e49929dfb30",
+    "title": "Heroes",
+    "artist_name": "David Bowie",
+    "year": 1977,
+    "release_id": null,
+    "credits": [
+      {
+        "id": "fbe5816e-f2d7-5661-ada0-2b74cb81fd8c",
+        "kind": "person",
+        "name": "David Bowie",
+        "role": "artist"
+      },
+      {
+        "id": "f855ca44-2e90-54c0-8ac3-89a3b7572959",
+        "kind": "person",
+        "name": "Tony Visconti",
+        "role": "producer"
+      },
+      {
+        "id": "0d19bdd7-cfa6-53e0-bd38-c12ec8ab463c",
+        "kind": "album",
+        "name": "Heroes",
+        "role": "album"
+      }
+    ]
+  },
+  {
+    "id": "9644be60-a5fe-5daf-9d82-d32782b608e4",
+    "title": "Space Oddity",
+    "artist_name": "David Bowie",
+    "year": 1969,
+    "release_id": null,
+    "credits": [
+      {
+        "id": "fbe5816e-f2d7-5661-ada0-2b74cb81fd8c",
+        "kind": "person",
+        "name": "David Bowie",
+        "role": "artist"
+      },
+      {
+        "id": "b85fa5d5-5eac-5fc2-a988-348eb0ebd89b",
+        "kind": "person",
+        "name": "Gus Dudgeon",
+        "role": "producer"
+      }
+    ]
+  },
+  {
+    "id": "3febff57-3ba4-52a4-8ea8-80a6e615a5ae",
+    "title": "Your Song",
+    "artist_name": "Elton John",
+    "year": 1970,
+    "release_id": null,
+    "credits": [
+      {
+        "id": "10155b02-a6ba-5f68-87f0-d105d8e33b93",
+        "kind": "person",
+        "name": "Elton John",
+        "role": "artist"
+      },
+      {
+        "id": "b85fa5d5-5eac-5fc2-a988-348eb0ebd89b",
+        "kind": "person",
+        "name": "Gus Dudgeon",
+        "role": "producer"
+      },
+      {
+        "id": "22d4f5de-8cf8-5b09-afb2-e5531800a23b",
+        "kind": "person",
+        "name": "Bernie Taupin",
+        "role": "writer"
+      },
+      {
+        "id": "21c670c1-888c-53b9-9390-c1f6e57d4cd5",
+        "kind": "album",
+        "name": "Elton John",
+        "role": "album"
+      }
+    ]
+  },
+  {
+    "id": "3b4a8d4f-c06d-5d88-a4e8-4eec080b69ac",
+    "title": "Tiny Dancer",
+    "artist_name": "Elton John",
+    "year": 1971,
+    "release_id": null,
+    "credits": [
+      {
+        "id": "10155b02-a6ba-5f68-87f0-d105d8e33b93",
+        "kind": "person",
+        "name": "Elton John",
+        "role": "artist"
+      },
+      {
+        "id": "b85fa5d5-5eac-5fc2-a988-348eb0ebd89b",
+        "kind": "person",
+        "name": "Gus Dudgeon",
+        "role": "producer"
+      },
+      {
+        "id": "22d4f5de-8cf8-5b09-afb2-e5531800a23b",
+        "kind": "person",
+        "name": "Bernie Taupin",
+        "role": "writer"
+      },
+      {
+        "id": "3251d876-bc5f-5bde-9da6-d94a78e8f0bb",
+        "kind": "album",
+        "name": "Madman Across the Water",
+        "role": "album"
+      }
+    ]
+  },
+  {
+    "id": "a2461755-7714-5787-ac6b-5d181836862a",
+    "title": "Rocket Man",
+    "artist_name": "Elton John",
+    "year": 1972,
+    "release_id": null,
+    "credits": [
+      {
+        "id": "10155b02-a6ba-5f68-87f0-d105d8e33b93",
+        "kind": "person",
+        "name": "Elton John",
+        "role": "artist"
+      },
+      {
+        "id": "b85fa5d5-5eac-5fc2-a988-348eb0ebd89b",
+        "kind": "person",
+        "name": "Gus Dudgeon",
+        "role": "producer"
+      },
+      {
+        "id": "22d4f5de-8cf8-5b09-afb2-e5531800a23b",
+        "kind": "person",
+        "name": "Bernie Taupin",
+        "role": "writer"
+      },
+      {
+        "id": "afd518ca-95ad-5fcf-a6ed-21dff4c2adff",
+        "kind": "album",
+        "name": "Honky Château",
+        "role": "album"
+      }
+    ]
+  },
+  {
+    "id": "cb0f158d-bb71-5968-9e58-9c842bf7ed5c",
+    "title": "Like a Virgin",
+    "artist_name": "Madonna",
+    "year": 1984,
+    "release_id": null,
+    "credits": [
+      {
+        "id": "0bcbc65b-74a8-5a2e-8930-3d0d4cea7290",
+        "kind": "person",
+        "name": "Madonna",
+        "role": "artist"
+      },
+      {
+        "id": "8bf7e6c3-e61f-5cb5-8717-ba2cdaab9f76",
+        "kind": "person",
+        "name": "Nile Rodgers",
+        "role": "producer"
+      },
+      {
+        "id": "6270b1d2-1539-5cd9-936b-2ec3d543f0e2",
+        "kind": "album",
+        "name": "Like a Virgin",
+        "role": "album"
+      }
+    ]
+  },
+  {
+    "id": "780d9d4b-c892-5356-a4e9-c1caa0d6b536",
+    "title": "Material Girl",
+    "artist_name": "Madonna",
+    "year": 1984,
+    "release_id": null,
+    "credits": [
+      {
+        "id": "0bcbc65b-74a8-5a2e-8930-3d0d4cea7290",
+        "kind": "person",
+        "name": "Madonna",
+        "role": "artist"
+      },
+      {
+        "id": "8bf7e6c3-e61f-5cb5-8717-ba2cdaab9f76",
+        "kind": "person",
+        "name": "Nile Rodgers",
+        "role": "producer"
+      },
+      {
+        "id": "6270b1d2-1539-5cd9-936b-2ec3d543f0e2",
+        "kind": "album",
+        "name": "Like a Virgin",
+        "role": "album"
+      }
+    ]
+  },
+  {
+    "id": "9ba0c584-370a-54cf-9ab7-398358dfa963",
+    "title": "Le Freak",
+    "artist_name": "Chic",
+    "year": 1978,
+    "release_id": null,
+    "credits": [
+      {
+        "id": "066aa3ee-1b70-5ad6-9dc9-076a32f118c9",
+        "kind": "person",
+        "name": "Chic",
+        "role": "artist"
+      },
+      {
+        "id": "8bf7e6c3-e61f-5cb5-8717-ba2cdaab9f76",
+        "kind": "person",
+        "name": "Nile Rodgers",
+        "role": "producer"
+      },
+      {
+        "id": "8de9e0c7-e7f7-5a9d-8346-a0d05d61c88d",
+        "kind": "person",
+        "name": "Bernard Edwards",
+        "role": "producer"
+      }
+    ]
+  },
+  {
+    "id": "27128e4e-9841-5849-9c58-7e687a9153f5",
+    "title": "Good Times",
+    "artist_name": "Chic",
+    "year": 1979,
+    "release_id": null,
+    "credits": [
+      {
+        "id": "066aa3ee-1b70-5ad6-9dc9-076a32f118c9",
+        "kind": "person",
+        "name": "Chic",
+        "role": "artist"
+      },
+      {
+        "id": "8bf7e6c3-e61f-5cb5-8717-ba2cdaab9f76",
+        "kind": "person",
+        "name": "Nile Rodgers",
+        "role": "producer"
+      },
+      {
+        "id": "8de9e0c7-e7f7-5a9d-8346-a0d05d61c88d",
+        "kind": "person",
+        "name": "Bernard Edwards",
+        "role": "producer"
+      }
+    ]
+  },
+  {
+    "id": "fc5834fd-f100-58f5-8319-e9f2475ad108",
+    "title": "Get Lucky",
+    "artist_name": "Daft Punk",
+    "year": 2013,
+    "release_id": null,
+    "credits": [
+      {
+        "id": "a8a144ea-0d15-5314-8207-1b277748bb7f",
+        "kind": "person",
+        "name": "Daft Punk",
+        "role": "artist"
+      },
+      {
+        "id": "ab1b6e9f-9078-50cd-aaf1-321c63a313a0",
+        "kind": "person",
+        "name": "Pharrell Williams",
+        "role": "feature"
+      },
+      {
+        "id": "8bf7e6c3-e61f-5cb5-8717-ba2cdaab9f76",
+        "kind": "person",
+        "name": "Nile Rodgers",
+        "role": "feature"
+      },
+      {
+        "id": "18d1a038-6398-533b-b453-8961a4685141",
+        "kind": "album",
+        "name": "Random Access Memories",
+        "role": "album"
+      }
+    ]
+  },
+  {
+    "id": "a075271e-91a2-5290-a99a-2229e2477e59",
+    "title": "Lose Yourself to Dance",
+    "artist_name": "Daft Punk",
+    "year": 2013,
+    "release_id": null,
+    "credits": [
+      {
+        "id": "a8a144ea-0d15-5314-8207-1b277748bb7f",
+        "kind": "person",
+        "name": "Daft Punk",
+        "role": "artist"
+      },
+      {
+        "id": "ab1b6e9f-9078-50cd-aaf1-321c63a313a0",
+        "kind": "person",
+        "name": "Pharrell Williams",
+        "role": "feature"
+      },
+      {
+        "id": "18d1a038-6398-533b-b453-8961a4685141",
+        "kind": "album",
+        "name": "Random Access Memories",
+        "role": "album"
+      }
+    ]
+  },
+  {
+    "id": "d9480152-73e1-5e4a-a724-a71608df6a46",
+    "title": "Instant Crush",
+    "artist_name": "Daft Punk",
+    "year": 2013,
+    "release_id": null,
+    "credits": [
+      {
+        "id": "a8a144ea-0d15-5314-8207-1b277748bb7f",
+        "kind": "person",
+        "name": "Daft Punk",
+        "role": "artist"
+      },
+      {
+        "id": "4587db78-4cac-5f83-9c72-bef2a24fc06f",
+        "kind": "person",
+        "name": "Julian Casablancas",
+        "role": "feature"
+      },
+      {
+        "id": "18d1a038-6398-533b-b453-8961a4685141",
+        "kind": "album",
+        "name": "Random Access Memories",
+        "role": "album"
+      }
+    ]
+  },
+  {
+    "id": "4508903f-3d6d-58f7-b720-e1bddf903258",
+    "title": "One More Time",
+    "artist_name": "Daft Punk",
+    "year": 2000,
+    "release_id": null,
+    "credits": [
+      {
+        "id": "a8a144ea-0d15-5314-8207-1b277748bb7f",
+        "kind": "person",
+        "name": "Daft Punk",
+        "role": "artist"
+      },
+      {
+        "id": "25ec8f41-337d-5cf9-b0d1-6679fb1e2fe0",
+        "kind": "album",
+        "name": "Discovery",
+        "role": "album"
+      }
+    ]
+  },
+  {
+    "id": "4107465d-ea59-532d-9309-d494c157aeb3",
+    "title": "Happy",
+    "artist_name": "Pharrell Williams",
+    "year": 2013,
+    "release_id": null,
+    "credits": [
+      {
+        "id": "ab1b6e9f-9078-50cd-aaf1-321c63a313a0",
+        "kind": "person",
+        "name": "Pharrell Williams",
+        "role": "artist"
+      },
+      {
+        "id": "ab1b6e9f-9078-50cd-aaf1-321c63a313a0",
+        "kind": "person",
+        "name": "Pharrell Williams",
+        "role": "producer"
+      },
+      {
+        "id": "7cc5e502-db9c-578d-a539-e1a85b6e117a",
+        "kind": "album",
+        "name": "G I R L",
+        "role": "album"
+      }
+    ]
+  },
+  {
+    "id": "830ddf4e-3251-530f-aeea-860b427e21ac",
+    "title": "Blurred Lines",
+    "artist_name": "Robin Thicke",
+    "year": 2013,
+    "release_id": null,
+    "credits": [
+      {
+        "id": "f7a8f1d5-78b2-5d2a-af45-47f3e41b7840",
+        "kind": "person",
+        "name": "Robin Thicke",
+        "role": "artist"
+      },
+      {
+        "id": "23379412-f92c-5c44-8a02-8a37ecf338fe",
+        "kind": "person",
+        "name": "T.I.",
+        "role": "feature"
+      },
+      {
+        "id": "ab1b6e9f-9078-50cd-aaf1-321c63a313a0",
+        "kind": "person",
+        "name": "Pharrell Williams",
+        "role": "feature"
+      },
+      {
+        "id": "ab1b6e9f-9078-50cd-aaf1-321c63a313a0",
+        "kind": "person",
+        "name": "Pharrell Williams",
+        "role": "producer"
+      }
+    ]
+  },
+  {
+    "id": "8c572105-45d7-54f7-b1bc-134f76be38f9",
+    "title": "Billie Jean",
+    "artist_name": "Michael Jackson",
+    "year": 1983,
+    "release_id": null,
+    "credits": [
+      {
+        "id": "141a8453-0f71-50b6-9667-77cfe93f639c",
+        "kind": "person",
+        "name": "Michael Jackson",
+        "role": "artist"
+      },
+      {
+        "id": "8fcd853b-3c6d-5588-afbd-ea45328d73ad",
+        "kind": "person",
+        "name": "Quincy Jones",
+        "role": "producer"
+      },
+      {
+        "id": "b2df592a-bcef-53d5-a3a5-b2758a7f1e9d",
+        "kind": "album",
+        "name": "Thriller",
+        "role": "album"
+      }
+    ]
+  },
+  {
+    "id": "aa7bdf59-7667-5889-acfa-2bd43394842c",
+    "title": "Thriller",
+    "artist_name": "Michael Jackson",
+    "year": 1982,
+    "release_id": null,
+    "credits": [
+      {
+        "id": "141a8453-0f71-50b6-9667-77cfe93f639c",
+        "kind": "person",
+        "name": "Michael Jackson",
+        "role": "artist"
+      },
+      {
+        "id": "8fcd853b-3c6d-5588-afbd-ea45328d73ad",
+        "kind": "person",
+        "name": "Quincy Jones",
+        "role": "producer"
+      },
+      {
+        "id": "dc9ec47c-63ae-5497-8bab-bf04f096c5cd",
+        "kind": "person",
+        "name": "Rod Temperton",
+        "role": "writer"
+      },
+      {
+        "id": "b2df592a-bcef-53d5-a3a5-b2758a7f1e9d",
+        "kind": "album",
+        "name": "Thriller",
+        "role": "album"
+      }
+    ]
+  },
+  {
+    "id": "4cb648f8-0ac4-5ba5-bbf1-e60375c7b4b1",
+    "title": "Rock with You",
+    "artist_name": "Michael Jackson",
+    "year": 1979,
+    "release_id": null,
+    "credits": [
+      {
+        "id": "141a8453-0f71-50b6-9667-77cfe93f639c",
+        "kind": "person",
+        "name": "Michael Jackson",
+        "role": "artist"
+      },
+      {
+        "id": "8fcd853b-3c6d-5588-afbd-ea45328d73ad",
+        "kind": "person",
+        "name": "Quincy Jones",
+        "role": "producer"
+      },
+      {
+        "id": "dc9ec47c-63ae-5497-8bab-bf04f096c5cd",
+        "kind": "person",
+        "name": "Rod Temperton",
+        "role": "writer"
+      },
+      {
+        "id": "869a8649-6748-5995-9455-ee5a73c6df68",
+        "kind": "album",
+        "name": "Off the Wall",
+        "role": "album"
+      }
+    ]
+  },
+  {
+    "id": "c6dcee20-95e9-5fd8-a238-23eff04eb6f9",
+    "title": "Crazy",
+    "artist_name": "Gnarls Barkley",
+    "year": 2006,
+    "release_id": null,
+    "credits": [
+      {
+        "id": "57f67193-1df8-5ffb-9a86-65dff8cdc9a1",
+        "kind": "person",
+        "name": "Gnarls Barkley",
+        "role": "artist"
+      },
+      {
+        "id": "e7d9eb2c-2791-512a-9537-8544f55c75f4",
+        "kind": "person",
+        "name": "Danger Mouse",
+        "role": "producer"
+      },
+      {
+        "id": "af068d45-6119-57e9-a901-21ade3f53a51",
+        "kind": "album",
+        "name": "St. Elsewhere",
+        "role": "album"
+      }
+    ]
+  },
+  {
+    "id": "580d1455-b104-50e9-98b1-33fadac0c5ce",
+    "title": "Lonely Boy",
+    "artist_name": "The Black Keys",
+    "year": 2011,
+    "release_id": null,
+    "credits": [
+      {
+        "id": "8c2789e7-9bf0-5563-b1a9-ad624cd5d5cb",
+        "kind": "person",
+        "name": "The Black Keys",
+        "role": "artist"
+      },
+      {
+        "id": "e7d9eb2c-2791-512a-9537-8544f55c75f4",
+        "kind": "person",
+        "name": "Danger Mouse",
+        "role": "producer"
+      },
+      {
+        "id": "05c8c41f-1bb6-5a61-a063-52ee1b05ab89",
+        "kind": "album",
+        "name": "El Camino",
+        "role": "album"
+      }
+    ]
+  },
+  {
+    "id": "875bb298-fb5a-5647-83ff-41fc85511b6e",
+    "title": "Tighten Up",
+    "artist_name": "The Black Keys",
+    "year": 2010,
+    "release_id": null,
+    "credits": [
+      {
+        "id": "8c2789e7-9bf0-5563-b1a9-ad624cd5d5cb",
+        "kind": "person",
+        "name": "The Black Keys",
+        "role": "artist"
+      },
+      {
+        "id": "e7d9eb2c-2791-512a-9537-8544f55c75f4",
+        "kind": "person",
+        "name": "Danger Mouse",
+        "role": "producer"
+      },
+      {
+        "id": "2995f93f-8140-5b58-ac6e-ac77c08a72ab",
+        "kind": "album",
+        "name": "Brothers",
+        "role": "album"
+      }
+    ]
+  },
+  {
+    "id": "d381eca3-bf7b-55de-8c65-4d48faa64d5a",
+    "title": "Come Together",
+    "artist_name": "The Beatles",
+    "year": 1969,
+    "release_id": null,
+    "credits": [
+      {
+        "id": "6952b318-1844-5e19-bbdf-7b8f8aa8ff0c",
+        "kind": "person",
+        "name": "The Beatles",
+        "role": "artist"
+      },
+      {
+        "id": "c9c817ea-9e64-53dd-9177-923b6070e996",
+        "kind": "person",
+        "name": "George Martin",
+        "role": "producer"
+      },
+      {
+        "id": "6d63d1c8-a35d-5d28-8181-b74dc50bd10b",
+        "kind": "album",
+        "name": "Abbey Road",
+        "role": "album"
+      }
+    ]
+  },
+  {
+    "id": "1b3b6305-515e-51f5-9913-209d733b1adf",
+    "title": "Something",
+    "artist_name": "The Beatles",
+    "year": 1969,
+    "release_id": null,
+    "credits": [
+      {
+        "id": "6952b318-1844-5e19-bbdf-7b8f8aa8ff0c",
+        "kind": "person",
+        "name": "The Beatles",
+        "role": "artist"
+      },
+      {
+        "id": "c9c817ea-9e64-53dd-9177-923b6070e996",
+        "kind": "person",
+        "name": "George Martin",
+        "role": "producer"
+      },
+      {
+        "id": "105a7c24-7cb8-528b-99ca-b681ea534d57",
+        "kind": "person",
+        "name": "George Harrison",
+        "role": "writer"
+      },
+      {
+        "id": "6d63d1c8-a35d-5d28-8181-b74dc50bd10b",
+        "kind": "album",
+        "name": "Abbey Road",
+        "role": "album"
+      }
+    ]
+  },
+  {
+    "id": "5d0af52e-e1e1-55be-b1fc-6c7a75f6e90e",
+    "title": "Here Comes the Sun",
+    "artist_name": "The Beatles",
+    "year": 1969,
+    "release_id": null,
+    "credits": [
+      {
+        "id": "6952b318-1844-5e19-bbdf-7b8f8aa8ff0c",
+        "kind": "person",
+        "name": "The Beatles",
+        "role": "artist"
+      },
+      {
+        "id": "c9c817ea-9e64-53dd-9177-923b6070e996",
+        "kind": "person",
+        "name": "George Martin",
+        "role": "producer"
+      },
+      {
+        "id": "105a7c24-7cb8-528b-99ca-b681ea534d57",
+        "kind": "person",
+        "name": "George Harrison",
+        "role": "writer"
+      },
+      {
+        "id": "6d63d1c8-a35d-5d28-8181-b74dc50bd10b",
+        "kind": "album",
+        "name": "Abbey Road",
+        "role": "album"
+      }
+    ]
+  }
+]

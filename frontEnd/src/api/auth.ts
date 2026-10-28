@@ -14,7 +14,7 @@ export class ApiRequestError extends Error {
   }
 }
 
-async function request(path: string, init: RequestInit = {}): Promise<Response> {
+export async function request(path: string, init: RequestInit = {}): Promise<Response> {
   const response = await fetch(path, init)
   if (!response.ok) {
     let body: ApiError | null = null
@@ -28,7 +28,7 @@ async function request(path: string, init: RequestInit = {}): Promise<Response> 
   return response
 }
 
-function postJson(body: unknown): RequestInit {
+export function postJson(body: unknown): RequestInit {
   return {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },

@@ -31,7 +31,8 @@ pub fn router(state: AppState) -> Router {
     let api = Router::new()
         .route("/health", get(health))
         .nest("/auth", crate::auth::router(state.clone()))
-        .nest("/catalog", crate::catalog::router(state.clone()));
+        .nest("/catalog", crate::catalog::router(state.clone()))
+        .nest("/chain", crate::chain::router(state.clone()));
     Router::new()
         .nest("/api", api)
         .fallback(not_found)

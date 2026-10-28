@@ -289,6 +289,123 @@
   font-weight: 800;
 }
 
+.enter-button:disabled,
+.credit-option:disabled {
+  cursor: wait;
+  opacity: 0.6;
+}
+
+.game-status {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+  margin: 0;
+  color: #c3c4cc;
+  font-size: 14px;
+}
+
+.game-status p {
+  margin: 0;
+}
+
+.game-status .enter-button {
+  min-height: 40px;
+}
+
+.chain-notice {
+  flex-shrink: 0;
+  margin: 14px 0 0;
+  color: #c3c4cc;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.candidate-panel {
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 14px;
+  padding: 14px;
+  border: 1px solid #30313b;
+  border-radius: 10px;
+  background: #171922;
+}
+
+.candidate-title {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin: 0;
+  color: #f5f4f7;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.candidate-title span {
+  color: #9294a0;
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.credit-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.credit-option {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 2px;
+  padding: 8px 11px;
+  border: 1px solid #383943;
+  border-radius: 8px;
+  background: #12141b;
+  color: #f5f4f7;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.credit-option:hover {
+  border-color: #a87cff;
+}
+
+.credit-option--shared {
+  border-color: #c5fa57;
+}
+
+.credit-option-name {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.credit-option-meta {
+  color: #9294a0;
+  font-family: var(--mono);
+  font-size: 10px;
+}
+
+.credit-option--shared .credit-option-meta {
+  color: #c5fa57;
+}
+
+.candidate-cancel {
+  align-self: flex-start;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #9294a0;
+  font: inherit;
+  font-size: 12px;
+  cursor: pointer;
+}
+
 .song-list {
   min-height: 0;
   overflow-y: auto;
