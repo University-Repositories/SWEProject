@@ -85,7 +85,7 @@ pub struct ChainCheckResponse {
 }
 
 impl ChainCheckResponse {
-    fn from_result(result: Result<AcceptedLink, MoveRejection>) -> Self {
+    pub(crate) fn from_result(result: Result<AcceptedLink, MoveRejection>) -> Self {
         match result {
             Ok(link) => Self {
                 accepted: true,
@@ -203,7 +203,10 @@ async fn load_song(repo: &CatalogRepo, id: Uuid) -> Result<Song, ApiError> {
     ))
 }
 
-async fn load_attempt(repo: &CatalogRepo, step: &ChainMove) -> Result<MoveAttempt, ApiError> {
+async fn load_attempt(
+    repo: &CatalogRepo,
+    step: &ChainMove,
+) -> Result<MoveAttempt, ApiError> {
     Ok(MoveAttempt {
         song: load_song(repo, step.recording_id).await?,
         selected_credit: CreditId(step.credit_id),
