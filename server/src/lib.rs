@@ -6,6 +6,7 @@ pub mod chain;
 pub mod config;
 pub mod cookies;
 pub mod error;
+pub mod game_actions;
 pub mod json;
 
 use sqlx::{ConnectOptions, PgPool, postgres::PgPoolOptions};

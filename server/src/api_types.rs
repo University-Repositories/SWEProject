@@ -31,6 +31,7 @@ pub enum ApiErrorCode {
     InvalidCredentials,
     NotFound,
     UsernameTaken,
+    GameEnded,
     UnsupportedMediaType,
     Internal,
 }
