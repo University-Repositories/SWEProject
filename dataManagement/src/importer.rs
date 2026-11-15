@@ -233,7 +233,8 @@ pub async fn populate_pop_songs(
     let page_size: u8 = 100;
     let max_offset_per_tag: u16 = 300;
     let mut total_inserted = 0;
-    let importer = CatalogImporter::new(1);
+    let importer = CatalogImporter::new(2);
+    let mut all_recordings = Vec::new();
 
     for tag in pop_tags {
         let mut offset: u16 = 0;
@@ -309,6 +310,12 @@ pub async fn populate_pop_songs(
                     }
                 }
 
+                // Drop songs with fewer than 2 distinct credits (module contracts, 5.3)
+                let distinct_credit_ids: HashSet<Uuid> = credits.iter().map(|c| c.id).collect();
+                if distinct_credit_ids.len() < 2 {
+                    continue;
+                }
+
                 batch.push(ImportRecording {
                     id: rec_id,
                     title: rec.title,
@@ -321,7 +328,18 @@ pub async fn populate_pop_songs(
 
             importer.import_recordings(pool, &batch).await?;
             total_inserted += batch.len();
+            all_recordings.extend(batch);
             offset += page_size as u16;
+        }
+    }
+
+    // Write to JSON file so import runs offline
+    if !all_recordings.is_empty() {
+        let json_output = serde_json::to_string_pretty(&all_recordings)?;
+        if std::path::Path::new("dataManagement/data/musicbrainz_subset.json").exists() {
+            let _ = std::fs::write("dataManagement/data/musicbrainz_subset.json", &json_output);
+        } else if std::path::Path::new("data/musicbrainz_subset.json").exists() {
+            let _ = std::fs::write("data/musicbrainz_subset.json", &json_output);
         }
     }
 
