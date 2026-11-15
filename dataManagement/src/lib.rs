@@ -327,6 +327,7 @@ impl CatalogRepo {
             r#"
             SELECT id, title, artist_name, year, release_id
             FROM recordings
+            WHERE title % $1 OR artist_name % $1
             ORDER BY
                 GREATEST(similarity(title, $1), similarity(artist_name, $1)) DESC,
                 year ASC NULLS LAST,
