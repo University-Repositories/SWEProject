@@ -1,4 +1,4 @@
-use game_engine::{Chain, MoveAttempt};
+use game_engine::{Chain, MoveAttempt, RecordingId};
 
 use crate::{
     api_types::{ApiError, ApiErrorCode},
@@ -27,11 +27,28 @@ pub fn end_game(ended: &mut bool) -> bool {
     !std::mem::replace(ended, true)
 }
 
+pub fn validate_reported_link(
+    chain: &Chain,
+    from: RecordingId,
+    to: RecordingId,
+) -> Result<(), ApiError> {
+    // i want reports to match an actual link in the game seq
+    if chain.songs().windows(2).any(|pair| pair == [from, to]) {
+        return Ok(());
+    }
+
+    Err(ApiError::new(
+        ApiErrorCode::NotFound,
+        "Link not found in this game",
+        None,
+    ))
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
     use crate::chain::MoveRejectionCode;
-    use game_engine::{CreditId, RecordingId, Song};
+    use game_engine::{CreditId, Song};
     use uuid::Uuid;
 
     fn attempt(id: u128) -> MoveAttempt {
@@ -52,9 +69,15 @@ mod tests {
         }
 
         let duplicate = submit_move(&mut chain, false, attempt(11)).unwrap();
-        assert_eq!(duplicate.rejection, Some(MoveRejectionCode::SongAlreadyPlayed));
+        assert_eq!(
+            duplicate.rejection,
+            Some(MoveRejectionCode::SongAlreadyPlayed)
+        );
         let exhausted = submit_move(&mut chain, false, attempt(14)).unwrap();
-        assert_eq!(exhausted.rejection, Some(MoveRejectionCode::CreditExhausted));
+        assert_eq!(
+            exhausted.rejection,
+            Some(MoveRejectionCode::CreditExhausted)
+        );
         assert_eq!(chain.songs().len(), 4);
     }
 
@@ -65,7 +88,28 @@ mod tests {
         assert!(end_game(&mut ended));
         assert!(!end_game(&mut ended));
         assert!(ended);
-        assert!(submit_move(&mut chain, ended, attempt(11)).is_err());
+        let error = submit_move(&mut chain, ended, attempt(11)).unwrap_err();
+        assert!(matches!(error.error.code, ApiErrorCode::GameEnded));
         assert_eq!(chain.songs().len(), 1);
+    }
+
+    #[test]
+    fn report_requires_a_played_link_in_order() {
+        let opening = attempt(10);
+        let second = attempt(11);
+        let third = attempt(12);
+        let (from, middle, to) = (opening.song.id, second.song.id, third.song.id);
+        let mut chain = Chain::new(opening.song);
+        assert!(validate_reported_link(&chain, from, middle).is_err());
+
+        assert!(submit_move(&mut chain, false, second).unwrap().accepted);
+        assert!(submit_move(&mut chain, false, third).unwrap().accepted);
+
+        assert!(validate_reported_link(&chain, from, middle).is_ok());
+        assert!(validate_reported_link(&chain, middle, to).is_ok());
+        assert!(validate_reported_link(&chain, from, to).is_err());
+        assert!(validate_reported_link(&chain, middle, from).is_err());
+        let error = validate_reported_link(&chain, to, attempt(13).song.id).unwrap_err();
+        assert!(matches!(error.error.code, ApiErrorCode::NotFound));
     }
 }

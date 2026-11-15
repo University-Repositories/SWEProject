@@ -22,6 +22,7 @@ use crate::{
     api_types::{ApiError, ApiErrorCode},
     app::AppState,
     auth::require_session,
+    game_actions::submit_move,
     json::ApiJson,
 };
 
@@ -103,21 +104,19 @@ impl ChainCheckResponse {
     }
 }
 
-/// An earlier move in the request breaks the rules.
-#[derive(Debug, PartialEq, Eq)]
-pub struct InvalidHistory;
-
-/// Replays the chain through the engine, then checks the next move.
-pub fn evaluate(
+fn evaluate(
     opening: Song,
     history: Vec<MoveAttempt>,
     next: MoveAttempt,
-) -> Result<Result<AcceptedLink, MoveRejection>, InvalidHistory> {
+) -> Result<ChainCheckResponse, ApiError> {
     let mut chain = Chain::new(opening);
     for attempt in history {
-        chain.apply(attempt).map_err(|_| InvalidHistory)?;
+        chain
+            .apply(attempt)
+            .map_err(|_| ApiError::validation(Some("moves")))?;
     }
-    Ok(chain.apply(next))
+    // i want the demo to use the same move logic as the game svc
+    submit_move(&mut chain, false, next)
 }
 
 #[derive(Debug, Deserialize)]
@@ -180,9 +179,7 @@ async fn check(
         history.push(load_attempt(&repo, step).await?);
     }
     let next = load_attempt(&repo, &request.next).await?;
-    let result =
-        evaluate(opening, history, next).map_err(|_| ApiError::validation(Some("moves")))?;
-    Ok(Json(ChainCheckResponse::from_result(result)))
+    Ok(Json(evaluate(opening, history, next)?))
 }
 
 async fn load_song(repo: &CatalogRepo, id: Uuid) -> Result<Song, ApiError> {
@@ -203,10 +200,7 @@ async fn load_song(repo: &CatalogRepo, id: Uuid) -> Result<Song, ApiError> {
     ))
 }
 
-async fn load_attempt(
-    repo: &CatalogRepo,
-    step: &ChainMove,
-) -> Result<MoveAttempt, ApiError> {
+async fn load_attempt(repo: &CatalogRepo, step: &ChainMove) -> Result<MoveAttempt, ApiError> {
     Ok(MoveAttempt {
         song: load_song(repo, step.recording_id).await?,
         selected_credit: CreditId(step.credit_id),
@@ -242,8 +236,7 @@ mod tests {
 
     #[test]
     fn accepts_a_link_through_a_shared_credit() {
-        let result = evaluate(song(1, &[10, 11]), vec![], attempt(song(2, &[11]), 11)).unwrap();
-        let response = ChainCheckResponse::from_result(result);
+        let response = evaluate(song(1, &[10, 11]), vec![], attempt(song(2, &[11]), 11)).unwrap();
         assert!(response.accepted);
         assert_eq!(response.uses_after, Some(1));
     }
@@ -255,8 +248,7 @@ mod tests {
             attempt(song(3, &[10]), 10),
             attempt(song(4, &[10]), 10),
         ];
-        let result = evaluate(song(1, &[10]), history, attempt(song(5, &[10]), 10)).unwrap();
-        let response = ChainCheckResponse::from_result(result);
+        let response = evaluate(song(1, &[10]), history, attempt(song(5, &[10]), 10)).unwrap();
         assert!(!response.accepted);
         assert_eq!(response.rejection, Some(MoveRejectionCode::CreditExhausted));
         assert_eq!(
@@ -267,8 +259,7 @@ mod tests {
 
     #[test]
     fn reports_the_rejection_reason() {
-        let result = evaluate(song(1, &[10]), vec![], attempt(song(2, &[20]), 20)).unwrap();
-        let response = ChainCheckResponse::from_result(result);
+        let response = evaluate(song(1, &[10]), vec![], attempt(song(2, &[20]), 20)).unwrap();
         assert_eq!(
             response.rejection,
             Some(MoveRejectionCode::CreditNotOnPreviousSong)
@@ -278,8 +269,9 @@ mod tests {
     #[test]
     fn rejects_a_history_that_breaks_the_rules() {
         let history = vec![attempt(song(2, &[20]), 20)];
-        let result = evaluate(song(1, &[10]), history, attempt(song(3, &[10]), 10));
-        assert_eq!(result, Err(InvalidHistory));
+        let error = evaluate(song(1, &[10]), history, attempt(song(3, &[10]), 10)).unwrap_err();
+        assert_eq!(error.status(), StatusCode::BAD_REQUEST);
+        assert_eq!(error.error.field.as_deref(), Some("moves"));
     }
 
     #[tokio::test]
