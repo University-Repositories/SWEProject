@@ -371,8 +371,9 @@ impl CatalogRepo {
             r#"
             SELECT id, title, artist_name, year, release_id
             FROM recordings
-            WHERE title % $1 OR artist_name % $1
+            WHERE $1 <% title OR $1 <% artist_name
             ORDER BY
+                GREATEST(word_similarity($1, title), word_similarity($1, artist_name)) DESC,
                 GREATEST(similarity(title, $1), similarity(artist_name, $1)) DESC,
                 year ASC NULLS LAST,
                 id ASC
