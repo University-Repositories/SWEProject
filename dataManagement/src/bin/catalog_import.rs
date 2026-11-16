@@ -1,4 +1,6 @@
-use data_management::{CatalogImporter, create_pool, load_default_subset, seed_dev_fixture};
+use data_management::{
+    CatalogImporter, create_pool, load_default_subset, run_migrations, seed_dev_fixture,
+};
 use std::env;
 
 #[tokio::main]
@@ -8,6 +10,9 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
 
     println!("Connecting to database at {}...", database_url);
     let pool = create_pool(&database_url).await?;
+
+    println!("Running database migrations...");
+    run_migrations(&pool).await?;
 
     let args: Vec<String> = env::args().collect();
     if args

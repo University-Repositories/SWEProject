@@ -233,7 +233,7 @@ pub async fn populate_pop_songs(
     let page_size: u8 = 100;
     let max_offset_per_tag: u16 = 300;
     let mut total_inserted = 0;
-    let importer = CatalogImporter::new(1);
+    let importer = CatalogImporter::new(2);
 
     for tag in pop_tags {
         let mut offset: u16 = 0;
@@ -307,6 +307,12 @@ pub async fn populate_pop_songs(
                             };
                         }
                     }
+                }
+
+                // Drop songs with fewer than 2 distinct credits (module contracts, 5.3)
+                let distinct_credit_ids: HashSet<Uuid> = credits.iter().map(|c| c.id).collect();
+                if distinct_credit_ids.len() < 2 {
+                    continue;
                 }
 
                 batch.push(ImportRecording {
