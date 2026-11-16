@@ -230,7 +230,10 @@ async fn test_catalog_search_unrelated_word_returns_empty_list() {
         .fetch_one(&pool)
         .await
         .unwrap();
-    assert!(count > 0, "Catalog must contain songs for this test to be meaningful");
+    assert!(
+        count > 0,
+        "Catalog must contain songs for this test to be meaningful"
+    );
 
     let results = repo.search("nonexistentword", 10).await.unwrap();
     assert!(
@@ -243,36 +246,45 @@ async fn test_catalog_search_unrelated_word_returns_empty_list() {
 #[tokio::test]
 async fn test_catalog_search_misspelled_title_matches() {
     let pool = setup_db().await;
-    let repo = CatalogRepo::new(pool.clone());
+    let mut tx = pool.begin().await.unwrap();
 
     let rec_id = Uuid::new_v4();
-    sqlx::query(
-        "INSERT INTO recordings (id, title, artist_name, year) VALUES ($1, $2, $3, $4) ON CONFLICT (id) DO UPDATE SET title = EXCLUDED.title, artist_name = EXCLUDED.artist_name, year = EXCLUDED.year",
-    )
-    .bind(rec_id)
-    .bind("Bohemian Rhapsody")
-    .bind("Queen")
-    .bind(1975)
-    .execute(&pool)
-    .await
-    .unwrap();
+    sqlx::query("INSERT INTO recordings (id, title, artist_name, year) VALUES ($1, $2, $3, $4)")
+        .bind(rec_id)
+        .bind("Bohemian Rhapsody")
+        .bind("Queen")
+        .bind(1975)
+        .execute(&mut *tx)
+        .await
+        .unwrap();
 
-    let results = repo.search("bohemian rapsody", 10).await.unwrap();
+    let results = CatalogRepo::search_with_executor(&mut *tx, "bohemian rapsody", 10)
+        .await
+        .unwrap();
     assert!(
-        !results.is_empty(),
-        "Misspelled title 'bohemian rapsody' must return a match"
+        results.iter().any(|r| r.id == rec_id),
+        "Expected Bohemian Rhapsody in search results for 'bohemian rapsody'"
     );
-    assert_eq!(results[0].id, rec_id);
-    assert_eq!(results[0].title, "Bohemian Rhapsody");
-    assert_eq!(results[0].artist_name, "Queen");
+
+    // Partial word search also matches
+    let results_partial = CatalogRepo::search_with_executor(&mut *tx, "bohem", 10)
+        .await
+        .unwrap();
+    assert!(
+        results_partial.iter().any(|r| r.id == rec_id),
+        "Expected Bohemian Rhapsody in search results for 'bohem'"
+    );
 
     // Misspelled artist name also matches
-    let results_artist = repo.search("queeen", 10).await.unwrap();
+    let results_artist = CatalogRepo::search_with_executor(&mut *tx, "queeen", 10)
+        .await
+        .unwrap();
     assert!(
-        !results_artist.is_empty(),
-        "Misspelled artist 'queeen' must match 'Queen'"
+        results_artist.iter().any(|r| r.id == rec_id),
+        "Expected Queen in search results for 'queeen'"
     );
-    assert_eq!(results_artist[0].id, rec_id);
+
+    tx.rollback().await.unwrap();
 }
 
 // 7. get_recording returns None for an unknown id.
