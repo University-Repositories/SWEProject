@@ -87,7 +87,7 @@ The `catalog_import` binary loads MusicBrainz recordings, validates credits, fil
   * `find_valid(token_hash, now) -> Result<Option<SessionRow>, RepoError>` (Expired sessions return `None`)
   * `delete(token_hash) -> Result<(), RepoError>` (Safe no-op if session is missing)
 * **`CatalogRepo`**:
-  * `search(query, limit) -> Result<Vec<RecordingSummaryRow>, RepoError>` (Ranked by trigram similarity, breaks ties by `year ASC`, then `id`)
+  * `search(query, limit) -> Result<Vec<RecordingSummaryRow>, RepoError>` (Filters by title/artist match using `pg_trgm` `%` operator, ranked by trigram similarity, breaks ties by `year ASC`, then `id`)
   * `get_recording(id) -> Result<Option<RecordingDetailRow>, RepoError>` (Credits ordered by `role`, then `name`)
   * `get_credit_ids(id) -> Result<Vec<Uuid>, RepoError>` (Deduplicated credit entity IDs)
 
