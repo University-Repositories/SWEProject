@@ -26,6 +26,7 @@ All commands below are run from the **repository root**:
 Migrations are located in `migrations/`:
 * `0001_users_and_sessions.sql`: Creates `users` and `sessions` tables with indexes and constraints.
 * `0002_catalog.sql`: Enables `pg_trgm` extension and creates `recordings`, `credit_entities`, and `recording_credits` tables with trigram GIN indexes.
+* `0003_games.sql`: Creates `games`, `game_players`, `moves`, and `reports` tables with relational constraints and indexes.
 
 To apply migrations manually:
 ```bash
@@ -87,9 +88,20 @@ The `catalog_import` binary loads MusicBrainz recordings, validates credits, fil
   * `find_valid(token_hash, now) -> Result<Option<SessionRow>, RepoError>` (Expired sessions return `None`)
   * `delete(token_hash) -> Result<(), RepoError>` (Safe no-op if session is missing)
 * **`CatalogRepo`**:
-  * `search(query, limit) -> Result<Vec<RecordingSummaryRow>, RepoError>` (Filters by title/artist match using `pg_trgm` `%` operator, ranked by trigram similarity, breaks ties by `year ASC`, then `id`)
+  * `search(query, limit) -> Result<Vec<RecordingSummaryRow>, RepoError>` (Filtered by title or artist matching query with pg_trgm % operator, ranked by trigram similarity, breaks ties by `year ASC`, then `id`)
   * `get_recording(id) -> Result<Option<RecordingDetailRow>, RepoError>` (Credits ordered by `role`, then `name`)
   * `get_credit_ids(id) -> Result<Vec<Uuid>, RepoError>` (Deduplicated credit entity IDs)
+  * `random_playable_recording() -> Result<Option<Uuid>, RepoError>` (Random recording sharing at least one credit with another recording)
+* **`GameRepo`**:
+  * `create_solo(user_id, opening_recording_id) -> Result<GameRow, RepoError>` (Creates game and player row in one transaction)
+  * `get(id) -> Result<Option<GameRow>, RepoError>`
+  * `get_players(game_id) -> Result<Vec<GamePlayerRow>, RepoError>`
+  * `list_moves(game_id) -> Result<Vec<MoveRow>, RepoError>` (Ordered by `turn_number ASC`)
+  * `add_move(game_id, user_id, turn_number, recording_id, credit_id) -> Result<MoveRow, RepoError>` (Returns `Conflict` on duplicate turn)
+  * `end(game_id, accepted_links) -> Result<bool, RepoError>` (Updates only active games; returns whether updated)
+* **`ReportRepo`**:
+  * `create(reporter_id, move_id, credit_id, explanation) -> Result<ReportRow, RepoError>`
+  * `get(id) -> Result<Option<ReportRow>, RepoError>`
 
 All repository methods also offer an `_with_executor` variant for use inside database transactions.
 

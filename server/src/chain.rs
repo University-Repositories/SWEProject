@@ -161,12 +161,10 @@ async fn start(
 
 // Demo shortcut. Sprint 2 moves opening song selection into the game sessions service.
 async fn random_recording_id(pool: &PgPool) -> Result<Option<Uuid>, ApiError> {
-    let id: Option<String> =
-        sqlx::query_scalar("SELECT id::text FROM recordings ORDER BY random() LIMIT 1")
-            .fetch_optional(pool)
-            .await
-            .map_err(|_| ApiError::internal())?;
-    Ok(id.and_then(|value| Uuid::parse_str(&value).ok()))
+    CatalogRepo::new(pool.clone())
+        .random_playable_recording()
+        .await
+        .map_err(|_| ApiError::internal())
 }
 
 async fn check(

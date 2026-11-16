@@ -1,7 +1,7 @@
 use chrono::{Duration, Utc};
 use data_management::{
-    CatalogImporter, CatalogRepo, ImportCredit, ImportRecording, RepoError, SessionRepo, UserRepo,
-    create_pool, run_migrations, seed_dev_fixture,
+    CatalogImporter, CatalogRepo, GameRepo, ImportCredit, ImportRecording, RepoError, ReportRepo,
+    SessionRepo, UserRepo, create_pool, run_migrations, seed_dev_fixture,
 };
 use sha2::{Digest, Sha256};
 use uuid::Uuid;
@@ -523,6 +523,338 @@ async fn test_coverage_report_matches_direct_table_counts() {
     assert_eq!(report.total_recordings, direct_rec);
     assert_eq!(report.total_credit_entities, direct_cred);
     assert_eq!(report.recordings_sharing_credits, direct_shared);
+}
+
+// 13. GameRepo.create_solo creates game and player row in a single transaction,
+// and get retrieves it.
+#[tokio::test]
+async fn test_game_create_solo_and_get() {
+    let pool = setup_db().await;
+    seed_dev_fixture(&pool).await.unwrap();
+
+    let user_repo = UserRepo::new(pool.clone());
+    let catalog = CatalogRepo::new(pool.clone());
+    let game_repo = GameRepo::new(pool.clone());
+
+    let username = format!("game_user_{}", Uuid::new_v4().simple());
+    let user = user_repo.create(&username, "password").await.unwrap();
+
+    let opening_rec_id = catalog
+        .random_playable_recording()
+        .await
+        .unwrap()
+        .expect("Dev fixture must contain playable recordings");
+
+    let game = game_repo
+        .create_solo(user.id, opening_rec_id)
+        .await
+        .unwrap();
+
+    assert_eq!(game.mode, "solo");
+    assert_eq!(game.status, "active");
+    assert_eq!(game.opening_recording_id, opening_rec_id);
+    assert!(game.accepted_links.is_none());
+    assert!(game.winner_user_id.is_none());
+    assert!(game.ended_at.is_none());
+
+    // Verify player row created in the same transaction
+    let players = game_repo.get_players(game.id).await.unwrap();
+    assert_eq!(players.len(), 1);
+    assert_eq!(players[0].user_id, user.id);
+    assert_eq!(players[0].game_id, game.id);
+    assert!(players[0].lives_remaining.is_none());
+
+    // Verify get
+    let fetched = game_repo.get(game.id).await.unwrap();
+    assert_eq!(fetched, Some(game));
+}
+
+// 14. GameRepo.add_move records moves and list_moves returns them in turn order.
+#[tokio::test]
+async fn test_game_add_move_and_list_moves() {
+    let pool = setup_db().await;
+    seed_dev_fixture(&pool).await.unwrap();
+
+    let user_repo = UserRepo::new(pool.clone());
+    let catalog = CatalogRepo::new(pool.clone());
+    let game_repo = GameRepo::new(pool.clone());
+
+    let username = format!("move_user_{}", Uuid::new_v4().simple());
+    let user = user_repo.create(&username, "password").await.unwrap();
+
+    let opening_rec_id = catalog.random_playable_recording().await.unwrap().unwrap();
+    let game = game_repo
+        .create_solo(user.id, opening_rec_id)
+        .await
+        .unwrap();
+
+    let rec_id = Uuid::new_v4();
+    let credit_id = Uuid::new_v4();
+    sqlx::query(
+        "INSERT INTO credit_entities (id, kind, name) VALUES ($1, 'person', 'Test Artist')",
+    )
+    .bind(credit_id)
+    .execute(&pool)
+    .await
+    .unwrap();
+    sqlx::query(
+        r#"
+        INSERT INTO recordings (id, title, artist_name, year)
+        VALUES ($1, 'Test Song', 'Test Artist', 2020)
+        "#,
+    )
+    .bind(rec_id)
+    .execute(&pool)
+    .await
+    .unwrap();
+
+    let move1 = game_repo
+        .add_move(game.id, user.id, 1, rec_id, credit_id)
+        .await
+        .unwrap();
+    assert_eq!(move1.game_id, game.id);
+    assert_eq!(move1.user_id, user.id);
+    assert_eq!(move1.turn_number, 1);
+    assert_eq!(move1.recording_id, rec_id);
+    assert_eq!(move1.credit_id, credit_id);
+
+    let move2 = game_repo
+        .add_move(game.id, user.id, 2, rec_id, credit_id)
+        .await
+        .unwrap();
+    assert_eq!(move2.turn_number, 2);
+
+    let moves = game_repo.list_moves(game.id).await.unwrap();
+    assert_eq!(moves.len(), 2);
+    assert_eq!(moves[0].id, move1.id);
+    assert_eq!(moves[1].id, move2.id);
+}
+
+// 15. GameRepo.add_move returns Conflict on duplicate turn number for the same game.
+#[tokio::test]
+async fn test_game_add_move_duplicate_turn_conflict() {
+    let pool = setup_db().await;
+    seed_dev_fixture(&pool).await.unwrap();
+
+    let user_repo = UserRepo::new(pool.clone());
+    let catalog = CatalogRepo::new(pool.clone());
+    let game_repo = GameRepo::new(pool.clone());
+
+    let username = format!("dup_user_{}", Uuid::new_v4().simple());
+    let user = user_repo.create(&username, "password").await.unwrap();
+
+    let opening_rec_id = catalog.random_playable_recording().await.unwrap().unwrap();
+    let game = game_repo
+        .create_solo(user.id, opening_rec_id)
+        .await
+        .unwrap();
+
+    let rec_id = Uuid::new_v4();
+    let credit_id = Uuid::new_v4();
+    sqlx::query("INSERT INTO credit_entities (id, kind, name) VALUES ($1, 'person', 'Dup Artist')")
+        .bind(credit_id)
+        .execute(&pool)
+        .await
+        .unwrap();
+    sqlx::query(
+        r#"
+        INSERT INTO recordings (id, title, artist_name, year)
+        VALUES ($1, 'Dup Song', 'Dup Artist', 2021)
+        "#,
+    )
+    .bind(rec_id)
+    .execute(&pool)
+    .await
+    .unwrap();
+
+    game_repo
+        .add_move(game.id, user.id, 1, rec_id, credit_id)
+        .await
+        .unwrap();
+
+    let dup_err = game_repo
+        .add_move(game.id, user.id, 1, rec_id, credit_id)
+        .await;
+
+    match dup_err {
+        Err(RepoError::Conflict(constraint)) => {
+            assert!(
+                constraint.contains("moves_game_id_turn_number_key")
+                    || constraint.contains("unique"),
+                "Expected conflict on (game_id, turn_number), got: {constraint}"
+            );
+        }
+        other => panic!(
+            "Expected RepoError::Conflict on duplicate turn, got: {:?}",
+            other
+        ),
+    }
+}
+
+// 16. GameRepo.end updates only an active game, reports true, and a second end changes nothing.
+#[tokio::test]
+async fn test_game_end_active_and_second_end_changes_nothing() {
+    let pool = setup_db().await;
+    seed_dev_fixture(&pool).await.unwrap();
+
+    let user_repo = UserRepo::new(pool.clone());
+    let catalog = CatalogRepo::new(pool.clone());
+    let game_repo = GameRepo::new(pool.clone());
+
+    let username = format!("end_user_{}", Uuid::new_v4().simple());
+    let user = user_repo.create(&username, "password").await.unwrap();
+
+    let opening_rec_id = catalog.random_playable_recording().await.unwrap().unwrap();
+    let game = game_repo
+        .create_solo(user.id, opening_rec_id)
+        .await
+        .unwrap();
+
+    // First end: updates active game and reports true
+    let updated = game_repo.end(game.id, 7).await.unwrap();
+    assert!(updated, "First end on active game must return true");
+
+    let ended_game = game_repo.get(game.id).await.unwrap().unwrap();
+    assert_eq!(ended_game.status, "ended");
+    assert_eq!(ended_game.accepted_links, Some(7));
+    assert!(ended_game.ended_at.is_some());
+
+    // Second end: already ended, returns false and changes nothing
+    let updated_second = game_repo.end(game.id, 14).await.unwrap();
+    assert!(
+        !updated_second,
+        "Second end on already ended game must return false"
+    );
+
+    let game_after_second = game_repo.get(game.id).await.unwrap().unwrap();
+    assert_eq!(
+        game_after_second.accepted_links,
+        Some(7),
+        "Second end must not overwrite accepted_links"
+    );
+    assert_eq!(
+        game_after_second.ended_at, ended_game.ended_at,
+        "Second end must not overwrite ended_at"
+    );
+}
+
+// 17. ReportRepo.create and get store and retrieve link and credit reports.
+#[tokio::test]
+async fn test_report_create_and_get() {
+    let pool = setup_db().await;
+    seed_dev_fixture(&pool).await.unwrap();
+
+    let user_repo = UserRepo::new(pool.clone());
+    let catalog = CatalogRepo::new(pool.clone());
+    let game_repo = GameRepo::new(pool.clone());
+    let report_repo = ReportRepo::new(pool.clone());
+
+    let username = format!("rep_user_{}", Uuid::new_v4().simple());
+    let user = user_repo.create(&username, "password").await.unwrap();
+
+    let opening_rec_id = catalog.random_playable_recording().await.unwrap().unwrap();
+    let game = game_repo
+        .create_solo(user.id, opening_rec_id)
+        .await
+        .unwrap();
+
+    let rec_id = Uuid::new_v4();
+    let credit_id = Uuid::new_v4();
+    sqlx::query(
+        "INSERT INTO credit_entities (id, kind, name) VALUES ($1, 'person', 'Report Artist')",
+    )
+    .bind(credit_id)
+    .execute(&pool)
+    .await
+    .unwrap();
+    sqlx::query(
+        r#"
+        INSERT INTO recordings (id, title, artist_name, year)
+        VALUES ($1, 'Report Song', 'Report Artist', 2022)
+        "#,
+    )
+    .bind(rec_id)
+    .execute(&pool)
+    .await
+    .unwrap();
+
+    let move_row = game_repo
+        .add_move(game.id, user.id, 1, rec_id, credit_id)
+        .await
+        .unwrap();
+
+    // 1. Report targeting a move
+    let report_move = report_repo
+        .create(
+            user.id,
+            Some(move_row.id),
+            None,
+            "Invalid song link reported",
+        )
+        .await
+        .unwrap();
+    assert_eq!(report_move.reporter_id, user.id);
+    assert_eq!(report_move.move_id, Some(move_row.id));
+    assert_eq!(report_move.credit_id, None);
+    assert_eq!(report_move.explanation, "Invalid song link reported");
+    assert_eq!(report_move.status, "open");
+    assert!(report_move.resolution_reason.is_none());
+    assert!(report_move.reviewer_id.is_none());
+    assert!(report_move.resolved_at.is_none());
+
+    let fetched = report_repo.get(report_move.id).await.unwrap();
+    assert_eq!(fetched, Some(report_move));
+
+    // 2. Report targeting a credit entity
+    let report_credit = report_repo
+        .create(
+            user.id,
+            None,
+            Some(credit_id),
+            "Misattributed credit entity",
+        )
+        .await
+        .unwrap();
+    assert_eq!(report_credit.move_id, None);
+    assert_eq!(report_credit.credit_id, Some(credit_id));
+
+    let fetched_credit = report_repo.get(report_credit.id).await.unwrap();
+    assert_eq!(fetched_credit, Some(report_credit));
+}
+
+// 18. CatalogRepo.random_playable_recording selects a recording that shares credits.
+#[tokio::test]
+async fn test_catalog_random_playable_recording() {
+    let pool = setup_db().await;
+    seed_dev_fixture(&pool).await.unwrap();
+    let catalog = CatalogRepo::new(pool.clone());
+
+    let rec_id = catalog
+        .random_playable_recording()
+        .await
+        .unwrap()
+        .expect("Dev fixture must contain playable recordings");
+
+    // Verify it shares at least one credit with another recording
+    let shared_count: i64 = sqlx::query_scalar(
+        r#"
+        SELECT COUNT(DISTINCT rc2.recording_id)
+        FROM recording_credits rc1
+        JOIN recording_credits rc2
+            ON rc1.credit_id = rc2.credit_id
+            AND rc1.recording_id != rc2.recording_id
+        WHERE rc1.recording_id = $1
+        "#,
+    )
+    .bind(rec_id)
+    .fetch_one(&pool)
+    .await
+    .unwrap();
+
+    assert!(
+        shared_count >= 1,
+        "Random playable recording must share at least 1 credit with another recording"
+    );
 }
 
 // MusicBrainz test: marked #[ignore] so CI isn't hitting their API.
