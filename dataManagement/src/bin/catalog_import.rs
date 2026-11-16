@@ -1,5 +1,5 @@
 use data_management::{
-    create_pool, load_default_subset, run_migrations, seed_dev_fixture, CatalogImporter,
+    CatalogImporter, create_pool, load_default_subset, run_migrations, seed_dev_fixture,
 };
 use std::env;
 
