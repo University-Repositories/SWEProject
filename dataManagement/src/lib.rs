@@ -116,6 +116,50 @@ pub struct RecordingDetailRow {
     pub credits: Vec<RecordingCredit>,
 }
 
+#[derive(Debug, Clone, PartialEq, Eq, FromRow, Serialize, Deserialize)]
+pub struct GameRow {
+    pub id: Uuid,
+    pub mode: String,
+    pub status: String,
+    pub opening_recording_id: Uuid,
+    pub accepted_links: Option<i32>,
+    pub winner_user_id: Option<Uuid>,
+    pub started_at: DateTime<Utc>,
+    pub ended_at: Option<DateTime<Utc>>,
+}
+
+#[derive(Debug, Clone, PartialEq, Eq, FromRow, Serialize, Deserialize)]
+pub struct GamePlayerRow {
+    pub game_id: Uuid,
+    pub user_id: Uuid,
+    pub lives_remaining: Option<i32>,
+}
+
+#[derive(Debug, Clone, PartialEq, Eq, FromRow, Serialize, Deserialize)]
+pub struct MoveRow {
+    pub id: Uuid,
+    pub game_id: Uuid,
+    pub user_id: Uuid,
+    pub turn_number: i32,
+    pub recording_id: Uuid,
+    pub credit_id: Uuid,
+    pub created_at: DateTime<Utc>,
+}
+
+#[derive(Debug, Clone, PartialEq, Eq, FromRow, Serialize, Deserialize)]
+pub struct ReportRow {
+    pub id: Uuid,
+    pub reporter_id: Uuid,
+    pub move_id: Option<Uuid>,
+    pub credit_id: Option<Uuid>,
+    pub explanation: String,
+    pub status: String,
+    pub resolution_reason: Option<String>,
+    pub reviewer_id: Option<Uuid>,
+    pub created_at: DateTime<Utc>,
+    pub resolved_at: Option<DateTime<Utc>>,
+}
+
 // -----------------------------------------------------------------------------
 // UserRepo
 // -----------------------------------------------------------------------------
@@ -327,6 +371,7 @@ impl CatalogRepo {
             r#"
             SELECT id, title, artist_name, year, release_id
             FROM recordings
+            WHERE title % $1 OR artist_name % $1
             ORDER BY
                 GREATEST(similarity(title, $1), similarity(artist_name, $1)) DESC,
                 year ASC NULLS LAST,
@@ -419,5 +464,345 @@ impl CatalogRepo {
         .map_err(RepoError::from_sqlx)?;
 
         Ok(rows)
+    }
+
+    pub async fn random_playable_recording(&self) -> Result<Option<Uuid>, RepoError> {
+        Self::random_playable_recording_with_executor(&self.pool).await
+    }
+
+    pub async fn random_playable_recording_with_executor<'e, E>(
+        executor: E,
+    ) -> Result<Option<Uuid>, RepoError>
+    where
+        E: sqlx::PgExecutor<'e>,
+    {
+        sqlx::query_scalar::<_, Uuid>(
+            r#"
+            SELECT r.id
+            FROM recordings r
+            WHERE EXISTS (
+                SELECT 1
+                FROM recording_credits rc1
+                JOIN recording_credits rc2
+                    ON rc1.credit_id = rc2.credit_id
+                    AND rc1.recording_id != rc2.recording_id
+                WHERE rc1.recording_id = r.id
+            )
+            ORDER BY random()
+            LIMIT 1
+            "#,
+        )
+        .fetch_optional(executor)
+        .await
+        .map_err(RepoError::from_sqlx)
+    }
+}
+
+// -----------------------------------------------------------------------------
+// GameRepo
+// -----------------------------------------------------------------------------
+
+#[derive(Debug, Clone)]
+pub struct GameRepo {
+    pool: PgPool,
+}
+
+impl GameRepo {
+    pub fn new(pool: PgPool) -> Self {
+        Self { pool }
+    }
+
+    pub fn pool(&self) -> &PgPool {
+        &self.pool
+    }
+
+    pub async fn create_solo(
+        &self,
+        user_id: Uuid,
+        opening_recording_id: Uuid,
+    ) -> Result<GameRow, RepoError> {
+        let mut tx = self.pool.begin().await.map_err(RepoError::Database)?;
+        let game = Self::create_solo_with_tx(&mut tx, user_id, opening_recording_id).await?;
+        tx.commit().await.map_err(RepoError::Database)?;
+        Ok(game)
+    }
+
+    pub async fn create_solo_with_tx(
+        tx: &mut sqlx::Transaction<'_, sqlx::Postgres>,
+        user_id: Uuid,
+        opening_recording_id: Uuid,
+    ) -> Result<GameRow, RepoError> {
+        let game = sqlx::query_as::<_, GameRow>(
+            r#"
+            INSERT INTO games (id, mode, status, opening_recording_id)
+            VALUES (gen_random_uuid(), 'solo', 'active', $1)
+            RETURNING
+                id, mode, status, opening_recording_id,
+                accepted_links, winner_user_id, started_at, ended_at
+            "#,
+        )
+        .bind(opening_recording_id)
+        .fetch_one(&mut **tx)
+        .await
+        .map_err(RepoError::from_sqlx)?;
+
+        sqlx::query(
+            "INSERT INTO game_players (game_id, user_id, lives_remaining) VALUES ($1, $2, NULL)",
+        )
+        .bind(game.id)
+        .bind(user_id)
+        .execute(&mut **tx)
+        .await
+        .map_err(RepoError::from_sqlx)?;
+
+        Ok(game)
+    }
+
+    pub async fn get(&self, id: Uuid) -> Result<Option<GameRow>, RepoError> {
+        Self::get_with_executor(&self.pool, id).await
+    }
+
+    pub async fn get_with_executor<'e, E>(
+        executor: E,
+        id: Uuid,
+    ) -> Result<Option<GameRow>, RepoError>
+    where
+        E: sqlx::PgExecutor<'e>,
+    {
+        sqlx::query_as::<_, GameRow>(
+            r#"
+            SELECT
+                id, mode, status, opening_recording_id,
+                accepted_links, winner_user_id, started_at, ended_at
+            FROM games
+            WHERE id = $1
+            "#,
+        )
+        .bind(id)
+        .fetch_optional(executor)
+        .await
+        .map_err(RepoError::from_sqlx)
+    }
+
+    pub async fn get_players(&self, game_id: Uuid) -> Result<Vec<GamePlayerRow>, RepoError> {
+        Self::get_players_with_executor(&self.pool, game_id).await
+    }
+
+    pub async fn get_players_with_executor<'e, E>(
+        executor: E,
+        game_id: Uuid,
+    ) -> Result<Vec<GamePlayerRow>, RepoError>
+    where
+        E: sqlx::PgExecutor<'e>,
+    {
+        sqlx::query_as::<_, GamePlayerRow>(
+            r#"
+            SELECT game_id, user_id, lives_remaining
+            FROM game_players
+            WHERE game_id = $1
+            ORDER BY user_id ASC
+            "#,
+        )
+        .bind(game_id)
+        .fetch_all(executor)
+        .await
+        .map_err(RepoError::from_sqlx)
+    }
+
+    pub async fn list_moves(&self, game_id: Uuid) -> Result<Vec<MoveRow>, RepoError> {
+        Self::list_moves_with_executor(&self.pool, game_id).await
+    }
+
+    pub async fn list_moves_with_executor<'e, E>(
+        executor: E,
+        game_id: Uuid,
+    ) -> Result<Vec<MoveRow>, RepoError>
+    where
+        E: sqlx::PgExecutor<'e>,
+    {
+        sqlx::query_as::<_, MoveRow>(
+            r#"
+            SELECT id, game_id, user_id, turn_number, recording_id, credit_id, created_at
+            FROM moves
+            WHERE game_id = $1
+            ORDER BY turn_number ASC
+            "#,
+        )
+        .bind(game_id)
+        .fetch_all(executor)
+        .await
+        .map_err(RepoError::from_sqlx)
+    }
+
+    pub async fn add_move(
+        &self,
+        game_id: Uuid,
+        user_id: Uuid,
+        turn_number: i32,
+        recording_id: Uuid,
+        credit_id: Uuid,
+    ) -> Result<MoveRow, RepoError> {
+        Self::add_move_with_executor(
+            &self.pool,
+            game_id,
+            user_id,
+            turn_number,
+            recording_id,
+            credit_id,
+        )
+        .await
+    }
+
+    pub async fn add_move_with_executor<'e, E>(
+        executor: E,
+        game_id: Uuid,
+        user_id: Uuid,
+        turn_number: i32,
+        recording_id: Uuid,
+        credit_id: Uuid,
+    ) -> Result<MoveRow, RepoError>
+    where
+        E: sqlx::PgExecutor<'e>,
+    {
+        sqlx::query_as::<_, MoveRow>(
+            r#"
+            INSERT INTO moves (id, game_id, user_id, turn_number, recording_id, credit_id)
+            VALUES (gen_random_uuid(), $1, $2, $3, $4, $5)
+            RETURNING id, game_id, user_id, turn_number, recording_id, credit_id, created_at
+            "#,
+        )
+        .bind(game_id)
+        .bind(user_id)
+        .bind(turn_number)
+        .bind(recording_id)
+        .bind(credit_id)
+        .fetch_one(executor)
+        .await
+        .map_err(RepoError::from_sqlx)
+    }
+
+    pub async fn end(&self, game_id: Uuid, accepted_links: i32) -> Result<bool, RepoError> {
+        Self::end_with_executor(&self.pool, game_id, accepted_links, None).await
+    }
+
+    pub async fn end_with_winner(
+        &self,
+        game_id: Uuid,
+        accepted_links: i32,
+        winner_user_id: Option<Uuid>,
+    ) -> Result<bool, RepoError> {
+        Self::end_with_executor(&self.pool, game_id, accepted_links, winner_user_id).await
+    }
+
+    pub async fn end_with_executor<'e, E>(
+        executor: E,
+        game_id: Uuid,
+        accepted_links: i32,
+        winner_user_id: Option<Uuid>,
+    ) -> Result<bool, RepoError>
+    where
+        E: sqlx::PgExecutor<'e>,
+    {
+        let res = sqlx::query(
+            r#"
+            UPDATE games
+            SET status = 'ended',
+                accepted_links = $2,
+                winner_user_id = COALESCE($3, winner_user_id),
+                ended_at = now()
+            WHERE id = $1 AND status = 'active'
+            "#,
+        )
+        .bind(game_id)
+        .bind(accepted_links)
+        .bind(winner_user_id)
+        .execute(executor)
+        .await
+        .map_err(RepoError::from_sqlx)?;
+
+        Ok(res.rows_affected() > 0)
+    }
+}
+
+// -----------------------------------------------------------------------------
+// ReportRepo
+// -----------------------------------------------------------------------------
+
+#[derive(Debug, Clone)]
+pub struct ReportRepo {
+    pool: PgPool,
+}
+
+impl ReportRepo {
+    pub fn new(pool: PgPool) -> Self {
+        Self { pool }
+    }
+
+    pub fn pool(&self) -> &PgPool {
+        &self.pool
+    }
+
+    pub async fn create(
+        &self,
+        reporter_id: Uuid,
+        move_id: Option<Uuid>,
+        credit_id: Option<Uuid>,
+        explanation: &str,
+    ) -> Result<ReportRow, RepoError> {
+        Self::create_with_executor(&self.pool, reporter_id, move_id, credit_id, explanation).await
+    }
+
+    pub async fn create_with_executor<'e, E>(
+        executor: E,
+        reporter_id: Uuid,
+        move_id: Option<Uuid>,
+        credit_id: Option<Uuid>,
+        explanation: &str,
+    ) -> Result<ReportRow, RepoError>
+    where
+        E: sqlx::PgExecutor<'e>,
+    {
+        sqlx::query_as::<_, ReportRow>(
+            r#"
+            INSERT INTO reports (id, reporter_id, move_id, credit_id, explanation, status)
+            VALUES (gen_random_uuid(), $1, $2, $3, $4, 'open')
+            RETURNING
+                id, reporter_id, move_id, credit_id, explanation,
+                status, resolution_reason, reviewer_id, created_at, resolved_at
+            "#,
+        )
+        .bind(reporter_id)
+        .bind(move_id)
+        .bind(credit_id)
+        .bind(explanation)
+        .fetch_one(executor)
+        .await
+        .map_err(RepoError::from_sqlx)
+    }
+
+    pub async fn get(&self, id: Uuid) -> Result<Option<ReportRow>, RepoError> {
+        Self::get_with_executor(&self.pool, id).await
+    }
+
+    pub async fn get_with_executor<'e, E>(
+        executor: E,
+        id: Uuid,
+    ) -> Result<Option<ReportRow>, RepoError>
+    where
+        E: sqlx::PgExecutor<'e>,
+    {
+        sqlx::query_as::<_, ReportRow>(
+            r#"
+            SELECT
+                id, reporter_id, move_id, credit_id, explanation,
+                status, resolution_reason, reviewer_id, created_at, resolved_at
+            FROM reports
+            WHERE id = $1
+            "#,
+        )
+        .bind(id)
+        .fetch_optional(executor)
+        .await
+        .map_err(RepoError::from_sqlx)
     }
 }
