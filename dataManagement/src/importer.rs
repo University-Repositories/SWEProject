@@ -268,14 +268,75 @@ pub async fn populate_pop_songs(
                 if let Some(artist_credits) = &rec.artist_credit {
                     for (idx, ac) in artist_credits.iter().enumerate() {
                         let role = if idx == 0 { "artist" } else { "feature" };
-                        let credit_id =
-                            Uuid::parse_str(&ac.artist.id).unwrap_or_else(|_| Uuid::new_v4());
+                        let Ok(credit_id) = Uuid::parse_str(&ac.artist.id) else {
+                            continue;
+                        };
                         credits.push(ImportCredit {
                             id: credit_id,
                             kind: "person".to_string(),
                             name: ac.name.clone(),
                             role: role.to_string(),
                         });
+                    }
+                }
+
+                // Fetch relationship credits (producers, writers) from MusicBrainz
+                let rel_source = if rec.relations.is_some() {
+                    rec.relations.clone()
+                } else {
+                    Recording::fetch()
+                        .id(&rec.id)
+                        .with_artist_relations()
+                        .with_work_relations()
+                        .with_work_level_relations()
+                        .execute_with_client(&client)
+                        .ok()
+                        .and_then(|r| r.relations)
+                };
+
+                if let Some(relations) = &rel_source {
+                    for rel in relations {
+                        match &rel.content {
+                            musicbrainz_rs::entity::relations::RelationContent::Artist(artist) => {
+                                let role = match rel.relation_type.as_str() {
+                                    "producer" => Some("producer"),
+                                    "writer" | "composer" | "lyricist" => Some("writer"),
+                                    _ => None,
+                                };
+                                if let Some(role) = role
+                                    && let Ok(artist_uuid) = Uuid::parse_str(&artist.id)
+                                {
+                                    credits.push(ImportCredit {
+                                        id: artist_uuid,
+                                        kind: "person".to_string(),
+                                        name: artist.name.clone(),
+                                        role: role.to_string(),
+                                    });
+                                }
+                            }
+                            musicbrainz_rs::entity::relations::RelationContent::Work(work) => {
+                                if let Some(work_relations) = &work.relations {
+                                    for w_rel in work_relations {
+                                        if let musicbrainz_rs::entity::relations::RelationContent::Artist(artist) =
+                                            &w_rel.content
+                                            && matches!(
+                                                w_rel.relation_type.as_str(),
+                                                "writer" | "composer" | "lyricist"
+                                            )
+                                            && let Ok(artist_uuid) = Uuid::parse_str(&artist.id)
+                                        {
+                                            credits.push(ImportCredit {
+                                                id: artist_uuid,
+                                                kind: "person".to_string(),
+                                                name: artist.name.clone(),
+                                                role: "writer".to_string(),
+                                            });
+                                        }
+                                    }
+                                }
+                            }
+                            _ => {}
+                        }
                     }
                 }
 
@@ -309,6 +370,11 @@ pub async fn populate_pop_songs(
                     }
                 }
 
+                // Skip songs without a valid release_id so cover art is guaranteed
+                let Some(release_id) = release_id else {
+                    continue;
+                };
+
                 // Drop songs with fewer than 2 distinct credits (module contracts, 5.3)
                 let distinct_credit_ids: HashSet<Uuid> = credits.iter().map(|c| c.id).collect();
                 if distinct_credit_ids.len() < 2 {
@@ -320,7 +386,7 @@ pub async fn populate_pop_songs(
                     title: rec.title,
                     artist_name,
                     year: earliest_year,
-                    release_id,
+                    release_id: Some(release_id),
                     credits,
                 });
             }

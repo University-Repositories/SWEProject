@@ -94,11 +94,15 @@ The `catalog_import` binary loads MusicBrainz recordings, validates credits, fil
   * `random_playable_recording() -> Result<Option<Uuid>, RepoError>` (Random recording sharing at least one credit with another recording)
 * **`GameRepo`**:
   * `create_solo(user_id, opening_recording_id) -> Result<GameRow, RepoError>` (Creates game and player row in one transaction)
+  * `create_match(player_one_id, player_two_id, opening_recording_id) -> Result<GameRow, RepoError>` (Creates live match with two players)
   * `get(id) -> Result<Option<GameRow>, RepoError>`
   * `get_players(game_id) -> Result<Vec<GamePlayerRow>, RepoError>`
   * `list_moves(game_id) -> Result<Vec<MoveRow>, RepoError>` (Ordered by `turn_number ASC`)
   * `add_move(game_id, user_id, turn_number, recording_id, credit_id) -> Result<MoveRow, RepoError>` (Returns `Conflict` on duplicate turn)
   * `end(game_id, accepted_links) -> Result<bool, RepoError>` (Updates only active games; returns whether updated)
+  * `end_with_winner(game_id, accepted_links, winner_user_id) -> Result<bool, RepoError>`
+  * `list_user_games(user_id, limit, before) -> Result<Vec<UserGameRow>, RepoError>` (Lists user's ended games, newest first, with mode, accepted links, opponent username for matches, won or lost, and end time; paged with limit and before time)
+  * `get_user_record(user_id) -> Result<UserRecord, RepoError>` (Computes user record: best solo chain, matches won, matches lost; excludes active games)
 * **`ReportRepo`**:
   * `create(reporter_id, move_id, credit_id, explanation) -> Result<ReportRow, RepoError>`
   * `get(id) -> Result<Option<ReportRow>, RepoError>`

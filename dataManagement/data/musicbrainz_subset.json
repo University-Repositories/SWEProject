@@ -1,10 +1,10 @@
 [
   {
-    "id": "2da4f188-f6f0-55ba-be05-254183e1a274",
+    "id": "01d2788d-862f-4d00-aa1e-f326a0d353a6",
     "title": "Bohemian Rhapsody",
     "artist_name": "Queen",
     "year": 1975,
-    "release_id": null,
+    "release_id": "aab07809-e340-48c3-9748-2a1666010fc1",
     "credits": [
       {
         "id": "7815d635-1620-5d25-aec4-4f5b5edc3fbe",
@@ -33,11 +33,11 @@
     ]
   },
   {
-    "id": "93012d87-fc4f-5ee3-9849-80e714e4d013",
+    "id": "40edb813-3671-4403-8bd6-d2354a1632f6",
     "title": "Killer Queen",
     "artist_name": "Queen",
     "year": 1974,
-    "release_id": null,
+    "release_id": "b7d2d050-2eae-414d-b86c-e10076e19a1e",
     "credits": [
       {
         "id": "7815d635-1620-5d25-aec4-4f5b5edc3fbe",
@@ -66,11 +66,11 @@
     ]
   },
   {
-    "id": "e085332f-be68-53aa-98ba-43d8f0c766b0",
+    "id": "eb5c17cc-22cd-4983-a8cb-040686b91902",
     "title": "Under Pressure",
     "artist_name": "Queen & David Bowie",
     "year": 1981,
-    "release_id": null,
+    "release_id": "a26bebc6-1f5c-4273-aac6-5530b779ec70",
     "credits": [
       {
         "id": "7815d635-1620-5d25-aec4-4f5b5edc3fbe",
@@ -93,11 +93,11 @@
     ]
   },
   {
-    "id": "40879385-4bbb-5ad6-ba14-054ce51f4c2e",
+    "id": "b7d5a8e6-9935-4803-a24c-44eb4b7be5aa",
     "title": "Let's Dance",
     "artist_name": "David Bowie",
     "year": 1983,
-    "release_id": null,
+    "release_id": "69c9ac58-4965-44c9-8c8d-492f71cd01de",
     "credits": [
       {
         "id": "fbe5816e-f2d7-5661-ada0-2b74cb81fd8c",
@@ -120,11 +120,11 @@
     ]
   },
   {
-    "id": "0ea7d21c-a7a4-5dcb-ab30-f2c385c40341",
+    "id": "b98decb1-ca7b-4b92-acca-c31f51783d2c",
     "title": "Modern Love",
     "artist_name": "David Bowie",
     "year": 1983,
-    "release_id": null,
+    "release_id": "e446b358-5de3-4ece-a99f-d9ee8dce0e78",
     "credits": [
       {
         "id": "fbe5816e-f2d7-5661-ada0-2b74cb81fd8c",
@@ -147,11 +147,11 @@
     ]
   },
   {
-    "id": "dcd7e11d-87df-514f-b0ee-7e49929dfb30",
+    "id": "271ff139-bdea-40cb-a8f7-e4e2ff5f3e6d",
     "title": "Heroes",
     "artist_name": "David Bowie",
     "year": 1977,
-    "release_id": null,
+    "release_id": "aebf14e3-3696-4a79-a893-91ebb413757d",
     "credits": [
       {
         "id": "fbe5816e-f2d7-5661-ada0-2b74cb81fd8c",
@@ -174,11 +174,11 @@
     ]
   },
   {
-    "id": "9644be60-a5fe-5daf-9d82-d32782b608e4",
+    "id": "4a18f5ae-3fbd-4356-a81a-ff0d4f96ea81",
     "title": "Space Oddity",
     "artist_name": "David Bowie",
     "year": 1969,
-    "release_id": null,
+    "release_id": "354af90c-cd29-445e-b9d1-b6e5606796e7",
     "credits": [
       {
         "id": "fbe5816e-f2d7-5661-ada0-2b74cb81fd8c",
@@ -195,11 +195,11 @@
     ]
   },
   {
-    "id": "3febff57-3ba4-52a4-8ea8-80a6e615a5ae",
+    "id": "9ba90373-13d0-44df-b82b-7dbb19d9bd7d",
     "title": "Your Song",
     "artist_name": "Elton John",
     "year": 1970,
-    "release_id": null,
+    "release_id": "d809c7ae-a95d-4e8e-8882-0b24a422ec20",
     "credits": [
       {
         "id": "10155b02-a6ba-5f68-87f0-d105d8e33b93",
@@ -228,11 +228,11 @@
     ]
   },
   {
-    "id": "3b4a8d4f-c06d-5d88-a4e8-4eec080b69ac",
+    "id": "6f58d267-19ee-443c-8b92-89b0088b9367",
     "title": "Tiny Dancer",
     "artist_name": "Elton John",
     "year": 1971,
-    "release_id": null,
+    "release_id": "775ddd32-bb8b-442e-90a3-50d3883bea8c",
     "credits": [
       {
         "id": "10155b02-a6ba-5f68-87f0-d105d8e33b93",
@@ -261,11 +261,11 @@
     ]
   },
   {
-    "id": "a2461755-7714-5787-ac6b-5d181836862a",
+    "id": "a7378268-42e0-432b-b0c9-b1d973cca430",
     "title": "Rocket Man",
     "artist_name": "Elton John",
     "year": 1972,
-    "release_id": null,
+    "release_id": "cd440643-7557-45d6-bd83-e354a4aa6291",
     "credits": [
       {
         "id": "10155b02-a6ba-5f68-87f0-d105d8e33b93",
@@ -294,11 +294,11 @@
     ]
   },
   {
-    "id": "cb0f158d-bb71-5968-9e58-9c842bf7ed5c",
+    "id": "20157ba9-d310-4794-8c70-faae73cc0777",
     "title": "Like a Virgin",
     "artist_name": "Madonna",
     "year": 1984,
-    "release_id": null,
+    "release_id": "acd392f4-d16c-4f21-996f-803eae7f50a8",
     "credits": [
       {
         "id": "0bcbc65b-74a8-5a2e-8930-3d0d4cea7290",
@@ -321,11 +321,11 @@
     ]
   },
   {
-    "id": "780d9d4b-c892-5356-a4e9-c1caa0d6b536",
+    "id": "45d5c76e-b4db-4e53-bcda-1242aaa05fcb",
     "title": "Material Girl",
     "artist_name": "Madonna",
     "year": 1984,
-    "release_id": null,
+    "release_id": "acd392f4-d16c-4f21-996f-803eae7f50a8",
     "credits": [
       {
         "id": "0bcbc65b-74a8-5a2e-8930-3d0d4cea7290",
@@ -348,11 +348,11 @@
     ]
   },
   {
-    "id": "9ba0c584-370a-54cf-9ab7-398358dfa963",
+    "id": "3d4e8192-6af2-4476-9297-527390ba7fe7",
     "title": "Le Freak",
     "artist_name": "Chic",
     "year": 1978,
-    "release_id": null,
+    "release_id": "1324ca9c-f379-45fb-9665-2c4b77ce5fce",
     "credits": [
       {
         "id": "066aa3ee-1b70-5ad6-9dc9-076a32f118c9",
@@ -375,11 +375,11 @@
     ]
   },
   {
-    "id": "27128e4e-9841-5849-9c58-7e687a9153f5",
+    "id": "e3bb7d5a-379d-416f-aa47-8d63fe4bbba6",
     "title": "Good Times",
     "artist_name": "Chic",
     "year": 1979,
-    "release_id": null,
+    "release_id": "81471e9f-ac97-4d80-a90e-4d855db2c66c",
     "credits": [
       {
         "id": "066aa3ee-1b70-5ad6-9dc9-076a32f118c9",
@@ -402,11 +402,11 @@
     ]
   },
   {
-    "id": "fc5834fd-f100-58f5-8319-e9f2475ad108",
+    "id": "345e4a72-46b4-48ba-8541-27c6b23c3b8c",
     "title": "Get Lucky",
     "artist_name": "Daft Punk",
     "year": 2013,
-    "release_id": null,
+    "release_id": "7f64ab9e-833c-4247-a35f-9a12ba2bcde4",
     "credits": [
       {
         "id": "a8a144ea-0d15-5314-8207-1b277748bb7f",
@@ -435,11 +435,11 @@
     ]
   },
   {
-    "id": "a075271e-91a2-5290-a99a-2229e2477e59",
+    "id": "12082874-5a11-48e8-9e05-ff0949c16b55",
     "title": "Lose Yourself to Dance",
     "artist_name": "Daft Punk",
     "year": 2013,
-    "release_id": null,
+    "release_id": "f161b8c7-44d0-4d50-b369-0abc95865e25",
     "credits": [
       {
         "id": "a8a144ea-0d15-5314-8207-1b277748bb7f",
@@ -462,11 +462,11 @@
     ]
   },
   {
-    "id": "d9480152-73e1-5e4a-a724-a71608df6a46",
+    "id": "8e8825c5-8ce3-48de-87b6-76c1a9e2d859",
     "title": "Instant Crush",
     "artist_name": "Daft Punk",
     "year": 2013,
-    "release_id": null,
+    "release_id": "f161b8c7-44d0-4d50-b369-0abc95865e25",
     "credits": [
       {
         "id": "a8a144ea-0d15-5314-8207-1b277748bb7f",
@@ -489,11 +489,11 @@
     ]
   },
   {
-    "id": "4508903f-3d6d-58f7-b720-e1bddf903258",
+    "id": "a78f0f7f-46fc-49c0-919c-a89f4ff9ecdb",
     "title": "One More Time",
     "artist_name": "Daft Punk",
     "year": 2000,
-    "release_id": null,
+    "release_id": "99db0309-35ee-4402-b0a4-70f0a137748b",
     "credits": [
       {
         "id": "a8a144ea-0d15-5314-8207-1b277748bb7f",
@@ -510,11 +510,11 @@
     ]
   },
   {
-    "id": "4107465d-ea59-532d-9309-d494c157aeb3",
+    "id": "2250e74a-1b9f-4532-b313-18b543582427",
     "title": "Happy",
     "artist_name": "Pharrell Williams",
     "year": 2013,
-    "release_id": null,
+    "release_id": "5fcfb4cb-4d4b-4f16-9f51-c5d101c7423a",
     "credits": [
       {
         "id": "ab1b6e9f-9078-50cd-aaf1-321c63a313a0",
@@ -537,11 +537,11 @@
     ]
   },
   {
-    "id": "830ddf4e-3251-530f-aeea-860b427e21ac",
+    "id": "85cba9c8-44aa-4de9-a43c-064a74c23e7e",
     "title": "Blurred Lines",
     "artist_name": "Robin Thicke",
     "year": 2013,
-    "release_id": null,
+    "release_id": "e1d05e61-8e6d-47be-bd0e-975ea214111a",
     "credits": [
       {
         "id": "f7a8f1d5-78b2-5d2a-af45-47f3e41b7840",
@@ -570,11 +570,11 @@
     ]
   },
   {
-    "id": "8c572105-45d7-54f7-b1bc-134f76be38f9",
+    "id": "d28ff8e5-0fc6-4c0f-9d38-0016b2369251",
     "title": "Billie Jean",
     "artist_name": "Michael Jackson",
     "year": 1983,
-    "release_id": null,
+    "release_id": "7eb883ba-9a07-4dfc-8517-4b3a2844bb91",
     "credits": [
       {
         "id": "141a8453-0f71-50b6-9667-77cfe93f639c",
@@ -597,11 +597,11 @@
     ]
   },
   {
-    "id": "aa7bdf59-7667-5889-acfa-2bd43394842c",
+    "id": "b94a6556-71d9-4ff8-a149-b64e52e1ec0f",
     "title": "Thriller",
     "artist_name": "Michael Jackson",
     "year": 1982,
-    "release_id": null,
+    "release_id": "c995c23e-83f4-4364-a13d-7ab17e6ab6f1",
     "credits": [
       {
         "id": "141a8453-0f71-50b6-9667-77cfe93f639c",
@@ -630,11 +630,11 @@
     ]
   },
   {
-    "id": "4cb648f8-0ac4-5ba5-bbf1-e60375c7b4b1",
+    "id": "e70ccea8-d7d2-42a6-9f91-7941f54fe6ba",
     "title": "Rock with You",
     "artist_name": "Michael Jackson",
     "year": 1979,
-    "release_id": null,
+    "release_id": "fd9a52fe-5561-4057-aa3d-5688cbc274f4",
     "credits": [
       {
         "id": "141a8453-0f71-50b6-9667-77cfe93f639c",
@@ -663,11 +663,11 @@
     ]
   },
   {
-    "id": "c6dcee20-95e9-5fd8-a238-23eff04eb6f9",
+    "id": "a1bc0390-875a-481a-8b09-b6d3371120b7",
     "title": "Crazy",
     "artist_name": "Gnarls Barkley",
     "year": 2006,
-    "release_id": null,
+    "release_id": "db434936-93f1-4f45-9b89-17a0a6d16eca",
     "credits": [
       {
         "id": "57f67193-1df8-5ffb-9a86-65dff8cdc9a1",
@@ -690,11 +690,11 @@
     ]
   },
   {
-    "id": "580d1455-b104-50e9-98b1-33fadac0c5ce",
+    "id": "b4ef8285-74c4-4409-90b3-87f5948271df",
     "title": "Lonely Boy",
     "artist_name": "The Black Keys",
     "year": 2011,
-    "release_id": null,
+    "release_id": "d45fd07a-82fc-44c9-9e74-8a59d5c3888b",
     "credits": [
       {
         "id": "8c2789e7-9bf0-5563-b1a9-ad624cd5d5cb",
@@ -717,11 +717,11 @@
     ]
   },
   {
-    "id": "875bb298-fb5a-5647-83ff-41fc85511b6e",
+    "id": "cce899ad-8837-4623-b510-322f72bcf424",
     "title": "Tighten Up",
     "artist_name": "The Black Keys",
     "year": 2010,
-    "release_id": null,
+    "release_id": "3814b407-25e9-40c5-b1e2-7f4988bc9058",
     "credits": [
       {
         "id": "8c2789e7-9bf0-5563-b1a9-ad624cd5d5cb",
@@ -744,11 +744,11 @@
     ]
   },
   {
-    "id": "d381eca3-bf7b-55de-8c65-4d48faa64d5a",
+    "id": "939df4f8-5b96-48ed-be41-a7a4aa83f787",
     "title": "Come Together",
     "artist_name": "The Beatles",
     "year": 1969,
-    "release_id": null,
+    "release_id": "d8da5039-6b88-4fd3-961a-d9f4b023f0f6",
     "credits": [
       {
         "id": "6952b318-1844-5e19-bbdf-7b8f8aa8ff0c",
@@ -771,11 +771,11 @@
     ]
   },
   {
-    "id": "1b3b6305-515e-51f5-9913-209d733b1adf",
+    "id": "ced6401e-396c-4c9e-9614-7f7e1a281e39",
     "title": "Something",
     "artist_name": "The Beatles",
     "year": 1969,
-    "release_id": null,
+    "release_id": "885ddfe3-e68d-4a8e-8570-2975318db1df",
     "credits": [
       {
         "id": "6952b318-1844-5e19-bbdf-7b8f8aa8ff0c",
@@ -804,11 +804,11 @@
     ]
   },
   {
-    "id": "5d0af52e-e1e1-55be-b1fc-6c7a75f6e90e",
+    "id": "87980d48-f825-4ede-b019-d402efb2dcea",
     "title": "Here Comes the Sun",
     "artist_name": "The Beatles",
     "year": 1969,
-    "release_id": null,
+    "release_id": "0cce9ea8-87a6-43a6-b234-6a36d8bb999b",
     "credits": [
       {
         "id": "6952b318-1844-5e19-bbdf-7b8f8aa8ff0c",
@@ -841,7 +841,7 @@
     "title": "Superstition",
     "artist_name": "Stevie Wonder",
     "year": 1972,
-    "release_id": "5c474da0-91ee-511c-81a9-db142d280981",
+    "release_id": "83981e07-0e38-47b4-b897-0b589600d3cb",
     "credits": [
       {
         "id": "5eb92801-f3d0-5141-958f-ec752da68c64",
@@ -870,11 +870,11 @@
     ]
   },
   {
-    "id": "a809a1d0-6054-4553-8746-f3cd60eadf71",
+    "id": "ded2f8a0-5b16-41f2-98e4-dac2e427225a",
     "title": "Stay High",
     "artist_name": "Brittany Howard",
     "year": 2019,
-    "release_id": "e0d48100-e920-546a-bd4b-1e37c2e58f9a",
+    "release_id": "6b0b8b9b-3a6c-427e-bc70-0be1581cf733",
     "credits": [
       {
         "id": "3d10125a-bf6e-534d-b8dd-5287eafe7de0",
@@ -903,11 +903,11 @@
     ]
   },
   {
-    "id": "d7374717-1c6b-49ca-a6da-8214bae98b91",
+    "id": "b4f77a3f-5caf-4e96-b1c7-cb955237bd0d",
     "title": "Hold On",
     "artist_name": "Alabama Shakes",
     "year": 2012,
-    "release_id": "aff861e9-e6e8-5d0c-b92e-e254d172e99b",
+    "release_id": "2caa415c-a121-4abb-a9cc-8c5ff04dd9fa",
     "credits": [
       {
         "id": "0fd71044-dbbd-57a9-9cf2-139d1b26a521",
@@ -936,11 +936,11 @@
     ]
   },
   {
-    "id": "4b533db1-0943-4318-ab93-41a4a4086695",
+    "id": "46e04efb-01c9-40cd-8056-eb38c4efdaad",
     "title": "Rolling in the Deep",
     "artist_name": "Adele",
     "year": 2010,
-    "release_id": "3adb3b48-40f8-52d9-b631-e2c4a0ffed74",
+    "release_id": "e44ddac0-0eed-4c88-8dcf-318f3bae8509",
     "credits": [
       {
         "id": "7dc3a405-d295-5b31-a54c-8d4311761a8d",
@@ -975,11 +975,11 @@
     ]
   },
   {
-    "id": "8fbcf1e7-8898-4856-9a25-c6bf2659e55b",
+    "id": "5b488da9-e5e4-412d-adcb-a7139143a0f5",
     "title": "Hello",
     "artist_name": "Adele",
     "year": 2015,
-    "release_id": "4b590f8f-ed88-54a0-a61b-ae86abf7c739",
+    "release_id": "a85f1898-4f63-4609-ae1a-bf72c1771712",
     "credits": [
       {
         "id": "7dc3a405-d295-5b31-a54c-8d4311761a8d",
@@ -1014,11 +1014,11 @@
     ]
   },
   {
-    "id": "65e7d5fb-f739-4d2c-98eb-62bce8c973a9",
+    "id": "6da17683-7c0f-45a1-b2f2-d4bf262dd627",
     "title": "Beat It",
     "artist_name": "Michael Jackson",
     "year": 1982,
-    "release_id": "4205b4e8-a7dc-50a0-a4e5-c9b0db6e16f5",
+    "release_id": "3b6f91fb-3ab5-4e23-918f-b1867b609419",
     "credits": [
       {
         "id": "141a8453-0f71-50b6-9667-77cfe93f639c",
@@ -1053,11 +1053,11 @@
     ]
   },
   {
-    "id": "2ea37b67-bf1b-430c-8e89-13e618821a7d",
+    "id": "435f6285-e768-4168-b677-6bcf94345716",
     "title": "Gold on the Ceiling",
     "artist_name": "The Black Keys",
     "year": 2011,
-    "release_id": "5bb1e286-fe37-567d-bd27-9127c6b72210",
+    "release_id": "d45fd07a-82fc-44c9-9e74-8a59d5c3888b",
     "credits": [
       {
         "id": "8c2789e7-9bf0-5563-b1a9-ad624cd5d5cb",
@@ -1086,11 +1086,11 @@
     ]
   },
   {
-    "id": "5370d061-f09b-4654-8e43-85f269a9b7ff",
+    "id": "a53cfd7e-d2b7-4d9e-a8b5-7e24d245af66",
     "title": "Sound & Color",
     "artist_name": "Alabama Shakes",
     "year": 2015,
-    "release_id": "24b92f34-e616-5289-ad20-f4252386c099",
+    "release_id": "d522302b-17fc-4afd-b26d-7ce26cabab90",
     "credits": [
       {
         "id": "0fd71044-dbbd-57a9-9cf2-139d1b26a521",
@@ -1113,11 +1113,11 @@
     ]
   },
   {
-    "id": "8cc14e0d-e25f-44e2-a083-a74421b53e8a",
+    "id": "8ff8ff51-6ee1-4bcd-8fc6-f92acf28227a",
     "title": "Don't Wanna Fight",
     "artist_name": "Alabama Shakes",
     "year": 2015,
-    "release_id": "24b92f34-e616-5289-ad20-f4252386c099",
+    "release_id": "d522302b-17fc-4afd-b26d-7ce26cabab90",
     "credits": [
       {
         "id": "0fd71044-dbbd-57a9-9cf2-139d1b26a521",
@@ -1140,11 +1140,11 @@
     ]
   },
   {
-    "id": "62a74d56-cb06-5116-b63c-e3c8c611f58e",
+    "id": "0807e3a7-ae6d-42af-8998-40dc5c008435",
     "title": "Bad",
     "artist_name": "Michael Jackson",
     "year": 1987,
-    "release_id": "99859091-e76d-5c36-b5f8-b187ebac0634",
+    "release_id": "b7931017-b24a-4c45-9c62-1173accf9d60",
     "credits": [
       {
         "id": "141a8453-0f71-50b6-9667-77cfe93f639c",
@@ -1173,11 +1173,11 @@
     ]
   },
   {
-    "id": "dc4fc854-34ca-5d2d-bc06-bc4878a9e451",
+    "id": "6452569d-ccf6-44b0-bb71-5ac430f61c53",
     "title": "The Way You Make Me Feel",
     "artist_name": "Michael Jackson",
     "year": 1987,
-    "release_id": "99859091-e76d-5c36-b5f8-b187ebac0634",
+    "release_id": "ddbd8b60-ce75-4b6c-bc46-89c566bfa58b",
     "credits": [
       {
         "id": "141a8453-0f71-50b6-9667-77cfe93f639c",
@@ -1206,11 +1206,11 @@
     ]
   },
   {
-    "id": "bd157a8e-2335-5980-b0aa-a260e3bedd7f",
+    "id": "e578f190-55b1-4cf5-a9c2-8b8b11c1e764",
     "title": "Smooth Criminal",
     "artist_name": "Michael Jackson",
     "year": 1987,
-    "release_id": "99859091-e76d-5c36-b5f8-b187ebac0634",
+    "release_id": "8fcecff9-0718-4dfc-ae01-dd0c40bcf855",
     "credits": [
       {
         "id": "141a8453-0f71-50b6-9667-77cfe93f639c",
@@ -1239,11 +1239,11 @@
     ]
   },
   {
-    "id": "e58c29a7-5eca-54cc-bb27-bd0e2b5404d2",
+    "id": "1937b739-726f-41ef-ae7d-d95fe328188b",
     "title": "Man in the Mirror",
     "artist_name": "Michael Jackson",
     "year": 1987,
-    "release_id": "99859091-e76d-5c36-b5f8-b187ebac0634",
+    "release_id": "e4427eba-75d8-4987-b472-2886349e5c8a",
     "credits": [
       {
         "id": "141a8453-0f71-50b6-9667-77cfe93f639c",
@@ -1278,11 +1278,11 @@
     ]
   },
   {
-    "id": "a9c0ad4d-bbe8-558a-9078-6a19c0acb9af",
+    "id": "519590d1-9746-4cbb-bdcc-c456d4dae442",
     "title": "Don't Stop 'Til You Get Enough",
     "artist_name": "Michael Jackson",
     "year": 1979,
-    "release_id": "899bdda5-b567-51d2-985b-e3daeff5e46b",
+    "release_id": "ae2c2544-8fca-4174-a4bc-b3b103bbd0c6",
     "credits": [
       {
         "id": "141a8453-0f71-50b6-9667-77cfe93f639c",
@@ -1311,11 +1311,11 @@
     ]
   },
   {
-    "id": "68a132e7-296f-5a28-a45f-5caeb981086e",
+    "id": "649515a2-de77-45c4-9b39-c7be258abd99",
     "title": "Off the Wall",
     "artist_name": "Michael Jackson",
     "year": 1979,
-    "release_id": "899bdda5-b567-51d2-985b-e3daeff5e46b",
+    "release_id": "fd9a52fe-5561-4057-aa3d-5688cbc274f4",
     "credits": [
       {
         "id": "141a8453-0f71-50b6-9667-77cfe93f639c",
@@ -1344,11 +1344,11 @@
     ]
   },
   {
-    "id": "6571d075-70ae-5ec8-87bd-5fde4e573995",
+    "id": "981eb81c-8c6b-4c5f-b8d9-339e685c8197",
     "title": "Give Me the Night",
     "artist_name": "George Benson",
     "year": 1980,
-    "release_id": "b2416cc1-7660-5b7d-8efb-20a44ca91585",
+    "release_id": "bf284952-e673-4f4f-8194-0ae5ca34ff7d",
     "credits": [
       {
         "id": "6a094fac-457e-5683-b681-eb4ca1a06255",
@@ -1377,11 +1377,11 @@
     ]
   },
   {
-    "id": "9b3c060c-4971-54ea-8ab5-cbeb0fdfcb3b",
+    "id": "9657aeda-e6b6-4411-9e66-38cb02dab184",
     "title": "Boogie Nights",
     "artist_name": "Heatwave",
     "year": 1976,
-    "release_id": "1932f47f-ce14-5e61-ab86-c4cc6e553317",
+    "release_id": "79573def-a5dc-4ffd-a950-787b2c926501",
     "credits": [
       {
         "id": "a6f0438e-4cbb-544f-8cb8-b22d9eb80f40",
@@ -1404,11 +1404,11 @@
     ]
   },
   {
-    "id": "f2a6d721-89cb-53c9-ad0b-39d2a847997f",
+    "id": "b3d7b8bd-6cc9-4573-a90a-15787b85f068",
     "title": "Always and Forever",
     "artist_name": "Heatwave",
     "year": 1976,
-    "release_id": "1932f47f-ce14-5e61-ab86-c4cc6e553317",
+    "release_id": "379075fa-cb44-423b-b33e-17981e6718d4",
     "credits": [
       {
         "id": "a6f0438e-4cbb-544f-8cb8-b22d9eb80f40",
@@ -1431,11 +1431,11 @@
     ]
   },
   {
-    "id": "5dcb6b8c-d0dc-539d-a7e9-94631af1be60",
+    "id": "a30d04d4-8fc7-4e2d-bc61-6189837ff9ba",
     "title": "We Are the World",
     "artist_name": "USA for Africa",
     "year": 1985,
-    "release_id": "b31746f1-df81-540d-9916-ed5443c13ab7",
+    "release_id": "3420b5a2-92ac-4b31-b1ea-4fca1eab517d",
     "credits": [
       {
         "id": "7be54d6a-d5d5-56df-b1d8-e38da718400c",
@@ -1470,11 +1470,11 @@
     ]
   },
   {
-    "id": "a7cb4a0f-e1c0-5f76-908b-490b2c37d6a2",
+    "id": "a8a72a2d-d53d-45ea-995b-6aa128e296bc",
     "title": "All Night Long (All Night)",
     "artist_name": "Lionel Richie",
     "year": 1983,
-    "release_id": "3e7ea2a6-fb56-5c02-ade6-8cdae09dbf3f",
+    "release_id": "d9ee5459-2c92-4129-b6f4-f5f75c994b6a",
     "credits": [
       {
         "id": "0220f86b-8022-57f6-b72b-86cd06e3116b",
@@ -1497,11 +1497,11 @@
     ]
   },
   {
-    "id": "0b08a374-fd9e-5240-9504-76879bf55cf5",
+    "id": "03e4c323-ccf9-441e-99e6-3e1f652565b1",
     "title": "Hey Jude",
     "artist_name": "The Beatles",
     "year": 1968,
-    "release_id": "938f5635-f09b-5880-9109-6c0972c383e9",
+    "release_id": "532ed037-e874-4464-93bc-3299619fa278",
     "credits": [
       {
         "id": "6952b318-1844-5e19-bbdf-7b8f8aa8ff0c",
@@ -1536,11 +1536,11 @@
     ]
   },
   {
-    "id": "e1826087-a7c9-5341-bb59-24ff044077e6",
+    "id": "d9b6e695-2b79-4732-97a4-b1b6c6b5bfdc",
     "title": "Let It Be",
     "artist_name": "The Beatles",
     "year": 1970,
-    "release_id": "b362d3d0-e824-5155-ae7b-efc11ce3731e",
+    "release_id": "5c94c7a5-5d0d-440d-9574-b486f422d23b",
     "credits": [
       {
         "id": "6952b318-1844-5e19-bbdf-7b8f8aa8ff0c",
@@ -1575,11 +1575,11 @@
     ]
   },
   {
-    "id": "6fae2cac-0e7a-5be2-8fa4-19110a60e5a4",
+    "id": "aa7ba2f2-f64d-410c-bf8c-cf15d654d7a6",
     "title": "Yesterday",
     "artist_name": "The Beatles",
     "year": 1965,
-    "release_id": "806f2925-6072-5293-9dd3-eb2afcd7424d",
+    "release_id": "bcc8b0f7-b412-44af-9529-56713fbff10d",
     "credits": [
       {
         "id": "6952b318-1844-5e19-bbdf-7b8f8aa8ff0c",
@@ -1608,11 +1608,11 @@
     ]
   },
   {
-    "id": "dd7755f3-7427-50e1-aabf-4d48435d7106",
+    "id": "8621e2a3-d02a-4f36-babb-164c2827db33",
     "title": "Eleanor Rigby",
     "artist_name": "The Beatles",
     "year": 1966,
-    "release_id": "32d238e3-5a98-5112-acaf-321d616abc0d",
+    "release_id": "4284e7c7-ef41-4d2d-b66e-ad80dc24d2fb",
     "credits": [
       {
         "id": "6952b318-1844-5e19-bbdf-7b8f8aa8ff0c",
@@ -1641,11 +1641,11 @@
     ]
   },
   {
-    "id": "68c873d4-de04-5ca6-b115-f920450fae41",
+    "id": "fbd6367d-c3e4-4315-b6c0-cc4e12a0ff81",
     "title": "Penny Lane",
     "artist_name": "The Beatles",
     "year": 1967,
-    "release_id": "3f11b4b1-d536-52be-bdd4-7e3c3e4ad541",
+    "release_id": "6111519f-04ba-4ab5-ba79-6631d1ebd29d",
     "credits": [
       {
         "id": "6952b318-1844-5e19-bbdf-7b8f8aa8ff0c",
@@ -1674,11 +1674,11 @@
     ]
   },
   {
-    "id": "1ad24d64-5eb1-519b-8c5e-01b830c65352",
+    "id": "6803ff98-aa7a-4d2c-9818-3edc9de2401d",
     "title": "Strawberry Fields Forever",
     "artist_name": "The Beatles",
     "year": 1967,
-    "release_id": "3f11b4b1-d536-52be-bdd4-7e3c3e4ad541",
+    "release_id": "a491f59f-7b73-4bd1-a3df-2dd4eb44f8cb",
     "credits": [
       {
         "id": "6952b318-1844-5e19-bbdf-7b8f8aa8ff0c",
@@ -1707,11 +1707,11 @@
     ]
   },
   {
-    "id": "9b4656b0-413f-5846-a1c5-3d9d4b40310c",
+    "id": "80bd4bc9-ded7-49a4-a090-982a7d69380b",
     "title": "A Hard Day's Night",
     "artist_name": "The Beatles",
     "year": 1964,
-    "release_id": "16a6460c-7e7d-518c-99a8-eea51a133940",
+    "release_id": "d3960107-77fa-4731-98ca-13db3626732c",
     "credits": [
       {
         "id": "6952b318-1844-5e19-bbdf-7b8f8aa8ff0c",
@@ -1740,11 +1740,11 @@
     ]
   },
   {
-    "id": "85961cdc-4228-5151-9b52-1e3670a70a9f",
+    "id": "148eaf65-db4c-4cec-87b3-ea24940b4f54",
     "title": "Help!",
     "artist_name": "The Beatles",
     "year": 1965,
-    "release_id": "806f2925-6072-5293-9dd3-eb2afcd7424d",
+    "release_id": "0966428b-fb87-4f0b-aaca-f87ec9b76a1c",
     "credits": [
       {
         "id": "6952b318-1844-5e19-bbdf-7b8f8aa8ff0c",
@@ -1773,11 +1773,11 @@
     ]
   },
   {
-    "id": "63b4eb4a-3994-5779-a0a4-876f73ae206b",
+    "id": "08a5cc77-ce79-4875-859e-8c3d172a6d17",
     "title": "In My Life",
     "artist_name": "The Beatles",
     "year": 1965,
-    "release_id": "b43c4619-faee-554c-9cf1-8fd4d1e13157",
+    "release_id": "f8f01352-faf2-4e86-8842-77f56970e495",
     "credits": [
       {
         "id": "6952b318-1844-5e19-bbdf-7b8f8aa8ff0c",
@@ -1806,11 +1806,11 @@
     ]
   },
   {
-    "id": "7e369c9a-774f-5e30-847a-4a49d5ce7208",
+    "id": "62ffc205-5700-4471-8661-72da7206de1d",
     "title": "Blackbird",
     "artist_name": "The Beatles",
     "year": 1968,
-    "release_id": "9d9fa1d5-7e75-580c-86bd-b253ce49b0f5",
+    "release_id": "607ff596-f98c-4de2-b745-9430be720643",
     "credits": [
       {
         "id": "6952b318-1844-5e19-bbdf-7b8f8aa8ff0c",
@@ -1839,11 +1839,11 @@
     ]
   },
   {
-    "id": "a8070cd3-e402-57d6-99de-c3aad181f141",
+    "id": "78946bb5-29e0-481e-beb8-0208f46c10e3",
     "title": "All You Need Is Love",
     "artist_name": "The Beatles",
     "year": 1967,
-    "release_id": "3f11b4b1-d536-52be-bdd4-7e3c3e4ad541",
+    "release_id": "e1782394-5d54-495d-b5c0-b20ff74d00e9",
     "credits": [
       {
         "id": "6952b318-1844-5e19-bbdf-7b8f8aa8ff0c",
@@ -1872,11 +1872,11 @@
     ]
   },
   {
-    "id": "39db760f-2307-5ea2-ade9-9d72a6f95ba9",
+    "id": "1366b057-6d90-4880-a1ba-9b8029bc759c",
     "title": "Imagine",
     "artist_name": "John Lennon",
     "year": 1971,
-    "release_id": "34353a88-6f1d-5fbe-a254-8a3e66be7e7f",
+    "release_id": "b300adb1-7dcc-4326-905a-e0183bc26ad6",
     "credits": [
       {
         "id": "8e272476-4c82-5bf5-84c1-a7be89ce65f2",
@@ -1905,11 +1905,11 @@
     ]
   },
   {
-    "id": "de2fe222-8a22-52b3-a9ab-17f8339e4034",
+    "id": "cc95fe67-34b5-4dca-9229-e7aced589f90",
     "title": "Instant Karma!",
     "artist_name": "John Lennon",
     "year": 1970,
-    "release_id": "19c78db0-da2c-5531-a40c-d86bce17c39f",
+    "release_id": "6c5a4490-af82-4ab7-840f-e65e6c922bc0",
     "credits": [
       {
         "id": "8e272476-4c82-5bf5-84c1-a7be89ce65f2",
@@ -1938,11 +1938,11 @@
     ]
   },
   {
-    "id": "951c5e99-d4c2-5be7-ae40-17c650cfe614",
+    "id": "5805aaa2-f1ff-411e-b732-3a48817aee58",
     "title": "Live and Let Die",
     "artist_name": "Paul McCartney & Wings",
     "year": 1973,
-    "release_id": "774c69f9-31fe-5d29-8601-ce26db9bd264",
+    "release_id": "9d9cce5d-fbc4-4a07-acdf-0b99fc889f80",
     "credits": [
       {
         "id": "f2f29bff-9d8b-5bf7-aef1-77384489ee50",
@@ -1971,11 +1971,11 @@
     ]
   },
   {
-    "id": "bc2fba13-9470-58e9-9af5-a99d1ca553a2",
+    "id": "f3b12ef3-cb03-4893-82ca-747887d37ed7",
     "title": "Band on the Run",
     "artist_name": "Paul McCartney & Wings",
     "year": 1973,
-    "release_id": "e9934b93-ab5b-5fe4-862d-d0514ca393a1",
+    "release_id": "36625188-90ff-4118-8db4-1458a205520b",
     "credits": [
       {
         "id": "f2f29bff-9d8b-5bf7-aef1-77384489ee50",
@@ -2004,11 +2004,11 @@
     ]
   },
   {
-    "id": "061476be-de29-5a5b-9b93-30c33ecf8dd7",
+    "id": "ffd41241-4556-46b2-ab0c-b17e94c069a7",
     "title": "My Sweet Lord",
     "artist_name": "George Harrison",
     "year": 1970,
-    "release_id": "e01b81e2-29a1-5937-9ad3-2de920a86385",
+    "release_id": "97035026-c663-4ed2-a466-b3c974fe06a0",
     "credits": [
       {
         "id": "105a7c24-7cb8-528b-99ca-b681ea534d57",
@@ -2037,11 +2037,11 @@
     ]
   },
   {
-    "id": "ff181268-757c-564f-9fee-d5a3a704b64f",
+    "id": "35bc22d4-6c24-48c8-b862-5e2e3403f0b2",
     "title": "I Want Your Love",
     "artist_name": "Chic",
     "year": 1978,
-    "release_id": "2ec95914-fc15-5fbb-84a8-9586e8c3446f",
+    "release_id": "365d834c-78a2-4892-8659-f14a19d62f09",
     "credits": [
       {
         "id": "066aa3ee-1b70-5ad6-9dc9-076a32f118c9",
@@ -2070,11 +2070,11 @@
     ]
   },
   {
-    "id": "31638672-4528-581e-b8ea-4e2a899537cb",
+    "id": "b542cedf-a80c-41d7-a912-980f60857dca",
     "title": "Everybody Dance",
     "artist_name": "Chic",
     "year": 1977,
-    "release_id": "3cec086f-521d-5e06-be30-c4fb81a065a8",
+    "release_id": "44f2113d-b847-4aa0-956a-3ed4e8d250c1",
     "credits": [
       {
         "id": "066aa3ee-1b70-5ad6-9dc9-076a32f118c9",
@@ -2103,11 +2103,11 @@
     ]
   },
   {
-    "id": "6b652bb5-7165-5f7a-98ce-3320f454c0d3",
+    "id": "74c634f2-b18d-475d-9813-6c3c0b5628ac",
     "title": "We Are Family",
     "artist_name": "Sister Sledge",
     "year": 1979,
-    "release_id": "ec12d2b8-7db7-56e5-b166-45e762ec0e41",
+    "release_id": "b2350aaa-8817-4167-8946-e54a3bfdff14",
     "credits": [
       {
         "id": "25916718-3ceb-59a3-b4a4-0708c599440f",
@@ -2148,11 +2148,11 @@
     ]
   },
   {
-    "id": "83ac9aed-7c56-59c3-b934-c5bf73fb93e6",
+    "id": "6c8d1eb0-614b-46c7-9b4f-2daee6201e47",
     "title": "He's the Greatest Dancer",
     "artist_name": "Sister Sledge",
     "year": 1979,
-    "release_id": "ec12d2b8-7db7-56e5-b166-45e762ec0e41",
+    "release_id": "f455b3d6-efde-4d4e-a0b4-f028196f9817",
     "credits": [
       {
         "id": "25916718-3ceb-59a3-b4a4-0708c599440f",
@@ -2193,11 +2193,11 @@
     ]
   },
   {
-    "id": "045cdd3f-5d4f-588e-8e84-1d374478b44e",
+    "id": "2444d517-8f29-494c-ad3b-6dcf90bbb1c0",
     "title": "Lost in Music",
     "artist_name": "Sister Sledge",
     "year": 1979,
-    "release_id": "ec12d2b8-7db7-56e5-b166-45e762ec0e41",
+    "release_id": "b219ec00-75f0-4c49-9ae9-093ededbf15c",
     "credits": [
       {
         "id": "25916718-3ceb-59a3-b4a4-0708c599440f",
@@ -2238,11 +2238,11 @@
     ]
   },
   {
-    "id": "2a0e20b2-def7-5ec8-898b-caaf544aee88",
+    "id": "c9a1591c-1738-4b3e-9bf8-360774fc1925",
     "title": "Upside Down",
     "artist_name": "Diana Ross",
     "year": 1980,
-    "release_id": "e55b5c6d-61e3-54fb-8898-d07b482e3626",
+    "release_id": "6507a5dc-1def-4ef8-96cd-50bb74381f0a",
     "credits": [
       {
         "id": "3d38d26a-2199-51dc-b1f0-9959e39331d4",
@@ -2283,11 +2283,11 @@
     ]
   },
   {
-    "id": "99c84179-2409-57ce-919c-be65df83ec64",
+    "id": "d7a10579-fa72-42db-88d3-c1af941d7dee",
     "title": "I'm Coming Out",
     "artist_name": "Diana Ross",
     "year": 1980,
-    "release_id": "e55b5c6d-61e3-54fb-8898-d07b482e3626",
+    "release_id": "2a16ce01-c78f-4857-95b0-1fbc0e9c3cbe",
     "credits": [
       {
         "id": "3d38d26a-2199-51dc-b1f0-9959e39331d4",
@@ -2328,11 +2328,11 @@
     ]
   },
   {
-    "id": "93719496-20d5-5675-995a-858e151416d9",
+    "id": "ebe65def-8b27-4962-b65f-3cc957a1dc92",
     "title": "The Reflex",
     "artist_name": "Duran Duran",
     "year": 1983,
-    "release_id": "dd4fb02e-e069-51c6-9e60-8bfa46994e1f",
+    "release_id": "07c7bf2a-6df3-4ada-bdc4-c127c8f4d44a",
     "credits": [
       {
         "id": "ba92f215-f0d3-51ac-ab8e-d627e3d53597",
@@ -2355,11 +2355,11 @@
     ]
   },
   {
-    "id": "50f079e5-171c-5626-a2af-dfff3d57b2f2",
+    "id": "4447446f-2f53-4cb8-8dfb-83709ba8c08a",
     "title": "Notorious",
     "artist_name": "Duran Duran",
     "year": 1986,
-    "release_id": "3926ce84-777e-50e8-802d-82ec6d9866b7",
+    "release_id": "150bf764-97c6-46a2-9267-680fd78b592c",
     "credits": [
       {
         "id": "ba92f215-f0d3-51ac-ab8e-d627e3d53597",
@@ -2382,11 +2382,11 @@
     ]
   },
   {
-    "id": "15c1dd3b-9712-5d88-8ec0-9f10e83b3ca2",
+    "id": "924b1d73-99a7-475e-b9de-499e5dee5d00",
     "title": "Original Sin",
     "artist_name": "INXS",
     "year": 1984,
-    "release_id": "04f9ac27-0e76-50df-8ab2-b773789b09c2",
+    "release_id": "23e8265e-77c3-413c-bd88-580109681085",
     "credits": [
       {
         "id": "e7ac9fe2-872d-51bb-b2b5-771d6b91c692",
@@ -2409,11 +2409,11 @@
     ]
   },
   {
-    "id": "69796499-5229-5826-a2dd-aa0f670f54f9",
+    "id": "1641d985-543a-4153-98d8-8a42b55f84a5",
     "title": "China Girl",
     "artist_name": "David Bowie",
     "year": 1983,
-    "release_id": "a13d8fc4-4fa4-56a7-a7fa-dd19f1913fbb",
+    "release_id": "5402622a-aa87-4f1f-87fc-7251bb60f6d1",
     "credits": [
       {
         "id": "fbe5816e-f2d7-5661-ada0-2b74cb81fd8c",
@@ -2442,11 +2442,11 @@
     ]
   },
   {
-    "id": "beb5c23a-e379-573c-a810-2520be2a7ae9",
+    "id": "034a459c-8b74-4743-bebf-af8396a01f8c",
     "title": "Give Life Back to Music",
     "artist_name": "Daft Punk",
     "year": 2013,
-    "release_id": "69507347-bbe9-54ba-b8c4-0f7d794616bd",
+    "release_id": "bd104f75-c502-40cf-b46a-83a0535984d4",
     "credits": [
       {
         "id": "a8a144ea-0d15-5314-8207-1b277748bb7f",
@@ -2469,11 +2469,11 @@
     ]
   },
   {
-    "id": "50c44879-1670-5085-946f-dc36fa575b76",
+    "id": "26487f05-78f4-4cc7-aa24-bc3607f392ea",
     "title": "Harder, Better, Faster, Stronger",
     "artist_name": "Daft Punk",
     "year": 2001,
-    "release_id": "1eafd4c8-911e-5f48-aece-35e1a1745b79",
+    "release_id": "f1dee57a-b00c-4c59-b5f7-9e3ff841f4c2",
     "credits": [
       {
         "id": "a8a144ea-0d15-5314-8207-1b277748bb7f",
@@ -2496,11 +2496,11 @@
     ]
   },
   {
-    "id": "7dc693bd-aaec-56ff-a7f2-8fc84e6ff0dc",
+    "id": "de0c999d-ddd0-494b-8a52-463333df64fd",
     "title": "Around the World",
     "artist_name": "Daft Punk",
     "year": 1997,
-    "release_id": "574cfde4-3c69-5ed7-8c34-f54149b309ad",
+    "release_id": "170d8783-40b3-4b0b-879d-0ef6055dfeb3",
     "credits": [
       {
         "id": "a8a144ea-0d15-5314-8207-1b277748bb7f",
@@ -2523,11 +2523,11 @@
     ]
   },
   {
-    "id": "894bfe6c-67e2-589c-ab27-df463ec09e86",
+    "id": "277dcb44-0643-457e-b679-bbd7676e1ecf",
     "title": "Da Funk",
     "artist_name": "Daft Punk",
     "year": 1995,
-    "release_id": "574cfde4-3c69-5ed7-8c34-f54149b309ad",
+    "release_id": "dec3511f-e086-41b7-b5ec-f47e3763c256",
     "credits": [
       {
         "id": "a8a144ea-0d15-5314-8207-1b277748bb7f",
@@ -2550,11 +2550,11 @@
     ]
   },
   {
-    "id": "30491e3f-6acd-552a-9607-258b8173b1fd",
+    "id": "1cb37a19-2070-4a82-8938-5e0dac802c8a",
     "title": "Drop It Like It's Hot",
     "artist_name": "Snoop Dogg",
     "year": 2004,
-    "release_id": "18cb4a8c-e92b-566c-b8d7-01441f24893a",
+    "release_id": "51051728-4ebb-4c75-ba04-30093981c526",
     "credits": [
       {
         "id": "c17187d5-1077-5aed-bce7-a6685f93c56b",
@@ -2583,11 +2583,11 @@
     ]
   },
   {
-    "id": "69051a7c-2f9e-50e8-b151-dd9d3e9f09a9",
+    "id": "ce0ff801-43b8-4b2d-acde-08a0739e77d4",
     "title": "Hollaback Girl",
     "artist_name": "Gwen Stefani",
     "year": 2004,
-    "release_id": "0fd09666-9f8d-5e7e-83e8-834a8e6a1a6d",
+    "release_id": "4bcde92f-4be7-451d-afff-db105eab3273",
     "credits": [
       {
         "id": "a9c4d157-7c46-56ad-b192-2cc3c2beb59c",
@@ -2622,11 +2622,11 @@
     ]
   },
   {
-    "id": "b9236efb-49ac-5000-b744-ce977bea1a58",
+    "id": "e15c144c-8225-42c4-86d9-1819386d4e1e",
     "title": "Rock Your Body",
     "artist_name": "Justin Timberlake",
     "year": 2002,
-    "release_id": "3ceebc7e-d3fb-5f3f-a4b1-6e562c9bcd1f",
+    "release_id": "3d28bd00-9067-4760-8d34-d318c04ce756",
     "credits": [
       {
         "id": "0014ca5c-db1f-5743-8120-1d84984a7fe8",
@@ -2661,11 +2661,11 @@
     ]
   },
   {
-    "id": "ef6d3a9a-2237-54b2-be7f-184fc9b5b17b",
+    "id": "717423fd-a267-4bee-b0f1-89fdd7329d48",
     "title": "Like I Love You",
     "artist_name": "Justin Timberlake",
     "year": 2002,
-    "release_id": "3ceebc7e-d3fb-5f3f-a4b1-6e562c9bcd1f",
+    "release_id": "db70ca38-7e98-4a8d-b785-7a8b470d65d8",
     "credits": [
       {
         "id": "0014ca5c-db1f-5743-8120-1d84984a7fe8",
@@ -2700,11 +2700,11 @@
     ]
   },
   {
-    "id": "2774ba41-b62a-5c0c-948b-df595947d3bc",
+    "id": "2812b243-c3b4-4c4a-baec-7381da26f427",
     "title": "I'm a Slave 4 U",
     "artist_name": "Britney Spears",
     "year": 2001,
-    "release_id": "a9874415-85fc-5500-8b35-e3a6d4f033b0",
+    "release_id": "60a063eb-3001-4922-a235-7fc2fb119a72",
     "credits": [
       {
         "id": "0d716624-a3a6-5132-8f6c-c4d44be448de",
@@ -2733,11 +2733,11 @@
     ]
   },
   {
-    "id": "fa860256-b740-5bb1-b0c6-8c0a9a736fc1",
+    "id": "ac231266-c032-4264-8cfa-32fdcac22e36",
     "title": "Hot in Herre",
     "artist_name": "Nelly",
     "year": 2002,
-    "release_id": "e665d35b-8e16-5892-bf3e-477db9782f10",
+    "release_id": "fb51d9a5-a243-4448-bebd-363bec29df68",
     "credits": [
       {
         "id": "0a0a9204-5dac-58eb-b223-261cd27a812e",
@@ -2766,11 +2766,11 @@
     ]
   },
   {
-    "id": "bfffda53-86e4-5074-ab8d-cf4de92df6a9",
+    "id": "0217da27-3e0f-46a8-9863-a7682973136a",
     "title": "Milkshake",
     "artist_name": "Kelis",
     "year": 2003,
-    "release_id": "10259b2a-1471-569f-9752-e318ae110fbb",
+    "release_id": "b96dc88e-f678-4e8a-ab25-0df5b4bd54f2",
     "credits": [
       {
         "id": "7118b6e9-c74c-5935-8ed0-0c568888ff51",
@@ -2799,11 +2799,11 @@
     ]
   },
   {
-    "id": "3450d267-5014-508a-be0c-0f7bd59d4ea7",
+    "id": "01fcd500-deed-4721-86c9-2c7a34242900",
     "title": "Frontin'",
     "artist_name": "Pharrell Williams",
     "year": 2003,
-    "release_id": "83e77108-c505-53c3-a75b-449ac3b3f03f",
+    "release_id": "4db17b0b-a797-4bf7-8608-d3ec837801cf",
     "credits": [
       {
         "id": "ab1b6e9f-9078-50cd-aaf1-321c63a313a0",
@@ -2832,11 +2832,11 @@
     ]
   },
   {
-    "id": "22066066-0ecf-5c5e-ba39-7b09aac23044",
+    "id": "76504556-b7c0-45e0-b188-02feebc6e2ea",
     "title": "Howlin' for You",
     "artist_name": "The Black Keys",
     "year": 2010,
-    "release_id": "2d4bb54e-0f7c-564f-be62-2951c5fe0803",
+    "release_id": "d45fd07a-82fc-44c9-9e74-8a59d5c3888b",
     "credits": [
       {
         "id": "8c2789e7-9bf0-5563-b1a9-ad624cd5d5cb",
@@ -2859,11 +2859,11 @@
     ]
   },
   {
-    "id": "4239ec13-242f-5d45-8557-56e102ab122a",
+    "id": "0e589536-2383-4ded-a884-4b0484e78eea",
     "title": "Fever",
     "artist_name": "The Black Keys",
     "year": 2014,
-    "release_id": "fba9da08-d98c-58ba-bc51-598a3234fcae",
+    "release_id": "2ce241c1-4c1c-401a-b872-fe7230e22b9d",
     "credits": [
       {
         "id": "8c2789e7-9bf0-5563-b1a9-ad624cd5d5cb",
@@ -2892,11 +2892,11 @@
     ]
   },
   {
-    "id": "83d5f761-6275-55fe-b3e4-5f2264c65984",
+    "id": "e155ab72-ddc3-497a-994b-552cf191e0dd",
     "title": "Feel Good Inc.",
     "artist_name": "Gorillaz",
     "year": 2005,
-    "release_id": "ef3254d9-fd8e-5d6e-bd85-67035b8a9125",
+    "release_id": "61968062-8019-4429-82db-462e948291e2",
     "credits": [
       {
         "id": "be2e0db3-c764-57ac-878a-e2c899f2fb5a",
@@ -2925,11 +2925,11 @@
     ]
   },
   {
-    "id": "96f35b54-1bcc-5b58-b3e1-4d3076264706",
+    "id": "b14ca678-dbde-4e7a-bb49-0230121eff54",
     "title": "DARE",
     "artist_name": "Gorillaz",
     "year": 2005,
-    "release_id": "ef3254d9-fd8e-5d6e-bd85-67035b8a9125",
+    "release_id": "ba5f8e83-1089-4fe3-b081-4cc943c58734",
     "credits": [
       {
         "id": "be2e0db3-c764-57ac-878a-e2c899f2fb5a",
@@ -2958,11 +2958,11 @@
     ]
   },
   {
-    "id": "c4c43d03-fd97-5895-ab2d-ceec49fe251d",
+    "id": "7f731488-2c8c-4d36-9596-1171462f8447",
     "title": "Dirty Harry",
     "artist_name": "Gorillaz",
     "year": 2005,
-    "release_id": "ef3254d9-fd8e-5d6e-bd85-67035b8a9125",
+    "release_id": "9ea337a4-e6fe-44c9-9ceb-8fe5c04c6663",
     "credits": [
       {
         "id": "be2e0db3-c764-57ac-878a-e2c899f2fb5a",
@@ -2991,11 +2991,11 @@
     ]
   },
   {
-    "id": "4c2125fc-012a-5b70-a20a-d9cfa11115a4",
+    "id": "bd8647bb-5cc4-4b07-ae5d-ebfdd4d52ed9",
     "title": "Dark Necessities",
     "artist_name": "Red Hot Chili Peppers",
     "year": 2016,
-    "release_id": "2a2930f6-fe88-55c7-ba5c-02713caf70ba",
+    "release_id": "5b1d2935-2347-4b71-a230-d550dac5e919",
     "credits": [
       {
         "id": "c02d4e28-32f5-5438-8ed0-958fd69baa6a",
@@ -3018,11 +3018,11 @@
     ]
   },
   {
-    "id": "4c4f7fed-8597-5067-a973-4c7e98c47cd5",
+    "id": "75087dae-ac87-492f-a6e0-75709098d2aa",
     "title": "The Getaway",
     "artist_name": "Red Hot Chili Peppers",
     "year": 2016,
-    "release_id": "2a2930f6-fe88-55c7-ba5c-02713caf70ba",
+    "release_id": "b352a856-359a-4815-b2d2-e6e787891571",
     "credits": [
       {
         "id": "c02d4e28-32f5-5438-8ed0-958fd69baa6a",
@@ -3045,11 +3045,11 @@
     ]
   },
   {
-    "id": "fb1c5bb3-2f07-5375-bc35-f4a4dc3cca42",
+    "id": "5ea8c5b9-906b-4c53-9200-ade2caf919c8",
     "title": "Modern Guilt",
     "artist_name": "Beck",
     "year": 2008,
-    "release_id": "09793a44-82eb-538e-89bc-1613a4dd9aa5",
+    "release_id": "a8df76da-9791-4be1-9d1a-62d4c15d53a8",
     "credits": [
       {
         "id": "ea2af770-76b5-53de-bab6-a96fb092af6c",
@@ -3078,11 +3078,11 @@
     ]
   },
   {
-    "id": "0a3f30e6-2fcb-5fb1-ac52-b9141bf7cc39",
+    "id": "9ab9741b-17d1-4111-ac98-8819b5c5b775",
     "title": "Happy Pills",
     "artist_name": "Norah Jones",
     "year": 2012,
-    "release_id": "50901f61-9507-5330-aca5-b1effd91c5b8",
+    "release_id": "b8e08dc8-7e76-4e25-8a23-8143d54b6acb",
     "credits": [
       {
         "id": "1e842cd6-1c43-54a2-90b4-eab49ffc8db8",
@@ -3117,11 +3117,11 @@
     ]
   },
   {
-    "id": "f421b576-c2d0-5d25-876a-c6a1d54ba5fd",
+    "id": "5dd210c3-cfd4-44a3-ae7d-a6e7f1c98019",
     "title": "Smiley Faces",
     "artist_name": "Gnarls Barkley",
     "year": 2006,
-    "release_id": "33e3de47-d896-50f9-ae72-9b387c2d937f",
+    "release_id": "7cd7538e-aaf6-4e4e-a2a0-be6ef60ed66b",
     "credits": [
       {
         "id": "57f67193-1df8-5ffb-9a86-65dff8cdc9a1",
@@ -3144,11 +3144,11 @@
     ]
   },
   {
-    "id": "6ad84fec-7e88-5ac6-bb12-cd7f89b5b9a7",
+    "id": "8219e264-e0ca-4469-8077-e10926ba930b",
     "title": "Going On",
     "artist_name": "Gnarls Barkley",
     "year": 2008,
-    "release_id": "3ff7f5ae-a64a-503f-a0e8-0425c13346ff",
+    "release_id": "d2c937b3-16db-4d09-be9e-5e8904746910",
     "credits": [
       {
         "id": "57f67193-1df8-5ffb-9a86-65dff8cdc9a1",
@@ -3171,11 +3171,11 @@
     ]
   },
   {
-    "id": "1718e6c3-ad0f-5552-8726-ec8e024ab67f",
+    "id": "77ac8f5a-60a5-4256-ac6b-b74f36f6a70c",
     "title": "West Coast",
     "artist_name": "Lana Del Rey",
     "year": 2014,
-    "release_id": "8355b946-593a-5ed0-bdb2-fb0e1f4c7a2f",
+    "release_id": "3bffe4d8-d501-4815-857d-1db362402e6e",
     "credits": [
       {
         "id": "37b4890a-131f-5902-a7ec-2992bbcf6236",
@@ -3204,11 +3204,11 @@
     ]
   },
   {
-    "id": "a8250f30-c43e-5225-8c14-7517d60e4b98",
+    "id": "678359f6-1ac4-456f-abda-0535381e1041",
     "title": "Shades of Cool",
     "artist_name": "Lana Del Rey",
     "year": 2014,
-    "release_id": "8355b946-593a-5ed0-bdb2-fb0e1f4c7a2f",
+    "release_id": "0916be5f-81f4-4b82-9d97-ada87f96159e",
     "credits": [
       {
         "id": "37b4890a-131f-5902-a7ec-2992bbcf6236",
@@ -3237,11 +3237,11 @@
     ]
   },
   {
-    "id": "8ae31bd0-29de-5d98-b8ed-64df3e5a4d22",
+    "id": "4810475b-aefa-423b-9c72-7d8f85a92a24",
     "title": "River Lea",
     "artist_name": "Adele",
     "year": 2015,
-    "release_id": "4b590f8f-ed88-54a0-a61b-ae86abf7c739",
+    "release_id": "9a691490-3104-43e6-9f6d-8dd7f7f644bf",
     "credits": [
       {
         "id": "7dc3a405-d295-5b31-a54c-8d4311761a8d",
@@ -3276,11 +3276,11 @@
     ]
   },
   {
-    "id": "9b511f36-0156-5e17-985b-d8b893880e94",
+    "id": "fec3fd63-693d-4cb5-b98d-63a30e30e711",
     "title": "Someone Like You",
     "artist_name": "Adele",
     "year": 2011,
-    "release_id": "3adb3b48-40f8-52d9-b631-e2c4a0ffed74",
+    "release_id": "22dc49c5-a664-46b0-bc27-f55872344bb2",
     "credits": [
       {
         "id": "7dc3a405-d295-5b31-a54c-8d4311761a8d",
@@ -3315,11 +3315,11 @@
     ]
   },
   {
-    "id": "fa5a3196-5a97-56f3-b4d0-3d81a03dc966",
+    "id": "cbb92794-9323-47bf-a3bb-1ad614592a30",
     "title": "Set Fire to the Rain",
     "artist_name": "Adele",
     "year": 2011,
-    "release_id": "3adb3b48-40f8-52d9-b631-e2c4a0ffed74",
+    "release_id": "1c5c07ea-fd97-4b37-873c-92cecee3a302",
     "credits": [
       {
         "id": "7dc3a405-d295-5b31-a54c-8d4311761a8d",
@@ -3348,11 +3348,11 @@
     ]
   },
   {
-    "id": "e88f598e-46d3-5fed-89c1-44200546f5da",
+    "id": "4534bd94-244d-41b0-b3f0-89e59d3e6bab",
     "title": "Skyfall",
     "artist_name": "Adele",
     "year": 2012,
-    "release_id": "d034af1c-f8d9-5a40-a8b6-5f7c6c369e5a",
+    "release_id": "70ec8b45-2291-456d-a0be-d8b120838a1b",
     "credits": [
       {
         "id": "7dc3a405-d295-5b31-a54c-8d4311761a8d",
@@ -3387,11 +3387,11 @@
     ]
   },
   {
-    "id": "abfd9486-0564-5c6e-86d9-5756394a5d7a",
+    "id": "ade2f0f3-39bf-46ad-a44d-7fc4a8069db7",
     "title": "Water Under the Bridge",
     "artist_name": "Adele",
     "year": 2015,
-    "release_id": "4b590f8f-ed88-54a0-a61b-ae86abf7c739",
+    "release_id": "0a536975-66b0-447d-8877-42cbc079e10c",
     "credits": [
       {
         "id": "7dc3a405-d295-5b31-a54c-8d4311761a8d",
@@ -3426,11 +3426,11 @@
     ]
   },
   {
-    "id": "55900f27-4ee0-52f7-8fda-95214805fb90",
+    "id": "6e741d97-68f9-4922-a00e-0243cb761d14",
     "title": "Send My Love (To Your New Lover)",
     "artist_name": "Adele",
     "year": 2015,
-    "release_id": "4b590f8f-ed88-54a0-a61b-ae86abf7c739",
+    "release_id": "1ea9d12f-6afc-4886-b397-7c84958e45cf",
     "credits": [
       {
         "id": "7dc3a405-d295-5b31-a54c-8d4311761a8d",
@@ -3465,11 +3465,11 @@
     ]
   },
   {
-    "id": "9dffc84d-5629-50fd-9446-4e2f962b720d",
+    "id": "6816b4e7-fb04-42dd-9818-8c202f6b1ca4",
     "title": "Rumour Has It",
     "artist_name": "Adele",
     "year": 2011,
-    "release_id": "3adb3b48-40f8-52d9-b631-e2c4a0ffed74",
+    "release_id": "be32e2bb-e844-4cac-b1b3-df8b79673a1d",
     "credits": [
       {
         "id": "7dc3a405-d295-5b31-a54c-8d4311761a8d",
@@ -3504,11 +3504,11 @@
     ]
   },
   {
-    "id": "2aac39bf-3999-59fb-a14d-d24f40062b01",
+    "id": "1db2b8f6-72fe-4d08-a607-1049d3bca1f9",
     "title": "Chandelier",
     "artist_name": "Sia",
     "year": 2014,
-    "release_id": "3ec4744d-d1a5-5daf-a9da-16d204cf6799",
+    "release_id": "c1530a4b-6c21-4807-8354-834beaa5cf7d",
     "credits": [
       {
         "id": "df8ffe05-9474-5c4f-b511-5da2352e3bc3",
@@ -3537,11 +3537,11 @@
     ]
   },
   {
-    "id": "399776b5-bc2a-56fc-9370-03227ecc8a6f",
+    "id": "8eaf533e-d38f-4db3-926c-689c3f08ad53",
     "title": "Cheap Thrills",
     "artist_name": "Sia",
     "year": 2016,
-    "release_id": "c20ee15d-1ab9-5586-9d70-47fcf542ca56",
+    "release_id": "385f2412-a242-4e57-8ff6-0296d9061678",
     "credits": [
       {
         "id": "df8ffe05-9474-5c4f-b511-5da2352e3bc3",
@@ -3570,11 +3570,11 @@
     ]
   },
   {
-    "id": "5bc56ae6-9f2f-588c-bb20-b230a733e94f",
+    "id": "c2e7c9e8-00e7-4a97-b3f9-2c1d389575ec",
     "title": "Dog Days Are Over",
     "artist_name": "Florence + The Machine",
     "year": 2008,
-    "release_id": "95a9f767-7bde-5ba2-8793-3d00bef013e4",
+    "release_id": "2a26dca8-ed8a-4c76-9182-e4629067e923",
     "credits": [
       {
         "id": "f96a8454-f60e-5267-826d-77c8a799efec",
@@ -3603,11 +3603,11 @@
     ]
   },
   {
-    "id": "6cc51a41-77fd-52e7-8c50-357b9f16d658",
+    "id": "a042a664-503a-459a-aa41-d4ec9084e722",
     "title": "Shake It Out",
     "artist_name": "Florence + The Machine",
     "year": 2011,
-    "release_id": "310d43bf-3c02-52d3-bc97-441d253062c0",
+    "release_id": "31994c25-f3c0-4571-a436-3b4e17e1b396",
     "credits": [
       {
         "id": "f96a8454-f60e-5267-826d-77c8a799efec",
@@ -3636,11 +3636,11 @@
     ]
   },
   {
-    "id": "c0484b90-9af1-55df-85eb-7c4b8721d507",
+    "id": "3093c43c-d82e-4da1-a727-a44ced501d07",
     "title": "Magic",
     "artist_name": "Coldplay",
     "year": 2014,
-    "release_id": "dca3f44a-edd2-5ac3-b6a9-d35e4c24cd47",
+    "release_id": "1ed400c9-04d2-4f93-be15-5479a69e3ed5",
     "credits": [
       {
         "id": "a7837b74-c1f3-5699-b831-5ffaf66c040d",
@@ -3663,11 +3663,11 @@
     ]
   },
   {
-    "id": "d1859a59-e093-54af-ae19-475686d4ca8a",
+    "id": "ea12da63-6f68-432e-9951-a779a5db64c9",
     "title": "Stronger (What Doesn't Kill You)",
     "artist_name": "Kelly Clarkson",
     "year": 2011,
-    "release_id": "382f70d2-8afb-5a1a-869e-7a6f4adc9455",
+    "release_id": "e3456f36-c5ed-47f3-a21b-9a7230a23700",
     "credits": [
       {
         "id": "a3aa8d2b-2838-5345-85ac-50db164e184c",
@@ -3696,11 +3696,11 @@
     ]
   },
   {
-    "id": "a8f98096-dc70-5792-8789-cd7d3e369504",
+    "id": "b4a11ae6-8a6d-49cd-8b1e-72c135cedf4f",
     "title": "Dreams",
     "artist_name": "Beck",
     "year": 2015,
-    "release_id": "c39a68b9-a130-5058-b609-5dff6fe994b7",
+    "release_id": "ee418b91-130f-444b-8e05-971a8449b115",
     "credits": [
       {
         "id": "ea2af770-76b5-53de-bab6-a96fb092af6c",
@@ -3735,11 +3735,11 @@
     ]
   },
   {
-    "id": "88c52647-480e-539f-9f0b-fc6fcbbbc0b3",
+    "id": "5bdbfe86-4ad5-4c19-8d29-ee5f30ba628b",
     "title": "Blinding Lights",
     "artist_name": "The Weeknd",
     "year": 2019,
-    "release_id": "1b608148-e415-5520-981d-e0e1cec2d1cc",
+    "release_id": "24f4415e-2684-42ed-b002-807066381839",
     "credits": [
       {
         "id": "a99368bd-e1d5-5e7b-8a98-b2a8638e154a",
@@ -3774,11 +3774,11 @@
     ]
   },
   {
-    "id": "64454600-4b68-5e3a-821c-60dba6c9b0ea",
+    "id": "b5fd3d68-2d7f-4f91-8e38-d385251ecdaa",
     "title": "Save Your Tears",
     "artist_name": "The Weeknd",
     "year": 2020,
-    "release_id": "1b608148-e415-5520-981d-e0e1cec2d1cc",
+    "release_id": "b1a27c22-48a0-48b1-be5b-fa5ea3fe31cc",
     "credits": [
       {
         "id": "a99368bd-e1d5-5e7b-8a98-b2a8638e154a",
@@ -3813,11 +3813,11 @@
     ]
   },
   {
-    "id": "17c20db0-2b4c-5f04-b141-c314260c7279",
+    "id": "08b815da-5d60-4807-a605-f6af03d5471d",
     "title": "Can't Feel My Face",
     "artist_name": "The Weeknd",
     "year": 2015,
-    "release_id": "81befcaf-2ea3-5454-9d90-d7d85f74d3cc",
+    "release_id": "847a5561-c79f-48cf-9b21-5bd02e930fb4",
     "credits": [
       {
         "id": "a99368bd-e1d5-5e7b-8a98-b2a8638e154a",
@@ -3852,11 +3852,11 @@
     ]
   },
   {
-    "id": "c93ed3d6-9107-5f22-99a9-86318d1b62af",
+    "id": "65f03bbd-a817-4feb-a1f1-dfc9103b1c2f",
     "title": "In Your Eyes",
     "artist_name": "The Weeknd",
     "year": 2020,
-    "release_id": "1b608148-e415-5520-981d-e0e1cec2d1cc",
+    "release_id": "5149293f-ccb3-4be9-b570-85fd6343b688",
     "credits": [
       {
         "id": "a99368bd-e1d5-5e7b-8a98-b2a8638e154a",
@@ -3891,11 +3891,11 @@
     ]
   },
   {
-    "id": "81a20b07-aeb8-5eab-9129-3dddca37ecf8",
+    "id": "69f7e609-160f-4c55-8220-05cac942d54d",
     "title": "Shake It Off",
     "artist_name": "Taylor Swift",
     "year": 2014,
-    "release_id": "b5dcefd7-4c5b-5ab1-8b64-de1a4be0eed6",
+    "release_id": "fb317b9d-e00c-44da-9358-ac734de6be03",
     "credits": [
       {
         "id": "0d85187a-5991-5340-b3b3-1a346181cadf",
@@ -3930,11 +3930,11 @@
     ]
   },
   {
-    "id": "0a568f6c-7ccb-5d5f-ac5a-07cb32f319e2",
+    "id": "87503693-83a4-4dd5-81dc-49bce6985efe",
     "title": "Blank Space",
     "artist_name": "Taylor Swift",
     "year": 2014,
-    "release_id": "b5dcefd7-4c5b-5ab1-8b64-de1a4be0eed6",
+    "release_id": "f3df4eea-4b64-4c72-81f5-bb248af8becc",
     "credits": [
       {
         "id": "0d85187a-5991-5340-b3b3-1a346181cadf",
@@ -3969,11 +3969,11 @@
     ]
   },
   {
-    "id": "512a4650-1a84-5a4e-80ee-3194d7a2ff81",
+    "id": "04d9c685-bcaf-4396-9006-9183d04e33d0",
     "title": "Style",
     "artist_name": "Taylor Swift",
     "year": 2014,
-    "release_id": "b5dcefd7-4c5b-5ab1-8b64-de1a4be0eed6",
+    "release_id": "f3df4eea-4b64-4c72-81f5-bb248af8becc",
     "credits": [
       {
         "id": "0d85187a-5991-5340-b3b3-1a346181cadf",
@@ -4008,11 +4008,11 @@
     ]
   },
   {
-    "id": "85325462-3b4e-5741-84ec-3e47a9c5d7c9",
+    "id": "73e33139-0789-4a94-8156-3d79ebf02fc0",
     "title": "Bad Blood",
     "artist_name": "Taylor Swift",
     "year": 2014,
-    "release_id": "b5dcefd7-4c5b-5ab1-8b64-de1a4be0eed6",
+    "release_id": "c0047f6d-2db1-4595-bab6-a94e56df568f",
     "credits": [
       {
         "id": "0d85187a-5991-5340-b3b3-1a346181cadf",
@@ -4047,11 +4047,11 @@
     ]
   },
   {
-    "id": "b89e62ff-fcca-51ec-9676-043c7f0cb85a",
+    "id": "eb04af9c-2bca-44cc-bfe3-4ee79ad8dcc6",
     "title": "We Are Never Ever Getting Back Together",
     "artist_name": "Taylor Swift",
     "year": 2012,
-    "release_id": "46b25ca0-2733-5ed8-a7dd-05d475eab8f2",
+    "release_id": "05205448-e2e3-4478-8475-c538ee3f03e7",
     "credits": [
       {
         "id": "0d85187a-5991-5340-b3b3-1a346181cadf",
@@ -4086,11 +4086,11 @@
     ]
   },
   {
-    "id": "b5685cb8-ddcf-5494-b33e-41570a694550",
+    "id": "b88528ba-9c4e-47f8-bc61-616486bdf420",
     "title": "I Knew You Were Trouble",
     "artist_name": "Taylor Swift",
     "year": 2012,
-    "release_id": "46b25ca0-2733-5ed8-a7dd-05d475eab8f2",
+    "release_id": "ab3593bc-9fcb-4237-8136-74888b5f3335",
     "credits": [
       {
         "id": "0d85187a-5991-5340-b3b3-1a346181cadf",
@@ -4125,11 +4125,11 @@
     ]
   },
   {
-    "id": "77d63b91-88aa-52c0-afb8-365c4d78b6f2",
+    "id": "f9168111-a172-494e-85a5-a64d31462ff8",
     "title": "Roar",
     "artist_name": "Katy Perry",
     "year": 2013,
-    "release_id": "421fe701-b2e9-55ed-90e7-33a2d7743a88",
+    "release_id": "a75dd777-15ae-47f7-aa28-6e9844a145d6",
     "credits": [
       {
         "id": "d5cf51cb-155c-56b3-b0df-ce96b72ee2ca",
@@ -4164,11 +4164,11 @@
     ]
   },
   {
-    "id": "6f3b3895-6fbe-5a56-a129-2b4ff8813632",
+    "id": "8799c59c-6ec0-4a6d-ae48-c58ae6678c9a",
     "title": "Teenage Dream",
     "artist_name": "Katy Perry",
     "year": 2010,
-    "release_id": "0c0d8e59-72bb-56b6-a496-d37546916345",
+    "release_id": "77716767-783b-43de-b13d-324a24019ce9",
     "credits": [
       {
         "id": "d5cf51cb-155c-56b3-b0df-ce96b72ee2ca",
@@ -4203,11 +4203,11 @@
     ]
   },
   {
-    "id": "00511e01-277b-5f46-b078-6e778fb7279b",
+    "id": "6241b648-372f-450d-b1a9-f723090c80e7",
     "title": "California Gurls",
     "artist_name": "Katy Perry",
     "year": 2010,
-    "release_id": "0c0d8e59-72bb-56b6-a496-d37546916345",
+    "release_id": "687a19e3-b37d-45c5-952d-ad4fef7ca5e7",
     "credits": [
       {
         "id": "d5cf51cb-155c-56b3-b0df-ce96b72ee2ca",
@@ -4236,11 +4236,11 @@
     ]
   },
   {
-    "id": "1be8dad4-d9b2-5ee2-9304-1c7af07b827a",
+    "id": "3e6db962-0f5f-4a34-8937-8167b0a7ed11",
     "title": "...Baby One More Time",
     "artist_name": "Britney Spears",
     "year": 1998,
-    "release_id": "e27b9d24-a0ce-5240-b046-754b6d865c54",
+    "release_id": "bf55bade-ecaf-47e4-af16-0ae7067dad7a",
     "credits": [
       {
         "id": "0d716624-a3a6-5132-8f6c-c4d44be448de",
@@ -4269,11 +4269,11 @@
     ]
   },
   {
-    "id": "537cd804-e3ac-5545-81c4-345d0657cb36",
+    "id": "c4e16d18-b0c9-406b-af94-334d4f1d8d0e",
     "title": "Oops!... I Did It Again",
     "artist_name": "Britney Spears",
     "year": 2000,
-    "release_id": "e7c9fbfb-fd74-5c45-aaf5-2609adffbb19",
+    "release_id": "3974f64d-a79f-4cee-bb6f-451aee77fa27",
     "credits": [
       {
         "id": "0d716624-a3a6-5132-8f6c-c4d44be448de",
@@ -4302,11 +4302,11 @@
     ]
   },
   {
-    "id": "82b03a22-e152-50c0-837f-9fb3ab95aa45",
+    "id": "52ded6b5-72f5-4e6d-aaf5-493a3e993850",
     "title": "Can't Stop the Feeling!",
     "artist_name": "Justin Timberlake",
     "year": 2016,
-    "release_id": "1edeff8b-f76f-56b9-a55a-796a8f7f72c3",
+    "release_id": "91866f83-1020-4a7c-8782-f6c20e69a8a9",
     "credits": [
       {
         "id": "0014ca5c-db1f-5743-8120-1d84984a7fe8",
@@ -4341,11 +4341,11 @@
     ]
   },
   {
-    "id": "53a1f477-3f6d-5598-a1f3-62d67a6bbb97",
+    "id": "a68b6829-3e40-4a20-83d2-8f326b111a88",
     "title": "Don't Stop Me Now",
     "artist_name": "Queen",
     "year": 1978,
-    "release_id": "fcceac41-7321-5525-ae3e-de9501b5896a",
+    "release_id": "26a597b2-466d-4b58-ae53-fd8d406f9ac1",
     "credits": [
       {
         "id": "7815d635-1620-5d25-aec4-4f5b5edc3fbe",
@@ -4374,11 +4374,11 @@
     ]
   },
   {
-    "id": "946f8a6c-0b25-54f2-a82c-7d64affdd79b",
+    "id": "1b8b24ec-bf1c-438c-a032-f642d4ce9203",
     "title": "Somebody to Love",
     "artist_name": "Queen",
     "year": 1976,
-    "release_id": "eddede64-d3ab-59e8-a7ea-e4e15574c01c",
+    "release_id": "b7d2d050-2eae-414d-b86c-e10076e19a1e",
     "credits": [
       {
         "id": "7815d635-1620-5d25-aec4-4f5b5edc3fbe",
@@ -4401,11 +4401,11 @@
     ]
   },
   {
-    "id": "b18c68f0-631c-535a-9f0f-5d6c6079a4ae",
+    "id": "efe98ebe-c6c8-4b89-a082-e6c2101729a8",
     "title": "We Will Rock You",
     "artist_name": "Queen",
     "year": 1977,
-    "release_id": "bf625b39-6722-5b4f-8077-4e0684a55a4e",
+    "release_id": "302b39e5-152d-4d72-8f89-2677e045604a",
     "credits": [
       {
         "id": "7815d635-1620-5d25-aec4-4f5b5edc3fbe",
@@ -4428,11 +4428,11 @@
     ]
   },
   {
-    "id": "63edcccd-331f-54e4-b705-df0ba9356895",
+    "id": "f5d886fa-38e1-47c2-83cc-0d71d5782bdd",
     "title": "We Are the Champions",
     "artist_name": "Queen",
     "year": 1977,
-    "release_id": "bf625b39-6722-5b4f-8077-4e0684a55a4e",
+    "release_id": "6feea997-ac90-4ce2-bf0a-43cc8b15a8fa",
     "credits": [
       {
         "id": "7815d635-1620-5d25-aec4-4f5b5edc3fbe",
@@ -4455,11 +4455,11 @@
     ]
   },
   {
-    "id": "b8551445-097a-5af2-9cf9-4361832588ec",
+    "id": "a2af2244-da87-4da7-9c66-767f801224dc",
     "title": "Radio Ga Ga",
     "artist_name": "Queen",
     "year": 1984,
-    "release_id": "f67d637b-97b2-5f68-8651-52ddcf9ef45f",
+    "release_id": "845f5e6e-abf9-4204-87c9-f88e5371e697",
     "credits": [
       {
         "id": "7815d635-1620-5d25-aec4-4f5b5edc3fbe",
@@ -4482,11 +4482,11 @@
     ]
   },
   {
-    "id": "aa2f3a11-930f-5124-8f1b-99bb4425357e",
+    "id": "6b235773-16bd-4fc5-b57e-c966f9d1db6d",
     "title": "Another One Bites the Dust",
     "artist_name": "Queen",
     "year": 1980,
-    "release_id": "af27a00e-e20a-5134-ab67-4036e0b7770b",
+    "release_id": "24888104-40a1-4d7e-ae36-7c8254b14082",
     "credits": [
       {
         "id": "7815d635-1620-5d25-aec4-4f5b5edc3fbe",
@@ -4509,11 +4509,11 @@
     ]
   },
   {
-    "id": "8fe16606-5a49-5965-963b-082663bf1b3f",
+    "id": "f259931f-4bff-4967-ad29-0ccebfae1bb0",
     "title": "Just What I Needed",
     "artist_name": "The Cars",
     "year": 1978,
-    "release_id": "7c634539-7373-53a6-8bb2-74dbc9fec29a",
+    "release_id": "7c812689-0ad7-4fb8-89ce-35c943451506",
     "credits": [
       {
         "id": "7cc9242f-f59a-5ccb-9c4b-3a092c70f147",
@@ -4542,11 +4542,11 @@
     ]
   },
   {
-    "id": "16887705-ffcf-5bff-a256-30223430062c",
+    "id": "4e1cb29a-6e74-4e7f-bc84-a2a57a7ad620",
     "title": "My Best Friend's Girl",
     "artist_name": "The Cars",
     "year": 1978,
-    "release_id": "7c634539-7373-53a6-8bb2-74dbc9fec29a",
+    "release_id": "d90bc8c9-ea21-4f7d-b638-1c0b9c058213",
     "credits": [
       {
         "id": "7cc9242f-f59a-5ccb-9c4b-3a092c70f147",
@@ -4575,11 +4575,11 @@
     ]
   },
   {
-    "id": "efd1b65f-075a-5666-8527-cc4d0339851e",
+    "id": "c3cad18b-ed96-4c29-9fd1-716cb87b5334",
     "title": "Changes",
     "artist_name": "David Bowie",
     "year": 1971,
-    "release_id": "8154f64c-7fd7-5c0e-993e-3c54dff54011",
+    "release_id": "c863b8cb-d34f-4b57-9372-3f7c6b285491",
     "credits": [
       {
         "id": "fbe5816e-f2d7-5661-ada0-2b74cb81fd8c",
@@ -4608,11 +4608,11 @@
     ]
   },
   {
-    "id": "09eb24f6-89f2-53b2-a2d9-fa2af186a407",
+    "id": "a2ab0ee1-41ae-4c6e-ae30-25110857aa64",
     "title": "Life on Mars?",
     "artist_name": "David Bowie",
     "year": 1971,
-    "release_id": "8154f64c-7fd7-5c0e-993e-3c54dff54011",
+    "release_id": "5d527fed-e4e6-4a4d-95a6-109a7f078098",
     "credits": [
       {
         "id": "fbe5816e-f2d7-5661-ada0-2b74cb81fd8c",
@@ -4641,11 +4641,11 @@
     ]
   },
   {
-    "id": "6afa6c1d-3582-595f-9e40-9ed81bf7e6aa",
+    "id": "64abd347-9102-46d6-92ce-7df5e4b365c4",
     "title": "Starman",
     "artist_name": "David Bowie",
     "year": 1972,
-    "release_id": "a187cadd-e101-5b20-907c-8f6e4a496271",
+    "release_id": "54476fe4-ca88-49a4-908b-67d2a2ee9197",
     "credits": [
       {
         "id": "fbe5816e-f2d7-5661-ada0-2b74cb81fd8c",
@@ -4674,11 +4674,11 @@
     ]
   },
   {
-    "id": "f092b779-c5a0-5aa6-bc73-d2108d0670c2",
+    "id": "2abcef47-c565-41a6-b155-c8cae2125ca9",
     "title": "Rebel Rebel",
     "artist_name": "David Bowie",
     "year": 1974,
-    "release_id": "326a2414-5d3e-5c51-85d8-cb21dd04ba4e",
+    "release_id": "354af90c-cd29-445e-b9d1-b6e5606796e7",
     "credits": [
       {
         "id": "fbe5816e-f2d7-5661-ada0-2b74cb81fd8c",
@@ -4701,11 +4701,11 @@
     ]
   },
   {
-    "id": "64c1b8d1-5355-5834-b9f5-fb9e42f69132",
+    "id": "eef710fa-0749-40cd-a0bd-d2ecb96072a1",
     "title": "Bennie and the Jets",
     "artist_name": "Elton John",
     "year": 1973,
-    "release_id": "e1fd4671-4290-5b6a-9974-788eaff9906e",
+    "release_id": "f9c5c09d-4c24-47de-bf43-c6ea218de29a",
     "credits": [
       {
         "id": "10155b02-a6ba-5f68-87f0-d105d8e33b93",
@@ -4740,11 +4740,11 @@
     ]
   },
   {
-    "id": "03604383-c78c-561a-9833-758625e91f05",
+    "id": "ae367dc5-cc41-40d4-a8a2-f43eb2557f72",
     "title": "Goodbye Yellow Brick Road",
     "artist_name": "Elton John",
     "year": 1973,
-    "release_id": "e1fd4671-4290-5b6a-9974-788eaff9906e",
+    "release_id": "b6fefb5d-f037-4eca-ab2b-955a476de078",
     "credits": [
       {
         "id": "10155b02-a6ba-5f68-87f0-d105d8e33b93",
@@ -4779,11 +4779,11 @@
     ]
   },
   {
-    "id": "d2e053f5-ee03-54f5-bc10-21626dcddad1",
+    "id": "bdfc4beb-e081-42a6-866a-637770524efc",
     "title": "Crocodile Rock",
     "artist_name": "Elton John",
     "year": 1972,
-    "release_id": "ba568748-3152-5dc2-83f4-1b1acf2ab61f",
+    "release_id": "46e95092-810b-416c-b45d-d7defd1bc533",
     "credits": [
       {
         "id": "10155b02-a6ba-5f68-87f0-d105d8e33b93",
@@ -4818,11 +4818,11 @@
     ]
   },
   {
-    "id": "1ebcfc2c-1d70-5afd-9aa6-2f05c9ccdd2a",
+    "id": "444573d8-3d83-427b-bc1e-b26ba5aa5de8",
     "title": "Daniel",
     "artist_name": "Elton John",
     "year": 1973,
-    "release_id": "ba568748-3152-5dc2-83f4-1b1acf2ab61f",
+    "release_id": "df23d045-a811-4e2c-94b5-d8531c538c21",
     "credits": [
       {
         "id": "10155b02-a6ba-5f68-87f0-d105d8e33b93",
@@ -4857,11 +4857,11 @@
     ]
   },
   {
-    "id": "0107266d-ab78-5d94-8a35-38c9bef5bb81",
+    "id": "a08cc051-12db-4524-83e0-c35331ce60b8",
     "title": "Candle in the Wind",
     "artist_name": "Elton John",
     "year": 1973,
-    "release_id": "e1fd4671-4290-5b6a-9974-788eaff9906e",
+    "release_id": "b2f8c349-90a8-4e10-ac93-12ac158d5065",
     "credits": [
       {
         "id": "10155b02-a6ba-5f68-87f0-d105d8e33b93",
@@ -4896,11 +4896,11 @@
     ]
   },
   {
-    "id": "000dafe0-87c7-545f-9530-7d9b1a541c31",
+    "id": "05923cfc-25ac-4122-abc1-9a6c2fc2f644",
     "title": "Don't Go Breaking My Heart",
     "artist_name": "Elton John & Kiki Dee",
     "year": 1976,
-    "release_id": "b4118df6-fdbe-5658-b831-99ab689bdccc",
+    "release_id": "8aef762f-6a9d-4596-90af-436a515628ff",
     "credits": [
       {
         "id": "6b7359b9-d1b7-5fa4-8318-eead95d7e256",
@@ -4941,11 +4941,11 @@
     ]
   },
   {
-    "id": "0dc503da-6110-593b-ac47-a18a385e4872",
+    "id": "d02bedd6-59e8-4c2e-a11d-422a4cddd95d",
     "title": "Sir Duke",
     "artist_name": "Stevie Wonder",
     "year": 1976,
-    "release_id": "328334d9-ab22-5f5d-8127-97f9dc923dd7",
+    "release_id": "251839f7-0138-455b-9fec-0ee3408914a3",
     "credits": [
       {
         "id": "5eb92801-f3d0-5141-958f-ec752da68c64",
@@ -4974,11 +4974,11 @@
     ]
   },
   {
-    "id": "51f27743-0e5d-58a1-a963-73bbd934a466",
+    "id": "a6b7b260-2aa3-4779-8114-c76360edf9ce",
     "title": "I Wish",
     "artist_name": "Stevie Wonder",
     "year": 1976,
-    "release_id": "328334d9-ab22-5f5d-8127-97f9dc923dd7",
+    "release_id": "d25eb893-c47d-4a6a-9a36-0606aa65dced",
     "credits": [
       {
         "id": "5eb92801-f3d0-5141-958f-ec752da68c64",
@@ -5007,11 +5007,11 @@
     ]
   },
   {
-    "id": "6a6a06fa-0aa0-52ae-ad94-77fce74d3d21",
+    "id": "04dc3d0b-dff4-41a0-8bf3-12b4b34460a6",
     "title": "Higher Ground",
     "artist_name": "Stevie Wonder",
     "year": 1973,
-    "release_id": "ddf41f73-8c78-58eb-bee2-244601f4685a",
+    "release_id": "19042ce4-7f7e-4d47-af5e-92f1266f5eaa",
     "credits": [
       {
         "id": "5eb92801-f3d0-5141-958f-ec752da68c64",
@@ -5040,11 +5040,11 @@
     ]
   },
   {
-    "id": "85c2483a-4585-5b2d-8d78-f993b9e10e0b",
+    "id": "b7ab14e0-837c-468b-a5f6-98bb4dc5800d",
     "title": "Living for the City",
     "artist_name": "Stevie Wonder",
     "year": 1973,
-    "release_id": "ddf41f73-8c78-58eb-bee2-244601f4685a",
+    "release_id": "3c7bbeb4-ff8e-4c28-bd26-eeef1f944069",
     "credits": [
       {
         "id": "5eb92801-f3d0-5141-958f-ec752da68c64",
@@ -5073,11 +5073,11 @@
     ]
   },
   {
-    "id": "a79dcdb4-bcad-5673-aaa0-0569c6605067",
+    "id": "d0439af2-7035-40df-b381-c33b7621cb51",
     "title": "Signed, Sealed, Delivered I'm Yours",
     "artist_name": "Stevie Wonder",
     "year": 1970,
-    "release_id": "3f90c404-bd2f-5c86-96f4-336cf91a48b4",
+    "release_id": "54049030-ebaa-47cd-b164-24eb43c0129f",
     "credits": [
       {
         "id": "5eb92801-f3d0-5141-958f-ec752da68c64",
@@ -5106,11 +5106,11 @@
     ]
   },
   {
-    "id": "2b7e065e-9fb3-5047-a4fb-c36326797352",
+    "id": "c7121b4e-cac1-40dd-91ec-eb7294b62105",
     "title": "Purple Rain",
     "artist_name": "Prince",
     "year": 1984,
-    "release_id": "ded0d34c-4039-5428-9376-9f85249c5ae5",
+    "release_id": "fa1515d9-bde6-4c85-9348-20f54becf2bd",
     "credits": [
       {
         "id": "54cd1e10-54ff-5e2a-aa4b-6be107d19ea5",
@@ -5139,11 +5139,11 @@
     ]
   },
   {
-    "id": "02e3ad2b-411c-578d-86dc-6886645a858a",
+    "id": "5d3ef164-81f6-439d-abcd-c60fd10e8ea4",
     "title": "When Doves Cry",
     "artist_name": "Prince",
     "year": 1984,
-    "release_id": "ded0d34c-4039-5428-9376-9f85249c5ae5",
+    "release_id": "079e14d5-01f2-4ed2-8693-47069d4a556c",
     "credits": [
       {
         "id": "54cd1e10-54ff-5e2a-aa4b-6be107d19ea5",
@@ -5172,11 +5172,11 @@
     ]
   },
   {
-    "id": "a1c16887-adc6-554a-9e5f-79c913faec7d",
+    "id": "3610b23f-6aeb-493b-8695-8b7366c49164",
     "title": "Kiss",
     "artist_name": "Prince",
     "year": 1986,
-    "release_id": "4cf6d3fc-6692-5fd7-adb5-a0098f08e284",
+    "release_id": "0db1a01a-7db4-449b-a139-11a743f0bc8a",
     "credits": [
       {
         "id": "54cd1e10-54ff-5e2a-aa4b-6be107d19ea5",
@@ -5205,11 +5205,11 @@
     ]
   },
   {
-    "id": "cd3f275a-acbd-508a-b648-dc558587c69e",
+    "id": "4413905d-09be-499a-8fdb-9afab091f572",
     "title": "1999",
     "artist_name": "Prince",
     "year": 1982,
-    "release_id": "cf7c7834-1660-50be-b345-1bc0aca7b9d2",
+    "release_id": "fc1b3ea6-8de1-499c-bce0-2b0691658790",
     "credits": [
       {
         "id": "54cd1e10-54ff-5e2a-aa4b-6be107d19ea5",
@@ -5238,11 +5238,11 @@
     ]
   },
   {
-    "id": "b6825ba0-5ad8-5034-831d-3402516358da",
+    "id": "3bc340d9-1395-495c-9a85-9d1d9377c5ae",
     "title": "Little Red Corvette",
     "artist_name": "Prince",
     "year": 1982,
-    "release_id": "cf7c7834-1660-50be-b345-1bc0aca7b9d2",
+    "release_id": "8977fd90-2563-4fca-9483-dffc1ff7abc6",
     "credits": [
       {
         "id": "54cd1e10-54ff-5e2a-aa4b-6be107d19ea5",
@@ -5271,11 +5271,11 @@
     ]
   },
   {
-    "id": "6a6a3f5f-7095-5b56-b157-cba10aaaf8de",
+    "id": "6043c5a7-a367-493a-aed7-4b1dcad1b218",
     "title": "Let's Go Crazy",
     "artist_name": "Prince",
     "year": 1984,
-    "release_id": "ded0d34c-4039-5428-9376-9f85249c5ae5",
+    "release_id": "fc1b3ea6-8de1-499c-bce0-2b0691658790",
     "credits": [
       {
         "id": "54cd1e10-54ff-5e2a-aa4b-6be107d19ea5",
@@ -5304,11 +5304,11 @@
     ]
   },
   {
-    "id": "6c0996c7-dd25-5f67-9384-912bdbce3e68",
+    "id": "3b580965-1cb4-42db-a25e-946441ae3559",
     "title": "I Feel for You",
     "artist_name": "Chaka Khan",
     "year": 1984,
-    "release_id": "06470a71-eab7-57eb-8b8d-163842099abe",
+    "release_id": "b239b76d-894c-4d9b-84fe-ce9583730009",
     "credits": [
       {
         "id": "3bb4b4f6-0dc4-5c95-9e3c-7c5f4af03c5c",
@@ -5337,11 +5337,11 @@
     ]
   },
   {
-    "id": "2bbb9354-9a0b-5396-a72e-2c9b60208295",
+    "id": "faeb3b29-2a7c-4ec4-bd29-656b220c370f",
     "title": "Manic Monday",
     "artist_name": "The Bangles",
     "year": 1986,
-    "release_id": "074687db-7928-5323-984a-39a91d3be7fd",
+    "release_id": "14134ee1-06c1-41d8-b37a-d10b95d63958",
     "credits": [
       {
         "id": "c1f77ac2-818d-5242-8adf-21d3d847d182",
@@ -5364,11 +5364,11 @@
     ]
   },
   {
-    "id": "4d332bb1-a97a-5fb0-9985-54945562168f",
+    "id": "62a95655-b416-4943-86ed-fc301f1b4222",
     "title": "Nothing Compares 2 U",
     "artist_name": "Sin\u00e9ad O'Connor",
     "year": 1990,
-    "release_id": "329e27e0-6367-542b-98c2-f6d78ff4fe6e",
+    "release_id": "25257a75-c38f-4894-a1c0-6e33464cfd0d",
     "credits": [
       {
         "id": "0f51c487-b6f4-52f1-8bbe-6d12dd78d84c",

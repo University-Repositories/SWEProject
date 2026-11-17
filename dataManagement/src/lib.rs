@@ -160,6 +160,29 @@ pub struct ReportRow {
     pub resolved_at: Option<DateTime<Utc>>,
 }
 
+#[derive(Debug, Clone, PartialEq, Eq, FromRow, Serialize, Deserialize)]
+pub struct UserGameRow {
+    pub id: Uuid,
+    pub mode: String,
+    pub accepted_links: Option<i32>,
+    pub opponent_username: Option<String>,
+    pub won: Option<bool>,
+    pub ended_at: Option<DateTime<Utc>>,
+}
+
+pub type UserGame = UserGameRow;
+pub type UserEndedGame = UserGameRow;
+pub type UserEndedGameRow = UserGameRow;
+
+#[derive(Debug, Clone, PartialEq, Eq, FromRow, Serialize, Deserialize)]
+pub struct UserRecord {
+    pub best_solo_chain: i32,
+    pub matches_won: i64,
+    pub matches_lost: i64,
+}
+
+pub type UserRecordRow = UserRecord;
+
 // -----------------------------------------------------------------------------
 // UserRepo
 // -----------------------------------------------------------------------------
@@ -722,6 +745,158 @@ impl GameRepo {
         .map_err(RepoError::from_sqlx)?;
 
         Ok(res.rows_affected() > 0)
+    }
+
+    pub async fn create_match(
+        &self,
+        player_one_id: Uuid,
+        player_two_id: Uuid,
+        opening_recording_id: Uuid,
+    ) -> Result<GameRow, RepoError> {
+        let mut tx = self.pool.begin().await.map_err(RepoError::Database)?;
+        let game =
+            Self::create_match_with_tx(&mut tx, player_one_id, player_two_id, opening_recording_id)
+                .await?;
+        tx.commit().await.map_err(RepoError::Database)?;
+        Ok(game)
+    }
+
+    pub async fn create_match_with_tx(
+        tx: &mut sqlx::Transaction<'_, sqlx::Postgres>,
+        player_one_id: Uuid,
+        player_two_id: Uuid,
+        opening_recording_id: Uuid,
+    ) -> Result<GameRow, RepoError> {
+        let game = sqlx::query_as::<_, GameRow>(
+            r#"
+            INSERT INTO games (id, mode, status, opening_recording_id)
+            VALUES (gen_random_uuid(), 'live', 'active', $1)
+            RETURNING
+                id, mode, status, opening_recording_id,
+                accepted_links, winner_user_id, started_at, ended_at
+            "#,
+        )
+        .bind(opening_recording_id)
+        .fetch_one(&mut **tx)
+        .await
+        .map_err(RepoError::from_sqlx)?;
+
+        sqlx::query(
+            "INSERT INTO game_players (game_id, user_id, lives_remaining) VALUES ($1, $2, 3), ($1, $3, 3)",
+        )
+        .bind(game.id)
+        .bind(player_one_id)
+        .bind(player_two_id)
+        .execute(&mut **tx)
+        .await
+        .map_err(RepoError::from_sqlx)?;
+
+        Ok(game)
+    }
+
+    pub async fn list_user_games(
+        &self,
+        user_id: Uuid,
+        limit: i64,
+        before: Option<DateTime<Utc>>,
+    ) -> Result<Vec<UserGameRow>, RepoError> {
+        Self::list_user_games_with_executor(&self.pool, user_id, limit, before).await
+    }
+
+    pub async fn list_ended_games(
+        &self,
+        user_id: Uuid,
+        limit: i64,
+        before: Option<DateTime<Utc>>,
+    ) -> Result<Vec<UserGameRow>, RepoError> {
+        Self::list_user_games_with_executor(&self.pool, user_id, limit, before).await
+    }
+
+    pub async fn list_user_ended_games(
+        &self,
+        user_id: Uuid,
+        limit: i64,
+        before: Option<DateTime<Utc>>,
+    ) -> Result<Vec<UserGameRow>, RepoError> {
+        Self::list_user_games_with_executor(&self.pool, user_id, limit, before).await
+    }
+
+    pub async fn list_user_games_with_executor<'e, E>(
+        executor: E,
+        user_id: Uuid,
+        limit: i64,
+        before: Option<DateTime<Utc>>,
+    ) -> Result<Vec<UserGameRow>, RepoError>
+    where
+        E: sqlx::PgExecutor<'e>,
+    {
+        sqlx::query_as::<_, UserGameRow>(
+            r#"
+            SELECT
+                g.id,
+                g.mode,
+                g.accepted_links,
+                opponent_u.username AS opponent_username,
+                CASE
+                    WHEN g.mode = 'solo' THEN NULL
+                    WHEN g.winner_user_id = $1 THEN TRUE
+                    WHEN g.winner_user_id IS NOT NULL THEN FALSE
+                    ELSE NULL
+                END AS won,
+                g.ended_at
+            FROM games g
+            JOIN game_players gp ON g.id = gp.game_id
+            LEFT JOIN game_players opponent_gp
+                ON opponent_gp.game_id = g.id AND opponent_gp.user_id != $1
+            LEFT JOIN users opponent_u
+                ON opponent_u.id = opponent_gp.user_id
+            WHERE gp.user_id = $1
+              AND g.status = 'ended'
+              AND g.ended_at IS NOT NULL
+              AND ($2::TIMESTAMPTZ IS NULL OR g.ended_at < $2)
+            ORDER BY g.ended_at DESC, g.id DESC
+            LIMIT $3
+            "#,
+        )
+        .bind(user_id)
+        .bind(before)
+        .bind(limit)
+        .fetch_all(executor)
+        .await
+        .map_err(RepoError::from_sqlx)
+    }
+
+    pub async fn get_user_record(&self, user_id: Uuid) -> Result<UserRecord, RepoError> {
+        Self::get_user_record_with_executor(&self.pool, user_id).await
+    }
+
+    pub async fn get_record(&self, user_id: Uuid) -> Result<UserRecord, RepoError> {
+        Self::get_user_record_with_executor(&self.pool, user_id).await
+    }
+
+    pub async fn get_user_record_with_executor<'e, E>(
+        executor: E,
+        user_id: Uuid,
+    ) -> Result<UserRecord, RepoError>
+    where
+        E: sqlx::PgExecutor<'e>,
+    {
+        sqlx::query_as::<_, UserRecord>(
+            r#"
+            SELECT
+                COALESCE(MAX(CASE WHEN g.mode = 'solo' THEN g.accepted_links ELSE NULL END), 0)::INT AS best_solo_chain,
+                COUNT(CASE WHEN g.mode = 'live' AND g.winner_user_id = $1 THEN 1 ELSE NULL END)::BIGINT AS matches_won,
+                COUNT(CASE WHEN g.mode = 'live' AND g.winner_user_id IS NOT NULL AND g.winner_user_id != $1 THEN 1 ELSE NULL END)::BIGINT AS matches_lost
+            FROM games g
+            JOIN game_players gp ON g.id = gp.game_id
+            WHERE gp.user_id = $1
+              AND g.status = 'ended'
+            "#,
+        )
+        .bind(user_id)
+        .fetch_one(executor)
+        .await
+        .map_err(RepoError::from_sqlx)
     }
 }
 
