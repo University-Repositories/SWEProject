@@ -1,7 +1,7 @@
 use chrono::{Duration, Utc};
 use data_management::{
     CatalogImporter, CatalogRepo, GameRepo, ImportCredit, ImportRecording, RepoError, ReportRepo,
-    SessionRepo, UserRepo, create_pool, run_migrations, seed_dev_fixture,
+    SessionRepo, UserGameRow, UserRecord, UserRepo, create_pool, run_migrations, seed_dev_fixture,
 };
 use sha2::{Digest, Sha256};
 use uuid::Uuid;
@@ -853,8 +853,264 @@ async fn test_catalog_random_playable_recording() {
 
     assert!(
         shared_count >= 1,
-        "Random playable recording must share at least 1 credit with another recording"
+        "Random playable recording must share at 1 least credit with another recording"
     );
+}
+
+// 19. GameRepo.list_user_games returns solo games and matches newest first with opponent and won/lost.
+#[tokio::test]
+async fn test_game_history_solo_and_matches_appear_newest_first() {
+    let pool = setup_db().await;
+    seed_dev_fixture(&pool).await.unwrap();
+    let user_repo = UserRepo::new(pool.clone());
+    let game_repo = GameRepo::new(pool.clone());
+
+    let u1_name = format!("HistoryUser1_{}", Uuid::new_v4().simple());
+    let u2_name = format!("HistoryUser2_{}", Uuid::new_v4().simple());
+    let user1 = user_repo.create(&u1_name, "pw1").await.unwrap();
+    let user2 = user_repo.create(&u2_name, "pw2").await.unwrap();
+
+    let opening_rec_id: Uuid = sqlx::query_scalar("SELECT id FROM recordings LIMIT 1")
+        .fetch_one(&pool)
+        .await
+        .unwrap();
+
+    // 1. User1 plays a solo game (older: 1 hour ago)
+    let solo_game = game_repo
+        .create_solo(user1.id, opening_rec_id)
+        .await
+        .unwrap();
+    game_repo.end(solo_game.id, 5).await.unwrap();
+    let t_solo = Utc::now() - Duration::hours(1);
+    sqlx::query("UPDATE games SET ended_at = $2 WHERE id = $1")
+        .bind(solo_game.id)
+        .bind(t_solo)
+        .execute(&pool)
+        .await
+        .unwrap();
+
+    // 2. User1 and User2 play a match (newer: 10 minutes ago, user1 wins)
+    let match_game = game_repo
+        .create_match(user1.id, user2.id, opening_rec_id)
+        .await
+        .unwrap();
+    game_repo
+        .end_with_winner(match_game.id, 10, Some(user1.id))
+        .await
+        .unwrap();
+    let t_match = Utc::now() - Duration::minutes(10);
+    sqlx::query("UPDATE games SET ended_at = $2 WHERE id = $1")
+        .bind(match_game.id)
+        .bind(t_match)
+        .execute(&pool)
+        .await
+        .unwrap();
+
+    // Check User 1 history: newest first
+    let u1_games: Vec<UserGameRow> = game_repo.list_user_games(user1.id, 10, None).await.unwrap();
+    assert_eq!(u1_games.len(), 2, "Expected 2 ended games for user1");
+
+    // Game 1 is the match
+    assert_eq!(u1_games[0].id, match_game.id);
+    assert_eq!(u1_games[0].mode, "live");
+    assert_eq!(u1_games[0].accepted_links, Some(10));
+    assert_eq!(
+        u1_games[0].opponent_username.as_deref(),
+        Some(u2_name.as_str())
+    );
+    assert_eq!(u1_games[0].won, Some(true));
+
+    // Game 2 is the solo game
+    assert_eq!(u1_games[1].id, solo_game.id);
+    assert_eq!(u1_games[1].mode, "solo");
+    assert_eq!(u1_games[1].accepted_links, Some(5));
+    assert_eq!(u1_games[1].opponent_username, None);
+    assert_eq!(u1_games[1].won, None);
+
+    // Check User 2 history: sees the match, opponent is user1, won is false
+    let u2_games = game_repo.list_user_games(user2.id, 10, None).await.unwrap();
+    assert_eq!(u2_games.len(), 1, "Expected 1 ended game for user2");
+    assert_eq!(u2_games[0].id, match_game.id);
+    assert_eq!(u2_games[0].mode, "live");
+    assert_eq!(u2_games[0].accepted_links, Some(10));
+    assert_eq!(
+        u2_games[0].opponent_username.as_deref(),
+        Some(u1_name.as_str())
+    );
+    assert_eq!(u2_games[0].won, Some(false));
+
+    // Pagination with before: games ended before t_match should only return solo_game
+    let paged_games = game_repo
+        .list_user_games(user1.id, 10, Some(t_match))
+        .await
+        .unwrap();
+    assert_eq!(paged_games.len(), 1);
+    assert_eq!(paged_games[0].id, solo_game.id);
+
+    // Pagination with limit: limit 1 returns only the first (newest) game
+    let limit_one = game_repo.list_user_games(user1.id, 1, None).await.unwrap();
+    assert_eq!(limit_one.len(), 1);
+    assert_eq!(limit_one[0].id, match_game.id);
+}
+
+// 20. GameRepo.get_user_record counts wins, losses, and best solo chain correctly.
+#[tokio::test]
+async fn test_user_record_counts_wins_losses_and_best_solo_chain() {
+    let pool = setup_db().await;
+    seed_dev_fixture(&pool).await.unwrap();
+    let user_repo = UserRepo::new(pool.clone());
+    let game_repo = GameRepo::new(pool.clone());
+
+    let u_a = user_repo
+        .create(&format!("RecA_{}", Uuid::new_v4().simple()), "pw")
+        .await
+        .unwrap();
+    let u_b = user_repo
+        .create(&format!("RecB_{}", Uuid::new_v4().simple()), "pw")
+        .await
+        .unwrap();
+    let u_c = user_repo
+        .create(&format!("RecC_{}", Uuid::new_v4().simple()), "pw")
+        .await
+        .unwrap();
+
+    let opening_rec_id: Uuid = sqlx::query_scalar("SELECT id FROM recordings LIMIT 1")
+        .fetch_one(&pool)
+        .await
+        .unwrap();
+
+    // User A plays solo games with 4, 14, 7 accepted links
+    let s1 = game_repo.create_solo(u_a.id, opening_rec_id).await.unwrap();
+    game_repo.end(s1.id, 4).await.unwrap();
+    let s2 = game_repo.create_solo(u_a.id, opening_rec_id).await.unwrap();
+    game_repo.end(s2.id, 14).await.unwrap();
+    let s3 = game_repo.create_solo(u_a.id, opening_rec_id).await.unwrap();
+    game_repo.end(s3.id, 7).await.unwrap();
+
+    // Match 1: User A vs User B -> User A wins
+    let m1 = game_repo
+        .create_match(u_a.id, u_b.id, opening_rec_id)
+        .await
+        .unwrap();
+    game_repo
+        .end_with_winner(m1.id, 8, Some(u_a.id))
+        .await
+        .unwrap();
+
+    // Match 2: User A vs User B -> User B wins (User A loses)
+    let m2 = game_repo
+        .create_match(u_a.id, u_b.id, opening_rec_id)
+        .await
+        .unwrap();
+    game_repo
+        .end_with_winner(m2.id, 11, Some(u_b.id))
+        .await
+        .unwrap();
+
+    // Match 3: User A vs User C -> User A wins
+    let m3 = game_repo
+        .create_match(u_a.id, u_c.id, opening_rec_id)
+        .await
+        .unwrap();
+    game_repo
+        .end_with_winner(m3.id, 5, Some(u_a.id))
+        .await
+        .unwrap();
+
+    // User A record: best solo chain 14, 2 wins, 1 loss
+    let rec_a = game_repo.get_user_record(u_a.id).await.unwrap();
+    assert_eq!(rec_a.best_solo_chain, 14);
+    assert_eq!(rec_a.matches_won, 2);
+    assert_eq!(rec_a.matches_lost, 1);
+
+    // User B record: 0 solo games, 1 win, 1 loss
+    let rec_b = game_repo.get_user_record(u_b.id).await.unwrap();
+    assert_eq!(rec_b.best_solo_chain, 0);
+    assert_eq!(rec_b.matches_won, 1);
+    assert_eq!(rec_b.matches_lost, 1);
+
+    // User C record: 0 solo games, 0 wins, 1 loss
+    let rec_c = game_repo.get_user_record(u_c.id).await.unwrap();
+    assert_eq!(rec_c.best_solo_chain, 0);
+    assert_eq!(rec_c.matches_won, 0);
+    assert_eq!(rec_c.matches_lost, 1);
+
+    // Unplayed user record defaults to all zeros
+    let u_fresh = user_repo
+        .create(&format!("Fresh_{}", Uuid::new_v4().simple()), "pw")
+        .await
+        .unwrap();
+    let rec_fresh = game_repo.get_user_record(u_fresh.id).await.unwrap();
+    assert_eq!(
+        rec_fresh,
+        UserRecord {
+            best_solo_chain: 0,
+            matches_won: 0,
+            matches_lost: 0
+        }
+    );
+}
+
+// 21. Game history and record queries exclude active games.
+#[tokio::test]
+async fn test_game_history_and_record_excludes_active_games() {
+    let pool = setup_db().await;
+    seed_dev_fixture(&pool).await.unwrap();
+    let user_repo = UserRepo::new(pool.clone());
+    let game_repo = GameRepo::new(pool.clone());
+
+    let u1 = user_repo
+        .create(&format!("ActiveTest1_{}", Uuid::new_v4().simple()), "pw")
+        .await
+        .unwrap();
+    let u2 = user_repo
+        .create(&format!("ActiveTest2_{}", Uuid::new_v4().simple()), "pw")
+        .await
+        .unwrap();
+
+    let opening_rec_id: Uuid = sqlx::query_scalar("SELECT id FROM recordings LIMIT 1")
+        .fetch_one(&pool)
+        .await
+        .unwrap();
+
+    // Ended solo game
+    let ended_solo = game_repo.create_solo(u1.id, opening_rec_id).await.unwrap();
+    game_repo.end(ended_solo.id, 6).await.unwrap();
+
+    // Active solo game (even with accepted_links set)
+    let active_solo = game_repo.create_solo(u1.id, opening_rec_id).await.unwrap();
+    sqlx::query("UPDATE games SET accepted_links = 99 WHERE id = $1")
+        .bind(active_solo.id)
+        .execute(&pool)
+        .await
+        .unwrap();
+
+    // Active match
+    let active_match = game_repo
+        .create_match(u1.id, u2.id, opening_rec_id)
+        .await
+        .unwrap();
+    sqlx::query("UPDATE games SET winner_user_id = $2 WHERE id = $1")
+        .bind(active_match.id)
+        .bind(u1.id)
+        .execute(&pool)
+        .await
+        .unwrap();
+
+    // History must only return ended_solo
+    let games = game_repo.list_user_games(u1.id, 10, None).await.unwrap();
+    assert_eq!(games.len(), 1, "Only ended games must appear in history");
+    assert_eq!(games[0].id, ended_solo.id);
+    assert_eq!(games[0].accepted_links, Some(6));
+
+    // Record must only count ended games
+    let record = game_repo.get_user_record(u1.id).await.unwrap();
+    assert_eq!(
+        record.best_solo_chain, 6,
+        "Active game's 99 accepted links must not count"
+    );
+    assert_eq!(record.matches_won, 0, "Active match must not count as won");
+    assert_eq!(record.matches_lost, 0);
 }
 
 // MusicBrainz test: marked #[ignore] so CI isn't hitting their API.
