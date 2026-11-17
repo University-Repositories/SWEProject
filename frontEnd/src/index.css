@@ -1,4 +1,4 @@
-:root {
+﻿:root {
   --text: #f5f4f7;
   --muted: #9294a0;
   --bg: #08090d;
@@ -35,6 +35,14 @@ input {
 
 button {
   cursor: pointer;
+}
+
+button:focus-visible,
+input:focus-visible,
+a:focus-visible,
+[role="option"]:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
 }
 
 #root {
