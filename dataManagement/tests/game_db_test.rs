@@ -1,7 +1,7 @@
 use chrono::{Duration, Utc};
 use data_management::{
-    CatalogImporter, CatalogRepo, GameRepo, ImportCredit, ImportRecording, RepoError, ReportRepo,
-    SessionRepo, UserRepo, create_pool, run_migrations, seed_dev_fixture,
+    CatalogImporter, CatalogRepo, GameRepo, ImportCredit, ImportRecording, MatchRepo, RepoError,
+    ReportRepo, SessionRepo, UserRepo, create_pool, run_migrations, seed_dev_fixture,
 };
 use sha2::{Digest, Sha256};
 use uuid::Uuid;
@@ -855,6 +855,239 @@ async fn test_catalog_random_playable_recording() {
         shared_count >= 1,
         "Random playable recording must share at least 1 credit with another recording"
     );
+}
+
+// 19. MatchRepo.save_match with an old version changes nothing and returns false.
+#[tokio::test]
+async fn test_match_save_with_old_version_changes_nothing_and_returns_false() {
+    let pool = setup_db().await;
+    seed_dev_fixture(&pool).await.unwrap();
+    let user_repo = UserRepo::new(pool.clone());
+    let match_repo = MatchRepo::new(pool.clone());
+
+    let u1 = user_repo
+        .create(&format!("VTest1_{}", Uuid::new_v4().simple()), "pw")
+        .await
+        .unwrap();
+    let u2 = user_repo
+        .create(&format!("VTest2_{}", Uuid::new_v4().simple()), "pw")
+        .await
+        .unwrap();
+
+    let opening_rec_id: Uuid = sqlx::query_scalar("SELECT id FROM recordings LIMIT 1")
+        .fetch_one(&pool)
+        .await
+        .unwrap();
+
+    let code = format!("INV_{}", Uuid::new_v4().simple());
+    let match_game = match_repo
+        .create_waiting_match(u1.id, opening_rec_id, &code)
+        .await
+        .unwrap();
+    assert_eq!(match_game.status, "waiting");
+    assert_eq!(match_game.version, 0);
+
+    // Second player joins -> version becomes 1, status becomes active
+    let joined = match_repo
+        .add_second_player(match_game.id, u2.id)
+        .await
+        .unwrap();
+    assert!(joined);
+
+    let loaded = match_repo.load_match(match_game.id).await.unwrap().unwrap();
+    assert_eq!(loaded.game.status, "active");
+    assert_eq!(loaded.game.version, 1);
+    assert_eq!(loaded.players.len(), 2);
+
+    // Save with expected_version = 1 succeeds, increments version to 2
+    let saved = match_repo
+        .save_match(
+            match_game.id,
+            1,
+            "active",
+            Some(u1.id),
+            2,
+            None,
+            Some(1),
+            None,
+        )
+        .await
+        .unwrap();
+    assert!(saved, "Save with matching version must succeed");
+
+    let updated = match_repo.load_match(match_game.id).await.unwrap().unwrap();
+    assert_eq!(updated.game.version, 2);
+    assert_eq!(updated.game.turn_number, 2);
+
+    // Save with stale expected_version = 1 fails and changes nothing
+    let stale_saved = match_repo
+        .save_match(
+            match_game.id,
+            1,
+            "ended",
+            Some(u2.id),
+            99,
+            None,
+            Some(50),
+            Some(u2.id),
+        )
+        .await
+        .unwrap();
+    assert!(!stale_saved, "Save with old version must return false");
+
+    // Verify database state is untouched
+    let unchanged = match_repo.load_match(match_game.id).await.unwrap().unwrap();
+    assert_eq!(unchanged.game.version, 2, "Version must remain at 2");
+    assert_eq!(unchanged.game.status, "active", "Status must not change");
+    assert_eq!(unchanged.game.turn_number, 2, "Turn number must not change");
+}
+
+// 20. Match invite codes are unique and return Conflict on duplicate.
+#[tokio::test]
+async fn test_match_invite_codes_are_unique() {
+    let pool = setup_db().await;
+    seed_dev_fixture(&pool).await.unwrap();
+    let user_repo = UserRepo::new(pool.clone());
+    let match_repo = MatchRepo::new(pool.clone());
+
+    let u1 = user_repo
+        .create(&format!("CodeUser1_{}", Uuid::new_v4().simple()), "pw")
+        .await
+        .unwrap();
+    let u2 = user_repo
+        .create(&format!("CodeUser2_{}", Uuid::new_v4().simple()), "pw")
+        .await
+        .unwrap();
+
+    let opening_rec_id: Uuid = sqlx::query_scalar("SELECT id FROM recordings LIMIT 1")
+        .fetch_one(&pool)
+        .await
+        .unwrap();
+
+    let code = format!("UNIQUE_{}", Uuid::new_v4().simple());
+    let first = match_repo
+        .create_waiting_match(u1.id, opening_rec_id, &code)
+        .await
+        .unwrap();
+    assert_eq!(first.invite_code.as_deref(), Some(code.as_str()));
+
+    // Finding by invite code works
+    let found = match_repo.find_by_invite_code(&code).await.unwrap();
+    assert_eq!(found.map(|g| g.id), Some(first.id));
+
+    // Duplicate invite code returns Conflict
+    let duplicate_res = match_repo
+        .create_waiting_match(u2.id, opening_rec_id, &code)
+        .await;
+    match duplicate_res {
+        Err(RepoError::Conflict(_)) => {}
+        other => panic!(
+            "Expected Conflict on duplicate invite code, got: {:?}",
+            other
+        ),
+    }
+}
+
+// 21. MatchRepo.find_user_waiting_or_active_match finds a user's match.
+#[tokio::test]
+async fn test_find_user_waiting_or_active_match() {
+    let pool = setup_db().await;
+    seed_dev_fixture(&pool).await.unwrap();
+    let user_repo = UserRepo::new(pool.clone());
+    let match_repo = MatchRepo::new(pool.clone());
+
+    let u1 = user_repo
+        .create(&format!("ActiveMatch1_{}", Uuid::new_v4().simple()), "pw")
+        .await
+        .unwrap();
+    let u2 = user_repo
+        .create(&format!("ActiveMatch2_{}", Uuid::new_v4().simple()), "pw")
+        .await
+        .unwrap();
+
+    let opening_rec_id: Uuid = sqlx::query_scalar("SELECT id FROM recordings LIMIT 1")
+        .fetch_one(&pool)
+        .await
+        .unwrap();
+
+    // Initially no match
+    let none_found = match_repo
+        .find_user_waiting_or_active_match(u1.id)
+        .await
+        .unwrap();
+    assert!(none_found.is_none());
+
+    // Create waiting match -> found
+    let code = format!("CODE_{}", Uuid::new_v4().simple());
+    let m = match_repo
+        .create_waiting_match(u1.id, opening_rec_id, &code)
+        .await
+        .unwrap();
+    let waiting_found = match_repo
+        .find_user_waiting_or_active_match(u1.id)
+        .await
+        .unwrap();
+    assert_eq!(waiting_found.map(|g| g.id), Some(m.id));
+
+    // Second player joins -> active match found for both users
+    match_repo.add_second_player(m.id, u2.id).await.unwrap();
+    let active_u1 = match_repo
+        .find_user_waiting_or_active_match(u1.id)
+        .await
+        .unwrap();
+    assert_eq!(active_u1.map(|g| g.id), Some(m.id));
+
+    let active_u2 = match_repo
+        .find_user_waiting_or_active_match(u2.id)
+        .await
+        .unwrap();
+    assert_eq!(active_u2.map(|g| g.id), Some(m.id));
+
+    // End match -> neither finds it
+    match_repo
+        .save_match(m.id, 1, "ended", None, 1, None, Some(0), Some(u1.id))
+        .await
+        .unwrap();
+    let ended_u1 = match_repo
+        .find_user_waiting_or_active_match(u1.id)
+        .await
+        .unwrap();
+    assert!(ended_u1.is_none(), "Ended match must not be returned");
+}
+
+// 22. UserRepo: get/set role and update display_name and bio.
+#[tokio::test]
+async fn test_user_repo_roles_display_name_and_bio() {
+    let pool = setup_db().await;
+    let user_repo = UserRepo::new(pool.clone());
+
+    let username = format!("ProfileUser_{}", Uuid::new_v4().simple());
+    let user = user_repo.create(&username, "pw").await.unwrap();
+    assert_eq!(user.role, "player");
+    assert_eq!(user.display_name, None);
+    assert_eq!(user.bio, None);
+
+    // Get role
+    let role = user_repo.get_role(user.id).await.unwrap();
+    assert_eq!(role.as_deref(), Some("player"));
+
+    // Set role to moderator
+    let updated_role = user_repo.set_role(user.id, "moderator").await.unwrap();
+    assert!(updated_role);
+    let role = user_repo.get_role(user.id).await.unwrap();
+    assert_eq!(role.as_deref(), Some("moderator"));
+
+    // Update display name and bio
+    let updated_profile = user_repo
+        .update_profile(user.id, Some("DJ Beat"), Some("Music lover & trivia fan"))
+        .await
+        .unwrap();
+    assert!(updated_profile);
+
+    let fetched = user_repo.find_by_id(user.id).await.unwrap().unwrap();
+    assert_eq!(fetched.display_name.as_deref(), Some("DJ Beat"));
+    assert_eq!(fetched.bio.as_deref(), Some("Music lover & trivia fan"));
+    assert_eq!(fetched.role, "moderator");
 }
 
 // MusicBrainz test: marked #[ignore] so CI isn't hitting their API.
