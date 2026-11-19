@@ -58,7 +58,7 @@ async fn search(
         ));
     }
 
-    if query_str.len() < 2 {
+    if query_str.chars().count() < 2 {
         return Ok(Json(SearchResultsResponse {
             results: Vec::new(),
         }));
