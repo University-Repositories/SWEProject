@@ -27,6 +27,7 @@ Migrations are located in `migrations/`:
 * `0001_users_and_sessions.sql`: Creates `users` and `sessions` tables with indexes and constraints.
 * `0002_catalog.sql`: Enables `pg_trgm` extension and creates `recordings`, `credit_entities`, and `recording_credits` tables with trigram GIN indexes.
 * `0003_games.sql`: Creates `games`, `game_players`, `moves`, and `reports` tables with relational constraints and indexes.
+* `0004_matches_roles_profiles.sql`: Adds `bio` to `users`; adds `invite_code`, `turn_user_id`, `turn_number`, `turn_deadline`, `version` to `games` and supports `'waiting'` status; adds `decision` to `reports`; creates `match_queue` table.
 
 To apply migrations manually:
 ```bash
@@ -83,6 +84,9 @@ The `catalog_import` binary loads MusicBrainz recordings, validates credits, fil
   * `create(username, password_hash) -> Result<UserRow, RepoError>` (Returns `Conflict` on case-insensitive duplicate username)
   * `find_by_username(username) -> Result<Option<UserRow>, RepoError>` (Matches ignoring case)
   * `find_by_id(id) -> Result<Option<UserRow>, RepoError>`
+  * `get_role(user_id) -> Result<Option<String>, RepoError>`
+  * `set_role(user_id, role) -> Result<bool, RepoError>`
+  * `update_profile(user_id, display_name, bio) -> Result<bool, RepoError>` (alias: `update_display_name_and_bio`)
 * **`SessionRepo`**:
   * `create(user_id, token_hash, expires_at) -> Result<(), RepoError>`
   * `find_valid(token_hash, now) -> Result<Option<SessionRow>, RepoError>` (Expired sessions return `None`)
@@ -99,6 +103,14 @@ The `catalog_import` binary loads MusicBrainz recordings, validates credits, fil
   * `list_moves(game_id) -> Result<Vec<MoveRow>, RepoError>` (Ordered by `turn_number ASC`)
   * `add_move(game_id, user_id, turn_number, recording_id, credit_id) -> Result<MoveRow, RepoError>` (Returns `Conflict` on duplicate turn)
   * `end(game_id, accepted_links) -> Result<bool, RepoError>` (Updates only active games; returns whether updated)
+  * Match convenience delegates: `create_waiting_match`, `find_match_by_invite_code`, `add_second_player`, `load_match`, `save_match`, `find_user_waiting_or_active_match`
+* **`MatchRepo`**:
+  * `create_waiting_match(creator_user_id, opening_recording_id, invite_code) -> Result<GameRow, RepoError>` (Creates waiting match with invite code and creator as player 1)
+  * `find_by_invite_code(invite_code) -> Result<Option<GameRow>, RepoError>`
+  * `add_second_player(game_id, second_player_user_id) -> Result<bool, RepoError>` (Adds player 2, transitions status to `'active'`, turn 1, increments version)
+  * `load_match(game_id) -> Result<Option<MatchDetails>, RepoError>` (Loads game, player list, and ordered move list)
+  * `save_match(game_id, expected_version, status, turn_user_id, turn_number, turn_deadline, accepted_links, winner_user_id) -> Result<bool, RepoError>` (Optimistic locking: succeeds only if current version matches expected version)
+  * `find_user_waiting_or_active_match(user_id) -> Result<Option<GameRow>, RepoError>`
 * **`ReportRepo`**:
   * `create(reporter_id, move_id, credit_id, explanation) -> Result<ReportRow, RepoError>`
   * `get(id) -> Result<Option<ReportRow>, RepoError>`
