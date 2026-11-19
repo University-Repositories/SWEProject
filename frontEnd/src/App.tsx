@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, type FormEvent } from 'react'
+﻿import { useEffect, useRef, useState, type FormEvent, type KeyboardEvent } from 'react'
 import { useNavigate, useSearchParams } from 'react-router-dom'
 import { ApiRequestError, getCurrentUser } from './api/auth'
 import { getRecording, searchSongs } from './api/catalog'
@@ -6,9 +6,9 @@ import { checkMove, startChain } from './api/chain'
 import type { ChainMove } from './api/generated/ChainMove'
 import type { MoveRejectionCode } from './api/generated/MoveRejectionCode'
 import type { RecordingDetail } from './api/generated/RecordingDetail'
+import type { RecordingSummary } from './api/generated/RecordingSummary'
 import './App.css'
 
-// Matches MAX_CREDIT_USES in the game engine.
 const MAX_CREDIT_USES = 3
 
 type PlayerId = 'starting' | 'player-one' | 'player-two'
@@ -21,7 +21,6 @@ type ChainCard = {
   linkedBy: { name: string; usesLeft: number } | null
 }
 
-// One credit entity on a song, with every role it has there.
 type CreditGroup = {
   creditId: string
   name: string
@@ -34,6 +33,7 @@ type ChatMessage = {
 }
 
 type GameStatus = 'loading' | 'signed-out' | 'ready' | 'error'
+type NoticeTone = 'info' | 'accepted' | 'rejected'
 
 const playerLabels: Record<PlayerId, string> = {
   starting: 'Starting Card',
@@ -80,6 +80,8 @@ function App() {
   const startQuery = searchParams.get('start') ?? ''
   const [isExitModalOpen, setIsExitModalOpen] = useState(false)
   const [connection, setConnection] = useState('')
+  const [searchResults, setSearchResults] = useState<RecordingSummary[]>([])
+  const [activeResultIndex, setActiveResultIndex] = useState(-1)
   const [inputFeedback, setInputFeedback] = useState<{ kind: 'wrong' | 'valid'; id: number } | null>(null)
   const [playerOneScore, setPlayerOneScore] = useState(0)
   const [playerName, setPlayerName] = useState('Player One')
@@ -90,10 +92,13 @@ function App() {
   const [creditUses, setCreditUses] = useState<Record<string, number>>({})
   const [candidate, setCandidate] = useState<RecordingDetail | null>(null)
   const [notice, setNotice] = useState('')
+  const [noticeTone, setNoticeTone] = useState<NoticeTone>('info')
   const [isBusy, setIsBusy] = useState(false)
   const [chatInput, setChatInput] = useState('')
   const [messages, setMessages] = useState<ChatMessage[]>([])
   const songListRef = useRef<HTMLDivElement>(null)
+  const connectionInputRef = useRef<HTMLInputElement>(null)
+  const creditButtonsRef = useRef<Array<HTMLButtonElement | null>>([])
   const feedbackTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
   const feedbackFrameRef = useRef<number | null>(null)
   const feedbackIdRef = useRef(0)
@@ -101,7 +106,6 @@ function App() {
   const currentSong = cards.length > 0 ? cards[0].song : null
   const currentCreditIds = new Set(currentSong?.credits.map((credit) => credit.creditId) ?? [])
 
-  // Check the session, then pick the opening song. ?start=<title> picks it by search.
   useEffect(() => {
     let cancelled = false
     async function beginGame() {
@@ -122,6 +126,7 @@ function App() {
       setCandidate(null)
       setPlayerOneScore(0)
       setNotice('Enter a song that shares a credit with the starting card.')
+      setNoticeTone('info')
       setStatus('ready')
     }
     beginGame().catch(() => {
@@ -131,6 +136,42 @@ function App() {
       cancelled = true
     }
   }, [startQuery])
+
+  useEffect(() => {
+    const query = connection.trim()
+    if (status !== 'ready' || query.length < 2) {
+      setSearchResults([])
+      setActiveResultIndex(-1)
+      return
+    }
+    let cancelled = false
+    const timer = setTimeout(() => {
+      searchSongs(query, 6)
+        .then((results) => {
+          if (cancelled) return
+          setSearchResults(results)
+          setActiveResultIndex(results.length > 0 ? 0 : -1)
+        })
+        .catch(() => {
+          if (!cancelled) {
+            setSearchResults([])
+            setActiveResultIndex(-1)
+          }
+        })
+    }, 150)
+    return () => {
+      cancelled = true
+      clearTimeout(timer)
+    }
+  }, [connection, status])
+
+  useEffect(() => {
+    if (!candidate) return
+    const groups = groupCredits(candidate)
+    const firstUsable = groups.findIndex((g) => (creditUses[g.creditId] ?? 0) < MAX_CREDIT_USES)
+    const target = firstUsable >= 0 ? firstUsable : 0
+    creditButtonsRef.current[target]?.focus()
+  }, [candidate, creditUses])
 
   useEffect(() => {
     songListRef.current?.scrollTo({ top: 0, behavior: 'smooth' })
@@ -167,23 +208,19 @@ function App() {
       return
     }
     setNotice('Something went wrong. Try again.')
+    setNoticeTone('rejected')
     showInputFeedback('wrong')
   }
 
-  // Step 1: find the song the player typed and show its credits.
-  async function findSong(title: string) {
+  async function selectRecording(id: string) {
     setIsBusy(true)
+    setSearchResults([])
+    setActiveResultIndex(-1)
     try {
-      const results = await searchSongs(title, 1)
-      if (results.length === 0) {
-        setCandidate(null)
-        setNotice(`No song found for “${title}”.`)
-        showInputFeedback('wrong')
-        return
-      }
-      const song = await getRecording(results[0].id)
+      const song = await getRecording(id)
       setCandidate(song)
       setNotice(`Pick the credit that links ${song.title} to ${currentSong?.title ?? 'the last song'}.`)
+      setNoticeTone('info')
     } catch (error) {
       handleRequestError(error)
     } finally {
@@ -191,7 +228,30 @@ function App() {
     }
   }
 
-  // Step 2: send the chain and the chosen credit to the server, which runs the game engine.
+  async function findSong(title: string) {
+    setIsBusy(true)
+    setSearchResults([])
+    setActiveResultIndex(-1)
+    try {
+      const results = await searchSongs(title, 1)
+      if (results.length === 0) {
+        setCandidate(null)
+        setNotice(`No song found for “${title}”.`)
+        setNoticeTone('rejected')
+        showInputFeedback('wrong')
+        return
+      }
+      const song = await getRecording(results[0].id)
+      setCandidate(song)
+      setNotice(`Pick the credit that links ${song.title} to ${currentSong?.title ?? 'the last song'}.`)
+      setNoticeTone('info')
+    } catch (error) {
+      handleRequestError(error)
+    } finally {
+      setIsBusy(false)
+    }
+  }
+
   async function chooseCredit(group: CreditGroup) {
     if (!candidate || !openingId || isBusy) return
     const next: ChainMove = { recordingId: candidate.id, creditId: group.creditId }
@@ -217,16 +277,68 @@ function App() {
         setPlayerOneScore((score) => score + 1)
         setCandidate(null)
         setNotice(`Linked by ${group.name}. ${usesLeft} ${usesLeft === 1 ? 'use' : 'uses'} left.`)
+        setNoticeTone('accepted')
         showInputFeedback('valid')
+        connectionInputRef.current?.focus()
       } else {
         setNotice(result.rejection ? rejectionText[result.rejection] : 'That link is not allowed.')
+        setNoticeTone('rejected')
         showInputFeedback('wrong')
-        if (result.rejection === 'SONG_ALREADY_PLAYED') setCandidate(null)
+        if (result.rejection === 'SONG_ALREADY_PLAYED') {
+          setCandidate(null)
+          connectionInputRef.current?.focus()
+        }
       }
     } catch (error) {
       handleRequestError(error)
     } finally {
       setIsBusy(false)
+    }
+  }
+
+  function handleSearchKeyDown(event: KeyboardEvent<HTMLInputElement>) {
+    if (event.key === 'Escape') {
+      if (searchResults.length > 0 || connection.length > 0) {
+        event.preventDefault()
+        setConnection('')
+        setSearchResults([])
+        setActiveResultIndex(-1)
+      }
+      return
+    }
+    if (searchResults.length === 0) return
+
+    if (event.key === 'ArrowDown') {
+      event.preventDefault()
+      setActiveResultIndex((index) => (index + 1) % searchResults.length)
+    } else if (event.key === 'ArrowUp') {
+      event.preventDefault()
+      setActiveResultIndex((index) => (index <= 0 ? searchResults.length - 1 : index - 1))
+    } else if (event.key === 'Enter' && activeResultIndex >= 0 && activeResultIndex < searchResults.length) {
+      event.preventDefault()
+      const picked = searchResults[activeResultIndex]
+      setConnection('')
+      void selectRecording(picked.id)
+    }
+  }
+
+  function handleCreditKeyDown(event: KeyboardEvent<HTMLDivElement>, count: number) {
+    if (event.key === 'Escape') {
+      event.preventDefault()
+      setCandidate(null)
+      connectionInputRef.current?.focus()
+      return
+    }
+    if (count === 0) return
+    const currentIndex = creditButtonsRef.current.findIndex((button) => button === document.activeElement)
+    if (event.key === 'ArrowDown' || event.key === 'ArrowRight') {
+      event.preventDefault()
+      const nextIndex = currentIndex < 0 ? 0 : (currentIndex + 1) % count
+      creditButtonsRef.current[nextIndex]?.focus()
+    } else if (event.key === 'ArrowUp' || event.key === 'ArrowLeft') {
+      event.preventDefault()
+      const prevIndex = currentIndex <= 0 ? count - 1 : currentIndex - 1
+      creditButtonsRef.current[prevIndex]?.focus()
     }
   }
 
@@ -249,6 +361,8 @@ function App() {
     ])
     setChatInput('')
   }
+
+  const candidateGroups = candidate ? groupCredits(candidate) : []
 
   return (
     <main className="game-page">
@@ -305,26 +419,78 @@ function App() {
 
           {status === 'ready' && (
             <>
-              <form className="connection-form" onSubmit={submitConnection}>
-                <label className="visually-hidden" htmlFor="connection-input">Make the Connection</label>
-                <input
-                  id="connection-input"
-                  className={`connection-input${inputFeedback ? ` feedback-${inputFeedback.kind}` : ''}`}
-                  data-feedback-id={inputFeedback?.id}
-                  placeholder="Make the Connection"
-                  value={connection}
-                  disabled={isBusy}
-                  onChange={(event) => {
-                    setConnection(event.target.value)
-                    clearInputFeedback()
-                  }}
-                />
-                <button className="enter-button" type="submit" disabled={isBusy}>
-                  ENTER <span aria-hidden="true">→</span>
-                </button>
-              </form>
+              <div className="search-wrap">
+                <form className="connection-form" onSubmit={submitConnection}>
+                  <label className="visually-hidden" htmlFor="connection-input">Make the Connection</label>
+                  <input
+                    ref={connectionInputRef}
+                    id="connection-input"
+                    role="combobox"
+                    aria-expanded={searchResults.length > 0}
+                    aria-controls="song-search-results"
+                    aria-activedescendant={
+                      activeResultIndex >= 0 && searchResults[activeResultIndex]
+                        ? `search-result-${searchResults[activeResultIndex].id}`
+                        : undefined
+                    }
+                    className={`connection-input${inputFeedback ? ` feedback-${inputFeedback.kind}` : ''}`}
+                    data-feedback-id={inputFeedback?.id}
+                    placeholder="Make the Connection"
+                    autoComplete="off"
+                    value={connection}
+                    disabled={isBusy}
+                    onKeyDown={handleSearchKeyDown}
+                    onChange={(event) => {
+                      setConnection(event.target.value)
+                      clearInputFeedback()
+                    }}
+                  />
+                  <button className="enter-button" type="submit" disabled={isBusy}>
+                    ENTER <span aria-hidden="true">→</span>
+                  </button>
+                </form>
 
-              {notice && <p className="chain-notice" role="status">{notice}</p>}
+                {searchResults.length > 0 && (
+                  <ul id="song-search-results" className="search-results" role="listbox" aria-label="Song results">
+                    {searchResults.map((result, index) => {
+                      const isActive = index === activeResultIndex
+                      return (
+                        <li
+                          key={result.id}
+                          id={`search-result-${result.id}`}
+                          role="option"
+                          aria-selected={isActive}
+                          className={`search-result-item${isActive ? ' search-result-item--active' : ''}`}
+                          onMouseEnter={() => setActiveResultIndex(index)}
+                          onMouseDown={(event) => {
+                            event.preventDefault()
+                            setConnection('')
+                            void selectRecording(result.id)
+                          }}
+                        >
+                          <span className="search-result-title">{result.title}</span>
+                          <span className="search-result-meta">
+                            {result.artistName}
+                            {result.year ? ` · ${result.year}` : ''}
+                          </span>
+                        </li>
+                      )
+                    })}
+                  </ul>
+                )}
+              </div>
+
+              {notice && (
+                <p className={`chain-notice chain-notice--${noticeTone}`} role="status">
+                  {noticeTone === 'accepted' && (
+                    <span className="status-badge status-badge--accepted">✓ ACCEPTED</span>
+                  )}
+                  {noticeTone === 'rejected' && (
+                    <span className="status-badge status-badge--rejected">✕ REJECTED</span>
+                  )}
+                  <span>{notice}</span>
+                </p>
+              )}
 
               {candidate && (
                 <div className="candidate-panel">
@@ -332,28 +498,56 @@ function App() {
                     <span>NEXT SONG</span>
                     {candidate.title} · {candidate.artistName}
                   </p>
-                  <div className="credit-options">
-                    {groupCredits(candidate).map((group) => {
+                  <div
+                    className="credit-options"
+                    role="group"
+                    aria-label="Song credits"
+                    onKeyDown={(event) => handleCreditKeyDown(event, candidateGroups.length)}
+                  >
+                    {candidateGroups.map((group, index) => {
                       const shared = currentCreditIds.has(group.creditId)
-                      const usesLeft = MAX_CREDIT_USES - (creditUses[group.creditId] ?? 0)
+                      const usedCount = creditUses[group.creditId] ?? 0
+                      const usesLeft = Math.max(0, MAX_CREDIT_USES - usedCount)
+                      const isUsedUp = usesLeft === 0
                       return (
                         <button
                           key={group.creditId}
+                          ref={(el) => {
+                            creditButtonsRef.current[index] = el
+                          }}
                           type="button"
-                          className={`credit-option${shared ? ' credit-option--shared' : ''}`}
-                          disabled={isBusy}
+                          className={`credit-option${shared ? ' credit-option--shared' : ''}${isUsedUp ? ' credit-option--used-up' : ''}`}
+                          disabled={isBusy || isUsedUp}
                           onClick={() => void chooseCredit(group)}
                         >
-                          <span className="credit-option-name">{group.name}</span>
+                          <span className="credit-option-header">
+                            <span className="credit-option-name">{group.name}</span>
+                            {isUsedUp ? (
+                              <span className="credit-badge credit-badge--used-up">USED UP</span>
+                            ) : shared ? (
+                              <span className="credit-badge credit-badge--shared">SHARED</span>
+                            ) : null}
+                          </span>
                           <span className="credit-option-meta">
                             {group.roles.join(', ')}
-                            {shared ? ` · on both songs · ${usesLeft} left` : ''}
+                            {isUsedUp
+                              ? ` · 0/${MAX_CREDIT_USES} left`
+                              : shared
+                                ? ` · on both songs · ${usesLeft}/${MAX_CREDIT_USES} left`
+                                : ` · ${usesLeft}/${MAX_CREDIT_USES} left`}
                           </span>
                         </button>
                       )
                     })}
                   </div>
-                  <button className="candidate-cancel" type="button" onClick={() => setCandidate(null)}>
+                  <button
+                    className="candidate-cancel"
+                    type="button"
+                    onClick={() => {
+                      setCandidate(null)
+                      connectionInputRef.current?.focus()
+                    }}
+                  >
                     Pick a different song
                   </button>
                 </div>
@@ -379,7 +573,7 @@ function App() {
                       <div className="song-details">
                         <p className="song-label">
                           {card.linkedBy
-                            ? `LINKED BY ${card.linkedBy.name.toUpperCase()} · ${card.linkedBy.usesLeft} LEFT`
+                            ? `✓ LINKED BY ${card.linkedBy.name.toUpperCase()} · ${card.linkedBy.usesLeft} LEFT`
                             : 'TRACK CONNECTION'}
                         </p>
                         <h2>{card.song.title}</h2>
