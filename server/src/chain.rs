@@ -19,7 +19,7 @@ use ts_rs::TS;
 use uuid::Uuid;
 
 use crate::{
-    api_types::{ApiError, ApiErrorCode},
+    api_types::{ApiError, ApiErrorCode, MoveRejectionCode},
     app::AppState,
     auth::require_session,
     json::ApiJson,
@@ -49,27 +49,6 @@ pub struct ChainCheckRequest {
 #[ts(export)]
 pub struct ChainStartResponse {
     pub recording_id: Uuid,
-}
-
-#[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize, TS)]
-#[serde(rename_all = "SCREAMING_SNAKE_CASE")]
-#[ts(export)]
-pub enum MoveRejectionCode {
-    SongAlreadyPlayed,
-    CreditNotOnPreviousSong,
-    CreditNotOnSubmittedSong,
-    CreditExhausted,
-}
-
-impl From<MoveRejection> for MoveRejectionCode {
-    fn from(rejection: MoveRejection) -> Self {
-        match rejection {
-            MoveRejection::SongAlreadyPlayed => Self::SongAlreadyPlayed,
-            MoveRejection::CreditNotOnPreviousSong => Self::CreditNotOnPreviousSong,
-            MoveRejection::CreditNotOnSubmittedSong => Self::CreditNotOnSubmittedSong,
-            MoveRejection::CreditExhausted => Self::CreditExhausted,
-        }
-    }
 }
 
 /// Accepted moves carry the credit's use count after the move.

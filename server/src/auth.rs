@@ -93,6 +93,21 @@ pub(crate) async fn require_session(
     Ok(next.run(request).await)
 }
 
+pub(crate) async fn require_moderator(
+    Extension(user): Extension<User>,
+    request: Request,
+    next: Next,
+) -> Result<Response, ApiError> {
+    if !matches!(user.role, Role::Moderator) {
+        return Err(ApiError::new(
+            crate::api_types::ApiErrorCode::Forbidden,
+            "Moderator access required",
+            None,
+        ));
+    }
+    Ok(next.run(request).await)
+}
+
 async fn me(Extension(user): Extension<User>) -> Json<User> {
     Json(user)
 }

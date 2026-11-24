@@ -109,3 +109,27 @@ Run the format and lint commands before you push.
 
 - Port 5432 already in use: another PostgreSQL is running on your machine. Stop it, then run `docker compose up -d` again.
 - Windows build error mentioning `link.exe` or `link: extra operand`: the Visual Studio C++ build tools are missing. Add the "Desktop development with C++" workload in the Visual Studio Installer.
+
+### Grant a moderator role
+
+Register the account first, then run this with the same `DATABASE_URL` as the server.
+
+```sh
+cargo run -p server --bin grant_moderator -- <username>
+```
+
+### Game and report API
+
+These routes require a session cookie. Send JSON on game start, move submission,
+report creation, and report resolution.
+
+| Method and path | Response |
+| --- | --- |
+| `POST /api/games` | `201 GameState`. Send `{}` to get a random opening. |
+| `GET /api/games/{id}` | `200 GameState` for the game's owner. |
+| `POST /api/games/{id}/moves` | `200 MoveResult`, including moves the game rules reject. |
+| `POST /api/games/{id}/end` | `200 GameState` on the first end and `409 GAME_ENDED` on repeats. |
+| `POST /api/reports` | `201 Report`. Send a move ID or credit ID and an explanation. |
+| `GET /api/reports/{id}` | `200 Report` for the reporter. |
+| `GET /api/moderation/reports?status=open` | `200` with open reports, oldest first. Moderator only. |
+| `POST /api/moderation/reports/{id}/resolve` | `200 Report`. Send `decision` (`upheld` or `dismissed`) and `reason`. Moderator only. |

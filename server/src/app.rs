@@ -32,7 +32,13 @@ pub fn router(state: AppState) -> Router {
         .route("/health", get(health))
         .nest("/auth", crate::auth::router(state.clone()))
         .nest("/catalog", crate::catalog::router(state.clone()))
-        .nest("/chain", crate::chain::router(state.clone()));
+        .nest("/chain", crate::chain::router(state.clone()))
+        .nest("/games", crate::games::router(state.clone()))
+        .nest("/reports", crate::reports::router(state.clone()))
+        .nest(
+            "/moderation/reports",
+            crate::reports::moderation_router(state.clone()),
+        );
     Router::new()
         .nest("/api", api)
         .fallback(not_found)

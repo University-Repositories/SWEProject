@@ -172,6 +172,9 @@ impl<S: GameStore, C: SongCatalog> GameSessions<S, C> {
             .await;
         match saved {
             Ok(()) => {}
+            Err(RepoError::Conflict(reason)) if reason == "game ended" => {
+                return Err(GameError::GameEnded);
+            }
             Err(RepoError::Conflict(_)) => return Err(GameError::TurnTaken),
             Err(err) => return Err(err.into()),
         }
@@ -195,9 +198,14 @@ impl<S: GameStore, C: SongCatalog> GameSessions<S, C> {
         }
         let moves = self.store.list_moves(game_id).await?;
         let accepted_links = moves.len() as i32;
-        let ended_at = Utc::now();
-        if !self.store.end(game_id, accepted_links, ended_at).await? {
-            return Err(GameError::GameEnded);
+        // match the timestamp precision postgres keeps
+        let now = Utc::now();
+        let ended_at = DateTime::from_timestamp_micros(now.timestamp_micros()).unwrap_or(now);
+        match self.store.end(game_id, accepted_links, ended_at).await {
+            Ok(true) => {}
+            Ok(false) => return Err(GameError::GameEnded),
+            Err(RepoError::Conflict(_)) => return Err(GameError::TurnTaken),
+            Err(error) => return Err(error.into()),
         }
         let ended = GameRecord {
             status: GameStatus::Ended,

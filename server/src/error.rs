@@ -28,7 +28,11 @@ impl ApiError {
                 StatusCode::UNAUTHORIZED
             }
             ApiErrorCode::NotFound => StatusCode::NOT_FOUND,
-            ApiErrorCode::UsernameTaken => StatusCode::CONFLICT,
+            ApiErrorCode::UsernameTaken
+            | ApiErrorCode::GameEnded
+            | ApiErrorCode::TurnTaken
+            | ApiErrorCode::ReportResolved => StatusCode::CONFLICT,
+            ApiErrorCode::Forbidden => StatusCode::FORBIDDEN,
             ApiErrorCode::UnsupportedMediaType => StatusCode::UNSUPPORTED_MEDIA_TYPE,
             ApiErrorCode::Internal => StatusCode::INTERNAL_SERVER_ERROR,
         }
@@ -127,6 +131,10 @@ mod tests {
             (ApiErrorCode::InvalidCredentials, 401),
             (ApiErrorCode::NotFound, 404),
             (ApiErrorCode::UsernameTaken, 409),
+            (ApiErrorCode::GameEnded, 409),
+            (ApiErrorCode::TurnTaken, 409),
+            (ApiErrorCode::ReportResolved, 409),
+            (ApiErrorCode::Forbidden, 403),
             (ApiErrorCode::UnsupportedMediaType, 415),
             (ApiErrorCode::Internal, 500),
         ] {

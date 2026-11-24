@@ -7,7 +7,9 @@ pub mod config;
 pub mod cookies;
 pub mod error;
 pub mod game_sessions;
+mod games;
 pub mod json;
+mod reports;
 
 use sqlx::{ConnectOptions, PgPool, postgres::PgPoolOptions};
 use std::time::Duration;
